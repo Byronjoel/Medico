@@ -1,0 +1,116 @@
+
+
+jueves, 11 de julio de 2019 09:52	Formulario: 
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query to backend;
+Could not send Query to backend.
+
+MSGSYNTAX  select  empresa.origen.id ,           empresa.origen.descripcion ,           empresa.origen.fec_ini ,           empresa.origen.fec_upd ,           empresa.origen.lock_reg ,           empresa.origen.first_user ,           empresa.origen.last_user     from empresa.origen    
+
+
+--------------------------------------------------------------------------------
+
+
+jueves, 11 de julio de 2019 09:52	Formulario: 
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAX  select  organizacion.nombre.id ,           organizacion.nombre.abreviatura ,           organizacion.nombre.razon_social ,           organizacion.nombre.ruc ,           organizacion.nombre.fec_ini ,           organizacion.nombre.lock_reg ,           organizacion.nombre.fec_upd ,           organizacion.nombre.first_user ,           organizacion.nombre.last_user ,           organizacion.nombre.first_oid ,           organizacion.nombre.last_oid ,           organizacion.nombre.contacto ,           organizacion.nombre.direccion ,           organizacion.nombre.telefono     from organizacion.nombre    
+
+
+--------------------------------------------------------------------------------
+jueves, 11 de julio de 2019 09:52	Formulario: Orden
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAX  select  empresa.origen.id ,           empresa.origen.descripcion ,           empresa.origen.fec_ini ,           empresa.origen.fec_upd ,           empresa.origen.lock_reg ,           empresa.origen.first_user ,           empresa.origen.last_user     from empresa.origen    
+
+
+jueves, 11 de julio de 2019 09:52	Formulario: Orden
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAX  select  organizacion.nombre.id ,           organizacion.nombre.abreviatura ,           organizacion.nombre.razon_social ,           organizacion.nombre.ruc ,           organizacion.nombre.fec_ini ,           organizacion.nombre.lock_reg ,           organizacion.nombre.fec_upd ,           organizacion.nombre.first_user ,           organizacion.nombre.last_user ,           organizacion.nombre.first_oid ,           organizacion.nombre.last_oid ,           organizacion.nombre.contacto ,           organizacion.nombre.direccion ,           organizacion.nombre.telefono     from organizacion.nombre    
+
+
+jueves, 11 de julio de 2019 09:52	Formulario: Orden
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAX  select  empresa.referencia.id ,           empresa.referencia.descripcion ,           empresa.referencia.fec_ini ,           empresa.referencia.fec_upd ,           empresa.referencia.lock_reg ,           empresa.referencia.first_user ,           empresa.referencia.last_user     from empresa.referencia    
+
+
+jueves, 11 de julio de 2019 09:52	Formulario: Orden
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAX  select  empresa.origen.id ,           empresa.origen.descripcion ,           empresa.origen.fec_ini ,           empresa.origen.fec_upd ,           empresa.origen.lock_reg ,           empresa.origen.first_user ,           empresa.origen.last_user     from empresa.origen    
+
+
+
+
+viernes, 12 de julio de 2019 08:35	Formulario: Usuarios
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+No response from the backend;
+No response from the backend.
+
+MSGSYNTAX  select  core.cs_grupos.cod_gru ,           core.cs_grupos.des_gru ,           core.cs_grupos.fec_ini ,           core.cs_grupos.lock_gru ,           core.cs_grupos.fec_upd ,           core.cs_grupos.last_user ,           core.cs_grupos.first_user     from core.cs_grupos    
+
+
+--------------------------------------------------------------------------------
+
+
+viernes, 12 de julio de 2019 08:35	Formulario: Usuarios
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAXselect  core.cs_usuarios.usuario ,           core.cs_usuarios.nom_usu ,           core.cs_usuarios.fec_ini ,           core.cs_usuarios.lock_usu ,           core.cs_usuarios.fec_upd ,           core.cs_usuarios.pwd_usu ,           core.cs_usuarios.doc_usu ,           core.cs_usuarios.last_user ,           core.cs_usuarios.first_user ,           core.cs_usuarios.cod_gru     from core.cs_usuarios WHERE (Upper( cs_usuarios.usuario) like Upper('%pru%' )) 
+
+
+--------------------------------------------------------------------------------

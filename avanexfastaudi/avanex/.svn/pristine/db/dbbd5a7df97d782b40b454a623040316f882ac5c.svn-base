@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="FF=6; FF=EDGE"?>
+<?page title="Login AvaNEX"?>
+<?link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<!--<?component name="newUsuario" macroURI="/templates/Cabecera.zul"?>-->
+
+<!-- use="org.zkoss.zul.impl.MessageboxDlg"-->
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.2  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:c="client">
+    <zscript>
+
+        String ip = session.getRemoteAddr();
+        session.removeAttribute(ip);
+        String ver = application.getInitParameter("version");   
+        String browser = Executions.getCurrent().getHeader("user-agent");
+        boolean firefox;
+        firefox = true;
+    </zscript>
+    <style src="css/login.css" />
+    <div align="right" >
+    <image  id="logo_avasus" src="/images/logos/avasus.png"  />
+   
+    <div></div>
+    <label value="Versión ${ver}" sclass="label" />
+    <div></div>
+    <label value="IP: ${ip}" sclass="label" />
+     </div>
+    
+    <window id="winLogin" title="AvaNEX" mode="highlighted" border="normal" width="45%" style=" border: 3px solid #86b3b1;"
+            position="center " apply="ec.com.cubosoft.avamed.coneccion.ControladoraPermisos" >
+        <caption  image="/images/logos/avasus_title.png" label="Por favor ingrese sus datos"/>
+        <div align="center" style="top:55%; left:50%; position:center;  border: 1px solid #86b3b1;"  >
+            <div height= "20px"></div>
+            <vbox>
+                <label value="Usuario"  sclass="label" />
+                <textbox id="id_user" c:onFocus="this.select()" style="  width: 200px;
+    font-size: 20px;
+    border: 1px solid #86b3b1;
+    border-left: 5px solid #86b3b1;
+     border-right: 5px solid #86b3b1;
+    text-transform:uppercase;" constraint="no empty:El usuario no puede ser vacío."/>
+                <label value="Contraseña" sclass="label" />
+                <textbox id="id_password" c:onFocus="this.select()" style="  width: 200px;
+    font-size: 20px;
+    border: 1px solid #86b3b1;
+    border-left: 5px solid #86b3b1;
+     border-right: 5px solid #86b3b1;
+    text-transform:uppercase;" type="password" constraint="no empty:La clave no puede ser vacía."/>
+                <label value="Ciudad" sclass="label" />
+                <combobox id="id_ciudad" c:onFocus="this.select()" style="   width: 200px;
+    height: 30px;
+       font-size: 12px;
+    border: 1px solid #86b3b1;
+     border-right: 5px solid #86b3b1;
+    border-left: 5px solid #86b3b1;"/>
+            </vbox>
+            <div height= "20px"></div>
+            <hbox>
+                <button id="iniciar" label="Ingresar" style="border: 2px solid #bede0d;
+ font-size: 20px;    font-weight: bold;    color:#bede0d;    width: 150px; " />
+                 <!--button_login"-->
+                <div width= "20px"></div>
+                <button id="cancelar" label="Cancelar" style="border: 2px solid #d82b3a;
+    background-color:#dff661;    font-size: 20px;    font-weight: bold;    color:#d82b3a;    width: 150px; " />
+                        <!--sclass="button_cancel" />-->
+            </hbox>
+            <div height= "20px"></div>
+        </div>
+        <attribute name="onOK"><![CDATA[
+                        Events.postEvent("onClick", iniciar, null);
+                    ]]>
+        </attribute>
+    </window>
+    
+    <window id="winNoCompatible" title="AvaNEX" mode="highlighted" border="normal" width="45%" 
+            position="center " visible="false" style=" border: 3px solid #86b3b1;">
+        <caption image="/images/logos/avasus_title.png" label="Navegador Incompatible"/>
+        <div align="center" style="top:35%; left:30%; position:center;border: 3px solid #86b3b1; "  >
+            <vbox>
+                <div height= "20px"></div>
+                <label>El Navegador que usted intenta utilizar no es compatible con el Sistema.</label>
+                <div height= "20px"></div>
+                <label>Para utilizar AvaSUS debe hacerlo con Mozilla Firefox.</label>
+                <div height= "20px"></div>
+                <label>Si no tiene instalado Firefox por favor comuniquese con el Dpto. de Sistemas</label>
+                <div height= "20px"></div>
+            </vbox>
+        </div>
+    </window>
+    
+    <zscript><![CDATA[
+        if (!firefox) {
+            winLogin.setVisible(false);
+            winNoCompatible.doModal();
+        };
+    ]]>
+    </zscript>
+    <window mode="overlapped" position="right,bottom" >
+        <label value= "Cubosoft (c) 2012" />
+    </window>  
+    <window mode="overlapped" position="bottom" >
+        <label value= "Versión ${ver}" />
+        <div></div>
+        <label value= "Browser ${browser}" />
+    </window>
+</zk>

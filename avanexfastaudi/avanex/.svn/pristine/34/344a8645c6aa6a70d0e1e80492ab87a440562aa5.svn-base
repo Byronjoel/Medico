@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte1401" language="groovy" pageWidth="1190" pageHeight="842" orientation="Landscape" columnWidth="1150" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abc96753-e33d-4173-becc-9fefe5f1ecf5">
+	<property name="ireport.zoom" value="0.683013455365071"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="empresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1817]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha2" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     dx_orden."descripcion" AS diagnostico,
+     historia."sexo" AS sexo,
+   historia."num_id" AS cedula,
+     dx_orden."edad" AS edad,
+     nombre."abreviatura" AS empresa,
+     dx_orden."nombre" AS paciente
+  
+FROM
+     "persona"."historia" historia INNER JOIN "ingreso"."orden" orden ON historia."id" = orden."id_historia"
+     INNER JOIN "ingreso"."dx_orden" dx_orden ON orden."id_historia" = dx_orden."id_historia"
+     AND dx_orden."id_orden" = orden."id"
+     INNER JOIN "organizacion"."nombre" nombre ON orden."id_empresa" = nombre."id"
+WHERE
+     orden.id_empresa = $P{empresa}
+ AND fec_ingreso BETWEEN $P{fecha} and $P{fecha2}]]>
+	</queryString>
+	<field name="diagnostico" class="java.lang.String"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="cedula" class="java.lang.String"/>
+	<field name="edad" class="java.lang.String"/>
+	<field name="empresa" class="java.lang.String"/>
+	<field name="paciente" class="java.lang.String"/>
+	<variable name="ocupacion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54">
+			<staticText>
+				<reportElement x="374" y="0" width="415" height="50" forecolor="#00CCCC" uuid="40aecacb-f06e-486a-98fe-2af0c1078346"/>
+				<textElement>
+					<font fontName="Arial" size="32" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[INFORME DE MORBILIDAD]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37">
+			<textField>
+				<reportElement x="476" y="0" width="244" height="35" forecolor="#666666" uuid="9af28b38-c6dc-45b5-981b-01c11d1fe3c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1050" y="0" width="100" height="20" uuid="a67df90e-41e4-42be-bfed-79145ddf37ab"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="36">
+			<crosstab>
+				<reportElement x="0" y="0" width="1150" height="34" uuid="496fee82-1e34-4978-9ab1-3b8f3e047bbd"/>
+				<rowGroup name="paciente" width="229" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{paciente}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="140" y="25" width="89" height="25" uuid="312ad3f4-2f1d-4123-941e-787494a240a2"/>
+								<textFieldExpression><![CDATA[$V{paciente}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#005FB3" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="140" height="25" forecolor="#FFFFFF" uuid="65c57f00-6da9-4479-8e54-42e481a83156"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total paciente]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="cedula" width="103" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{cedula}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="70" height="25" uuid="a38b8142-e9f3-4576-8b91-ca2411853157"/>
+								<textFieldExpression><![CDATA[$V{cedula}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="25" uuid="a396e7c0-3929-459f-b981-80fa6de4acb6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total cedula]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="diagnostico" height="30" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{diagnostico}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="30" uuid="c5166b2d-cc41-4b4b-8565-fa95d4d59904"/>
+								<textFieldExpression><![CDATA[$V{diagnostico}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="5cd8040e-d09f-4060-a00f-8dee7e862499"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total diagnostico]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="diagnosticoMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[$F{diagnostico}]]></measureExpression>
+				</measure>
+				<crosstabCell width="88" height="25">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" uuid="e3d27d70-0135-4f12-a5b5-4348718f0054"/>
+							<textFieldExpression><![CDATA[$V{diagnosticoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="88" height="25" rowTotalGroup="paciente">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF" uuid="a8d3ef8d-c692-4ec0-8636-79f03020a075"/>
+							<textFieldExpression><![CDATA[$V{diagnosticoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="50" columnTotalGroup="diagnostico">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" uuid="6d04ce26-56d2-4848-9faa-4c6d93cff716"/>
+							<textFieldExpression><![CDATA[$V{diagnosticoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="paciente" columnTotalGroup="diagnostico">
+					<cellContents backcolor="#005FB3" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" forecolor="#FFFFFF" uuid="9ad3ac66-13b7-484d-96be-7ef354117940"/>
+							<textFieldExpression><![CDATA[$V{diagnosticoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="88" height="25" rowTotalGroup="cedula">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" uuid="95d844e1-b0fe-47c2-9436-097bb93f91ae"/>
+							<textFieldExpression><![CDATA[$V{diagnosticoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="cedula" columnTotalGroup="diagnostico">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" uuid="247b441a-e7d1-403e-a97c-04b9dc3c9c10"/>
+							<textFieldExpression><![CDATA[$V{diagnosticoMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="AvaNEX"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./welcome"?>
+<!-- Created on __DATE__, __TIME__  -->
+
+<!-- @author __USER__   -->
+<!-- @version   --> 
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <zscript>
+        String ver = application.getInitParameter("version");   
+    </zscript>
+    <window id="welcome" title="AvaSUS" border="normal" height="100%"  style=" border: 3px solid #86b3b1;"
+            width="100%" position="parent" maximizable="true" maximized="true"  apply="ec.com.cubosoft.avamed.coneccion.Controladoramenus" >
+        <caption >
+            <hlayout height="16px">
+                <toolbarbutton label="@{welcome$composer.usuario}" />
+            </hlayout>
+        </caption>
+        <borderlayout height="100%" width = "100%" >
+            <north >
+                <include src="/templates/Menu.zul" />
+            </north>
+            <center >
+                <div align="center" height="100%">
+                    <image src="/images/logos/avasus_fondo.png" />
+                    <label> by Cubosoft &#174;</label>
+                </div>
+            </center>
+            <south border= "none">
+                <label value="Versión ${ver}" sclass="label" />
+            </south>
+        </borderlayout>
+    </window>
+</zk>

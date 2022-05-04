@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div align="center" style="top:35%; left:30%; position:center; "  >
+        <label>Se han encontrado las siguientes prácticas para el paciente en la Orden</label>
+        <div></div>
+        <label>Por favor escoja una Práctica:</label>
+    </div>
+    <listbox id="listaHistorias" mold="paging" pageSize="10" pagingPosition="bottom" sclass="detalle-listado"  >
+        <listhead>
+             <listheader label="Avasus" sort="auto" align="center" width="15%"   />
+             <listheader label="Nextlab" sort="auto" align="center" width="15%"   />
+            <listheader label="Paciente" sort="auto" align="center" width="35%"   />
+            <listheader label="CI" sort="auto" align="center" width="15%"  />
+            <listheader label="Fecha Nac." sort="auto" align="center" />
+            <listheader label="Control" sort="auto" align="left"/>
+            
+        </listhead>
+    </listbox>
+</zk>

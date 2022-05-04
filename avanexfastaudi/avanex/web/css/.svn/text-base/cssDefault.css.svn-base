@@ -1,0 +1,154 @@
+/* 
+    Document   : StiloDefault
+    Created on : 22/02/2011, 10:31:41 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+/*
+.root {
+    display: block;
+
+}*/
+.titulo {
+    color:#4F4F4F;
+    font-family: arial, sans-serif;
+    font-size: 28px;
+}
+.titulo {
+    color:#778899;
+
+
+}
+
+.windows
+{ border: blue; 
+}
+.subTitulo {
+    color:#4F4F4F;
+    font-family: arial, sans-serif;
+    font-size: 22px;
+
+}
+.Tlabel {
+    color:#4F4F4F;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+.button
+{
+    border: 2px black solid;
+    background-color:#E8E8E8;
+    font-size: 16px;
+    font-weight: bold;
+    color:#4F4F4F;
+}
+
+.button1
+{
+    border: 2px black solid;
+    background-color:#E8E8E8;
+    font-size: 12px;
+    font-weight: bold;
+    color:#4F4F4F;
+}
+.button:hover {
+    background-color:#778899;
+}
+.button:focus {
+    background-color:#BEBEBE;
+}
+
+.image-Label {
+    margin: 10px 5px 0;
+    padding: 5px 10px;
+    color: #4F4F4F;
+}
+
+.image-Label .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-Label .item {
+    border: 1px solid #CCCCCC;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.image-Label .desc-div {
+    padding: 10px 20px;
+}
+
+.textbox {
+    color:#4F4F4F;
+    border: 3px outset black;
+    font-size: 18px;
+}
+.label
+{
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: arial, sans-serif;
+
+}
+.labelLogin
+{
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: arial, sans-serif;
+
+}
+
+/*.label:hover {
+    background-color:#778899;
+}
+.label:focus {
+    background-color:#BEBEBE;
+}*/
+.Blabel
+{
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    
+
+}
+.row
+{
+   color: #27408B;
+   border: none;
+   overflow:visible;
+   background:#8FBC8F;
+}
+.row:hover {
+    background-color: aqua;
+}
+.prueba
+{
+  border: 3px #B22222 solid;
+
+
+}
+.windows
+{
+  top:20%;
+  left:40%;
+  position: absolute;
+/*  background-image:url(${c:encodeURL('/images/fondo2.png')});
+background-repeat: no-repeat; */
+}
+
+
+
+

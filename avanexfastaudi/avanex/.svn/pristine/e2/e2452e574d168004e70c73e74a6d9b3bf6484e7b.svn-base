@@ -1,0 +1,24 @@
+ <!-- index.zul -->
+
+  <!-- Created on __DATE__, __TIME__  -->
+ <!-- @author __USER__   -->
+ <!-- @version   -->
+
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="/css/cssDefault_1.css" />
+  <style src="/css/cssDefault.css" />
+    <window id="WinReporte" border="none" apply="${arg.controladora}" >
+        <grid id="GrdReporte" width="100%" height="900px"    mold="paging"  >
+            <columns >
+                <column label="Descripcion"   width="65%" />
+                <column label="Valor"  width="35%" />
+                   <column id="ClmOrden"   width="0%" visible="false" />
+                <column label="Nombre"  width="0%" visible="false" />
+            </columns>
+            <rows id="GrdFilas" />
+        </grid>
+        <button id="btnGuardarReporte" label="Guardar" onClick=""/>
+    </window>
+</zk>
+

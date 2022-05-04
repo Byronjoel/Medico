@@ -1,0 +1,31 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="280px" height="100px">
+        <north title="Cargar archivos digitalizados"></north>
+        <center>
+            <div>
+                <div align="center">
+                    <hbox>
+                        <label>Desea cargar un archivo?</label>
+                    </hbox>
+                </div>
+
+                <div align="center" style="top:35%; left:10%; position: absolute;">
+                    <hbox>
+                        <div width="15px"></div>
+                        <button id="MsgUpdate" label="Si" sclass="button_save1"  upload="true,maxsize=5000072" image="/images/upload.png"  />
+                        <div width="20px"></div>
+                        <button id="MsgCancel" label="Cancelar" sclass="button_cancel" >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winEditarHistoria.onClose();
+                                ]]>
+                            </attribute>
+                        </button>
+                    </hbox>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+<datos_generales_standar>
+<pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+<pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+<estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-A</estado_codigo>
+<estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Azuay</estado_descripcion>
+<canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">0103</canton_codigo>
+<canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Cuenca</canton_descripcion>
+<parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+<parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+<etnia descripcion="ETNIA" orden="0" tipo_dato="T"/>
+<practica descripcion="PRACTICA" orden="0" tipo_dato="L">1144</practica>
+<nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">HISTORIA OCUPACIONAL PERIODICA BANCO PACIFICO</nombre_practica>
+<solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L"/>
+<paciente descripcion="NOMBRE" orden="0" tipo_dato="L">MICHAEL ALEJANDRO LOPEZ PONCE</paciente>
+<nombres descripcion="NOMBRES" orden="0" tipo_dato="L">MICHAEL ALEJANDRO</nombres>
+<apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">LOPEZ PONCE</apellidos>
+<fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1994/08/07</fecha_nace>
+<id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">393231</id_historia>
+<empresa descripcion="EMPRESA" orden="0" tipo_dato="L">BANCO DEL PACIFICO</empresa>
+<identificacion descripcion="CI" orden="0" tipo_dato="L">0104847744</identificacion>
+<estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+<id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">816470</id_orden>
+<telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0983552834/804189</telefono>
+<sexo descripcion="SEXO" orden="0" tipo_dato="L">MASCULINO</sexo>
+<profesion descripcion="PROFESION" orden="0" tipo_dato="L">ESTUDIANTE</profesion>
+<edad descripcion="EDAD" orden="0" tipo_dato="L">23 AÑOS </edad>
+<ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">CAJERO</ocupacion>
+<instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">3</instruccion_paciente>
+<ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">CUENCA</ciudad_nace>
+<direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">SECTOR TOTORACOCHA</direccion_paciente>
+<titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SR</titulo_paciente>
+<medico descripcion="MEDICO" orden="0" tipo_dato="L">Dr. FRANKLIN GENARO ORDOÑEZ CARDENAS </medico>
+<especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L">MEDICO OCUPACIONAL</especialidad>
+<cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L">MSP 465 K17 F155</cod_med>
+<titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Dr.</titulo_medico>
+<fecha descripcion="FECHA" orden="0" tipo_dato="L">2018/02/26</fecha>
+<fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2018/02/26 08:31:59</fecha_hora>
+<dx descripcion="DIAGNOSTICO" orden="0"/>
+<recomendaciones descripcion="RECOMENDACIONES" orden="0"/>
+<prescripciones descripcion="PRESCRIPCIONES" orden="0"/>
+<estado descripcion="ESTADO" orden="0" tipo_dato="L">IN</estado>
+</datos_generales_standar>
+<pagina0 Id="1" IdFormato="5100">
+<datos_generales descripcion="Sección 1: Datos Generales">
+<lugar descripcion="Lugar" item_lista="" lineas="1" orden="" tipo_dato="T">CUENCA</lugar>
+<fecha_datos descripcion="Fecha" item_lista="" orden="" tipo_dato="D">26-feb-2018</fecha_datos>
+<raza descripcion="Raza" item_lista="" lineas="1" orden="" tipo_dato="T">MESTIZA</raza>
+<lugar_residencia descripcion="Lugar de Residencia:" item_lista="" lineas="1" orden="" tipo_dato="T">CUENCA</lugar_residencia>
+<telefono_domicilio descripcion="Teléfono de domicilio:" item_lista="" lineas="1" orden="" tipo_dato="T">804189</telefono_domicilio>
+<telefono_celular descripcion="Teléfono Celular:" item_lista="" lineas="1" orden="" tipo_dato="T">0983552834</telefono_celular>
+<contacto_emergencia descripcion="Persona de Contacto en Caso de Emergencia:" item_lista="" lineas="2" orden="" tipo_dato="T">NORA PONCE</contacto_emergencia>
+<telefono_contacto descripcion="Teléfono" item_lista="" lineas="1" orden="" tipo_dato="T">0995749481</telefono_contacto>
+<ocupacion_habitual descripcion="Ocupacion (A que se dedica)" item_lista="" lineas="1" orden="" tipo_dato="T">EMPLEADO PRIVADO</ocupacion_habitual>
+</datos_generales>
+<informacion_laboral descripcion="Sección 2. Información Laboral"/>
+<trabajo_actual descripcion="Puesto de trabajo actual">
+<cargo_actual descripcion="Cargo actual" item_lista="" lineas="1" orden="" tipo_dato="T">CAJERO</cargo_actual>
+<area descripcion="Area" item_lista="" lineas="1" orden="" tipo_dato="T">OPERACIONES INTEGRALES</area>
+<departamento descripcion="Departamento" item_lista="" lineas="1" orden="" tipo_dato="T">SERVICIOS MONETARIOS</departamento>
+<cargos_anteriores descripcion="Localidad:" item_lista="" lineas="1" orden="" tipo_dato="T">EMOV CAPULISPAMBA</cargos_anteriores>
+</trabajo_actual>
+<antecedentes_laborales descripcion="Antecedentes Laborales"/>
+<trabajos_previos descripcion="Trabajos previos">
+<empresa_actividad1 descripcion="Empresa/Actividad (1)" item_lista="" lineas="0" orden="" tipo_dato="T">NO REFIERE</empresa_actividad1>
+<tiempo_trabajo_1 descripcion="Tiempo Trabajo (1)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puesto_trabajo_1 descripcion="Puesto de Trabajo (1)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<factores_riesgo_1 descripcion="Factores de Riesgo 1 (Un factor por linea, limite tres lineas)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<horas_exposicion_diaria_1 descripcion="Horas de Exposición diaria" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa_actividad_2 descripcion="Empresa/Actividad  (2)" item_lista="" lineas="0" orden="" tipo_dato="T">NO REFIERE</empresa_actividad_2>
+<tiempo_trabajo_2 descripcion="Tiempo de Trabajo (2)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puesto_trabajo_2 descripcion="Puesto de Trabajo (2)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<factores_riesgo_2 descripcion="Factores de Riesgo2 (Un factor por linea, limite tres lineas)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<horas_exposicion_diaria_2 descripcion="Horas de Exposición Diaria (2)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa_actividad_3 descripcion="Empresa/Actividad (3)" item_lista="" lineas="0" orden="" tipo_dato="T">NO REFIERE</empresa_actividad_3>
+<tiempo_trabajo_3 descripcion="Tiempo de trabajo (3)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puesto_trabajo_3 descripcion="Puesto de Trabajo (3)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<factores_riesgo_3 descripcion="Factores de Riesgo 3 (Un factor por linea, limite tres lineas)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<horas_exposicion_diaria_3 descripcion="Horas de Exposición diaria (3)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa_actividad_4 descripcion="Empresa/Actividad (4)" item_lista="" lineas="0" orden="" tipo_dato="T">NO REFIERE</empresa_actividad_4>
+<tiempo_trabajo_4 descripcion="Tiempo de Trabajo (4)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puesto_trabajo_4 descripcion="Puesto de Trabajo (4)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<factores_riesgo_4 descripcion="Factores de Riesgo 4 (Un factor por linea, limite tres lineas)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<horas_exposicion_diaria_4 descripcion="Horas de Exposición diaria (4)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa_actividad_5 descripcion="Empresa/Actividad (5)" item_lista="" lineas="0" orden="" tipo_dato="T">NO REFIERE</empresa_actividad_5>
+<tiempo_trabajo_5 descripcion="Tiempo de Trabajo (5)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puesto_trabajo_5 descripcion="Puesto de Trabajo (5)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<factores_riesgo_5 descripcion="Factores de Riesgo 5 (Un factor por linea, limite tres lineas)" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<horas_exposicion_diaria_5 descripcion="Horas de Exposición diaria (5)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</trabajos_previos>
+</pagina0>
+<pagina1 Id="2" IdFormato="5101">
+<enfermedades_ocupacional descripcion="Enfermedades Ocupacionales">
+<enfermedades_ocupacionales descripcion="Enfermedades Ocupacionales" item_lista="" orden="" tipo_dato="S">NO</enfermedades_ocupacionales>
+<descripcion_enfermedad descripcion="Descripción de la Enfermedad" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<molestias_atribuidas_trabajo descripcion="Molestias Atribuidas al Trabajo" item_lista="SI/NO/" orden="" tipo_dato="LD">NO||</molestias_atribuidas_trabajo>
+</enfermedades_ocupacional>
+<accidentes_trabajo descripcion="Accidentes deTrabajo">
+<accidentes descripcion="Accidente (Reportado al riesgo de trabajo)" item_lista="" orden="" tipo_dato="S">NO</accidentes>
+<descripcion_lesion descripcion="Descripción de la Lesion" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<descripcion_accidente descripcion="Descripción del Accidente" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<fecha_accidente descripcion="Fecha de accidente" item_lista="" orden="" tipo_dato="D"/>
+<empresa_accidente descripcion="Empresa donde ocurrio el accidente" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<cargo_accidente descripcion="Cargo en empresa donde ocurrio el accidente" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</accidentes_trabajo>
+<sec3_pato descripcion="Sección 3. Antecedentes Patológicos Personales"/>
+<antecedentes_patologicos_personales descripcion="Enfermedades Patológicas Personales (Coloque la palabra NO REFIERE  o detalle si hay antecedente)">
+<alergias descripcion="Alergías: " item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</alergias>
+<oculares descripcion="Oculares" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</oculares>
+<auditivas descripcion="Auditivas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</auditivas>
+<respiratorias descripcion="Respiratorias" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</respiratorias>
+<cardiovasculares descripcion="Cardiovasculares:" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</cardiovasculares>
+<gastrointestinales descripcion="Gastrointestinales" item_lista="" lineas="1" orden="" tipo_dato="T">GASTRITIS DESDE EL 2017, EN TRATAMIENTO Y CONTROLES</gastrointestinales>
+<urogenitales descripcion="Urogenitales" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</urogenitales>
+<endocrinas descripcion="Endócrinas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</endocrinas>
+<neurologicas descripcion="Neurológicas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</neurologicas>
+<psiquiatricas descripcion="Psiquiátricas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</psiquiatricas>
+<osteomusculares descripcion="Osteomusculares" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</osteomusculares>
+<psicologicas descripcion="Psicológicas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</psicologicas>
+<traumaticas descripcion="Traumáticas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</traumaticas>
+<quirurgicas descripcion="Quirúrgicas" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</quirurgicas>
+<otras_enfermedades descripcion="Otras" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</otras_enfermedades>
+</antecedentes_patologicos_personales>
+<antecedentes_gineco_obstetricos descripcion="NO APLICA PARA:FEMENINO"/>
+<vacunas descripcion="Inmunizaciones">
+<vacuna_1 descripcion="Vacuna (1)" item_lista="" lineas="1" orden="" tipo_dato="T">NO REFIERE</vacuna_1>
+<fecha_1 descripcion="Fecha (1)" item_lista="" orden="" tipo_dato="D"/>
+<refuerzo_1 descripcion="Refuerzo (1)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<vacuna_2 descripcion="Vacuna (2)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<fecha_2 descripcion="Fecha (2)" item_lista="" orden="" tipo_dato="D"/>
+<refuerzo_2 descripcion="Refuerzo (2)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<vacuna_3 descripcion="Vacuna (3)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<fecha_3 descripcion="Fecha (3)" item_lista="" orden="" tipo_dato="D"/>
+<refuerzo_3 descripcion="Refuerzo (3)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<vacuna_4 descripcion="Vacuna (4)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<fecha_4 descripcion="Fecha (4)" item_lista="" orden="" tipo_dato="D"/>
+<refuerzo_4 descripcion="Refuerzo (4)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<vacuna_5 descripcion="Vacuna (5)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<fecha_5 descripcion="Fecha (5)" item_lista="" orden="" tipo_dato="D"/>
+<refuerzo_5 descripcion="Refuerzo (5)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</vacunas>
+<discapacidad descripcion="Discapacidad">
+<discapacidad_sn descripcion="Discapaciad" item_lista="" orden="" tipo_dato="S">NO</discapacidad_sn>
+<tipo_discapacidad descripcion="Tipo" item_lista="Física/Visual/Auditiva/Mental/" orden="" tipo_dato="L"/>
+<otra_discapacidad descripcion="Otra:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<descripcion_discapacidad descripcion="Descripción" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<certificado_conadis descripcion="Vertificado CONADIS:" item_lista="" orden="" tipo_dato="S">NO</certificado_conadis>
+<porcentaja_discapacidad descripcion="Porcentaje de discapacidad:" item_lista="" orden="" tipo_dato="N"/>
+</discapacidad>
+<antecedentes_patologicos_familiares descripcion="Sección 4. Antecedentes Patológicos Familiares">
+<antecedentes_patologicos_familiares_t descripcion="Antecedentes Patológicos Familiares" item_lista="" lineas="0" orden="" tipo_dato="T">NO REFIERE</antecedentes_patologicos_familiares_t>
+</antecedentes_patologicos_familiares>
+<habitos descripcion="Sección 5: Hábitos">
+<fuma descripcion="Fuma:" item_lista="" orden="" tipo_dato="S">NO</fuma>
+<periodo_s descripcion="Periodo (Años de consumo)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<frecuencia_diario descripcion="Frecuencia (Años de habito)" item_lista="NO FUMA/CASI NUNCA/DIARIO/SEMANAL/MENSUAL/TRIMESTRAL/SEMESTRAL/ANUAL/" orden="" tipo_dato="L"/>
+<cuantos_diario descripcion="Cuantos (diario)" item_lista="" orden="" tipo_dato="N"/>
+<otros_habitos descripcion="Otros (Otras frecuencias de consumo)" item_lista="" orden="" tipo_dato="S">NO</otros_habitos>
+<descripcion_habitos descripcion="Descripción" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<periodo_ex descripcion="Periodo (Exfumador)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<frecuencia_ex descripcion="Frecuencia (Exfumador)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<alcohol descripcion="Alcohol (Frecuencia)" item_lista="Semanal/Quincenal/Mensual/Trimestral/Anual/No bebe/" orden="" tipo_dato="L">Anual</alcohol>
+<deportes descripcion="Deportes u otras actividades" item_lista="" orden="" tipo_dato="S">NO</deportes>
+<deportes_cual descripcion="Cual" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<cuantas_veces descripcion="Cuantas veces por semana:" item_lista="" orden="" tipo_dato="N"/>
+<cada_15 descripcion="C/15 (Quincenal)" item_lista="SI/NO/" orden="" tipo_dato="L"/>
+<medicamentos descripcion="Medicamentos" item_lista="" orden="" tipo_dato="S">SI</medicamentos>
+<cual_medicamentos descripcion="Cual:" item_lista="" lineas="1" orden="" tipo_dato="T">OMEPRAZOL 40 MG DIARIOS </cual_medicamentos>
+<consumo_drogas descripcion="Otras Drogas" item_lista="" orden="" tipo_dato="S">NO</consumo_drogas>
+<drogas_cual descripcion="Cual:" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</habitos>
+</pagina1>
+<pagina2 Id="3" IdFormato="5102">
+<examen_fisico descripcion="Sección 6: Examen Físico">
+<estado_general descripcion="Estado General:" item_lista="Bueno/Regular/Malo/" orden="" tipo_dato="L">Bueno</estado_general>
+<estado_general_1 descripcion="Lateridad" item_lista="Zurdo/Diestro/" orden="" tipo_dato="L">Diestro</estado_general_1>
+<usa_lentes descripcion="Usa Lentes:" item_lista="" orden="" tipo_dato="S">NO</usa_lentes>
+<peso descripcion="Peso (Kg)" item_lista="" orden="" tipo_dato="N">81</peso>
+<talla descripcion="Talla (m):" item_lista="" orden="" tipo_dato="N">187</talla>
+<imc descripcion="IMC=" item_lista="" orden="" tipo_dato="N">23.16</imc>
+<perimetro_abdominal descripcion="Perímetro Abdominal (cm):" item_lista="" orden="" tipo_dato="N">97</perimetro_abdominal>
+<presion_arterial descripcion="Presión Arterial (sentado)" item_lista="" lineas="1" orden="" tipo_dato="T">110/70</presion_arterial>
+<frecuencia_cardiaca descripcion="Frecuencia Cardiaca (/min):" item_lista="" orden="" tipo_dato="N">70</frecuencia_cardiaca>
+<frecuencia_respiratoria descripcion="Frecuencia Respiratoria (/min):" item_lista="" orden="" tipo_dato="N">14</frecuencia_respiratoria>
+</examen_fisico>
+<examen_fisico_2 descripcion="2. Examen Físico  (Coloque NORMAL o detalle hallazgo alterado)">
+<cabeza descripcion="Cabeza" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</cabeza>
+<fascie descripcion="Fascie" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</fascie>
+<ojos descripcion="Ojos" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</ojos>
+<oidos descripcion="Oídos" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</oidos>
+<nariz descripcion="Naríz" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</nariz>
+<boca descripcion="Boca" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</boca>
+<dentadura descripcion="Dentadura" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</dentadura>
+<amigdalas descripcion="Amigdalas" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</amigdalas>
+<cuello_uno descripcion="Cuello" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</cuello_uno>
+<tiroides descripcion="Tiroides" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</tiroides>
+<torax descripcion="Tórax" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</torax>
+<corazon descripcion="Corazón" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</corazon>
+<pulmones descripcion="Pulmones" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</pulmones>
+<mamas descripcion="Mamas" item_lista="" lineas="1" orden="" tipo_dato="T">N/A</mamas>
+<abdomen descripcion="Abdomen" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</abdomen>
+<columna descripcion="Columna" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</columna>
+<cuello descripcion="Pelvis" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</cuello>
+<genitales descripcion="Genitales" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</genitales>
+<recto descripcion="Recto" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</recto>
+<neurologico descripcion="Neurológico" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</neurologico>
+<extremidades descripcion="Extremidades" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</extremidades>
+</examen_fisico_2>
+<examen_sistema_osteomuscular descripcion="2. Examen del Sistema Osteomuscular"/>
+<columna_vertebral descripcion="Columna Vertebral"/>
+<desviacion_eje_antero_posterior descripcion="Desviación del eje antero-posterior"/>
+<curvas_fisiologicas_antero_posterior descripcion="Curvas Fisiológicas antero-poterior">
+<cervical_normal descripcion="Cervical" item_lista="Normal/Aumentada/Disminuida/" orden="" tipo_dato="L">Normal</cervical_normal>
+<dorsal_normal descripcion="Dorsal" item_lista="Normal/Aumentada/Disminuida/" orden="" tipo_dato="L">Normal</dorsal_normal>
+<lumbar_normal descripcion="Lumbar" item_lista="Normal/Aumentada/Disminuida/" orden="" tipo_dato="L">Normal</lumbar_normal>
+</curvas_fisiologicas_antero_posterior>
+<desviacion_eje_lateral descripcion="Desviación del eje Lateral"/>
+<eje_lateral descripcion="Eje Lateral">
+<dorsal_eje descripcion="Dorsal" item_lista="Normal/Concavidad derecha/Concavidad izquierda/" orden="" tipo_dato="L">Normal</dorsal_eje>
+<lumbar_eje descripcion="Lumbar" item_lista="Normal/Concavidad derecha/Concavidad izquierda/" orden="" tipo_dato="L">Normal</lumbar_eje>
+</eje_lateral>
+<palpitacion descripcion="Palpación"/>
+<columna_cervical descripcion="Columna Cervical">
+<columna_cervical_dolorosas descripcion="Apófisis espinosas dolorosas" item_lista="SI/NO/" orden="" tipo_dato="L">NO</columna_cervical_dolorosas>
+<columna_cervical_contractura descripcion="Contractura Muscular" item_lista="SI/NO/" orden="" tipo_dato="L">NO</columna_cervical_contractura>
+</columna_cervical>
+<columna_dorsal descripcion="Columna Dorsal">
+<columna_dorsal_dolorosas descripcion="Apófisis espinosas dolorosas" item_lista="SI/NO/" orden="" tipo_dato="L">NO</columna_dorsal_dolorosas>
+<columna_dorsal_contractura descripcion="Contractura Muscular" item_lista="SI/NO/" orden="" tipo_dato="L">NO</columna_dorsal_contractura>
+</columna_dorsal>
+<columna_lumbar descripcion="Columna Lumbar">
+<columna_lumbar_dolorosas descripcion="Apófisis espinosas dolorosas" item_lista="SI/NO/" orden="" tipo_dato="L">NO</columna_lumbar_dolorosas>
+<columna_lumbar_contractura descripcion="Contractura Muscular" item_lista="SI/NO/" orden="" tipo_dato="L">NO</columna_lumbar_contractura>
+</columna_lumbar>
+</pagina2>
+<pagina3 Id="4" IdFormato="5103">
+<expo_neuro descripcion="Exporación Neurológica"/>
+<lasegue descripcion="Laségue">
+<lasegue_derecha descripcion="Derecha" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</lasegue_derecha>
+<lasegue_izquierda descripcion="Izquierda" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</lasegue_izquierda>
+</lasegue>
+<schober descripcion="Schober">
+<t_schober descripcion="Coloque la medida flexion anterior" item_lista="" lineas="1" orden="" tipo_dato="T">15</t_schober>
+<t_schober1 descripcion="Coloque la medida flexión posterior " item_lista="" lineas="1" orden="" tipo_dato="T">9</t_schober1>
+</schober>
+<bragard descripcion="Bragard">
+<bragard_derecha descripcion="Derecha" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</bragard_derecha>
+<bragard_izquierda descripcion="Izquierda" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</bragard_izquierda>
+</bragard>
+<valsalva descripcion="Valsalva">
+<valsalva_derecha descripcion="Valsalva" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</valsalva_derecha>
+<valsalva_izquierda descripcion="Valsalva" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</valsalva_izquierda>
+</valsalva>
+<phalen descripcion="Test de Phalen">
+<phalen_derecha descripcion="Derecha" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</phalen_derecha>
+<phalen_izquierda descripcion="Izquierda" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</phalen_izquierda>
+</phalen>
+<tinel descripcion="Test de Tinel">
+<tinel_derecha descripcion="Derecha" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</tinel_derecha>
+<tinel_izquierda descripcion="Izquierda" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</tinel_izquierda>
+</tinel>
+<finkel descripcion="Signo de Finkelstein">
+<finkel_derecha descripcion="Derecha" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</finkel_derecha>
+<finkel_izquierda descripcion="Izquierda" item_lista="POSITIVO/NEGATIVO/" orden="" tipo_dato="L">NEGATIVO</finkel_izquierda>
+</finkel>
+<seccion7 descripcion="Sección 7. Reporte de Resultados"/>
+<labo descripcion="Examenes de Laboratorio (Ingrese valor alterado sin unidades o coloque NORMAL)">
+<glucosa descripcion="Glucosa" item_lista="" lineas="1" orden="" tipo_dato="T">94</glucosa>
+<urea descripcion="Urea" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</urea>
+<crea descripcion="Creatinina" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</crea>
+<acido_uri descripcion="Acido Urico" item_lista="" lineas="1" orden="" tipo_dato="T">6.60</acido_uri>
+<colesterol descripcion="Colesterol" item_lista="" lineas="1" orden="" tipo_dato="T">152</colesterol>
+<trigli descripcion="Triglicéridos" item_lista="" lineas="1" orden="" tipo_dato="T">83</trigli>
+<hdl descripcion="HDL" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</hdl>
+<ldl descripcion="LDL" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</ldl>
+<tgo descripcion="TGO" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</tgo>
+<tgp descripcion="TGP" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</tgp>
+<ggt descripcion="GGT" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</ggt>
+<vdrl descripcion="VDRL" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</vdrl>
+<ige descripcion="IgE" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</ige>
+<emo descripcion="Elemental y Microscópico de Orina (Coloque NO SOLICITADO, si no tiene resultados)" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</emo>
+<copro descripcion="Coproparasitario (Coloque NO SOLICITADO, si no tiene resultados)" item_lista="" lineas="1" orden="" tipo_dato="T">NO SOLICITADO</copro>
+</labo>
+<hemograma descripcion="Hemograma Completo">
+<globulos_b descripcion="Globulos Blancos" item_lista="" lineas="1" orden="" tipo_dato="T">5</globulos_b>
+<neutrofilos descripcion="Neutrofilos" item_lista="" lineas="1" orden="" tipo_dato="T">55</neutrofilos>
+<linfocitos descripcion="Linfocitos" item_lista="" lineas="1" orden="" tipo_dato="T">33</linfocitos>
+<monocitos descripcion="Monocitos" item_lista="" lineas="1" orden="" tipo_dato="T">9</monocitos>
+<eosinofilos descripcion="Eosinofilos" item_lista="" lineas="1" orden="" tipo_dato="T">2</eosinofilos>
+<hematocrito descripcion="Hematocrito" item_lista="" lineas="1" orden="" tipo_dato="T">47.3</hematocrito>
+<hemoglobina descripcion="Hemoglobina" item_lista="" lineas="1" orden="" tipo_dato="T">16.10</hemoglobina>
+<globulos_r descripcion="Globulos Rojos" item_lista="" lineas="1" orden="" tipo_dato="T">5.48</globulos_r>
+<plaquetas descripcion="Plaquetas" item_lista="" lineas="1" orden="" tipo_dato="T">292</plaquetas>
+</hemograma>
+<oftal descripcion="Valoración Oftalmológica">
+<a_visual_derecho descripcion="Agudeza Visual Ojo Derecho" item_lista="" lineas="1" orden="" tipo_dato="T">20/20 LEJOS (SIN CORRECCION)</a_visual_derecho>
+<a_visual_izquierdo descripcion="Agudeza Visual Ojo Izquierdo" item_lista="" lineas="1" orden="" tipo_dato="T">20/20 LEJOS (SIN CORRECCION)</a_visual_izquierdo>
+<ref_ocular_derecho descripcion="Refracción Ocular Ojo Derecho" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</ref_ocular_derecho>
+<ref_ocular_izquierdo descripcion="Refracción Ocular Ojo Izquierdo" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</ref_ocular_izquierdo>
+<tono_ocular_dere descripcion="Tono ocular ojo derecho" item_lista="" lineas="1" orden="" tipo_dato="T">14 mm Hg</tono_ocular_dere>
+<tono_ocular_izquier descripcion="Tono ocular ojo izquierdo" item_lista="" lineas="1" orden="" tipo_dato="T">14 mm Hg</tono_ocular_izquier>
+<vision_crom_derecho descripcion="Vision Cromática Ojo Derecho" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</vision_crom_derecho>
+<vision_crom_izquierdo descripcion="Vision Cromática Ojo Izquierdo" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</vision_crom_izquierdo>
+<campi_derecho descripcion="Campimetría Ojo Derecho" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</campi_derecho>
+<campi_izquierdo descripcion="Campimetría Ojo Izquierdo" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</campi_izquierdo>
+<movi_oculares_derecho descripcion="Movimientos Oculares Ojo Derecho" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</movi_oculares_derecho>
+<movi_oculares_izquierdo descripcion="Movimientos Oculares Ojo Izquierdo" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</movi_oculares_izquierdo>
+<biomi_derecho descripcion="Biomicroscopía Ojo Derecho" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</biomi_derecho>
+<biomi_izquierdo descripcion="Biomicroscopía Ojo Izquierdo" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</biomi_izquierdo>
+<fondo_ojo_derecho descripcion="Fondo de Ojo Derecho" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</fondo_ojo_derecho>
+<fondo_ojo_izquierdo descripcion="Fondo de Ojo Izquierdo" item_lista="NORMAL/ANORMAL/" orden="" tipo_dato="L">NORMAL</fondo_ojo_izquierdo>
+<diagnos_derecho descripcion="Diagnóstico" item_lista="" lineas="1" orden="" tipo_dato="T">EMETROPE AO</diagnos_derecho>
+</oftal>
+<exa_radio descripcion="Exámenes Radiológicos">
+<rx_torax descripcion="Rx de Tórax" item_lista="" lineas="0" orden="" tipo_dato="T">NO SOLICITADO</rx_torax>
+<rx_cervical descripcion="Rx de Columna Cervical" item_lista="" lineas="0" orden="" tipo_dato="T">RECTIFICACION LORDOSIS (NO PATOLOGICO)</rx_cervical>
+<rx_lumbar descripcion="Rx de Columna Lumbar AP y Lateral" item_lista="" lineas="0" orden="" tipo_dato="T">ASIMETRIA POSTURAL DORSOLUMBAR (NO PATOLOGICO)
+BASCULAMIENTO PELVICO (NO PATOLOGICO)</rx_lumbar>
+</exa_radio>
+</pagina3>
+<pagina4 Id="5" IdFormato="5104">
+<val_cardio descripcion="Valoración Cardiológica">
+<electro descripcion="Electrocardiograma" item_lista="" lineas="0" orden="" tipo_dato="T">NO SOLICITADO</electro>
+</val_cardio>
+<val_oto descripcion="Valoración Otorrinolaringológica">
+<audio descripcion="Audiometría diagnóstico" item_lista="" lineas="0" orden="" tipo_dato="T">NO SOLICITADO</audio>
+<diag descripcion="Valoración Otorrino" item_lista="" lineas="0" orden="" tipo_dato="T">NO SOLICITADO</diag>
+</val_oto>
+<otro_exa descripcion="Otros Exámenes">
+<otro_exam descripcion="Otros exámenes" item_lista="" lineas="0" orden="" tipo_dato="T">NO SOLICITADOS</otro_exam>
+</otro_exa>
+<seccion8 descripcion="Sección 8. Informe final y recomendaciones"/>
+<diag8 descripcion="8.1 Diagnósticos">
+<dx descripcion="DIAGNÓSTICO GENERAL:" orden="" tipo_dato="G"/>
+</diag8>
+<obs8 descripcion="8.2 Observaciones">
+<obs descripcion="Observaciones:" item_lista="" lineas="0" orden="" tipo_dato="T">NO SE ABRE EL CUADRO DIAGNOSTICOS:
+GASTRITIS CRONICA K 297</obs>
+</obs8>
+<reco descripcion="8.3 Recomendaciones">
+<recom descripcion="Recomendaciones:" item_lista="" lineas="0" orden="" tipo_dato="T">1. DIETA NORMOCALORICA, NORMOGRASA, BLANDA GASTRICA
+2. EJERCICIO FISICO REGULAR. 
+3. CAPACITACION Y CUIDADOS DE ESPALDA. 
+3. PAUSAS ACTIVAS DURANTE LA JORNADA LABORAL. 
+5. CAMBIOS POSTURALES CADA HORA EN EL TRABAJO 
+6. EJERCICIOS DE FORTALECIMIENTO MUSCULAR LUMBAR Y ABDOMINAL
+7. CONTROL E INDICACIONES DE GASTROENTEROLOGIA
+</recom>
+</reco>
+</pagina4>
+<pagina5 Id="6" IdFormato="5105">
+<firmas descripcion="FIRMAS">
+<firma_paciente descripcion="Desea que se imprima los datos del paciente para su firma:" item_lista="" orden="" tipo_dato="S">SI</firma_paciente>
+</firmas>
+</pagina5>
+<pagina6 Id="7" IdFormato="5028">
+<resultado descripcion="CERTIFICADO SEGÚN PERFIL DE EXÁMENES">
+<tipo_chequeo descripcion="Elija el Tipo de Certificado según los exámenes realizados" item_lista="SIN EXAMENES SOLO CHEQUEO/LABORATORIO/ESPECIALIDADES/IMAGEN/LABORATORIO Y ESPECIALIDADES/LABORATORIO E IMAGEN/ESPECIALIDADES E IMAGEN/LABORATORIO, ESPECIALIDADES E IMAGEN/" orden="" tipo_dato="L">LABORATORIO, ESPECIALIDADES E IMAGEN</tipo_chequeo>
+</resultado>
+</pagina6>
+<pagina7 Id="8" IdFormato="5039"/>
+</resultados>

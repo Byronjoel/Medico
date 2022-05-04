@@ -1,0 +1,46 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="280px" height="100px">
+        <north title="Cargar archivos digitalizados"></north>
+        <center>
+            <div>              
+                <div align="center" style="top:35%; left:10%; position: absolute;">
+                    <popup id="mailPop" width="550px" onClick="@command('abrirGridResultadoGrafico')" >        
+                        <grid id="graphResults2" width="100%" mold="paging"
+                              pageSize="10" model="@{WinAuditoria$ControladoraAuditoria.graphResults2}">
+                            <columns>
+                                <column label="Icon" width="50px" />
+                                <column label="ID" width="150px" />
+                                <column label="Descripcion" width="80px" />
+                                <column label="Ctrl" width="100px" />
+                            </columns>
+                            <rows>
+                                <row self="@{each=graphResults2}">
+                                    <label value="@{graphResults2.type}"/>
+                                    <toolbarbutton label="@{graphResults2.title}"/>
+                                    <label value="@{graphResults2.id}"/>
+                                    <label value="@{graphResults2.descripcion}"/>
+                                </row>
+                            </rows>
+                        </grid>
+                     
+                        <grid id="GridResultadoGrafico" height ="300px" visible="true" emptyMessage="No hay registros de ordenes">
+                            <columns menupopup="auto"  sizable="true">
+                                <column label = "Fecha" width="12%"  align="center"/>
+                                <column label = "Orden" width="12%"  align="center" />
+                                <column label = "Estado" width="12%"  align="center" />
+                                <column label = "Paciente" width="35%" style="text-align:center;"/>
+                                                   
+                            </columns>
+                            <rows id="rowsTablaresultado"/>                                                 
+                        </grid>
+
+
+
+                    </popup>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

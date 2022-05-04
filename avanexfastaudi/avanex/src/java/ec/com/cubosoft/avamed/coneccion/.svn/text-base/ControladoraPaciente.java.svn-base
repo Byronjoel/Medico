@@ -1,0 +1,3599 @@
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.mensajes.AdmMensajes;
+import ec.com.cubosoft.avamed.mensajes.TipoMensaje;
+import ec.com.cubosoft.avamed.modelo.core.CsPerxgru;
+import ec.com.cubosoft.avamed.modelo.core.CsUsuarios;
+import ec.com.cubosoft.avamed.modelo.ingreso.Orden;
+import ec.com.cubosoft.avamed.modelo.ingreso.PracticaXOrden;
+import ec.com.cubosoft.avamed.modelo.medico.AbreviaturaXMedico;
+import ec.com.cubosoft.avamed.modelo.medico.Nombre;
+import ec.com.cubosoft.avamed.modelo.medico.Area;
+import ec.com.cubosoft.avamed.modelo.persona.Historia;
+import ec.com.cubosoft.avamed.modelo.persona.ResultadoGrafico;
+import ec.com.cubosoft.avamed.modelo.persona.XmlResultado;
+import ec.com.cubosoft.avamed.modelo.practica.Abreviatura;
+import ec.com.cubosoft.avamed.modelo.practica.FormatoXPractica;
+import ec.com.cubosoft.avamed.modelo.practica.NombreP;
+import ec.com.cubosoft.avamed.modelo.practica.TextoXAbreviatura;
+import ec.com.cubosoft.avamed.modelo.publico.Iso3166R2;
+import ec.com.cubosoft.avamed.negocio.CalcularEdad;
+import ec.com.cubosoft.avamed.negocio.ConvertirDocumento;
+import ec.com.cubosoft.avamed.procesos.AdmiNegocio;
+import ec.com.cubosoft.avamed.procesos.CreacionXml;
+import ec.com.cubosoft.avamed.procesos.ManejadoraXml;
+import ec.com.cubosoft.avamed.procesos.iReport;
+import ec.com.cubosoft.avamed.utilities.UtilFichero;
+import ec.com.cubosoft.avasus.controller.renderder.AreaRenderer;
+import ec.com.cubosoft.avasus.controller.renderder.PracticaRenderer;
+import java.io.*;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import javax.naming.NamingException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.*;
+import org.xml.sax.InputSource;
+import org.zkoss.util.media.AMedia;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.SuspendNotAllowedException;
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+import org.zkoss.zul.*;
+import org.zkoss.zul.Timer;
+
+/**
+ * @author Juan Pablo Chavez
+ * @version 1.0.1
+ * @version 1.0.2
+ *
+ * @author Patricia Amoroso
+ * @version 1.0
+ */
+public class ControladoraHistoria extends GenericForwardComposer {
+
+    private static final long serialVersionUID = 1L;
+    private boolean bandGuardar, completo, banModificar, editAudiometria,
+            visibleFrameCarga, banderaCarga;
+    int numFormatos;
+    String nombreI = "", valorBusqueda = "", diagnosticoXml, recomendacionesXml,
+            prescripcionesXml, idSeleccion = "", ocupacion = "";
+    Integer posPractica;
+    private Integer idArea, idPractica;
+    boolean limpiarBandera;
+    static final Map<String, String> INSTRUCCION = new HashMap<String, String>() {
+
+        {
+            put("1", "Primaria");
+            put("2", "Secundaria");
+            put("3", "Superior");
+            put("4", "Cuarto Nivel");
+            put("O", "Otro");
+        }
+        private static final long serialVersionUID = 1L;
+    };
+    //
+    public Button btnBuscar, btnReset, btnCancel, btnNew, btnGuardar;
+    Listbox LbxPracticas, LbxAreas, LsbOrdenesXHistoria, LsbPracticasXOrden;
+    Bandbox bbAreas, bbPracticas;
+    Grid gridXML, grdDatos;
+    Rows rowsXML, GrdFilasDatos;
+    Document doc1, newDoc;
+    Window WinHistoria;
+    Textbox bOrden, bHistorial, Valor;
+    SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
+    DateFormat formatoHora = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    Label idNombre, idEmpresa, idSexo, idEdad, idCI, idHistoria, idOrden,
+            idProfesion, idECivil, labelIdPractica, nomPractica, nombres, apellidos,
+            idInstruccion, idDireccion, fechaIngreso;
+    Iframe reporte;
+    Historia objHistoria;
+    CsPerxgru permisos;
+    CsUsuarios usuario;
+    Nombre medico;
+    ProcesosSession admiSessionUsuario = new ProcesosSession();
+    XmlResultado resultadoXML, resXml;
+    ManejadoraXml AdmXml = new ManejadoraXml();
+    CreacionXml admXml = new CreacionXml();
+    PracticaXOrden selectedPractica;
+    AdmiNegocio admNegocio;
+    Date fechaOrden, fecCreacionModifica;
+    Treechildren root;
+    String valorSeleccion;
+    Menupopup editPopup;
+    String idref;
+    Boolean bCargaAbreviaturas = false;
+    Integer idPracticaAbre;
+    String AreaPractica;
+    Integer IdAreaPractica;
+    boolean bInfConcl;
+    Selectbox areasSb;
+    //TIMER
+    Label now, counter;
+    private static int autoSave = 300;
+    private int countNum = autoSave;
+    Progressmeter pm;
+    Timer contador;
+    Include barraBotones;
+
+    public void onCreate$WinHistoria() {
+        try {
+            modificarSession();
+
+            //Creacion del Timer
+
+            this.contador = new Timer();
+
+            // timer doesn't work without a page as parent
+            this.contador.setPage(this.WinHistoria.getPage());
+            this.contador.setDelay(1000);
+            this.contador.setRepeats(true);
+            this.contador.addEventListener("onTimer", new EventListener() {
+
+                @Override
+                public void onEvent(Event event) throws Exception {
+//                    System.err.print("Contando nuevo " + new Integer(countNum).toString());
+                    //now.setValue("Time :" + new Date().toString());
+                    if (countNum == 0) {
+                        contador.setRunning(false);
+                        try {
+                            if (quietSave()) {
+                                timerRestart();
+                            }
+                            return;
+                        } catch (Exception ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                    counter.setValue("Guardado automático en: " + --countNum + " seg.");
+                    pm.setValue((autoSave - countNum) / 3);
+                }
+            });
+            this.contador.setRunning(false);
+        } catch (Exception e) {
+            //throw new RuntimeException(e.getCause().toString(), e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void modificarSession() {
+        try {
+            admNegocio = new AdmiNegocio();
+            admiSessionUsuario.AgregarAtributoSession(4, page.getId(), desktop.getSession());
+            permisos = admiSessionUsuario.ObtenerPermisosPgina(desktop.getSession());
+            usuario = (CsUsuarios) admiSessionUsuario.ObtenerAtributoSession(2, desktop.getSession());
+
+            if (usuario.getMedicos().size() > 0) {
+                medico = usuario.getMedicos().get(0);
+                idArea = medico.getArea().getId();
+                bbAreas.setValue(medico.getArea().getDescripcion());
+            } else {
+                Map<String, Object> wSQL = new HashMap<String, Object>();
+                List oSQL = new ArrayList();
+                wSQL.put("id ?=", 0);
+
+                List data = admNegocio.getData(new Nombre(), wSQL, null, oSQL);
+
+                if (data.size() > 0) {
+                    medico = (Nombre) data.get(0);
+                }
+            }
+
+            enableButtons();
+            loadAreas();
+            loadPracticas();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void enableButtons() {
+
+        Collection<Component> componentes = barraBotones.getFellows();
+
+        for (Component c : componentes) {
+            System.out.print(c.toString());
+        }
+
+        btnBuscar = (Button) barraBotones.getFellow("btnBuscar", false);
+        btnReset = (Button) barraBotones.getFellow("btnReset", false);
+        btnCancel = (Button) barraBotones.getFellow("btnCancel", false);
+        btnGuardar = (Button) barraBotones.getFellow("btnGuardar", false);
+        btnNew = (Button) barraBotones.getFellow("btnNew", false);
+
+        //Buscar
+        btnBuscar.setDisabled(false);
+        btnBuscar.setVisible(true);
+
+        btnBuscar.addEventListener(Events.ON_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                if ((bOrden.getValue().isEmpty()) && (bHistorial.getValue().isEmpty())) {
+                    //no se puuede realizar la busqueda
+                    Messagebox.show(new AdmMensajes().getMessage(TipoMensaje.INCOMPLETO), "Informacion", Messagebox.OK, Messagebox.INFORMATION);
+                } else {
+                    try {
+                        find();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+        });
+
+        //Reset
+        btnReset.setDisabled(false);
+        btnReset.setVisible(true);
+        btnReset.addEventListener(Events.ON_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                reset();
+            }
+        });
+
+        //Cancelar
+        btnCancel.setDisabled(false);
+        btnCancel.setVisible(true);
+
+        btnCancel.addEventListener(Events.ON_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                reset();
+            }
+        });
+
+        if (permisos != null) {
+            if (permisos.getAlta() == 1) { //activo nuevo
+                bandGuardar = true;
+            } else {
+                bandGuardar = true;
+                btnNew.setSclass("button-disabled");
+            }
+            if (permisos.getModif() == 1) { //activo actualizar
+                bandGuardar = true;
+            } else {
+                btnNew.setSclass("button-disabled");
+            }
+            if (permisos.getImprime() == 1) { //activo imprimir
+            } else {
+                btnNew.setSclass("button-disabled");
+            }
+            if (permisos.getSync() == 1) { //activo sincronizar
+            } else {
+                btnNew.setSclass("button-disabled");
+            }
+            if (bandGuardar) { //activo sincronizar
+                btnGuardar.setDisabled(false);
+                btnGuardar.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        eventGuardar();
+                    }
+                });
+                btnGuardar.setVisible(true);
+                btnGuardar.setDisabled(false);
+            } else {
+                btnNew.setSclass("button-disabled");
+            }
+        }
+    }
+
+    private void eventGuardar() {
+        try {
+            crearDirectorioPrincipal();
+            newDoc = admXml.crearDocumento();
+            newDoc = CreamosXMLGuardar(newDoc);
+
+            int numNodo = newDoc.getChildNodes().item(0).getChildNodes().getLength();
+            if (numNodo == numFormatos) {
+                Window winMensaje = new Window();
+                String windowMessage;
+                if ((completo)) {
+                    windowMessage = "msg_completo.zul";
+                } else {
+                    windowMessage = "msg_incompleto.zul";
+                }
+                Executions.createComponents(windowMessage, winMensaje, null);
+                final Label msg = new Label();
+                msg.setParent(winMensaje);
+                msg.setVisible(false);
+                Button save1 = (Button) winMensaje.getFellow("cbMsgSave1", false);
+                save1.addEventListener("onClick", new EventListener() {
+
+                    @Override
+                    public void onEvent(Event e) throws Exception {
+                        guardar("IN", true);
+                        Window aux;
+                        aux = (Window) msg.getParent();
+                        aux.onClose();
+                    }
+                });
+                Button save2 = (Button) winMensaje.getFellow("cbMsgSave2", false);
+                save2.addEventListener("onClick", new EventListener() {
+
+                    @Override
+                    public void onEvent(Event e) throws Exception {
+                        guardar("CO", true);
+                        Window aux;
+                        aux = (Window) msg.getParent();
+                        aux.onClose();
+                    }
+                });
+
+                Button preview = (Button) winMensaje.getFellow("cbMsgPreview", false);
+
+                preview.addEventListener("onClick", new EventListener() {
+
+                    @Override
+                    public void onEvent(Event e) throws Exception {
+
+                        //Cierro la ventana auxiliar
+                        Window aux;
+                        aux = (Window) msg.getParent();
+                        aux.onClose();
+
+                        //Guardo primero
+                        if (!guardar("IN", false)) {
+                            return;
+                        }
+
+                        //Abro la ventana de vista previa
+                        Window winMensaje = new Window();
+                        String windowMessage = "msg_preview.zul";
+                        Executions.createComponents(windowMessage, winMensaje, null);
+                        winMensaje.setBorder("normal");
+                        //winMensaje.setAction("show: slideDown;hide: slideUp");
+                        winMensaje.setClosable(true);
+                        winMensaje.setTitle("Vista Preliminar de Informe");
+                        final Label msg = new Label();
+                        msg.setParent(winMensaje);
+                        msg.setVisible(false);
+                        final Iframe frameReporte = (Iframe) winMensaje.getFellow("reporteV", false);
+
+                        Map<String, Object> wSQL = new HashMap<String, Object>();
+                        wSQL.put("orden.id", resXml.getOrden().getId());
+                        wSQL.put("practica.id", resXml.getPractica().getId());
+
+                        AMedia mediaCarga = loadReport(wSQL, true);
+
+                        if (mediaCarga != null) {
+                            frameReporte.setContent(mediaCarga);
+                            final Button validate = (Button) winMensaje.getFellow("cbMsgValidate", false);
+
+                            if ((medico.getId() == 0)) {
+                                validate.setDisabled(true);
+                            }
+
+                            validate.addEventListener("onClick", new EventListener() {
+
+                                @Override
+                                public void onEvent(Event e) throws Exception {
+                                    if (guardar("CO", true, false)) {
+                                        validate.setDisabled(true);
+
+                                        Map<String, Object> wSQL = new HashMap<String, Object>();
+                                        wSQL.put("orden.id", resXml.getOrden().getId());
+                                        wSQL.put("practica.id", resXml.getPractica().getId());
+
+                                        AMedia mediaCarga = loadReport(wSQL, true);
+                                        if (mediaCarga != null) {
+                                            frameReporte.setContent(mediaCarga);
+                                        }
+                                    }
+                                }
+                            });
+
+                            winMensaje.setId("winMsgPreview");
+                            winMensaje.setParent(WinHistoria);
+                            winMensaje.doModal();
+                        } else {
+                            Messagebox.show("El informe esta incompleto o no está cerrado, consulte con el médico responsable",
+                                    "Información / Está incompleto el informe", Messagebox.OK, Messagebox.INFORMATION);
+                        }
+                    }
+                });
+
+                if (completo) {
+                    winMensaje.setId("winMsgCompleto");
+                } else {
+                    winMensaje.setId("winMsgIncompleto");
+                }
+
+                winMensaje.setParent(WinHistoria);
+                winMensaje.doModal();
+
+            } else {
+                alert("El número de nodos es diferente al número de formatos, por favor comunique esto a la ext. 722");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e.getCause().toString(), e);
+        }
+    }
+
+    private void find() throws InterruptedException, NamingException {
+        bOrden.setValue(bOrden.getValue().trim());
+        bHistorial.setValue(bHistorial.getValue().trim());
+
+        objHistoria = (Historia) getHistoria(new Historia(), bHistorial.getValue().trim(), bOrden.getValue().trim(), "");
+
+        if (objHistoria != null) {
+            idNombre.setValue(objHistoria.getNombres() + " " + objHistoria.getApellidos());
+            nombres.setValue(objHistoria.getNombres());
+            apellidos.setValue(objHistoria.getApellidos());
+            ocupacion = objHistoria.getOcupacion();
+            if (ocupacion == null) {
+                ocupacion = "";
+            }
+
+            idSexo.setValue(new AdmMensajes().getDescripcionAbreviatura(objHistoria.getSexo()));
+            idCI.setValue(objHistoria.getNumId());
+            idHistoria.setValue(objHistoria.getId().toString());
+            idProfesion.setValue(objHistoria.getProfesion());
+            idInstruccion.setValue(INSTRUCCION.get(objHistoria.getInstruccion()));
+            idDireccion.setValue(objHistoria.getDireccion());
+            bHistorial.setValue(objHistoria.getId().toString());
+            bHistorial.setDisabled(true);
+
+            List orden = objHistoria.getOrden();
+            String empresa;
+
+            fechaOrden = null;
+
+            if (!(bOrden.getValue().isEmpty())) {
+                for (Object obj : orden) {
+                    Orden or = (Orden) obj;
+                    if (!(bOrden.getValue().isEmpty())) {
+                        if (or.getId() == (Long.parseLong(bOrden.getValue()))) {
+                            empresa = or.getOrganizacion().getAbreviatura();
+                            idEmpresa.setValue(empresa);
+                            fechaOrden = or.getFecIni();
+                            fechaIngreso.setValue(fechaOrden.toString());
+                        }
+                    }
+                }
+            }
+
+            idECivil.setValue(new AdmMensajes().getDescripcionAbreviatura(objHistoria.getEstadoCivil()));
+
+            //Calculo de la Edad
+            CalcularEdad calcEdad = new CalcularEdad(objHistoria.getFechaNace(), fechaOrden);
+
+            if (calcEdad.getAnio() == 0) {
+                if (calcEdad.getMes() == 0) {
+                    idEdad.setValue(calcEdad.obtenerDias());
+                } else {
+                    idEdad.setValue(calcEdad.obtenerMeses());
+                }
+            } else {
+                idEdad.setValue(calcEdad.obtenerAnios());
+            }
+
+            idHistoria.setValue(objHistoria.getId().toString());
+            grdDatos.setVisible(true);
+
+            //si la orden es vacia y no selecciono practica ni area me va el filtro de todo
+            if ((bOrden.getValue().isEmpty()) && ((bbAreas.getValue().isEmpty()))
+                    && ((bbPracticas.getValue().isEmpty()))) {
+
+                List ordenesXHistoria = objHistoria.getOrden();
+                selectOrdenesXHistoria(ordenesXHistoria);
+
+            } else {
+                //practicas de acuerdo a una orden
+                idOrden.setValue(bOrden.getValue());
+                selectPractica();
+            }
+
+        } else {
+            Messagebox.show("Verifique los datos y complete su Información", "Informacion", Messagebox.OK, Messagebox.INFORMATION);
+            reset();
+        }
+    }
+
+    private List getInformes() throws NamingException {
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        List oSQL = new ArrayList();
+        wSQL.put("historia.id ?=", objHistoria.getId());
+        wSQL.put("estado ?=", "CO");
+        oSQL.add("idOrden");
+
+        return admNegocio.getData(new XmlResultado(), wSQL, null, oSQL);
+    }
+
+    private void loadTree(List<XmlResultado> xmlResultados) {
+
+        Treeitem itemRoot = new Treeitem("(Todos los Informes)");
+
+        Treechildren childrenRoot = new Treechildren();
+        Treechildren childrenPaciente = null;
+        Treechildren childrenOrden = null;
+
+        BigInteger idHistoriaN = new BigInteger("0");
+        BigInteger idOrdenN = new BigInteger("-1");
+        Treeitem itemHistoria = null;
+        Treeitem itemOrden = null;
+
+        itemRoot.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+                Treeitem itemRootClicked = (Treeitem) event.getTarget();
+
+                for (Object objeto : itemRootClicked.getChildren()) {
+                    if (objeto.getClass().getCanonicalName().
+                            equals(Treechildren.class.getCanonicalName())) {
+                        for (Object subObjeto : ((Treechildren) objeto).getChildren()) {
+                            if (subObjeto.getClass().getCanonicalName().
+                                    equals(Treeitem.class.getCanonicalName())) {
+                                resultados.addAll(getResultadoLoopHistoria(((Treeitem) subObjeto)));
+                            }
+                        }
+                    }
+                }
+
+                if (resultados.size() > 0) {
+                    loadReport(resultados);
+                } else {
+                    reporte.setVisible(false);
+                    Messagebox.show("No existen informes listos para impresión en la orden escogida.");
+                }
+            }
+        });
+
+        for (XmlResultado resultado : xmlResultados) {
+
+            //Nodo de Historia
+            if (!idHistoriaN.equals(resultado.getIdHistoria())) {
+                idHistoriaN = resultado.getIdHistoria();
+
+                //Creacion del Nodo de Historia
+                itemHistoria = new Treeitem(resultado.getHistoria().getPaciente(), resultado.getIdHistoria());
+                childrenRoot.appendChild(itemHistoria);
+                childrenPaciente = new Treechildren();
+                idOrdenN = new BigInteger("-1");
+
+                itemHistoria.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        System.out.append(event.getTarget().toString());
+                        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+                        Treeitem itemHistoriaClicked = (Treeitem) event.getTarget();
+
+                        resultados.addAll(getResultadoLoopHistoria(itemHistoriaClicked));
+
+                        if (resultados.size() > 0) {
+                            loadReport(resultados);
+                        } else {
+                            reporte.setVisible(false);
+                            Messagebox.show("No existen informes listos para impresión en la orden escogida.");
+                        }
+
+                    }
+                });
+            }
+
+            //Nodo de Orden
+            if (!idOrdenN.equals(resultado.getIdOrden())) {
+                idOrdenN = resultado.getIdOrden();
+                itemOrden = new Treeitem(resultado.getIdOrden().toString(), resultado.getIdOrden());
+                childrenPaciente.appendChild(itemOrden);
+                childrenPaciente.setParent(itemHistoria);
+
+                childrenOrden = new Treechildren();
+                childrenOrden.setParent(itemOrden);
+
+                itemOrden.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        //System.out.append(event.getTarget().toString());
+                        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+                        Treeitem itemOrdenClicked = (Treeitem) event.getTarget();
+
+                        resultados.addAll(getResultadoLoopOrden(itemOrdenClicked));
+
+                        if (resultados.size() > 0) {
+                            loadReport(resultados);
+                        } else {
+                            reporte.setVisible(false);
+                            Messagebox.show("No existen informes listos para impresión en la orden escogida.");
+                        }
+                    }
+                });
+            }
+
+            //Nodo de Informes XML
+            Treeitem itemInforme = new Treeitem();
+            itemInforme.setValue(resultado);
+            Treerow rowInforme = new Treerow();
+            Treecell cellPractica = new Treecell(resultado.getPractica().getAbreviatura());
+            cellPractica.setParent(rowInforme);
+            //Imagen de estado
+            Treecell cellImgEstado = new Treecell();
+            Image imageLock;
+
+            if (resultado.getEstado().equals("IN")) {
+                imageLock = new Image("/images/editing.png");
+            } else {
+                imageLock = new Image("/images/lock.png");
+            }
+
+            imageLock.setParent(cellImgEstado);
+            cellImgEstado.setParent(rowInforme);
+            //
+            rowInforme.setParent(itemInforme);
+            itemInforme.setParent(childrenOrden);
+
+            itemInforme.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                @Override
+                public void onEvent(Event event) throws Exception {
+
+                    Treeitem itemInformeClicked = (Treeitem) event.getTarget();
+                    XmlResultado resultado = (XmlResultado) itemInformeClicked.getValue();
+
+                    System.out.append("Informe No. " + resultado.getId().toString());
+                    loadReport(resultado);
+                }
+            });
+        }
+
+        childrenRoot.setParent(itemRoot);
+        itemRoot.setParent(root);
+    }
+
+    private void loadReport(XmlResultado resultado) {
+        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+        resultados.add(resultado);
+        loadReport(resultados);
+    }
+
+    private void loadReport(List<XmlResultado> resultados) {
+
+        //Abro la ventana de vista previa
+        Window winMensaje = new Window();
+        String windowMessage = "msg_informe.zul";
+        Executions.createComponents(windowMessage, winMensaje, null);
+        winMensaje.setBorder("normal");
+        winMensaje.setClosable(true);
+        winMensaje.setTitle("Vista Preliminar de Informe");
+        final Label msg = new Label();
+        msg.setParent(winMensaje);
+        msg.setVisible(false);
+
+        final Iframe reporteV = (Iframe) winMensaje.getFellow("reporteV", false);
+        String fileName = "resultados.pdf";
+
+        if (resultados.size() == 1) {
+            fileName = null;
+            fileName = "resultado_O" + resultados.get(0).getIdOrden() + "_P" + resultados.get(0).getIdPractica();
+        }
+
+        try {
+            String global = "java:global/avasus-med/AdministradorGlobalBean";
+            String generico = "java:global/avasus-med/AdministradorGenericoBean";
+            iReport reportes = new iReport(global, generico);
+            byte[] buf = reportes.getReport(resultados, true);
+
+            if (buf != null) {
+                InputStream mediaIS = new ByteArrayInputStream(buf);
+                AMedia media = new AMedia(fileName, "pdf", "application/pdf", mediaIS);
+                reporteV.setContent(media);
+                reporteV.setVisible(true);
+            } else {
+                Messagebox.show("El informe esta incompleto o no está cerrado, consulte con el médico responsable",
+                        "Información / Está incompleto el informe", Messagebox.OK, Messagebox.INFORMATION);
+                return;
+            }
+
+            winMensaje.setId("winMsgPreview");
+            winMensaje.setParent(WinHistoria);
+            winMensaje.doModal();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private List<XmlResultado> getResultadoLoopHistoria(Treeitem itemHistoria) {
+        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+
+        for (Object objeto : itemHistoria.getChildren()) {
+//            System.out.print(objeto);
+            if (objeto.getClass().getCanonicalName().
+                    equals(Treechildren.class.getCanonicalName())) {
+                for (Object subObjeto : ((Treechildren) objeto).getChildren()) {
+                    //System.out.print("Subobjeto" + subObjeto.toString());
+                    //System.out.print("Subobjeto Valor" + ((Treeitem) subObjeto).getValue());
+                    if (subObjeto.getClass().getCanonicalName().
+                            equals(Treeitem.class.getCanonicalName())) {
+                        resultados.addAll(getResultadoLoopOrden(((Treeitem) subObjeto)));
+                    }
+                }
+            }
+        }
+
+        return resultados;
+    }
+
+    private List<XmlResultado> getResultadoLoopOrden(Treeitem itemOrden) {
+
+        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+
+        for (Object objeto : itemOrden.getChildren()) {
+            if (objeto.getClass().getCanonicalName().
+                    equals(Treechildren.class.getCanonicalName())) {
+
+                Treechildren children = (Treechildren) objeto;
+
+                for (Object subObjeto : children.getChildren()) {
+                    if (subObjeto.getClass().getCanonicalName().
+                            equals(Treeitem.class.getCanonicalName())) {
+
+                        Treeitem item = (Treeitem) subObjeto;
+
+                        if (item.getValue().getClass().getCanonicalName().
+                                equals(XmlResultado.class.getCanonicalName())) {
+                            XmlResultado resultado = (XmlResultado) item.getValue();
+                            if (resultado.getEstado().equals("CO")) {
+                                resultados.add(resultado);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return resultados;
+    }
+
+    private void selectPractica() throws NamingException, InterruptedException {
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        wSQL.put("orden.id ?=", bOrden.getValue());
+        wSQL.put("practica.id ?=", idPractica);
+        wSQL.put("practica.area.id ?=", idArea);
+        wSQL.put("orden.historia.id ?=", idHistoria.getValue());
+        wSQL.put("lockReg ?=", 0);
+
+        List oSQL = new ArrayList();
+        oSQL.add("practica.descripcion");
+
+        List practicasXOrden = admNegocio.getData(new PracticaXOrden(), wSQL, null, oSQL);
+
+        if (practicasXOrden.size() == 1) {
+            selectedPractica = (PracticaXOrden) practicasXOrden.get(0);
+            loadXMLSelectedPractica();
+        } else if (practicasXOrden.isEmpty()) {
+            Messagebox.show("No se encontraron registros para la busqueda: " + wSQL.toString());
+        } else {
+            selectPracticaXOrden(practicasXOrden);
+        }
+    }
+
+    private void loadXMLSelectedPractica() throws InterruptedException, NamingException {
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+
+        wSQL.put("practica.id ?=", selectedPractica.getPractica().getId());
+        wSQL.put("orden.id ?=", selectedPractica.getOrden().getId());
+
+        //verifo si esta en resultados
+        List XMLResultados = admNegocio.getData(new XmlResultado(), wSQL, null, null);
+
+        //Datos Comunes
+        nomPractica.setValue(selectedPractica.getPractica().getDescripcion());
+        labelIdPractica.setValue(selectedPractica.getPractica().getId().toString());
+        nomPractica.setVisible(true);
+        AreaPractica = selectedPractica.getPractica().getArea().getDescripcion();
+        IdAreaPractica = selectedPractica.getPractica().getArea().getId();
+        bCargaAbreviaturas = false;
+
+        if (XMLResultados.size() == 1) {
+            resXml = (XmlResultado) XMLResultados.get(0);
+            //verifico si es administrador o medico
+            //if ((resXml.getMedico().equals(objUsuarioActivo.getNomUsu())) || (objGrupoActivo.getCodGru().equals("ADMIN"))) {
+            loadGridResultados(resXml);
+        } else {
+            loadAbreviaturas();
+            loadGridEntradas();
+        }
+
+        //Sirve para carga de Grid Extenso
+        gridXML.renderAll();
+        gridXML.invalidate();
+        gridXML.setVisible(true);
+
+        //Historial de la derecha
+        List ListaXmlResultados = getInformes();
+        if (ListaXmlResultados != null) {
+            loadTree(ListaXmlResultados);
+        }
+
+        btnBuscar.setDisabled(true);
+    }
+
+    private void limpiarMenupop() {
+        editPopup.getChildren().clear();
+    }
+
+    public void loadAbreviaturas() {
+        try {
+            if (!(bCargaAbreviaturas)) {
+                limpiarMenupop();
+                bCargaAbreviaturas = true;
+                String auxidArea = String.valueOf(IdAreaPractica);
+                String auxidAreaUsu = String.valueOf(idArea);
+                System.out.println("ids abreviaturas PRac" + IdAreaPractica + "Area Usuario" + idArea);
+                List abreviaturas = getCabreviaturas(new AbreviaturaXMedico(), auxidArea, auxidAreaUsu);
+                if (abreviaturas.size() > 0) {
+                    for (Object objectAbreviatura : abreviaturas) {
+                        AbreviaturaXMedico objAbrevia = (AbreviaturaXMedico) objectAbreviatura;
+                        Abreviatura obj = objAbrevia.getAbreviatura();
+                        String nombre = obj.getDescripcion();
+                        List terminos = objAbrevia.getAbreviatura().getTextoXAbreviaturaList();
+                        if (terminos.size() > 0) {
+                            try {
+                                Menu objMenu = new Menu();
+                                objMenu.setLabel(nombre);
+                                Menupopup objMenupop = new Menupopup();
+//                                objMenupop.setId(objAbrevia.getId().toString());
+                                for (Object Texto : terminos) {
+                                    TextoXAbreviatura objTextoAbre = (TextoXAbreviatura) Texto;
+                                    final Menuitem itemabre = new Menuitem(objTextoAbre.getCodigo());
+                                    itemabre.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                                        @Override
+                                        public void onEvent(Event event) throws Exception {
+                                            String valn = itemabre.getSclass();
+                                            String informe;
+                                            String conclucion;
+                                            if (bInfConcl) {
+//                                         dx conclucion rx informe
+                                                System.out.println("todo el men " + valn);
+                                                if ((idref.equalsIgnoreCase("Tdx"))) {
+                                                    //cnclion
+                                                    try {
+                                                        int pos = valn.lastIndexOf("@");
+                                                        if (pos > 0) {
+                                                            conclucion = valn.substring((pos + 12), valn.length()).trim();
+                                                            try {
+                                                                Textbox auxotro = (Textbox) rowsXML.getFellowIfAny("Trx");
+                                                                informe = valn.substring(((valn.indexOf("@")) + 9), ((valn.lastIndexOf("@")))).trim();
+                                                                auxotro.setValue(auxotro.getValue() + "" + informe);
+                                                            } catch (Exception e) {
+                                                            }
+
+                                                        } else {
+                                                            conclucion = "NO REFIERE";
+                                                        }
+                                                    } catch (Exception e) {
+                                                        conclucion = "NO REFIERE";
+                                                        System.out.println(e.getMessage());
+                                                    }
+
+                                                    System.out.println("Conclusion " + conclucion);
+                                                    valn = conclucion;
+                                                }
+                                                if ((idref.equalsIgnoreCase("Trx"))) {
+                                                    //informe
+                                                    try {
+                                                        informe = valn.substring(((valn.indexOf("@")) + 9), ((valn.lastIndexOf("@")))).trim();
+                                                        Textbox auxotro = (Textbox) rowsXML.getFellowIfAny("Tdx");
+                                                        int pos = valn.lastIndexOf("@");
+                                                        if (pos > 0) {
+                                                            conclucion = valn.substring((pos + 12), valn.length()).trim();
+                                                            auxotro.setValue(auxotro.getValue() + " " + conclucion);
+                                                        }
+                                                    } catch (Exception e) {
+                                                        informe = "NO REFIERE";
+                                                        System.out.println(e.getMessage());
+                                                    }
+
+                                                    System.out.println("Informe " + informe);
+                                                    valn = informe;
+                                                }
+                                                bInfConcl = false;
+                                            }
+
+                                            Valor.setValue(Valor.getValue() + " " + valn);
+                                            System.out.println("El valor  click de seleccion es? " + valorSeleccion + " val");
+                                        }
+                                    });
+//                                    itemabre.setId(objTextoAbre.getId().toString());
+                                    itemabre.setSclass(objTextoAbre.getTexto());
+                                    itemabre.setParent(objMenupop);
+                                }
+                                objMenupop.setParent(objMenu);
+                                objMenu.setParent(editPopup);
+                            } catch (Exception e) {
+                                System.out.println(e.getMessage());
+                            }
+
+                        } else {
+                            final Menuitem itemabre = new Menuitem(nombre);
+//                            itemabre.setId(obj.getId().toString());
+                            itemabre.setParent(editPopup);
+                        }
+                        //Creamos el menu y ahi el submenu
+                    }
+                } else //                        
+                //                        itemabreb.setParent(editPopup);
+                {
+//                    no hay abreviaturasa para esa practica
+                    Menuitem itemvacio = new Menuitem("No Dispone Abreviaturas");
+                    itemvacio.setParent(editPopup);
+
+                }
+
+            }
+        }//            editPopup.setParent(WinHistoria);
+        catch (Exception e) {
+            System.out.println("loadAbreviaturas " + e.getMessage());
+        }
+    }
+
+    private void selectPracticaXOrden(List practicasXOrden) throws InterruptedException {
+
+        try {
+            int x = LsbPracticasXOrden.getChildren().size();
+
+            if (x >= 1) {//si hay datos toca eliminar
+                while (LsbPracticasXOrden.getChildren().size() > 0) {
+                    for (int i = 0; i < LsbPracticasXOrden.getChildren().size(); i++) {
+                        LsbPracticasXOrden.getChildren().remove(i);
+                    }
+                }
+            }
+
+            Window winMensaje = new Window();
+
+            Executions.createComponents("lista-practicas.zul", winMensaje, null);
+            final Label msg = new Label();
+            msg.setParent(winMensaje);
+            msg.setVisible(false);
+
+            final Listbox listaPracticas = (Listbox) winMensaje.getFellow("listaPracticas", false);
+
+            for (Object objeto : practicasXOrden) {
+                PracticaXOrden practicaXOrden = (PracticaXOrden) objeto;
+                NombreP objPractica = (NombreP) practicaXOrden.getPractica();
+//               - Area objarea = (Area) objPracOrden.getArea();
+                final Listitem filaPracticaOrden = new Listitem();
+                filaPracticaOrden.setValue(practicaXOrden);
+                Listcell idPractic = new Listcell(objPractica.getId().toString());
+                Listcell DesPractica = new Listcell(objPractica.getDescripcion());
+
+                Listcell cellImgEstado = new Listcell();
+                final Image imageLock;
+                if (practicaXOrden.getStsTecnico().equals("IN")) {
+                    imageLock = new Image("/images/editing.png");
+                } else if (practicaXOrden.getStsTecnico().equals("CO")) {
+                    imageLock = new Image("/images/lock.png");
+                } else {
+                    imageLock = new Image("/images/document_blank.png");
+                }
+                imageLock.setParent(cellImgEstado);
+                Listcell PracticaArea = new Listcell(objPractica.getArea().getDescripcion());
+                Listcell IdPracticaArea = new Listcell(objPractica.getArea().getId().toString());
+                filaPracticaOrden.appendChild(IdPracticaArea);
+                filaPracticaOrden.appendChild(PracticaArea);
+                filaPracticaOrden.appendChild(cellImgEstado);
+                filaPracticaOrden.appendChild(DesPractica);
+                filaPracticaOrden.appendChild(idPractic);
+                filaPracticaOrden.setParent(listaPracticas);
+            }
+
+            listaPracticas.addEventListener(Events.ON_SELECT, new EventListener() {
+
+                @Override
+                public void onEvent(Event event) throws Exception {
+
+                    Listitem itemPractica = listaPracticas.getSelectedItem();
+
+                    posPractica = listaPracticas.getSelectedIndex();
+                    Listcell b = (Listcell) itemPractica.getChildren().get(3);
+                    String x = b.getLabel().toString();
+                    b = (Listcell) itemPractica.getChildren().get(4);
+                    nomPractica.setValue(x);
+                    labelIdPractica.setValue(b.getLabel().toString());
+                    b = (Listcell) itemPractica.getChildren().get(1);
+                    AreaPractica = "";
+                    AreaPractica = b.getLabel().toString();
+                    b = (Listcell) itemPractica.getChildren().get(0);
+                    IdAreaPractica = 0;
+                    IdAreaPractica = Integer.parseInt(b.getLabel().toString());
+                    nomPractica.setVisible(true);
+
+                    selectedPractica = (PracticaXOrden) itemPractica.getValue();
+                    loadXMLSelectedPractica();
+
+//                    FiltroBusquedaResultadoSeleccionPractica(idPractica.getValue());
+                    Window aux;
+                    aux = (Window) msg.getParent();
+                    aux.onClose();
+                }
+            });
+
+            winMensaje.setWidth("500px");
+            winMensaje.setTitle("Ordenes");
+            winMensaje.setClosable(true);
+            winMensaje.setId("winMsgListaPracticas");
+            winMensaje.setParent(WinHistoria);
+            winMensaje.doModal();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void selectOrdenesXHistoria(List OrdenesXHistoria) {
+
+        try {
+            if (OrdenesXHistoria.size() > 0) {
+                int x = LsbOrdenesXHistoria.getChildren().size();
+                if (x >= 1) {//si hay datos toca eliminar
+                    while (LsbOrdenesXHistoria.getChildren().size() > 0) {
+                        for (int i = 0; i < LsbOrdenesXHistoria.getChildren().size(); i++) {
+                            LsbOrdenesXHistoria.getChildren().remove(i);
+                        }
+                    }
+                }
+
+                Window winMensaje = new Window();
+
+                Executions.createComponents("lista-ordenes.zul", winMensaje, null);
+                final Label msg = new Label();
+                msg.setParent(winMensaje);
+                msg.setVisible(false);
+
+                final Listbox listaOrdenes = (Listbox) winMensaje.getFellow("listaOrdenes", false);
+
+                for (Object objOrdenHistoria : OrdenesXHistoria) {
+                    String emp = "";
+                    Orden idOrdenLista = (Orden) objOrdenHistoria;
+                    final Listitem filaOrdenHistoria = new Listitem();
+
+                    Listcell orden = new Listcell(idOrdenLista.getId().toString());
+
+//                    Date n = new Date();
+                    Listcell ordenFecha = new Listcell(formato.format(idOrdenLista.getFecIni()));
+
+                    if ((idOrdenLista.getOrganizacion() == null) || (idOrdenLista.getOrganizacion().getAbreviatura() == null)) {
+                        emp = "";
+                    } else {
+                        emp = idOrdenLista.getOrganizacion().getAbreviatura();
+                    }
+
+                    Listcell empresa = new Listcell(emp);
+                    filaOrdenHistoria.appendChild(orden);
+                    filaOrdenHistoria.appendChild(ordenFecha);
+                    filaOrdenHistoria.appendChild(empresa);
+                    filaOrdenHistoria.setParent(listaOrdenes);
+                }
+
+                listaOrdenes.addEventListener(Events.ON_SELECT, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        Listitem a = listaOrdenes.getSelectedItem();
+                        Listcell b = (Listcell) a.getChildren().get(0);
+                        String x = b.getLabel().toString();
+                        Listcell em = (Listcell) a.getChildren().get(2);
+                        String ems = em.getLabel().toString();
+                        Listcell fec = (Listcell) a.getChildren().get(1);
+                        String fecha = fec.getLabel().toString();
+
+                        fechaOrden = formato.parse(fecha);
+                        fechaIngreso.setValue(fecha);
+                        if (!(ems.isEmpty())) {
+                            bOrden.setValue(x);
+                            idOrden.setValue(x);
+                            idEmpresa.setValue(ems);
+                            bOrden.setDisabled(true);
+                            bHistorial.setValue(idHistoria.getValue());
+                            bHistorial.setDisabled(true);
+                            idSeleccion = x;
+                            selectPractica();
+                        } else {
+                            Messagebox.show("Verifique los datos del Historial y complete su Información", "Informacion", Messagebox.OK, Messagebox.INFORMATION);
+                            reset();
+                        }
+
+                        Window aux;
+                        aux = (Window) msg.getParent();
+                        aux.onClose();
+                    }
+                });
+
+                winMensaje.setWidth("500px");
+                winMensaje.setTitle("Ordenes");
+                winMensaje.setId("winMsgListaOrdenes");
+                winMensaje.setParent(WinHistoria);
+                winMensaje.doModal();
+
+            } else {
+                Messagebox.show(new AdmMensajes(TipoMensaje.ERROR_BUSCAR_VACIO).getMessage(TipoMensaje.ERROR_BUSCAR_VACIO), "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+                reset();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void cleanCab() {
+        bbPracticas.setValue("");
+        bHistorial.setValue("");
+        bOrden.setValue("");
+
+        bHistorial.setDisabled(false);
+        bOrden.setDisabled(false);
+        bbPracticas.setDisabled(false);
+        bbAreas.setDisabled(false);
+        bHistorial.setDisabled(false);
+        bOrden.setDisabled(false);
+    }
+
+    private void lockCab() {
+        bbPracticas.setDisabled(true);
+        bbAreas.setDisabled(true);
+        bHistorial.setDisabled(true);
+        bOrden.setDisabled(true);
+
+    }
+
+    private void limpiarDatos() {
+        idNombre.setValue("");
+        idEmpresa.setValue("");
+        idSexo.setValue("");
+        idCI.setValue("");
+        idHistoria.setValue("");
+        idOrden.setValue("");
+        idECivil.setValue("");
+        idEdad.setValue("");
+        idHistoria.setValue("");
+        grdDatos.setVisible(false);
+
+        cleanGrid(rowsXML);
+        cleanCab();
+    }
+
+    private void reset() {
+        btnBuscar.setDisabled(false);
+        btnGuardar.setDisabled(false);
+        nomPractica.setVisible(false);
+        nomPractica.setValue("");
+        labelIdPractica.setValue("");
+        numFormatos = 0;
+
+        diagnosticoXml = "";
+        recomendacionesXml = "";
+        prescripcionesXml = "";
+        banModificar = false;
+
+        selectedPractica = null;
+
+        cleanTree();
+        cleanGrid(GrdFilasDatos);
+        limpiarDatos();
+
+        //Paro el Timer
+        timerStop();
+        counter.setValue("");
+    }
+
+    private void loadGridEntradas() {
+        //nuevo
+        NodeList listTexFrames = null;
+        Node nodoText, nodoFrame;
+        Element elemento;
+        timerRestart();
+        List dataGrid = new ArrayList();
+
+        //verificar q el grid este vacio o vaciar
+        rowsXML.getChildren().clear();
+
+        try {
+            Map<String, Object> wSQL = new HashMap<String, Object>();
+            List oSQL = new ArrayList();
+            wSQL.put("idPractica ?=", selectedPractica.getPractica().getId());
+            wSQL.put("lockReg ?=", 0);
+            oSQL.add("idHoja");
+
+            List<Object> Formatos = admNegocio.getData(new FormatoXPractica(), wSQL, null, oSQL);
+
+//            GrdReporte.setVisible(false);
+
+            if (!(Formatos.isEmpty())) {
+                numFormatos = Formatos.size() + 1;
+                for (int t = 0; t < Formatos.size(); t++) {
+                    System.out.print("Pagina " + t);
+                    FormatoXPractica formatPage = (FormatoXPractica) Formatos.get(t);
+                    String xml = new String(formatPage.getXml(), "UTF8");
+                    DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+                    doc1 = docBuilder.parse(new InputSource(new StringReader(xml)));
+                    NodeList lista = AdmXml.getlistanodos("frame", doc1);
+                    Group fila = new Group();
+                    fila.setId(formatPage.getId().toString());
+                    fila.setLabel("PAGINA" + t + "  ID Formato: " + formatPage.getIdHoja());
+                    fila.setVisible(false);
+                    fila.setParent(rowsXML);
+
+                    //de los frames
+                    for (int k = 0; k < lista.getLength(); k++) {
+                        //si es frame cre un grupo y se pasa a crear los textfail
+                        //lista de frame //obtengo el frame 0 q tiene los datos generales
+                        listTexFrames = lista.item(k).getChildNodes();
+                        nodoFrame = lista.item(k);
+                        visibleFrameCarga = true;
+                        //lista de frame o grupos
+                        listTexFrames = loadFrame(nodoFrame);
+
+                        if (listTexFrames.getLength() > 0) {
+                            dataGrid.add(nodoFrame);
+                        }
+                        //dataGrid.clear();
+                        if (listTexFrames != null) {
+                            for (int i = 0; i < listTexFrames.getLength(); i++) {
+                                nodoText = listTexFrames.item(i);
+                                if (nodoText.getNodeType() == Node.ELEMENT_NODE) {
+                                    dataGrid.add(nodoText);
+                                    elemento = (Element) nodoText;
+                                    if (elemento.getNodeName() != null) {
+                                        loadElement(elemento, nodoText);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    rowsXML.setVisible(true);
+                    System.out.println("Filas" + dataGrid.size());
+                }
+
+
+                //colOrden.onSort();
+            } else {
+                Messagebox.show("No se encontraron formatos cargados para practica "
+                        + selectedPractica.getPractica().getDescripcion());
+                reset();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        lockCab();
+
+    }
+
+    private NodeList loadFrame(Node NFrame) {
+        NodeList listTextFrames = null;
+        NodeList listanodoproperty = null;
+        Group grupo;
+
+        if (NFrame.getNodeType() == Node.ELEMENT_NODE) {
+            //le hago el nodo elemento
+            Element elemento = (Element) NFrame;
+            if (elemento.getNodeName() != null) {
+                String NomNodo = elemento.getTagName();
+                if (NomNodo.equals("frame")) {
+                    //es un grupo y tomo los textField del grupo
+                    listTextFrames = NFrame.getChildNodes();
+                    if (listTextFrames.getLength() > 0) {
+                        //tomo las propiedades del frame
+                        listanodoproperty = listTextFrames.item(1).getChildNodes();
+                    }
+
+                    String nomGrupo = "S/N";
+                    String n = "S/D";
+                    String sexoVisible = "";
+
+                    for (int j = 0; j < listanodoproperty.getLength(); j++) {
+                        //int c = listanodoproperty.getLength();
+                        Node tagitem = listanodoproperty.item(j);
+                        if (tagitem.getNodeType() == Node.ELEMENT_NODE) {
+                            elemento = (Element) tagitem;
+                            NamedNodeMap item_atributos = elemento.getAttributes();
+                            //obtener del xml el atributos show
+                            Node valname = item_atributos.item(0);
+                            Node valvalor = item_atributos.item(1);
+//                            Node valsexo = item_atributos.item(2);
+                            if ((valname != null) && (valvalor != null)) {
+                                String va = valname.getNodeValue();
+                                //NOMBRE DEL GRUPO
+                                if (va.equals("nombre")) {
+                                    nomGrupo = valvalor.getNodeValue();
+                                }
+                                if (va.equals("descripcion")) {
+                                    n = valvalor.getNodeValue();
+                                }
+                                if (va.equals("sexo")) {
+                                    sexoVisible = valvalor.getNodeValue();
+                                }
+                            }
+                        }
+                    }
+
+                    if (!(sexoVisible.isEmpty())) {
+                        if (!(sexoVisible.equalsIgnoreCase(idSexo.getValue()))) {
+                            n = "NO APLICA PARA:" + sexoVisible;
+                            visibleFrameCarga = false;
+                        }
+                    }
+
+                    grupo = new Group();
+                    grupo.setLabel(n);
+
+                    //No se pudo suprimir el estilo del grupo debido a que no se puede setear desde el css
+                    grupo.setStyle("border: 1px outset; background:#B9D103; color: black;text-align: center;");
+                    //grupo.setVisible(visibleFrameCarga);
+                    grupo.setVisible(true);
+
+                    if (nomGrupo.equals("S/D")) {
+                        nomGrupo = " ";
+                    }
+
+                    grupo.setId(nomGrupo);
+                    grupo.setParent(rowsXML);
+                }
+            }
+        }
+        return listTextFrames;
+    }
+
+    //XML NUEVO, PROCEDIMIENTO CUANDO NUEVO REGISTRO
+    private void loadElement(Element elemento, Node NText) throws InterruptedException {
+        NodeList listaNodoTextFile, listaNodoProperty = null;
+        Label lblOrden, lblNombre, lblDescripcion;
+        Node tagItem;
+        NamedNodeMap item_atributos;
+        Row row;
+        String NamNText = elemento.getTagName();
+
+        if (!visibleFrameCarga) {
+            return;
+        }
+
+        if (NamNText.equals("textField")) {
+            listaNodoTextFile = NText.getChildNodes();
+            lblOrden = new Label();
+            lblNombre = new Label("S/N");
+            lblDescripcion = new Label("S/D");
+            String tipoDato = "T", itemsLista = "", obligatorio = "", valorDef = "";
+            int lineas = 1;
+
+            String orden = "";
+            if (listaNodoTextFile.getLength() > 0) {
+                listaNodoProperty = listaNodoTextFile.item(1).getChildNodes();
+            }
+
+            //no hay propiedades
+            if (listaNodoProperty.getLength() == 1) {
+                orden = "1";
+                lblOrden.setValue(orden);
+                tipoDato = "sinPropiedades";
+            }
+
+            //RECORRO LAS PROPIEDADES DE LAS TEXTFIELD
+            for (int j = 0; j < listaNodoProperty.getLength(); j++) {
+                tagItem = listaNodoProperty.item(j);
+
+                if (tagItem.getNodeType() == Node.ELEMENT_NODE) {
+                    elemento = (Element) tagItem;
+                    item_atributos = elemento.getAttributes();
+                    //obtener del xml el atributos show
+                    Node valname = item_atributos.item(0);
+                    Node valvalor = item_atributos.item(1);
+
+                    if ((valname != null) && (valvalor != null)) {
+                        String va = valname.getNodeValue();
+                        //PROPIEDAD ORDEN
+                        if (va.equals("orden")) {
+                            orden = valvalor.getNodeValue();
+                            lblOrden.setValue(valvalor.getNodeValue());
+                        } else if (va.equals("nombre")) {
+                            lblNombre.setValue(valvalor.getNodeValue());
+                            lblNombre.setSclass("nombre-resultado");
+                        } else if (va.equals("descripcion")) {
+                            lblDescripcion.setValue(valvalor.getNodeValue());
+                            lblDescripcion.setSclass("descripcion-resultado");
+                        } else if (va.equals("lineas")) {
+                            lineas = Integer.parseInt(valvalor.getNodeValue());
+                        } else if (va.equals("item_lista")) {
+                            itemsLista = valvalor.getNodeValue();
+                        } else if (va.equals("tipo_dato")) {
+                            tipoDato = valvalor.getNodeValue();
+                        } else if (va.equals("obligatorio")) {
+                            obligatorio = valvalor.getNodeValue();
+                        } else if (va.equals("valor_defecto")) {
+                            valorDef = valvalor.getNodeValue();
+                        } else {
+                            Messagebox.show("PROPIEDAD DESCONOCIDA: '" + va + "'", "Informacion", Messagebox.OK, Messagebox.INFORMATION);
+                        }
+                    }
+                }
+            }
+
+            //agregar las columnas
+            if ((!(orden.equals("0"))) && (!(orden.isEmpty()))) {//Si es 0 no se hace nada se salta
+                row = new Row();
+                row.setSclass("row-resultado");
+                row.appendChild(lblDescripcion);
+
+//                row.appendChild(new Datebox());
+                //tipo de dato
+                if (tipoDato.equals("T")) {
+                    final Textbox nText = new Textbox();
+
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        nText.setConstraint("no empty, no future: Ingrese Dato");
+                    }
+                    switch (lineas) {
+                        case 0: {
+                            nText.setMultiline(true);
+                            nText.setRows(5);
+                            break;
+                        }
+                        case 1: {
+                            nText.setMaxlength(128);
+                            break;
+                        }
+                        case 2: {
+                            nText.setMaxlength(256);
+                            break;
+                        }
+                        default: {
+                            nText.setMaxlength(128);
+                            break;
+                        }
+                    }
+                    if (lineas == 0) {
+                        nText.addEventListener("onDoubleClick", new EventListener() {
+
+                            @Override
+                            public void onEvent(Event event) throws Exception {
+                                //Nuevo evento de edicion de doble click
+
+                                Window winEdicion = new Window();
+                                String windowMessage;
+
+                                windowMessage = "edicion-aux.zul";
+                                winEdicion.setWidth("550px");
+                                Executions.createComponents(windowMessage, winEdicion, null);
+                                final Textbox edicion = (Textbox) winEdicion.getFellow("edit-aux", true);
+                                edicion.setValue(nText.getValue());
+
+                                winEdicion.addEventListener("onClose", new EventListener() {
+
+                                    @Override
+                                    public void onEvent(Event event) throws Exception {
+                                        nText.setValue(edicion.getValue());
+                                    }
+                                });
+
+                                winEdicion.setTitle("Edición de resultado");
+                                winEdicion.setClosable(true);
+                                winEdicion.setSizable(true);
+                                winEdicion.setId("winEditAuxiliar");
+                                winEdicion.setParent(WinHistoria);
+                                winEdicion.doModal();
+                            }
+                        });
+                    }
+
+                    nText.setSclass("resultado-completo");
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        nText.setValue(valorDef);
+                    }
+
+                    nText.setId("T" + lblNombre.getValue() + new Date().toString());
+                    nText.setWidth("90%");
+                    boolean cuadroT = false;
+                    final Hlayout cuadroa = new Hlayout();
+                    final Button nAbre = new Button("");
+                    nAbre.setImage("/images/template.png");
+                    bInfConcl = false;
+                    if ((AreaPractica.equalsIgnoreCase("Rayos X")) || (AreaPractica.equalsIgnoreCase("Ecografías")) || (AreaPractica.equalsIgnoreCase("Mamografía"))) {
+
+                        if ((nText.getId().toString().equalsIgnoreCase("Tdx")) || (nText.getId().toString().equalsIgnoreCase("Trx"))) {
+                            cuadroT = true;
+                            nAbre.addEventListener(Events.ON_RIGHT_CLICK, new EventListener() {
+
+                                @Override
+                                public void onEvent(Event event) throws Exception {
+                                    bInfConcl = false;
+                                    if ((AreaPractica.equalsIgnoreCase("Rayos X")) || (AreaPractica.equalsIgnoreCase("Ecografías")) || (AreaPractica.equalsIgnoreCase("Mamografía"))) {
+                                        if ((nText.getId().toString().equalsIgnoreCase("Tdx")) || (nText.getId().toString().equalsIgnoreCase("Trx"))) {
+                                            bInfConcl = true;
+                                            idref = nText.getId().toString();
+
+                                        }
+                                    }
+                                }
+                            });
+                            nAbre.setContext(editPopup);
+                            nAbre.setWidth("40px");
+                            nAbre.setHeight("30px");
+                        }
+                    }
+
+                    if (cuadroT) {
+                        nText.setWidth("400px");
+                        cuadroa.appendChild(nAbre);
+                        cuadroa.appendChild(nText);
+                        row.appendChild(cuadroa);
+                    } else {
+                        row.appendChild(nText);
+                    }
+                    nText.setSclass("resultado");
+
+                } else if (tipoDato.equals("N")) {
+                    Decimalbox nDecimal = new Decimalbox();
+
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        // nDecimal.setConstraint("no negative,no zero");
+                    }
+
+                    nDecimal.setCols(20);
+                    //nDecimal.setFormat("#,##0.##");
+                    nDecimal.setWidth("50%");
+
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        nDecimal.setValue(new BigDecimal(valorDef));
+                        nDecimal.setDisabled(true);
+                    }
+
+                    row.appendChild(nDecimal);
+
+                } else if (tipoDato.equals("D")) {
+
+//                    System.out.print("Fecha de " + lblDescripcion.getValue());
+
+                    Datebox fechita = new Datebox();
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        fechita.setConstraint("no empty, no future: Ingrese Dato");
+                    }
+
+                    fechita.setCols(16);
+                    fechita.setFormat("dd-MMM-yyyy");
+                    fechita.setWidth("30%");
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        fechita.setText(valorDef);
+                        fechita.setDisabled(true);
+                    }
+                    fechita.setMold("rounded");
+
+                    row.appendChild(fechita);
+
+                } else if (tipoDato.equals("S")) {
+                    Radiogroup grpRadio = new Radiogroup();
+
+                    Radio lblSi = new Radio("SI");
+                    Radio lblNo = new Radio("NO");
+                    lblSi.setParent(grpRadio);
+                    lblNo.setParent(grpRadio);
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        //lblSi.s
+                    }
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        if (valorDef.equals("SI")) {
+                            lblSi.setChecked(true);
+                            lblNo.setChecked(false);
+                            lblSi.setDisabled(true);
+                            lblNo.setDisabled(true);
+                        }
+                        if (valorDef.equals("NO")) {
+                            lblSi.setChecked(false);
+                            lblNo.setChecked(true);
+                            lblSi.setDisabled(true);
+                            lblNo.setDisabled(true);
+                        }
+                    }
+
+                    lblSi.setStyle("font-size: 16px;");
+                    lblNo.setStyle("font-size: 16px;");
+
+                    grpRadio.setWidth("98%");
+                    row.appendChild(grpRadio);
+
+                } else if (tipoDato.equals("L")) {
+                    Combobox grpLista = new Combobox();
+                    String subString = itemsLista;
+                    while (!(subString.isEmpty())) {
+                        int pos = subString.indexOf("/");
+                        if (pos > 0) {
+                            String sub = subString.substring(0, pos);
+                            grpLista.appendItem(sub);
+                            subString = subString.substring(pos + 1);
+                        } else {
+                            subString = "";
+                        }
+                    }
+                    grpLista.setValue("(Seleccione)");
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        grpLista.setText(valorDef);
+                        grpLista.setDisabled(true);
+                    }
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        grpLista.setConstraint("no empty, no future: Ingrese Dato");
+                    }
+
+                    grpLista.setStyle("font-size: 16px;");
+                    grpLista.setWidth("98%");
+                    grpLista.setSclass("resultado");
+
+                    row.appendChild(grpLista);
+
+                } else if (tipoDato.equals("LD")) {
+
+                    Hbox grpListaDetalle = new Hbox();
+                    grpListaDetalle.setWidth("98%");
+                    Combobox grpLista = new Combobox();
+                    Space espacio = new Space();
+                    String subString = itemsLista;
+
+                    while (!(subString.isEmpty())) {
+                        int pos = subString.indexOf("/");
+                        if (pos > 0) {
+                            String sub = subString.substring(0, pos);
+                            grpLista.appendItem(sub);
+                            subString = subString.substring(pos + 1);
+                        } else {
+                            subString = "";
+                        }
+                    }
+                    grpLista.setValue("(Seleccione)");
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        grpLista.setText(valorDef);
+                        grpLista.setDisabled(true);
+                    }
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        grpLista.setConstraint("no empty, no future: Ingrese Dato");
+                    }
+
+                    Textbox porq = new Textbox();
+                    porq.setWidth("190%");
+                    porq.setSclass("resultado");
+                    porq.setMaxlength(256);
+
+                    //Agrego los controles al arreglo
+                    grpLista.setStyle("font-size: 16px;");
+                    grpLista.setParent(grpListaDetalle);
+                    espacio.setParent(grpListaDetalle);
+                    porq.setParent(grpListaDetalle);
+
+                    //Agrego el Arreglo a la Linea
+                    row.appendChild(grpListaDetalle);
+
+                } else if (tipoDato.equals("B")) {  //Audiometria
+
+                    Button btnAplet = new Button(lblDescripcion.getValue());
+                    if (lblDescripcion.getValue().equals("AUDIOMETRIA")) {
+//                                                audio = 1;
+                        btnAplet.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                            @Override
+                            public void onEvent(Event event) throws Exception {
+                                loadAudioApplet();
+                            }
+                        });
+                        if (!(valorDef.isEmpty())) {
+                            //    ingresa
+                            btnAplet.setLabel(valorDef);
+                        }
+                        row.appendChild(btnAplet);
+                    }
+                } else {
+                    final Textbox nText = new Textbox();
+                    nText.setMaxlength(128);
+                    nText.setCols(50);
+                    nText.setWidth("98%");
+                    nText.setSclass("resultado");
+                    if (obligatorio.equals("0")) {
+                        //    ingresa
+                        nText.setConstraint("no empty, no future: Ingrese Dato");
+                    }
+                    if (!(valorDef.isEmpty())) {
+                        //    ingresa
+                        nText.setValue(valorDef);
+                    }
+                    row.appendChild(nText);
+                }
+
+                if (row.getChildren().size() < 2) {
+                    Messagebox.show("Existe un error en el resultado, Informe a su administrador comunicarse con extensión 722",
+                            "Información de usuario", Messagebox.OK, Messagebox.ERROR);
+                } else {
+                    row.appendChild(lblNombre);
+                }
+
+                //row.setVisible(visibleFrameCarga);
+                row.setParent(rowsXML);
+            }
+        }
+    }
+    //<editor-fold defaultstate="expanded" desc="AUDITORIA DE XML">
+    private String path;
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    private void crearDirectorioPrincipal() {
+        try {
+            //ClassLoader loader = Thread.currentThread().getContextClassLoader();
+            //String path = loader.getResource("fileName").toURI().getPath();
+
+            String dir = new File(System.getProperty("user.dir")).getAbsolutePath();
+            File file = new File(dir + "/auditoria");
+            if (!file.exists()) {
+                file.mkdirs();
+            }
+            setPath(dir + "/auditoria");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+            //System.out.println(e.getMessage());
+        }
+    }
+
+    private String CrearDirectorioOrden(String DirOrden) {
+        String pathOrden = null;
+        try {
+            //ClassLoader loader = Thread.currentThread().getContextClassLoader();
+            pathOrden = getPath() + "/" + DirOrden;
+            File file = new File(pathOrden);
+            if (!file.exists()) {
+                file.mkdirs();
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+            //e.printStackTrace(System.out);
+        } finally {
+            return pathOrden;
+        }
+    }
+
+    private void guardarArchivo(XmlResultado resultadoGuardarXml) {
+        String dirXml = null;
+        try {
+            String pathOrden = CrearDirectorioOrden(resultadoGuardarXml.getOrden().getId().toString());
+            String fechaHora = new Date().toString().trim();
+            fechaHora = fechaHora.replaceAll(":", "-");
+            String orde = resultadoGuardarXml.getOrden().getId().toString();
+            String pra = resultadoGuardarXml.getPractica().getId().toString();
+
+            try {
+                dirXml = pathOrden + "/Orden- " + orde + "_Practica- " + pra + " fecha- " + fechaHora + ".xml";
+            } catch (Exception e) {
+                throw new RuntimeException(e.getCause().toString(), e);
+            }
+
+            String XMLd = resultadoGuardarXml.getResultado();
+            File archivo = new File(dirXml);
+
+            if (archivo.exists()) {
+                archivo.delete();
+            }
+
+            BufferedWriter escribir = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(archivo), "UTF8"));
+            escribir.write(XMLd);
+//            System.out.println("Guardo Archivo FISICO " + dirXml + " Contenido: " + XMLd);
+            escribir.close();
+
+        } catch (Exception e) {
+            System.out.println("Exception Guardar Archivo: " + dirXml);
+            System.out.println(e.getCause());
+            throw new RuntimeException(e);
+        }
+    }
+
+    private Document createDatosGeneralesXML(Document doc) {
+        try {
+            System.out.println("Crear Datos Generales Standar Historia_ " + idHistoria.getValue() + "Orden_" + idOrden.getValue());
+            Element grpDatos = null;
+            Element elemento = null;
+
+            String x1 = "datos_generales_standar";
+            grpDatos = doc.createElement(x1); // creamos el elemento raiz
+            doc.getDocumentElement().appendChild(grpDatos); //pegamos la raiz al documento
+
+            try {
+                Iso3166R2 ciudad = (Iso3166R2) admiSessionUsuario.ObtenerAtributoSession(5, desktop.getSession());
+
+                //ORIGEN Pais
+                elemento = doc.createElement("pais_codigo"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Código");
+                elemento.appendChild(doc.createTextNode(ciudad.getIdIso2().getIso31661().getAlfa3() != null ? ciudad.getIdIso2().getIso31661().getAlfa3() : ""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                elemento = doc.createElement("pais_descripcion"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "País");
+                elemento.appendChild(doc.createTextNode(ciudad.getIdIso2().getIso31661().getPais() != null ? ciudad.getIdIso2().getIso31661().getPais() : ""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                //ORIGEN estado
+                elemento = doc.createElement("estado_codigo"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Código");
+                elemento.appendChild(doc.createTextNode(ciudad.getIdIso2().getIso2() != null ? ciudad.getIdIso2().getIso2() : ""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                elemento = doc.createElement("estado_descripcion"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Estado");
+                elemento.appendChild(doc.createTextNode(ciudad.getIdIso2().getRegion1() != null ? ciudad.getIdIso2().getRegion1() : ""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                //ORIGEN canton
+                elemento = doc.createElement("canton_codigo"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Código");
+                elemento.appendChild(doc.createTextNode(ciudad.getCodigo() != null ? ciudad.getCodigo() : ""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                elemento = doc.createElement("canton_descripcion"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Cantón");
+                elemento.appendChild(doc.createTextNode(ciudad.getRegion2() != null ? ciudad.getRegion2() : ""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                //ORIGEN parroquia
+                elemento = doc.createElement("parroquia_codigo"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Código");
+                elemento.appendChild(doc.createTextNode(""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                elemento = doc.createElement("parroquia_descripcion"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Parroquia");
+                elemento.appendChild(doc.createTextNode(""));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            } catch (Exception e) {
+                elemento = doc.createElement("canton_descripcion"); //creamos un nuevo elemento
+                elemento.setAttribute("orden", "0");
+                elemento.setAttribute("tipo_dato", "T");
+                elemento.setAttribute("descripcion", "Cantón");
+                elemento.appendChild(doc.createTextNode("Quito"));
+                grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            }
+            //ORIGEN
+            //Id de Practica
+            elemento = doc.createElement("practica"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "PRACTICA");
+            elemento.appendChild(doc.createTextNode(labelIdPractica.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //Nombre de Practica
+            elemento = doc.createElement("nombre_practica"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "NOMBRE_PRACTICA");
+            elemento.appendChild(doc.createTextNode(nomPractica.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //DATOS PACIENTE
+            elemento = doc.createElement("paciente"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "NOMBRE");
+            elemento.appendChild(doc.createTextNode(idNombre.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //Nombres
+            elemento = doc.createElement("nombres"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "NOMBRES");
+            elemento.appendChild(doc.createTextNode(nombres.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //Apellidos
+            elemento = doc.createElement("apellidos"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "APELLIDOS");
+            elemento.appendChild(doc.createTextNode(apellidos.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //fecha_nace
+            elemento = doc.createElement("fecha_nace"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "fecha_nace");
+            elemento.appendChild(doc.createTextNode(objHistoria.getFechaNace() != null ? formato.format(objHistoria.getFechaNace()) : ""));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //ID_HISTORIA
+            elemento = doc.createElement("id_historia"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "IDHISTORIA");
+            elemento.appendChild(doc.createTextNode(idHistoria.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("empresa"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "EMPRESA");
+            elemento.appendChild(doc.createTextNode(idEmpresa.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("identificacion"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "CI");
+            elemento.appendChild(doc.createTextNode(idCI.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+//            elemento = doc.createElement("edad"); //creamos un nuevo elemento
+//            elemento.setAttribute("orden", "0");
+//            elemento.setAttribute("tipo_dato", "L");
+//            elemento.setAttribute("descripcion", "EDAD");
+//            elemento.appendChild(doc.createTextNode(idEdad.getValue()));
+//            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("estado_civil"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "ESTADOCIVIL");
+            elemento.appendChild(doc.createTextNode(idECivil.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("id_orden"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "IDORDEN");
+            elemento.appendChild(doc.createTextNode(idOrden.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("telefono"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "TELEFONO");
+            elemento.appendChild(doc.createTextNode(objHistoria.getTelefono() == null ? "" : objHistoria.getTelefono()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("sexo"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "SEXO");
+            elemento.appendChild(doc.createTextNode(idSexo.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("profesion"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "PROFESION");
+            elemento.appendChild(doc.createTextNode(idProfesion.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("edad"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "EDAD");
+            elemento.appendChild(doc.createTextNode(idEdad.getValue()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("ocupacion"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "OCUPACION");
+            elemento.appendChild(doc.createTextNode(ocupacion));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("instruccion_paciente"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "INSTRUCCION PACIENTE");
+            elemento.appendChild(doc.createTextNode(objHistoria.getInstruccion() == null ? "" : objHistoria.getInstruccion()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("ciudad_nace"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "CIUDAD NACIMIENTO");
+            elemento.appendChild(doc.createTextNode(objHistoria.getCiudadNace() == null ? "" : objHistoria.getCiudadNace()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("direccion_paciente"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "DIRECCION");
+            elemento.appendChild(doc.createTextNode(objHistoria.getDireccion() == null ? "" : objHistoria.getDireccion()));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("titulo_paciente"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "TITULO");
+            String titulo = "";
+            if ((objHistoria.getTitulo() == null) || (objHistoria.getTitulo().isEmpty())) {
+                if (objHistoria.getSexo().equalsIgnoreCase("M")) {
+                    titulo = "SR";
+                } else {
+                    titulo = "SRA";
+                }
+            } else {
+                titulo = objHistoria.getTitulo();
+            }
+            elemento.appendChild(doc.createTextNode(titulo));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //DATOS  MEDICO
+            elemento = doc.createElement("medico"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "MEDICO");
+//            Nombre nomMed = (Nombre) getCObjeto(new Nombre(), "usuario", objUsuarioActivo.getUsuario(), objUsuarioActivo.getUsuario().getClass(), 1, true);
+//            if (ObjMed == null) {
+//                ObjMed = (Nombre) getCObjeto(new Nombre(), "id", "0", Long.TYPE, 0, true);
+//            }
+            elemento.appendChild(doc.createTextNode((medico.getNombreMedico() == null ? "" : medico.getNombreMedico())));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("especialidad"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "ESPECIALIDAD");
+            elemento.appendChild(doc.createTextNode((medico.getEspecialidad() == null ? "" : medico.getEspecialidad())));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("cod_med"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "CODIGO-MEDICO");
+            elemento.appendChild(doc.createTextNode((medico.getCodMedico() == null ? "" : medico.getCodMedico())));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+
+            elemento = doc.createElement("titulo_medico"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "TITULO");
+            elemento.appendChild(doc.createTextNode("Dr"));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            //OTROS DATOS
+            elemento = doc.createElement("fecha"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "FECHA");
+            Date fecha;
+
+            if (fechaOrden != null) {
+                fecha = fechaOrden;
+            } else {
+                throw new RuntimeException("No se encontró la fecha de orden para asignar al informe.\nSe asignará la fecha actual");
+            }
+            elemento.appendChild(doc.createTextNode(formato.format(fecha)));
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            elemento = doc.createElement("fecha_hora"); //creamos un nuevo elemento
+            elemento.setAttribute("orden", "0");
+            elemento.setAttribute("tipo_dato", "L");
+            elemento.setAttribute("descripcion", "FECHA-HORA");
+            String f = formatoHora.format(fecha);
+            elemento.appendChild(doc.createTextNode(f));
+            fecCreacionModifica = null;
+            grpDatos.appendChild(elemento); //pegamos el elemento hijo a la raiz
+            System.out.println("Creado Datos Generales Standard Historia_ " + idHistoria.getValue() + "Orden_" + idOrden.getValue());
+        } catch (Exception e) {
+            System.out.println("Datos Generales Standard " + e.getMessage());
+            throw new RuntimeException(e);
+        }
+        return doc;
+    }
+
+    private Document CreamosXMLGuardar(Document doc) {
+///        Nombrenbodo datos_generales_standar
+        completo = true;
+        diagnosticoXml = "";
+        try {
+
+            Element elemento = null;
+            int con = gridXML.getRows().getGroupCount();
+            List grupos = rowsXML.getGroups();
+            Element Frame = null;
+            Element pag = null;
+            Row fila;
+            Label etiqueta;
+            //creamos DATOS GENERALES XML
+            doc = createDatosGeneralesXML(doc);
+            try {
+                boolean subgrupo = false;
+                for (int i = 0; i < con; i++) {
+                    Group grp = (Group) grupos.get(i);
+                    int x = grp.getItemCount();
+                    int y = grp.getChildren().size();
+                    if ((x == 0) && (!(subgrupo))) {//es pagina creamos en elemento de pagina
+                        String x1 = grp.getLabel().toLowerCase();
+                        String idformato = grp.getId();
+                        Integer c = x1.indexOf(":") + 2;
+                        System.out.println(x1 + " el valor c" + c);
+                        String x2 = x1.substring(c);
+                        subgrupo = true;
+                        if (x1.length() > 7) {
+                            x1 = x1.substring(0, 7);
+                        }
+                        String pagina = x1.substring(0, x1.length() - 1);
+                        if (pagina.equals("pagina")) {
+                            pag = doc.createElement(x1); // creamos el elemento raiz
+                            pag.setAttribute("Id", x2);
+                            pag.setAttribute("IdFormato", idformato);
+
+                            doc.getDocumentElement().appendChild(pag); //pegamos la raiz al documento
+                        } else {
+                            subgrupo = false;
+                            x1 = grp.getId().toLowerCase();
+                            Frame = doc.createElement(x1); // creamos el elemento raiz
+//                            String no = grp.getLabel();
+                            Frame.setAttribute("descripcion", grp.getLabel());
+                            if (grp.isVisible()) {
+//                                Frame.setAttribute("sexo", idSexo.getValue());
+                            } else {
+                                Frame.setAttribute("sexo", "!" + idSexo.getValue());
+                            }
+                            pag.appendChild(Frame); //pegamos la raiz al documento
+                        }
+                    } else {
+                        subgrupo = false;
+                        String x1 = grp.getId().toLowerCase();
+                        Frame = doc.createElement(x1); // creamos el elemento raiz
+                        Frame.setAttribute("descripcion", grp.getLabel());
+                        if (grp.isVisible()) {
+//                            Frame.setAttribute("sexo", idSexo.getValue());
+                        } else {
+                            Frame.setAttribute("sexo", "!" + idSexo.getValue());
+                        }
+                        pag.appendChild(Frame); //pegamos la raiz al documento
+                    }
+                    String tipoDato = "", nombre = "", descripcion = "", orden = "", dato = "";
+                    for (int j = 0; j < x; j++) {
+                        fila = (Row) grp.getItems().get(j);
+                        dato = "";
+                        Integer lineas = -1;
+                        String ItemLista = "";
+                        if (fila.getChildren().size() > 0) {
+                            for (int k = 0; k < fila.getChildren().size(); k++) {
+                                switch (k) {
+                                    case 0:
+                                        etiqueta = (Label) fila.getChildren().get(k);
+                                        descripcion = etiqueta.getValue(); //creamos un nuevo elemento
+                                        //tomo la descripcion
+                                        break;
+                                    case 1: //asignar depende del tipo
+                                    {
+                                        try {
+                                            String tipo = fila.getChildren().get(k).toString();
+                                            int c = tipo.indexOf(" ");
+                                            tipo = tipo.substring(1, c);
+                                            if (tipo.equals("Textbox")) {
+                                                Textbox valor = (Textbox) fila.getChildren().get(k);
+                                                tipoDato = "T";
+
+                                                dato = valor.getText();
+
+                                                if (valor.isMultiline()) {
+                                                    lineas = 0;
+                                                } else {
+                                                    if (valor.getMaxlength() == 128) {
+                                                        lineas = 1;
+                                                    } else {
+                                                        if (valor.getMaxlength() == 256) {
+                                                            lineas = 2;
+                                                        } else {
+                                                            lineas = 1;
+                                                        }
+                                                    }
+                                                }
+                                            } else if (tipo.equals("Hlayout")) {
+                                                Hlayout valor = (Hlayout) fila.getChildren().get(k);
+                                                if (valor.getChildren().size() > 0) {
+                                                    for (int l = 0; l < valor.getChildren().size(); l++) {
+                                                        switch (l) {
+                                                            case 0:
+//                                       boton no hace nada
+                                                                //tomo la descripcion
+                                                                break;
+                                                            case 1: //asignar depende del tipo
+                                                            {
+                                                                String tipo1 = valor.getChildren().get(l).toString();
+                                                                int c1 = tipo1.indexOf(" ");
+                                                                tipo1 = tipo1.substring(1, c);
+                                                                if (tipo1.equals("Textbox")) {
+                                                                    Textbox valor1 = (Textbox) valor.getChildren().get(k);
+                                                                    tipoDato = "T";
+                                                                    dato = valor1.getText();
+
+                                                                    if (valor1.isMultiline()) {
+                                                                        lineas = 0;
+                                                                    } else {
+                                                                        if (valor1.getMaxlength() == 128) {
+                                                                            lineas = 1;
+                                                                        } else {
+                                                                            if (valor1.getMaxlength() == 256) {
+                                                                                lineas = 2;
+                                                                            } else {
+                                                                                lineas = 1;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            } else if (tipo.equals("Decimalbox")) {
+                                                Decimalbox valor = (Decimalbox) fila.getChildren().get(k);
+                                                //valor.setFormat("#,##0.##");
+                                                tipoDato = "N";
+
+                                                dato = valor.getText();
+
+                                            } else if (tipo.equals("Datebox")) {
+                                                Datebox valor = (Datebox) fila.getChildren().get(k);
+                                                tipoDato = "D";
+                                                valor.setFormat("dd-MMM-yyyy");
+                                                dato = valor.getText();
+
+                                            } else if (tipo.equals("Radiogroup")) {
+                                                Radiogroup grpRadio = (Radiogroup) fila.getChildren().get(k);
+                                                if (!(grpRadio.isVisible())) {
+                                                }
+                                                int pos = grpRadio.getSelectedIndex();
+                                                if (pos > -1) {
+                                                    Radio lblradio = grpRadio.getSelectedItem();
+                                                    dato = lblradio.getLabel();
+                                                } else {
+                                                    dato = " ";
+                                                }
+
+                                                tipoDato = "S";
+                                            } else if (tipo.equals("Combobox")) {
+                                                String pos = "";
+                                                Combobox grpRadio = (Combobox) fila.getChildren().get(k);
+                                                int po = grpRadio.getSelectedIndex();
+                                                if (po > -1) {
+                                                    pos = grpRadio.getSelectedItem().getLabel();
+                                                }
+                                                if (pos.isEmpty()) {
+                                                    dato = "";
+                                                } else {
+                                                    dato = pos;
+                                                }
+                                                ItemLista = "";
+                                                for (int l = 0; l < grpRadio.getItemCount(); l++) {
+                                                    Comboitem v = grpRadio.getItemAtIndex(l);
+                                                    ItemLista = ItemLista + v.getLabel() + "/";
+                                                }
+
+                                                tipoDato = "L";
+                                            } else if (tipo.equals("Hbox")) {
+                                                String pos = "";
+                                                Hbox grpGrupo = (Hbox) fila.getChildren().get(k);
+//                                                                    Groupbox grpGrupo = (Groupbox) fila.getChildren().get(k);
+                                                Combobox comboLista = (Combobox) grpGrupo.getChildren().get(0);
+                                                Textbox porq = (Textbox) grpGrupo.getChildren().get(2);
+
+                                                int po = comboLista.getSelectedIndex();
+
+                                                if (po > -1) {
+                                                    pos = comboLista.getSelectedItem().getLabel();
+                                                }
+
+                                                if (pos.isEmpty()) {
+                                                    dato = "";
+                                                } else {
+                                                    dato = pos + "|" + porq.getValue() + "|";
+                                                }
+                                                ItemLista = "";
+                                                for (int l = 0; l < comboLista.getItemCount(); l++) {
+                                                    Comboitem v = comboLista.getItemAtIndex(l);
+                                                    ItemLista = ItemLista + v.getLabel() + "/";
+                                                }
+
+                                                tipoDato = "LD";
+                                            } else {
+                                                if (tipo.equals("Button")) {
+                                                    tipoDato = "B";
+                                                    dato = "";
+                                                } else {
+                                                    tipoDato = "T";
+                                                    dato = "";
+                                                }
+                                            }
+                                        } catch (Exception e) {
+                                            throw new RuntimeException(e);
+                                        }
+                                    }
+                                    break;
+                                    case 3:
+                                        etiqueta = (Label) fila.getChildren().get(k);
+                                        orden = etiqueta.getValue(); //creamos un nuevo elemento
+                                        break;
+                                    case 2:
+                                        etiqueta = (Label) fila.getChildren().get(k);
+                                        nombre = etiqueta.getValue();
+                                        if (nombre.equals("dx")) {
+
+                                            diagnosticoXml = dato;
+                                        }
+                                        if (nombre.equals("recomendaciones")) {
+
+                                            recomendacionesXml = dato;
+                                        }
+                                        if (nombre.equals("prescripciones")) {
+
+                                            prescripcionesXml = dato;
+                                        }
+
+                                        //System.out.print("Elemento:" +nombre);
+                                        //El nombre no tiene que ir con espacios
+                                        nombre = nombre.trim();
+
+                                        elemento = doc.createElement(nombre); //creamos un nuevo elemento
+                                        if (ItemLista != null) {
+                                            elemento.setAttribute("item_lista", ItemLista);
+                                            ItemLista = null;
+                                        }
+                                        if (lineas > -1) {
+                                            elemento.setAttribute("lineas", lineas.toString());
+                                            lineas = -1;
+                                        }
+                                        elemento.setAttribute("tipo_dato", tipoDato);
+                                        elemento.setAttribute("descripcion", descripcion);
+                                        elemento.setAttribute("orden", orden);
+                                        if (dato == null) {
+                                            dato = "";
+                                        }
+                                        if (tipoDato.equals("B")) {
+                                            String derecho = (String) session.getAttribute("derecho");
+                                            String izquierdo = (String) session.getAttribute("izquierdo");
+                                            if (derecho == null) {
+                                                derecho = "";
+                                            }
+                                            if (izquierdo == null) {
+                                                izquierdo = "";
+                                            }
+                                            if ((derecho.isEmpty()) || (izquierdo.isEmpty())) {
+                                                if ((editAudiometria) && (banModificar)) {
+                                                    completo = false;
+                                                } else {
+                                                    completo = true;
+                                                }
+                                            }
+                                            dato = "";
+                                        } else {
+                                            if (dato.isEmpty()) {
+                                                completo = false;
+                                            }
+                                        }
+                                        if (!(fila.isVisible())) {
+                                            dato = " ";
+                                        }
+//                                        else {
+//                                            elemento.setAttribute("visible", "TRUE");
+//                                        }
+                                        elemento.appendChild(doc.createTextNode(dato));
+                                        break;
+                                }
+                            }
+                            Frame.appendChild(elemento); //pegamos el elemento hijo a la raiz
+                        }
+                    }
+                }
+                NodeList listaHijos = doc.getChildNodes();
+                listaHijos = listaHijos.item(0).getChildNodes();
+                Node NPagina;
+                NPagina = listaHijos.item(0);
+                if (NPagina.getNodeType() == Node.ELEMENT_NODE) {
+                    Element elementoP = (Element) NPagina;
+                    if (elementoP.getNodeName() != null) {
+                        String NamNText = elementoP.getTagName();
+                        if (NamNText.equals("datos_generales_standar")) {
+                            //agregamos un nuevo nodo
+                            Element elementoI = doc.createElement("dx"); //creamos un nuevo elemento
+                            elementoI.setAttribute("orden", "0");
+                            elementoI.setAttribute("descripcion", "DIAGNOSTICO");
+                            elementoI.appendChild(doc.createTextNode(diagnosticoXml));
+                            elementoP.appendChild(elementoI);
+                            elementoI = doc.createElement("recomendaciones"); //creamos un nuevo elemento
+                            elementoI.setAttribute("orden", "0");
+                            elementoI.setAttribute("descripcion", "RECOMENDACIONES");
+                            if (recomendacionesXml == null) {
+                                recomendacionesXml = "";
+                            }
+                            elementoI.appendChild(doc.createTextNode(recomendacionesXml));
+                            elementoP.appendChild(elementoI);
+                            elementoI = doc.createElement("prescripciones"); //creamos un nuevo elemento
+                            elementoI.setAttribute("orden", "0");
+                            elementoI.setAttribute("descripcion", "PRESCRIPCIONES");
+                            if (prescripcionesXml == null) {
+                                prescripcionesXml = "";
+                            }
+                            elementoI.appendChild(doc.createTextNode(prescripcionesXml));
+                            elementoP.appendChild(elementoI);
+                        }
+
+                    }
+                }
+                NodeList lista = doc.getElementsByTagName("datos_generales_standar");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return doc;
+    }
+
+    private void agregarEstado(Document doc, String estado, String diagnos, boolean banderaDiagnostico) {
+        NodeList listaHijos = newDoc.getChildNodes();
+        listaHijos = listaHijos.item(0).getChildNodes();
+        Node NPagina;
+
+        //eliminanos el nodo un nuevo nodo
+        NPagina = listaHijos.item(0);
+
+        listaHijos = listaHijos.item(0).getChildNodes();
+        if (NPagina.getNodeType() == Node.ELEMENT_NODE) {
+            Element elementoP = (Element) NPagina;
+            if (elementoP.getNodeName() != null) {
+                String NamNText = elementoP.getTagName();
+                if (NamNText.equals("datos_generales_standar")) {
+                    //agregamos un nuevo nodo
+                    Element elementoI = doc.createElement("estado"); //creamos un nuevo elemento
+                    elementoI.setAttribute("orden", "0");
+                    elementoI.setAttribute("tipo_dato", "L");
+                    elementoI.setAttribute("descripcion", "ESTADO");
+                    elementoI.appendChild(doc.createTextNode(estado));
+                    elementoP.appendChild(elementoI);
+                }
+
+            }
+        }
+        //NodeList lista = doc.getElementsByTagName("datos_generales_standar");
+    }
+
+    private void confirmEditAudiometria() {
+        try {
+            Window winEditar = new Window();
+            Executions.createComponents("msg_audiometria.zul", winEditar, null);
+            final Label msg = new Label();
+            msg.setParent(winEditar);
+            msg.setVisible(false);
+            Button edit = (Button) winEditar.getFellow("MsgEditar", false);
+            edit.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                @Override
+                public void onEvent(Event e) throws Exception {
+
+                    loadAudioApplet();
+                    Window aux;
+                    aux = (Window) msg.getParent();
+                    aux.onClose();
+                }
+            });
+            winEditar.setId("winEditar");
+            winEditar.setParent(WinHistoria);
+            winEditar.doModal();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void loadAudioApplet() {
+        try {
+            Window winMensaje = new Window();
+            Executions.createComponents("audiometria.zul", winMensaje, null);
+            editAudiometria = true;
+            contador.setRunning(false);
+            winMensaje.setTitle("Audiometria");
+
+            //Nuevas dimensiones del Applet
+            winMensaje.setWidth(new Integer(new Double(getHeight() * (1.415)).intValue()).toString() + "px");
+            winMensaje.setHeight(new Integer(new Double(getHeight() * (0.9)).intValue()).toString() + "px");
+            final Label msg = new Label();
+            msg.setParent(winMensaje);
+            msg.setVisible(false);
+            Button edit = (Button) winMensaje.getFellow("btnClose", false);
+            edit.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                @Override
+                public void onEvent(Event e) throws Exception {
+
+                    Window aux;
+                    aux = (Window) msg.getParent();
+                    aux.onClose();
+                    timerRestart();
+                }
+            });
+
+
+            winMensaje.setId("winAudio");
+            winMensaje.setParent(WinHistoria);
+//            winMensaje.setSizable(true);
+            winMensaje.doModal();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e.getCause().toString(), e);
+        }
+    }
+
+    //XML MODIFICACION EDICION, PRECEDIMIENTO PARA EDICION DE XML EXISTENTE
+    void loadGrid(final XmlResultado resXml, boolean estado) {
+        //desde XmlResultados
+        editAudiometria = false;
+        numFormatos = 1;
+        NodeList listGrupos, listHijosGrupo = null;
+        Label LblNombre, LblDescripcion, LblOrden;
+        Node NItem, NGurpo, NPagina;
+        Group grupo;
+        Row NewFila;
+        idPracticaAbre = null;
+
+        if (banderaCarga) {
+            timerRestart();
+        }
+
+        try {
+            Element elemento;
+            //verificar q el grid este vacio o vaciar
+            int x = rowsXML.getChildren().size();
+            if (x >= 1) {//si hay datos toca eliminar
+                while (rowsXML.getChildren().size() > 0) {
+                    for (int i = 0; i
+                            < rowsXML.getChildren().size(); i++) {
+                        rowsXML.getChildren().remove(i);
+                    }
+                }
+            }
+
+            String xml = resXml.getResultado();
+            fecCreacionModifica = resXml.getFecIni();
+            doc1 = ConvertirDocumento.getConvertirDocumentoDocument(xml);
+            idPracticaAbre = resXml.getPractica().getId();
+            AreaPractica = resXml.getPractica().getArea().getDescripcion();
+            IdAreaPractica = resXml.getPractica().getArea().getId();
+            NodeList listaHijos = doc1.getChildNodes();
+            listaHijos = listaHijos.item(0).getChildNodes();
+
+            for (int t = 1; t < listaHijos.getLength(); t++) {
+                NPagina = listaHijos.item(t);
+                if (NPagina.getNodeType() == Node.ELEMENT_NODE) {
+                    elemento = (Element) NPagina;
+                    if (elemento.getNodeName() != null) {
+                        String NamNText = elemento.getTagName();
+                        if (!(NamNText.equals("datos_generales_standar"))) {
+                            //String c = elemento.getAttribute("Id");
+                            String idforma = elemento.getAttribute("IdFormato");
+                            numFormatos = numFormatos + 1;
+                            NamNText = NamNText + " ID Formato: " + elemento.getAttribute("Id");
+                            final Group fila = new Group();
+                            fila.setLabel(NamNText);
+                            fila.setId(idforma);
+                            //fila.setStyle("background-color:#B5B5B5;font-size: 26px;color:#4F4F4F");
+                            fila.setOpen(false);
+                            fila.setVisible(false);
+                            fila.setParent(rowsXML);
+                            listGrupos = NPagina.getChildNodes();
+                            for (int k = 0; k < listGrupos.getLength(); k++) {
+                                String descripcionXmlRes;
+                                NGurpo = listGrupos.item(k);
+                                if (NGurpo.getNodeType() == Node.ELEMENT_NODE) {
+                                    elemento = (Element) NGurpo;
+                                    if (elemento.getNodeName() != null) {
+                                        NamNText = elemento.getTagName();
+                                        grupo = new Group();
+                                        descripcionXmlRes = elemento.getAttribute("descripcion");
+                                        int numAtri = elemento.getAttributes().getLength();
+                                        String sexVisible = elemento.getAttribute("sexo");
+                                        boolean visibleEditFrameTExt = true;
+                                        if (!(sexVisible.isEmpty())) {
+                                            if (!(sexVisible.equalsIgnoreCase(idSexo.getValue()))) {
+                                                visibleEditFrameTExt = false;
+                                            }
+                                        }
+
+                                        grupo.setVisible(visibleEditFrameTExt);
+                                        grupo.setLabel(descripcionXmlRes);
+
+                                        //No se puede eliminar esta linea de estilo porque no hace caso mediante CSS
+                                        grupo.setStyle(" border: 1px outset; background: #B9D103; color: black;text-align: center; ");
+                                        grupo.setId(NamNText);
+                                        grupo.setParent(rowsXML);
+                                        listHijosGrupo = NGurpo.getChildNodes();
+                                        if (listHijosGrupo.getLength() > 0) {
+                                            for (int y = 0; y < listHijosGrupo.getLength(); y++) {
+                                                NItem = listHijosGrupo.item(y);
+                                                if (NItem.getNodeType() == Node.ELEMENT_NODE) {
+                                                    String ordenXmlRes;
+                                                    String nombreXmlRes;
+                                                    String tipoXmlRes;
+                                                    String ItemsListaXmlRes = null;
+                                                    int lineas = 1;
+                                                    elemento = (Element) NItem;
+
+                                                    if (elemento.getNodeName() != null) {
+                                                        NamNText = elemento.getTagName();
+                                                        nombreXmlRes = elemento.getTagName();
+                                                        descripcionXmlRes = elemento.getAttribute("descripcion");
+                                                        tipoXmlRes = elemento.getAttribute("tipo_dato");
+                                                        ordenXmlRes = elemento.getAttribute("orden");
+
+                                                        if ((tipoXmlRes.equals("L")) || (tipoXmlRes.equals("LD"))) {
+                                                            ItemsListaXmlRes = elemento.getAttribute("item_lista");
+                                                        }
+
+                                                        if (tipoXmlRes.equals("T")) {
+                                                            String xv = elemento.getAttribute("lineas");
+                                                            if (xv.isEmpty()) {
+                                                                lineas = 1;
+                                                            } else {
+                                                                lineas = Integer.parseInt(xv);
+                                                            }
+                                                        }
+
+                                                        String valor = elemento.getTextContent();
+                                                        if (valor == null || valor.trim().equalsIgnoreCase("")) {
+                                                            valor = "";
+                                                        }
+                                                        LblDescripcion = new Label(descripcionXmlRes);
+                                                        if (!(descripcionXmlRes.equals("S/D"))) {
+                                                            LblDescripcion.setSclass("descripcion-resultado");
+                                                        }
+                                                        LblOrden = new Label(ordenXmlRes);
+                                                        LblNombre = new Label(nombreXmlRes);
+                                                        NewFila = new Row();
+                                                        NewFila.setSclass("row-resultado");
+                                                        NewFila.appendChild(LblDescripcion);
+                                                        //verifico tipos de datos
+                                                        if (tipoXmlRes.equals("T")) {
+                                                            if (!(estado)) {
+                                                                //Si solo es para revisar
+                                                                final Label nValor = new Label(valor);
+                                                                nValor.setStyle("color:black;");
+                                                                NewFila.appendChild(nValor);
+                                                            } else {
+                                                                final Textbox nText = new Textbox(valor);
+
+                                                                nText.setSclass("resultado-completo");
+//                                                                    nText.setContext("editPopup");
+
+                                                                nText.setId("T" + LblNombre.getValue());
+
+                                                                if (valor.isEmpty()) {
+                                                                    //agregamos un hbox
+                                                                    nText.setSclass("resultado-incompleto");
+
+                                                                    nText.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            nText.setSclass("resultado-completo");
+                                                                        }
+                                                                    });
+                                                                }
+                                                                switch (lineas) {
+                                                                    case 0: {
+                                                                        nText.setMultiline(true);
+                                                                        nText.setRows(5);
+                                                                        break;
+                                                                    }
+                                                                    case 1: {
+                                                                        nText.setMaxlength(128);
+                                                                        break;
+                                                                    }
+                                                                    case 2: {
+                                                                        nText.setMaxlength(256);
+                                                                        break;
+                                                                    }
+                                                                    default: {
+                                                                        nText.setMaxlength(128);
+//                                                                            nText.setMultiline(true);
+//                                                                            nText.setRows(5);
+                                                                        break;
+                                                                    }
+                                                                }
+
+                                                                if (lineas == 0) {
+                                                                    nText.addEventListener("onDoubleClick", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            Window winEdicion = new Window();
+                                                                            String windowMessage;
+                                                                            windowMessage = "edicion-aux.zul";
+                                                                            winEdicion.setWidth("550px");
+                                                                            Executions.createComponents(windowMessage, winEdicion, null);
+                                                                            final Textbox edicion = (Textbox) winEdicion.getFellow("edit-aux", true);
+                                                                            edicion.setValue(nText.getValue());
+
+                                                                            winEdicion.addEventListener("onClose", new EventListener() {
+
+                                                                                @Override
+                                                                                public void onEvent(Event event) throws Exception {
+                                                                                    nText.setValue(edicion.getValue());
+                                                                                }
+                                                                            });
+
+                                                                            winEdicion.setTitle("Edición de resultado");
+                                                                            winEdicion.setClosable(true);
+                                                                            winEdicion.setSizable(true);
+                                                                            winEdicion.setId("winEditAuxiliar");
+                                                                            winEdicion.setParent(WinHistoria);
+                                                                            winEdicion.doModal();
+                                                                        }
+                                                                    });
+                                                                }
+                                                                nText.setWidth("90%");
+
+                                                                boolean cuadroT = false;
+                                                                final Hlayout cuadroa = new Hlayout();
+                                                                final Button nAbre = new Button("");
+
+                                                                nAbre.setImage("/images/template.png");
+                                                                bInfConcl = false;
+                                                                if ((AreaPractica.equalsIgnoreCase("Rayos X")) || (AreaPractica.equalsIgnoreCase("Ecografías")) || (AreaPractica.equalsIgnoreCase("Mamografía"))) {
+
+                                                                    if ((nText.getId().toString().equalsIgnoreCase("Tdx")) || (nText.getId().toString().equalsIgnoreCase("Trx"))) {
+                                                                        cuadroT = true;
+                                                                        nAbre.addEventListener(Events.ON_RIGHT_CLICK, new EventListener() {
+
+                                                                            @Override
+                                                                            public void onEvent(Event event) throws Exception {
+                                                                                bInfConcl = false;
+                                                                                if ((AreaPractica.equalsIgnoreCase("Rayos X")) || (AreaPractica.equalsIgnoreCase("Ecografías")) || (AreaPractica.equalsIgnoreCase("Mamografía"))) {
+                                                                                    if ((nText.getId().toString().equalsIgnoreCase("Tdx")) || (nText.getId().toString().equalsIgnoreCase("Trx"))) {
+                                                                                        bInfConcl = true;
+                                                                                        idref = nText.getId().toString();
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                        nAbre.setContext(editPopup);
+                                                                        nAbre.setWidth("40px");
+                                                                        nAbre.setHeight("30px");
+                                                                    }
+                                                                }
+                                                                try {
+                                                                    Valor = null;
+                                                                    Valor = nText;
+//                                                                                loadAbreviaturas(idPracticaAbre, objAreaUsuario, nText);
+                                                                } catch (Exception e) {
+                                                                    System.out.println(e.getMessage());
+                                                                }
+                                                                if (cuadroT) {
+                                                                    nText.setWidth("400px");
+                                                                    cuadroa.appendChild(nAbre);
+                                                                    cuadroa.appendChild(nText);
+
+                                                                    NewFila.appendChild(cuadroa);
+                                                                } else {
+                                                                    NewFila.appendChild(nText);
+                                                                }
+                                                            }
+                                                        } else if (tipoXmlRes.equals("N")) {
+                                                            if (!(estado)) {
+                                                                final Label nValor = new Label(valor);
+                                                                nValor.setStyle("color:black;");
+                                                                NewFila.appendChild(nValor);
+                                                            } else {
+                                                                final Decimalbox nDecimal;
+
+                                                                if (valor.isEmpty()) {
+                                                                    nDecimal = new Decimalbox();
+                                                                    nDecimal.setSclass("resultado-incompleto");
+                                                                    nDecimal.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            nDecimal.setSclass("resultado-completo");
+                                                                        }
+                                                                    });
+                                                                } else {
+                                                                    //nDecimal = new Decimalbox(BigDecimal.valueOf(Long.parseLong(valor)));
+                                                                    nDecimal = new Decimalbox(new BigDecimal(valor));
+                                                                    nDecimal.setSclass("resultado-completo");
+                                                                }
+                                                                nDecimal.setCols(20);
+                                                                //nDecimal.setFormat("#,##0.##");
+                                                                NewFila.appendChild(nDecimal);
+                                                            }
+                                                        } else if (tipoXmlRes.equals("D")) {
+                                                            if (!(estado)) {
+                                                                final Label nFecha = new Label(valor);
+                                                                nFecha.setStyle("color:black;");
+                                                                NewFila.appendChild(nFecha);
+                                                            } else {
+                                                                //boolean cambio = false;
+                                                                final Datebox nFecha = new Datebox();
+                                                                nFecha.setSclass("resultado");
+
+                                                                if (!(valor.trim().isEmpty())) {
+                                                                    nFecha.setFormat("dd-MMM-yyyy");
+                                                                    DateFormat formatter;
+                                                                    formatter = new SimpleDateFormat("dd-MMM-yyyy");
+                                                                    Date fec = null;
+
+                                                                    try {
+                                                                        fec = (Date) formatter.parse(valor);
+                                                                    } catch (Exception e) {
+                                                                        StringTokenizer stk = new StringTokenizer(valor, "/");
+                                                                        String d = stk.nextToken();
+                                                                        String m = stk.nextToken();
+                                                                        String a = stk.nextToken();
+                                                                        valor = a + "/" + m + "/" + d;
+                                                                        Date nuv = new Date(valor);
+                                                                        valor = formatter.format(nuv);
+                                                                        fec = (Date) formatter.parse(valor);
+
+                                                                        throw new RuntimeException(e);
+                                                                    }
+
+                                                                    System.out.println("DANDO FORMATO FECHA DEL XML " + valor + "rESxML " + resXml.getId() + " ID HISTORIA " + resXml.getHistoria());
+                                                                    nFecha.setValue(fec);
+
+                                                                } else {
+                                                                    nFecha.setSclass("resultado-incompleto");
+                                                                    nFecha.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            nFecha.setSclass("resultado-completo");
+                                                                        }
+                                                                    });
+                                                                }
+                                                                nFecha.setCols(16);
+                                                                nFecha.setMold("rounded");// nFecha.setFormat("yyyy/MM/dd"); //nFecha.setFormat("MM-dd-yy");
+
+                                                                NewFila.appendChild(nFecha);
+                                                            }
+                                                        } else if (tipoXmlRes.equals("S")) {
+                                                            if (!(estado)) {
+                                                                final Label nValor = new Label(valor);
+                                                                nValor.setStyle("color:black;");
+                                                                NewFila.appendChild(nValor);
+                                                            } else {
+                                                                Radiogroup grpRadio = new Radiogroup();
+                                                                final Radio lblSi = new Radio("SI");
+                                                                final Radio lblNo = new Radio("NO");
+
+                                                                if (valor.equals("SI")) {
+                                                                    lblSi.setChecked(true);
+                                                                    lblSi.setSclass("resultado");
+                                                                } else {
+                                                                    if (valor.equals("NO")) {
+                                                                        lblNo.setChecked(true);
+                                                                        lblNo.setSclass("resultado");
+                                                                    }
+                                                                }
+
+                                                                if (valor.trim().isEmpty()) {
+                                                                    lblSi.setSclass("sino-incompleto");
+                                                                    lblNo.setSclass("sino-incompleto");
+
+                                                                    lblSi.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            lblSi.setSclass("resultado");
+                                                                            lblNo.setSclass("resultado");
+                                                                        }
+                                                                    });
+
+                                                                    lblNo.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            lblNo.setSclass("resultado");
+                                                                            lblSi.setSclass("resultado");
+                                                                        }
+                                                                    });
+                                                                }
+
+                                                                lblSi.setStyle("font-size: 16px;");
+                                                                lblNo.setStyle("font-size: 16px;");
+
+                                                                lblSi.setParent(grpRadio);
+                                                                lblNo.setParent(grpRadio);
+                                                                NewFila.appendChild(grpRadio);
+                                                            }
+                                                        } else if (tipoXmlRes.equals("L")) {
+                                                            if (!(estado)) {
+                                                                final Label nValor = new Label(valor);
+                                                                nValor.setStyle("color:black;");
+                                                                NewFila.appendChild(nValor);
+                                                            } else {
+                                                                if (valor.isEmpty()) {
+                                                                    NewFila.setStyle("color:red;");
+                                                                }
+
+                                                                final Combobox grpLista = new Combobox();
+                                                                grpLista.setSclass("resultado");
+                                                                String subString = ItemsListaXmlRes;
+                                                                while (!(subString.isEmpty())) {
+                                                                    int pos = subString.indexOf("/");
+                                                                    if (pos > 0) {
+                                                                        String sub = subString.substring(0, pos);
+                                                                        grpLista.appendItem(sub);
+                                                                        subString = subString.substring(pos + 1);
+                                                                    } else {
+//                                                                                            subString = "";
+                                                                    }
+                                                                }
+
+                                                                if (valor.trim().isEmpty()) {
+                                                                    grpLista.setValue("(Seleccione)");
+                                                                    grpLista.setSclass("resultado-incompleto");
+                                                                    grpLista.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            grpLista.setSclass("resultado-completo");
+                                                                        }
+                                                                    });
+
+                                                                } else {
+                                                                    grpLista.setValue(valor);
+                                                                    grpLista.setSclass("resultado");
+                                                                }
+
+                                                                grpLista.setStyle("font-size: 16px;");
+                                                                grpLista.setWidth("95%");
+                                                                NewFila.appendChild(grpLista);
+                                                            }
+                                                        } else if (tipoXmlRes.equals("LD")) {
+                                                            if (!(estado)) {
+                                                                String va = null;
+                                                                if (!(valor.isEmpty())) {
+
+                                                                    String g = valor.substring(0, valor.indexOf("|"));
+                                                                    va = g;
+                                                                    g = valor.substring(valor.indexOf("|") + 1);
+                                                                    g = g.substring(0, g.indexOf("|"));
+                                                                    if (!(g.isEmpty())) {
+                                                                        va = va + " , " + g;
+                                                                    }
+                                                                } else {
+                                                                    va = "";
+                                                                }
+
+                                                                final Label nValor = new Label(va);
+                                                                nValor.setWidth("95%");
+                                                                nValor.setStyle("color:black;");
+                                                                NewFila.appendChild(nValor);
+
+                                                            } else {
+                                                                Hbox grpListaDetalle = new Hbox();
+
+                                                                final Combobox grpLista = new Combobox();
+                                                                grpLista.setParent(grpListaDetalle);
+
+                                                                Space espacio = new Space();
+                                                                //espacio.setWidth("15%");
+                                                                espacio.setParent(grpListaDetalle);
+                                                                String subString = ItemsListaXmlRes;
+
+                                                                final Textbox porq = new Textbox();
+                                                                porq.setWidth("190%");
+                                                                porq.setMaxlength(256);
+                                                                porq.setParent(grpListaDetalle);
+
+                                                                while (!(subString.isEmpty())) {
+                                                                    int pos = subString.indexOf("/");
+                                                                    if (pos > -1) {
+                                                                        String sub = subString.substring(0, pos);
+                                                                        grpLista.appendItem(sub);
+                                                                        subString = subString.substring(pos + 1);
+                                                                    } else {
+//                                                                                                subString = "";
+                                                                    }
+                                                                }
+
+                                                                if (valor.isEmpty()) {
+                                                                    //Si el resultado esta vacio
+                                                                    grpLista.setValue("(Seleccione)");
+                                                                    grpLista.setSclass("resultado-incompleto");
+                                                                    grpLista.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            grpLista.setClass("resultado-completo");
+                                                                            porq.setSclass("resultado-completo");
+                                                                        }
+                                                                    });
+
+                                                                    porq.setSclass("resultado-incompleto");
+
+                                                                } else {
+                                                                    //Si el resultado NO esta vacio
+                                                                    String g = valor.substring(0, valor.indexOf("|"));
+                                                                    grpLista.setValue(g);
+                                                                    g = valor.substring(valor.indexOf("|") + 1);
+                                                                    g = g.substring(0, g.indexOf("|"));
+                                                                    porq.setValue(g);
+                                                                    porq.setSclass("resultado");
+                                                                }
+
+                                                                grpListaDetalle.setStyle("font-size: 16px;");
+                                                                NewFila.appendChild(grpListaDetalle);
+                                                            }
+                                                        } else if (tipoXmlRes.equals("B")) {
+                                                            if (!(estado)) {
+                                                                final Button btnAplet = new Button(LblDescripcion.getValue());
+                                                                NewFila.appendChild(btnAplet);
+                                                            } else {
+                                                                final Button btnAplet = new Button(LblDescripcion.getValue());
+                                                                if (LblDescripcion.getValue().equals("AUDIOMETRIA")) {
+                                                                    btnAplet.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            confirmEditAudiometria();
+                                                                        }
+                                                                    });
+
+                                                                    NewFila.appendChild(btnAplet);
+                                                                }
+                                                            }
+                                                        } else {
+                                                            if (!(estado)) {
+                                                                final Label nValor = new Label(valor);
+                                                                nValor.setStyle("color:black;");
+                                                                NewFila.appendChild(nValor);
+                                                            } else {
+                                                                final Textbox nText = new Textbox();
+                                                                nText.setSclass("resultado");
+                                                                if (valor.isEmpty()) {
+                                                                    nText.setSclass("resultado-incompleto");
+                                                                    nText.addEventListener("onChange", new EventListener() {
+
+                                                                        @Override
+                                                                        public void onEvent(Event event) throws Exception {
+                                                                            nText.setSclass("resultado-completo");
+                                                                        }
+                                                                    });
+                                                                }
+                                                                nText.setValue(valor);
+                                                                nText.addEventListener("onDoubleClick", new EventListener() {
+
+                                                                    @Override
+                                                                    public void onEvent(Event event) throws Exception {
+                                                                        String val = nText.getValue();
+                                                                        Window winaux;
+                                                                        winaux = new Window("Edit", "none", true);
+                                                                        winaux.setPosition("center");
+                                                                        winaux.setSclass("win-edit-resultado");
+                                                                        winaux.setParent(WinHistoria);
+                                                                        winaux.doModal();
+                                                                        final Textbox aux;
+                                                                        aux = new Textbox();
+                                                                        aux.setSclass("edit-resultado");
+                                                                        aux.setMultiline(true);
+                                                                        aux.setWidth("350px");
+                                                                        aux.setHeight("120px");
+                                                                        aux.setValue(val);
+                                                                        aux.setParent(winaux);
+                                                                        winaux.addEventListener("onClose", new EventListener() {
+
+                                                                            @Override
+                                                                            public void onEvent(Event event) throws Exception {
+                                                                                String x = aux.getValue();
+                                                                                nText.setValue(aux.getValue());
+                                                                            }
+                                                                        });
+                                                                    }
+                                                                });
+                                                                nText.setWidth("90%");
+                                                                boolean cuadroT = false;
+                                                                final Hlayout cuadroa = new Hlayout();
+
+                                                                final Button nAbre = new Button("");
+                                                                nAbre.setImage("/images/template.png");
+                                                                bInfConcl = false;
+                                                                if ((AreaPractica.equalsIgnoreCase("Rayos X")) || (AreaPractica.equalsIgnoreCase("Ecografías")) || (AreaPractica.equalsIgnoreCase("Mamografía"))) {
+
+                                                                    if ((nText.getId().toString().equalsIgnoreCase("Tdx")) || (nText.getId().toString().equalsIgnoreCase("Trx"))) {
+                                                                        cuadroT = true;
+                                                                        nAbre.addEventListener(Events.ON_RIGHT_CLICK, new EventListener() {
+
+                                                                            @Override
+                                                                            public void onEvent(Event event) throws Exception {
+                                                                                bInfConcl = false;
+                                                                                if ((AreaPractica.equalsIgnoreCase("Rayos X")) || (AreaPractica.equalsIgnoreCase("Ecografías")) || (AreaPractica.equalsIgnoreCase("Mamografía"))) {
+                                                                                    if ((nText.getId().toString().equalsIgnoreCase("Tdx")) || (nText.getId().toString().equalsIgnoreCase("Trx"))) {
+                                                                                        bInfConcl = true;
+                                                                                        idref = nText.getId().toString();
+
+                                                                                    }
+                                                                                }
+                                                                                Valor = null;
+                                                                                Valor = nText;
+                                                                            }
+                                                                        });
+                                                                        nAbre.setContext(editPopup);
+                                                                        nAbre.setWidth("40px");
+                                                                        nAbre.setHeight("30px");
+                                                                    }
+                                                                }
+                                                                if (cuadroT) {
+                                                                    nText.setWidth("400px");
+                                                                    cuadroa.appendChild(nAbre);
+                                                                    cuadroa.appendChild(nText);
+                                                                    NewFila.appendChild(cuadroa);
+                                                                } else {
+                                                                    NewFila.appendChild(nText);
+                                                                }
+                                                            }
+                                                        }
+
+                                                        if (NewFila.getChildren().size() < 2) {
+                                                            Messagebox.show("Existe un error en el resultado, Informe a su administrador comunicarse con extencion 722",
+                                                                    "Información de usuario", Messagebox.OK, Messagebox.ERROR);
+                                                        } else {
+                                                            NewFila.appendChild(LblNombre);
+                                                        }
+                                                        NewFila.setVisible(visibleEditFrameTExt);
+                                                        NewFila.setParent(rowsXML);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                banModificar = true;
+                rowsXML.setVisible(true);
+                lockCab();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void loadGridResultados(XmlResultado resXml) {
+        banderaCarga = false;
+        try {
+            if (resXml.getEstado().equals("IN")) {
+                System.out.println("Cargando el Grid " + resXml.getId() + " Orden " + resXml.getOrden().getId() + " Practica " + resXml.getPractica().getDescripcion() + "Estado " + resXml.getEstado());
+                banderaCarga = true;
+                bCargaAbreviaturas = false;
+                loadAbreviaturas();
+                loadGrid(resXml, true);
+            }
+            if (resXml.getEstado().equals("CO")) {
+                final Label g = new Label("false");
+                List<CsPerxgru> listPermisos = (List<CsPerxgru>) admiSessionUsuario.ObtenerAtributoSession(6, session);
+                for (CsPerxgru objpermiso : listPermisos) {
+                    String idPermiso = objpermiso.getCsPerxgruPK().getCodPer().toString();
+                    if (idPermiso.equals("EDIT")) {
+                        final XmlResultado resXml1 = resXml;
+                        try {
+                            Window winEdit = new Window();
+                            Executions.createComponents("msg_edicion.zul", winEdit, null);
+                            final Label msg = new Label();
+                            msg.setParent(winEdit);
+                            msg.setVisible(false);
+                            Button edit = (Button) winEdit.getFellow("MsgEditar", false);
+                            edit.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                                @Override
+                                public void onEvent(Event e) throws Exception {
+                                    banderaCarga = true;
+                                    bCargaAbreviaturas = false;
+                                    loadAbreviaturas();
+                                    loadGrid(resXml1, true);
+                                    System.out.println("Cargando el Grid " + resXml1.getId() + " Orden " + resXml1.getOrden().getId() + " Practica " + resXml1.getPractica().getDescripcion() + "Estado true");
+                                    Window aux;
+                                    aux = (Window) msg.getParent();
+
+                                    aux.onClose();
+                                }
+                            });
+                            Button cancel = (Button) winEdit.getFellow("MsgCancel", false);
+                            cancel.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                                @Override
+                                public void onEvent(Event e) throws Exception {
+                                    btnGuardar.setDisabled(true);
+                                    Window aux;
+                                    aux = (Window) msg.getParent();
+                                    aux.onClose();
+                                }
+                            });
+                            winEdit.setId("winEditarHistoria");
+                            winEdit.setParent(WinHistoria);
+                            winEdit.doModal();
+
+                        } catch (SuspendNotAllowedException e) {
+                            e.printStackTrace(System.out);
+                        }
+                    }
+                }
+                if (!(banderaCarga)) {
+                    bCargaAbreviaturas = false;
+                    loadAbreviaturas();
+                    loadGrid(resXml, false);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void cleanGrid(Rows Nombre) {
+        Nombre.getChildren().clear();
+    }
+
+    public void onSelect$LbxAreas() {
+        Area areaf = (Area) LbxAreas.getSelectedItem().getValue();
+        bbAreas.setValue(areaf.getDescripcion());
+        this.idArea = areaf.getId();
+
+        System.out.print("Area escogida = " + idArea);
+
+        if (this.idArea == 0) {
+            this.idArea = null;
+        }
+
+        System.out.print("Area escogida = " + idArea);
+
+        bbAreas.close();
+    }
+
+    public Integer getIdArea() {
+        return idArea;
+    }
+
+    public void setIdArea(Integer idArea) {
+        this.idArea = idArea;
+    }
+
+    public void onSelect$LbxPracticas() {
+        NombreP practica = (NombreP) LbxPracticas.getSelectedItem().getValue();
+        bbPracticas.setValue(practica.getAbreviatura());
+        idPractica = practica.getId();
+
+        System.out.print("Practica escogida = " + idPractica);
+
+        bbPracticas.close();
+    }
+
+    public void loadAreas() throws NamingException {
+        Object table = new Area();
+        List oSQL = new ArrayList();
+        oSQL.add("descripcion");
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        wSQL.put("lockReg ?=", 0);
+        wSQL.put("idPadre?=", 0);
+        List objectList = admNegocio.getData(table, wSQL, null, oSQL);
+
+        LbxAreas.setItemRenderer(new AreaRenderer());
+        LbxAreas.setModel(new ListModelList(objectList));
+    }
+
+    public void loadPracticas() throws NamingException {
+
+        Object table = new NombreP();
+        List oSQL = new ArrayList();
+        oSQL.add("descripcion");
+
+        List objectList = admNegocio.getData(table, false, oSQL);
+
+        LbxPracticas.setItemRenderer(new PracticaRenderer());
+        LbxPracticas.setModel(new ListModelList(objectList));
+
+        bbPracticas.setValue(null);
+    }
+
+    public void cleanTree() {
+        while (root.getItemCount() > 0) {
+            root.removeChild(root.getFirstChild());
+        }
+    }
+
+    private Integer getHeight() {
+        Integer rtn;
+        String height;
+        height = WinHistoria.getHeight();
+        height = height.substring(0, height.indexOf("px"));
+        System.out.print("height " + height);
+        rtn = new Integer(height);
+        return rtn;
+    }
+
+    private AMedia loadReport(Map<String, Object> wSQL, boolean forceVisible) {
+        String global = "java:global/avasus-med/AdministradorGlobalBean";
+        String generico = "java:global/avasus-med/AdministradorGenericoBean";
+
+        iReport reportes = new iReport(global, generico);
+
+        AMedia media = null;
+        try {
+            byte[] buf = reportes.getReport(wSQL, forceVisible);
+
+            if (buf != null) {
+                InputStream mediaIS = new ByteArrayInputStream(buf);
+                media = new AMedia("Resultado.pdf", "pdf", "application/pdf", mediaIS);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        return media;
+
+    }
+
+    private void setNewXmlResultado() throws NamingException {
+        long x = Long.parseLong(idHistoria.getValue());
+        objHistoria = (Historia) admNegocio.getObjetoxID(Historia.class, x);
+        long y = Long.parseLong(idOrden.getValue());
+        Orden ord = (Orden) admNegocio.getObjetoxID(Orden.class, y);
+        //NombreP nom = (NombreP) getCObjetos(new NombreP(), "descripcion", nomPractica.getValue(), false, true);
+        NombreP nom = selectedPractica.getPractica();
+        //Nombre nomMed = new Nombre();
+        resultadoXML = new XmlResultado();
+
+        resultadoXML.setMedico(medico.getNombreMedico());
+        resultadoXML.setMedicos(medico);
+
+        resultadoXML.setEmpresa(idEmpresa.getValue());
+        resultadoXML.setFecha(new Date());
+        resultadoXML.setHistoria(objHistoria);
+
+        resultadoXML.setOrden(ord);
+
+        resultadoXML.setHora(new Date());
+        resultadoXML.setPractica(nom);
+
+        resultadoXML.setFirstUser(usuario.getUsuario());
+
+    }
+
+    private boolean saveAudiometria(Long id, String oido) throws FileNotFoundException, IOException, NamingException {
+
+        String codigo = "", descripcion = "";
+
+        if (oido.equalsIgnoreCase("IZQ")) {
+            oido = "izquierdo";
+            codigo = "AU-OI";
+            descripcion = "OIDO IZQUIERDO";
+        }
+
+        if (oido.equalsIgnoreCase("DER")) {
+            oido = "derecho";
+            codigo = "AU-OD";
+            descripcion = "OIDO DERECHO";
+        }
+
+        String oidoData = (String) session.getAttribute(oido);
+//        System.out.print("salida :" + oido + " " + oidoData.length());
+        session.setAttribute(oido, "");
+
+        ResultadoGrafico grafico;
+
+        //Save de Imagen Oido
+        if (oidoData != null) {
+            grafico = new ResultadoGrafico();
+            grafico.setIdXmlResultado(id);
+            byte[] imagen = UtilFichero.decode64S(oidoData);
+            //Imagen de Audiometria Oido
+            grafico.setCod(codigo);
+            grafico.setFirstUser(usuario.getUsuario());
+            grafico.setDato(imagen);
+            grafico.setDescripcion(descripcion);
+
+            grafico = (ResultadoGrafico) admNegocio.guardar(grafico);
+
+            if (grafico == null) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean quietSave() throws Exception {
+        crearDirectorioPrincipal();
+
+        newDoc = admXml.crearDocumento();
+        newDoc = CreamosXMLGuardar(newDoc);
+        return guardar("IN", false, true);
+    }
+
+    private boolean guardar(String estado, boolean limpiar) throws InterruptedException {
+        return guardar(estado, limpiar, true);
+    }
+
+    private boolean guardar(String estado, boolean limpiar, boolean avisos) throws InterruptedException {
+        limpiarBandera = limpiar;
+        XmlResultado nuevo = null;
+        boolean guardarExamenD = true;
+        boolean guardarExamenI = true;
+        if ((estado.equals("CO")) && (medico.getId() == 0)) {
+            estado = "IN";
+            Messagebox.show("Usted no es un Médico, por tal razón el informe quedará incompleto. \n\r"
+                    + "El informe no se cerrará hasta que un médico lo revise",
+                    "Información de usuario", Messagebox.OK, Messagebox.INFORMATION);
+        }
+        try {
+            if (banModificar) { //Si es Modificación del registro
+                System.out.print("Actualizando registro");
+
+                resXml.setMedico(medico.getNombreMedico());
+                resXml.setMedicos(medico);
+                resXml.setLastUser(usuario.getUsuario());
+                resXml.setEmpresa(idEmpresa.getValue());
+                resXml.setEstado(estado);
+                agregarEstado(newDoc, estado, diagnosticoXml, false);
+                int numNodo = newDoc.getChildNodes().item(0).getChildNodes().getLength();
+                if (numNodo == numFormatos) {
+                    resXml.setResultado(ConvertirDocumento.getConvertirDocumentoString(newDoc));
+                    if (!diagnosticoXml.isEmpty()) {
+                        resXml.setDx(diagnosticoXml);
+                    }
+//                    guardarArchivo(resXml);
+                } else {
+//                    guardarArchivo(resXml);
+                    Messagebox.show("El informe  no fue actualizado reporte el mensaje por favor", "Error", Messagebox.OK, Messagebox.ERROR);
+                    return false;
+                }
+                if (limpiar) {
+                    numFormatos = 0;
+                }
+                if (admNegocio.actualizar(resXml)) {
+                    //Actualización de los graficos de audiometria
+                    if (editAudiometria) {
+                        List listgraficos = getCObjetos(new ResultadoGrafico(), "idXmlResultado", resXml.getId(), false, true);
+                        for (Object object : listgraficos) {
+                            ResultadoGrafico objElimina = (ResultadoGrafico) object;
+                            admNegocio.eliminar(objElimina);
+                        }
+                        guardarExamenD = saveAudiometria(resXml.getId(), "DER");
+                        guardarExamenI = saveAudiometria(resXml.getId(), "IZQ");
+                        editAudiometria = false;
+                    }
+                } else {
+                    throw new RuntimeException("Error al guardar el informe, por favor comunique a la Ext. 722 al administrador del sistema.");
+                }
+
+            } else { //Si es nuevo el registro
+                System.out.print("Guardando NUEVO");
+                setNewXmlResultado();
+
+                resultadoXML.setEstado(estado);
+                agregarEstado(newDoc, estado, diagnosticoXml, false);
+
+                if (!diagnosticoXml.isEmpty()) {
+                    resultadoXML.setDx(diagnosticoXml);
+                }
+
+                int nodos = newDoc.getChildNodes().item(0).getChildNodes().getLength();
+
+                if (nodos == numFormatos) {
+                    resultadoXML.setResultado(ConvertirDocumento.getConvertirDocumentoString(newDoc));
+//                    guardarArchivo(resultadoXML);
+                } else {
+//                    guardarArchivo(resultadoXML);
+                    Messagebox.show("Resultado del Informe no fue Modificado reporte el Mensaje", "Información", Messagebox.OK, Messagebox.INFORMATION);
+                }
+                banModificar = true;
+
+                if (limpiar) {
+                    numFormatos = 0;
+                }
+
+                nuevo = (XmlResultado) admNegocio.guardar(resultadoXML);
+                resXml = nuevo;
+                resultadoXML = null;
+                if ((nuevo != null) && (editAudiometria)) {
+                    guardarExamenD = saveAudiometria(nuevo.getId(), "DER");
+                    guardarExamenI = saveAudiometria(nuevo.getId(), "IZQ");
+
+                    editAudiometria = false;
+                }
+            }
+        } catch (Exception e) {
+            reset();
+            //Messagebox.show(new AdmMensajes().getMessage(TipoMensaje.USER_NO_AUTORIZADO), "Informacion", Messagebox.OK, Messagebox.INFORMATION);
+            throw new RuntimeException(e);
+        } finally {
+            if (limpiar) {
+                btnBuscar.setDisabled(false);
+                banModificar = false;
+                reset();
+            } else {
+                timerRestart();
+            }
+
+            if (!(guardarExamenD) || (!(guardarExamenI))) {
+                //no se guardo uno de los dos
+                Messagebox.show(new AdmMensajes().getMessage(TipoMensaje.ERROR_GRABAR) + " Resultado Examen ", "Información", Messagebox.OK, Messagebox.ERROR);
+                return false;
+            } else {
+                if (limpiar && avisos) {
+                    Messagebox.show(new AdmMensajes().getMessage(TipoMensaje.GRABAR), "Informacion", Messagebox.OK, Messagebox.INFORMATION);
+
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public Object getHistoria(Object tabla, String idHistoria, String idOrden, String NumCedula)
+            throws NamingException {
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        List oSQL = new ArrayList<Object>();
+
+        wSQL.put("orden.id ?=", idOrden);
+        wSQL.put("id ?=", idHistoria);
+        wSQL.put("numId ?=", NumCedula);
+
+        oSQL.add("id");
+
+        return admNegocio.getData(tabla, wSQL, null, oSQL).get(0);
+    }
+
+    public List getCObjetos(Object tabla, String refcolumnaOrden, Object valorLike, boolean conLike, boolean bandera) throws NamingException {
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        List oSQL = new ArrayList();
+        String ref;
+
+        if (bandera) {
+            wSQL.put("lockReg ?=", 0);
+        } else {
+            wSQL.put("lockReg ?=", 1);
+        }
+
+        if (conLike) {
+            ref = refcolumnaOrden + " ?like";
+        } else {
+            ref = refcolumnaOrden + " ?=";
+        }
+        wSQL.put(ref, valorLike);
+
+        oSQL.add(refcolumnaOrden);
+        return admNegocio.getData(tabla, wSQL, null, oSQL);
+    }
+
+    public List<Object> getCabreviaturas(Object tabla, String idAreaP, String IdAreaM) throws NamingException {
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+
+        wSQL.put("lockReg ?=", 0);
+        wSQL.put("Medico.area.id ?=", IdAreaM);
+        wSQL.put("Medico.area.id ?=", idAreaP);
+        return admNegocio.getData(tabla, wSQL, null, null);
+    }
+
+    public void timerRestart() {
+        timerStop();
+        countNum = autoSave;
+        contador.setRunning(true);
+    }
+
+    public void timerStop() {
+        contador.setRunning(false);
+        counter.setValue("Guardado automático en :" + new Integer(autoSave).toString() + " seg.");
+        pm.setValue(0);
+    }
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="AvasusJPAPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>jdbc/avasus</jta-data-source>
+    <class>ec.com.cubosoft.avamed.modelo.core.Ciediez</class>
+    <class>ec.com.cubosoft.avamed.modelo.empresa.Origen</class>
+    <class>ec.com.cubosoft.avamed.modelo.empresa.Referencia</class>
+    <class>ec.com.cubosoft.avamed.modelo.ingreso.PracticaXOrden</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.AbreviaturaXMedico</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.Area</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.DetalleEspecialidad</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.Direccion</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.Edireccion</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.Especialidad</class>
+    <class>ec.com.cubosoft.avamed.modelo.medico.Nombre</class>
+    <class>ec.com.cubosoft.avamed.modelo.organizacion.DireccionO</class>
+    <class>ec.com.cubosoft.avamed.modelo.organizacion.EdireccionOrg</class>
+    <class>ec.com.cubosoft.avamed.modelo.organizacion.Organizacion</class>
+    <class>ec.com.cubosoft.avamed.modelo.organizacion.Usuario</class>
+    <class>ec.com.cubosoft.avamed.modelo.persona.Episodio</class>
+    <class>ec.com.cubosoft.avamed.modelo.persona.Historia</class>
+    <class>ec.com.cubosoft.avamed.modelo.persona.ResultadoGrafico</class>
+    <class>ec.com.cubosoft.avamed.modelo.persona.XmlResultado</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.Abreviatura</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.Codificacion</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.FormatoXPractica</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.NombreP</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.PracticaAsociada</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.PracticaXReporte</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.Reporte</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.ReporteXEmpresa</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.Sinonimo</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.Termino</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.TextoXAbreviatura</class>
+    <class>ec.com.cubosoft.avamed.modelo.publico.AudImagen</class>
+    <class>ec.com.cubosoft.avamed.modelo.publico.Iso31661</class>
+    <class>ec.com.cubosoft.avamed.modelo.publico.Iso31662</class>
+    <class>ec.com.cubosoft.avamed.modelo.publico.Iso3166R2</class>
+    <class>ec.com.cubosoft.avamed.modelo.ingreso.DxOrden</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.ImgDigital</class>
+    <class>ec.com.cubosoft.avamed.modelo.vistas.Resultado</class>
+    <class>ec.com.cubosoft.avamed.modelo.vistas.Pedidos</class>
+    <class>ec.com.cubosoft.avamed.modelo.core.Farmacos</class>
+    <class>ec.com.cubosoft.avamed.modelo.core.Presentacion</class>
+    <class>ec.com.cubosoft.avamed.modelo.persona.Receta</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.FormatoXAntecedentes</class>
+    <class>ec.com.cubosoft.avamed.modelo.practica.XmlAntecedentes</class>
+    <class>ec.com.cubosoft.avamed.modelo.persona.XmlAntecedentes</class>
+    <class>ec.com.cubosoft.avamed.modelo.vistas.VserImagen</class>
+    <class>ec.com.cubosoft.avamed.modelo.ingreso.Orden</class>
+    <class>ec.com.cubosoft.avamed.modelo.core.CsGrupos</class>
+    <class>ec.com.cubosoft.avamed.modelo.core.CsPerxgru</class>
+    <class>ec.com.cubosoft.avamed.modelo.core.CsUsuarios</class>
+    <class>ec.com.cubosoft.avamed.modelo.core.Perxuser</class>
+    <class>ec.com.cubosoft.avamed.modelo.organizacion.ImgLogo</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <properties>
+      <!--<property name="eclipselink.logging.parameters" value="true"/>-->
+      <!--<property name="eclipselink.logging.level.sql" value="FINE"/>-->
+      <!--            <property name="javax.persistence.query.timeout" value="20"/>
+            <property name="javax.persistence.lock.timeout" value="20"/>-->
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="NextlabJPAPU" transaction-type="JTA">
+    <jta-data-source>jdbc/nextlab</jta-data-source>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.LisanaPrac</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.Lismed</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.Lisori</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.Lispac</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.Lispet</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.ViewPedido</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.STransa</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.STrausu</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.SUsuar</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.LisoriEmpr</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.Listcata</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.LispetAvanex</class>
+    <class>ec.com.cubosoft.avamed.modelo.nextla.Lisord</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <properties>
+      <!--<property name="eclipselink.logging.parameters" value="true"/>-->
+      <!--<property name="eclipselink.logging.level.sql" value="FINE"/>-->
+    </properties>
+  </persistence-unit>
+</persistence>

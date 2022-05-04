@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.misanalisis.cubosoft.net/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="eReport" targetNamespace="http://ws.misanalisis.cubosoft.net/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.misanalisis.cubosoft.net/" elementFormDefault="unqualified" targetNamespace="http://ws.misanalisis.cubosoft.net/" version="1.0">
+
+  <xs:element name="PdfXOrden" type="tns:PdfXOrden"/>
+
+  <xs:element name="PdfXOrdenResponse" type="tns:PdfXOrdenResponse"/>
+
+  <xs:complexType name="PdfXOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="order" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PdfXOrdenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:pdfResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pdfResponse">
+    <xs:sequence>
+      <xs:element name="code" type="xs:int"/>
+      <xs:element name="completos" type="xs:int"/>
+      <xs:element name="incompletos" type="xs:int"/>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element minOccurs="0" name="pdf" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="PdfXOrden">
+    <wsdl:part element="tns:PdfXOrden" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PdfXOrdenResponse">
+    <wsdl:part element="tns:PdfXOrdenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="eReportWS">
+    <wsdl:operation name="PdfXOrden">
+      <wsdl:input message="tns:PdfXOrden" name="PdfXOrden">
+    </wsdl:input>
+      <wsdl:output message="tns:PdfXOrdenResponse" name="PdfXOrdenResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="eReportSoapBinding" type="tns:eReportWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="PdfXOrden">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="PdfXOrden">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="PdfXOrdenResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="eReport">
+    <wsdl:port binding="tns:eReportSoapBinding" name="eReportWSPort">
+      <soap:address location="http://localhost:9080/postlab-1.0/eReport"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

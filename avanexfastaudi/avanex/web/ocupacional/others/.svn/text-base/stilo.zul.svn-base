@@ -1,0 +1,24 @@
+  <!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+<z>
+  <style>
+                .stilo {
+    		color: blue;
+			font-style: oblique;
+                        background:
+		}
+                .z-button
+                {
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 10px;
+                    font-family: arial, sans-serif;
+                    color: black;
+                }
+                .z-textbox {
+                    color: white;
+                    border: 3px outset blue;
+                }
+    </style>
+</z>
+ 

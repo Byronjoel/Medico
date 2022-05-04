@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="42" bottomMargin="28">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="958"/>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/medico]]></fieldDescription>
+	</field>
+	<field name="cod_med" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/cod_med]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="audiometria" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/examenes2/audiometria]]></fieldDescription>
+	</field>
+	<field name="ret" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/examenes2/ret]]></fieldDescription>
+	</field>
+	<field name="rcl" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/examenes2/rcl]]></fieldDescription>
+	</field>
+	<field name="electro" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/examenes2/electro]]></fieldDescription>
+	</field>
+	<field name="resultado" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/examenes2/resultado]]></fieldDescription>
+	</field>
+	<field name="dx" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/diagno/dx]]></fieldDescription>
+	</field>
+	<field name="prescripciones" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/diagno/prescripciones]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="738" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="511" height="326">
+					<property name="nombre" value="examenes2"/>
+					<property name="descripcion" value="ESTUDIOS DE ESPECIALIDADES"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="511" height="326"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="2" y="54" width="88" height="51"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RX ESTANDAR DE TORAX]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="107" width="88" height="51"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RX COLUMNA LUMBOSACRA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="215" width="88" height="98"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[OTROS ESTUDIOS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="1" width="412" height="51">
+						<property name="orden" value="2010"/>
+						<property name="nombre" value="audiometria"/>
+						<property name="descripcion" value="AUDIOMETRIA:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{audiometria}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="54" width="412" height="51">
+						<property name="orden" value="30"/>
+						<property name="nombre" value="ret"/>
+						<property name="descripcion" value="RX ESTANDAR DE TORAX:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ret}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="107" width="412" height="51">
+						<property name="orden" value="40"/>
+						<property name="nombre" value="rcl"/>
+						<property name="descripcion" value="RX COLUMNA LUMBOSACRA:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{rcl}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="161" width="412" height="51">
+						<property name="orden" value="40"/>
+						<property name="nombre" value="electro"/>
+						<property name="descripcion" value="ELECTROCARDIOGRAMA:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{electro}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="215" width="412" height="98">
+						<property name="orden" value="2030"/>
+						<property name="nombre" value="resultado"/>
+						<property name="descripcion" value="OTROS ESTUDIOS:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{resultado}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="105" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="159" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="213" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="53" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="2" y="161" width="88" height="51"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ELECTROCARDIOGRAMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="1" width="87" height="51"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AUDIOMETRÍA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="315" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="92" y="0" width="1" height="315"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="326" width="511" height="412">
+					<property name="nombre" value="diagno"/>
+					<property name="descripcion" value="DIAGNÓSTICOS Y PRESCRIPCIONES MÉDICAS"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="511" height="412"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="2" width="97" height="12"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[IX. DIAGNÓSTICOS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="15" width="505" height="185">
+						<property name="orden" value="2040"/>
+						<property name="nombre" value="dx"/>
+						<property name="descripcion" value="DIAGNÓSTICO GENERAL:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dx}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="211" width="144" height="12"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[X. PRESCRIPCIONES MÉDICAS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="225" width="506" height="185">
+						<property name="orden" value="2050"/>
+						<property name="nombre" value="prescripciones"/>
+						<property name="descripcion" value="PRESCRIPCIONES MÉDICAS:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{prescripciones}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="209" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="201" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="25">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="12" width="100" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Id. "+$F{id_orden}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="1" width="100" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{canton_codigo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="6" width="51" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[P4 - FU]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

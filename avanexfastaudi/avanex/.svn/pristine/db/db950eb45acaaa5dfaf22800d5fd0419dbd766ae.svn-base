@@ -1,0 +1,25 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="280px" height="110px">
+        <north title="Este Informe ya tiene receta"></north>
+        <center>
+            <div>
+                <div align="center">
+                    <hbox>
+                        <label>Desea eliminar ese registro y agregar uno nuevo?</label>
+                    </hbox>
+                </div>
+                <div align="center" style="top:35%; left:10%; position: absolute;">
+                    <hbox>
+                        <div ></div>
+                        <button id="MsgNuevo" label="Nuevo" sclass="button_save1" />
+                        <div ></div>
+                        <button id="MsgImprimir" label="Imprimir" sclass="button_save1" />
+                        <div></div>
+                    </hbox>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

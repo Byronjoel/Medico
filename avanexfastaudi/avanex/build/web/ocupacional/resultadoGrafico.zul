@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>-->
+<!--?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="activewin"?-->
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="./resultadoGrafico"?>-->
+<!-- @author Juan Pablo Chavez  -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso  -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+    <style src="/css/edicion-aux.css" />        
+    
+ <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('grid.MailViewModel')">
+         
+        <hlayout id="ctlhlayout">
+            <button id="revertBtn" width="115px" label="Revert Letters" onClick="@command('revertMail')" />
+            <button id="rmAllBtn" width="115px" label="Delete All"
+                    disabled="@load(empty vm.mailData.mails)" onClick="@command('deleteAllMail')" />            
+            <button label="volver Auditoria" href="/ocupacional/adminAuditoria.zul"/>
+        </hlayout>
+
+        <grid id="GridOrdenes" height="350px"   model="@load(vm.mailData.mails)"
+              emptyMessage="Nothing in Inbox.">
+            <columns>
+                <column label="Icon" width="50px" />
+                <column label="Subject" />
+                <column label="Received" width="150px" />
+                <column label="Size" width="80px" />
+                <column label="Ctrl" width="100px" />
+            </columns>
+            <template name="model">
+                <row>
+                    <image
+                        src="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+                    <label value="@load(each.subject)" />
+                    <label value="@load(each.date)" />
+                    <label value="@load(each.size)" />
+                    <button label="Delete" onClick="@command('removeMail', mail=each)" />
+                </row>
+            </template>
+        </grid>         
+    </window>
+    
+<!--    <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('grid.MailViewModel')">
+        <hlayout id="ctlhlayout">
+            <button id="revertBtn" width="115px" label="Revert Letters" onClick="@command('revertMail')" />
+            <button id="rmAllBtn" width="115px" label="Delete All"
+                    disabled="@load(empty vm.mailData.mails)" onClick="@command('deleteAllMail')" />            
+            <button label="volver Auditoria" href="/ocupacional/adminAuditoria.zul"/>
+        </hlayout>
+
+        <grid height="350px" model="@load(vm.listResultadoGrafico)"
+              emptyMessage="Nothing in Inbox.">
+            <columns>
+                <column label="Icon" width="50px" />
+                <column label="Subject" />
+                <column label="Received" width="150px" />
+                <column label="Size" width="80px" />
+                <column label="Ctrl" width="100px" />
+            </columns>
+            <template name="model">
+                <row self="@{each=resultado_grafico}">
+                 <row>
+                    <image
+                        src="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+                    <label value="@load(each.id)" />
+                    <label value="@load(each.descripcion)" />
+                    <label value="@load(vm.resultado_grafico.descripcion)" />
+                    <button label="Delete" onClick="@command('removeMail', resultado_grafico=each)" />
+                </row>
+            </template>
+        </grid>                   
+                  
+    </window>
+    
+     <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('grid.MailViewModel')">
+        <hlayout id="ctlhlayout">
+            <button id="revertBtn" width="115px" label="Revert Letters" onClick="@command('revertMail')" />
+            <button id="rmAllBtn" width="115px" label="Delete All"
+                    disabled="@load(empty vm.mailData.mails)" onClick="@command('deleteAllMail')" />            
+            <button label="volver Auditoria" href="/ocupacional/adminAuditoria.zul"/>
+        </hlayout>
+        <separator />
+        Inbox mails : <label value="@load(vm.mailData.size)" />
+        <separator />
+        <grid height="350px" model="@load(ec.com.cubosoft.avasus.controller.renderder.OrdenIngresoRenderer.listResultadoGrafico)"
+              emptyMessage="Nothing in Inbox.">
+            <columns>
+                <column label="Icon" width="50px" />
+                <column label="Subject" />
+                <column label="Received" width="150px" />
+                <column label="Size" width="80px" />
+                <column label="Ctrl" width="100px" />
+            </columns>
+            <template name="model">
+                <row self="@{each=resultado_grafico}">
+                 <row>
+                    <image
+                        src="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+                    <label value="@load(each.id)" />
+                    <label value="@load(each.descripcion)" />
+                    <label value="@load(vm.resultado_grafico.descripcion)" />
+                    <button label="Delete" onClick="@command('removeMail', resultado_grafico=each)" />
+                </row>
+            </template>
+        </grid>   
+                                          
+                          
+    </window>-->
+    
+   
+            
+            
+<!--            <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('grid.ResultadoGraficoVM')">                
+        <grid height="350px" model="@load(vm.listResultadoGrafico)"
+              emptyMessage="Nothing in Inbox.">
+            <columns>
+                <column label="Icon" width="50px" />
+                <column label="Subject" />
+                <column label="Received" width="150px" />
+                <column label="Size" width="80px" />
+                <column label="Ctrl" width="100px" />
+            </columns>
+            <template name="model">
+                <row self="@{each=resultado_grafico}">
+                    <image
+                        src="/img/Centigrade-Widget-Icons/EnvelopeOpen-16x16.png" />
+                    <label value="@load(each.id)" />
+                    <label value="@load(each.descripcion)" />
+                    <label value="@load(vm.resultado_grafico.descripcion)" />
+                    <button label="Delete" onClick="@command('removeMail', resultado_grafico=each)" />
+                </row>
+            </template>
+        </grid>   
+        
+                    
+    </window>-->
+    
+<!--    <window id="modalDialog" title="Servcios" border="normal" width="460px" visible="false"
+            position="center,center" closable="true"  style=" border: 3px solid #86b3b1;"   action="show: slideDown;hide: slideUp">
+        <vlayout>
+            <grid>
+                <columns>
+                    <column hflex="1" label="#" />
+                    <column hflex="2" label="Descripción" align="center" />
+                    <column hflex="1" label="Quantity" align="center" />
+                </columns>
+                <rows id="practicas">
+                
+                </rows>
+            </grid>
+            <button id="closeBtn" hflex="1" label="close"/>
+        </vlayout>
+    </window>-->
+    
+            
+</zk>

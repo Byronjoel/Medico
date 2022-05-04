@@ -1,0 +1,16 @@
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./WindowMenu"?>
+
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.1  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div id="WindowMenu" apply="ec.com.cubosoft.avamed.coneccion.ControladoraMenu" >
+         <label value="@{WindowMenu$composer.referencia, load-after='BarraMenu.onCreate'}" visible="false" />
+        <menubar id="BarraMenu"   />
+        <toolbar id="barraProcesos" />
+         <!--        <label value="@{WindowMenu$composer.referencia, load-after='BarraMenu.onCreate'}" visible="false" />-->
+    </div>
+</zk>

@@ -1,0 +1,56 @@
+ <!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+<?taglib uri="/stilo.zul" prefix="c"?>
+<?page title="AVASUS"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul" use="stilo.zul" >
+    <style dynamic="true" >
+                              .titulo {
+                        color: blue;
+			font-family: arial, sans-serif;
+                        font-size: 28px;
+                        background:
+		}
+                .button
+                {
+                 border: 1px outset;
+                 background-color:white;
+                    font-size: 18;
+                     font-weight: bold;
+                    color: blue
+        padding-top:10px;
+        <!--background-image: url(/logos/eliminar.ico);-->
+
+                }
+                .z-textbox {
+                     color: blue;
+                    border: 3px outset blue;
+                    font-size: 18px;
+                }
+                .z-label
+                {
+
+                 color: blue;
+                padding:5px"
+                font-style: italic;
+                font-weight: bold;
+                font-size: 16px;
+              font-family: arial, sans-serif;
+                }
+    
+    </style>
+    <window  title="Modal Dialog" border="normal" zclass="titulo" >
+        <groupbox id="ini" mold="3d" open="false" width="300px">
+            <caption label="Please Click Me!" />
+            <div  fulfill="ini.onOpen=IniciarSession.zul" forward="" />
+        </groupbox>
+        <a label="Iniciar Session" href="IniciarSession.zul"  zclass="z-label"  />
+        <button label="nuevo" onClick=""  image="logos/eliminar.ico" width="70px" height="60px" href="templates/HistoriaEncabezado.zul" >
+
+        </button>
+              
+        </window>
+    </zk>

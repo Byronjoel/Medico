@@ -1,0 +1,59 @@
+  <!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+
+    <!--style src="/css/cssDefault.css"/-->
+    <!--vbox id="WinControles" align="center" width="100px" apply="${arg.controladora}" -->
+    <groupbox id="WinControles"  vflex="true" closable="false" width="100%" >
+            <!--<caption label="CONTROLES" />-->
+            <vbox align="center">
+                <space/>
+                <button id="btnReset"  label="Reset   "  disabled="true" width="80%"  visible="false" zclass="button" image="/images/reset.gif" />
+                <space/>
+                <button id="btnCancel" label="Cancelar"  disabled="true"  width="80%"  visible="false" zclass="button" image="/images/close.gif" />
+                <space/>
+                <button id="btnBuscar" autodisable="true" width="80%"  label="Buscar"   disabled="true" visible="true"  zclass="button" image="/images/buscar.gif" />
+                <space/>
+                <button id="btnUpdate" label="Modificar"  disabled="true"  width="80%" visible="false"   zclass="button" image="/images/open.gif" />
+                <space/>
+                 <button id="btnGuardar" autodisable="true" label="Guardar "  disabled="true"  width="80%" visible="false"     zclass="button" image="/images/guardar.gif" />
+                <space/>
+                <button id="btnNew" label="Nuevo   "  disabled="true"  width="80%" visible="false"  zclass="button" image="/images/nuevo.gif"  />
+                <space/>
+                <button id="btnDelete" label="Eliminar "  disabled="true"  width="80%" visible="false"   zclass="button" image="/images/delete.gif" />
+                <space/>
+                <button id="btnPreview" label="Preview  "   disabled="true"  width="80%"  visible="false" zclass="button" image="/images/preview.gif" />
+                <space/>
+                <button id="btnOpen" label="Abrir    "   disabled="true"  width="80%"  visible="false" zclass="button" image="/images/open.gif" />
+                <space/>
+                <button id="btnPrint" label="Imprimir "  disabled="true"  width="80%" visible="false"    zclass="button" image="/images/imprimir.gif" />
+                <space/>
+                <button id="btnSync" label="Syncronizar"  disabled="true" width="80%" visible="false"  zclass="button" image="/images/syncronizar.gif" />
+<!--                <button label="Left" image="/widgets/input/button/img/ArrowLeft-16x16.png"
+                    hoverImage="/widgets/input/button/img/ArrowLeftGreen-16x16.png" width="125px" />
+ 
+                <button label="Right" image="/widgets/input/button/img/ArrowRight-16x16.png"
+                    hoverImage="/widgets/input/button/img/ArrowRightGreen-16x16.png" width="125px" dir="reverse" />
+ 
+                <button label="Above" image="/widgets/input/button/img/ArrowUp-16x16.png"
+                    hoverImage="/widgets/input/button/img/ArrowUpGreen-16x16.png" width="125px" orient="vertical" />
+ 
+        <button label="Below" image="/widgets/input/button/img/ArrowDown-16x16.png"
+            hoverImage="/widgets/input/button/img/ArrowDownGreen-16x16.png" width="125px" orient="vertical" dir="reverse" />-->
+        </vbox>
+    </groupbox>
+</zk>   
+<!--<vbox id="WinControles" align="center"  >-->
+     
+<!--    <button id="btnBuscar"  label="Buscar" width="80px" height="80px"  disabled="true" visible="true"  zclass="button" image="/images/buscar.gif" />
+<button id="btnReset" label="Reset" width="80px" height="80px"  disabled="true" visible="false" zclass="button" image="/images/reset.gif" />
+<button id="btnCancel" label="Cancelar" width="80px" height="80px" disabled="true" visible="false" zclass="button" image="/images/close.gif" />
+<button id="btnGuardar" label="Guardar" width="80px" height="80px" disabled="true" visible="false"     zclass="button" image="/images/guardar.gif" />
+<button id="btnNew" label="Nuevo" width="80px" height="80px" disabled="true" visible="false"  zclass="button" image="/images/nuevo.gif"  />
+<button id="btnUpdate" label="Modificar" width="80px" height="80px" disabled="true" visible="false"   zclass="button" image="/images/open.gif" />
+<button id="btnDelete" label="Eliminar" width="80px" height="80px" disabled="true" visible="false"   zclass="button" image="/images/delete.gif" />
+<button id="btnPreview" label="Preview" width="80px" height="80px"  disabled="true"  visible="false" zclass="button" image="/images/preview.gif" />
+<button id="btnOpen" label="Abrir" width="80px" height="80px"  disabled="true"  visible="false" zclass="button" image="/images/open.gif" />
+<button id="btnPrint" label="Imprimir" width="80px" height="80px" disabled="true" visible="false"    zclass="button" image="/images/imprimir.gif" />
+<button id="btnSync" label="Syncronizar" width="80px" height="80px" disabled="true" visible="false"  zclass="button" image="/images/syncronizar.gif" />-->
+<!--</vbox>-->

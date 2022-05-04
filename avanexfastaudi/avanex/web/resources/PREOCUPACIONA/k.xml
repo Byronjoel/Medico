@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+    <datos_generales_standar>
+        <pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+        <pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+        <estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+        <estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+        <canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+        <canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+        <parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+        <parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+        <etnia descripcion="ETNIA" orden="0" tipo_dato="T">MESTIZO</etnia>
+        <practica descripcion="PRACTICA" orden="0" tipo_dato="L">1247</practica>
+        <nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">PRUEBA - CONSENTIMIENTO</nombre_practica>
+        <solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">dfgdf</solicitante>
+        <paciente descripcion="NOMBRE" orden="0" tipo_dato="L">PRUEBAS PRUEBAS</paciente>
+        <nombres descripcion="NOMBRES" orden="0" tipo_dato="L">PRUEBAS</nombres>
+        <apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">PRUEBAS</apellidos>
+        <fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1990/11/27</fecha_nace>
+        <id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+        <empresa descripcion="EMPRESA" orden="0" tipo_dato="L">PRUEBA ANTECE</empresa>
+        <identificacion descripcion="CI" orden="0" tipo_dato="L">050144418</identificacion>
+        <estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+        <id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">177</id_orden>
+        <telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0987274785// 032946061</telefono>
+        <sexo descripcion="SEXO" orden="0" tipo_dato="L">FEMENINO</sexo>
+        <profesion descripcion="PROFESION" orden="0" tipo_dato="L">ING</profesion>
+        <edad descripcion="EDAD" orden="0" tipo_dato="L">25 AÑOS </edad>
+        <ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">cargo</ocupacion>
+        <instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+        <ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">QUITO</ciudad_nace>
+        <direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">..</direccion_paciente>
+        <titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SRA</titulo_paciente>
+        <medico descripcion="MEDICO" orden="0" tipo_dato="L">Lcdo. PRUEBAS MEDICO PRUEBAS</medico>
+        <especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L">Pruebas</especialidad>
+        <cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L">1234</cod_med>
+        <titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Lcdo.</titulo_medico>
+        <fecha descripcion="FECHA" orden="0" tipo_dato="L">2016/04/01</fecha>
+        <fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2016/04/01 00:00:00</fecha_hora>
+    </datos_generales_standar>
+    <pagina0 Id="1" IdFormato="13">
+        <datos_establecimiento_frame descripcion="A. DATOS DEL ESTABLECIMIENTO - EMPRESA Y USUARIO">
+            <catolica descripcion="RELIGIÓN" item_lista="CÁTOLICA/EVANGÉLICA/TESTIGOS DE JEHOVÁ/MORMONA/" orden="" tipo_dato="L">TESTIGOS DE JEHOVÁ</catolica>
+            <grupo_sanguineo descripcion="GRUPO SANGUÍNEO" item_lista="" lineas="1" orden="" tipo_dato="T">ORH POSITIVO</grupo_sanguineo>
+            <lateralidad descripcion="LATERALIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">DERECHA</lateralidad>
+            <lesbiana descripcion="ORIENTACIÓN SEXUAL" item_lista="LESBIANA/GAY/BISEXUAL/HETEROSEXUAL/NO SABE NO RESPONDE/" orden="" tipo_dato="L">NO SABE NO RESPONDE</lesbiana>
+            <femenino descripcion="IDENTIDAD DE GÉNERO" item_lista="FEMENINO/MASCULINO/TRANS-FEMENINO/TRANS-MASCULINO/NO SABE NO RESPONDE/" orden="" tipo_dato="L">NO SABE NO RESPONDE</femenino>
+            <siDiscapacidad descripcion="¿TIENE DISCAPACIDAD?" item_lista="" orden="" tipo_dato="S">SI</siDiscapacidad>
+            <tipoDiscapacidad descripcion="TIPO DE DISCAPACIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">AUDITIVA</tipoDiscapacidad>
+            <porcentajeDiscapacidad descripcion="% DE DISCAPACIDAD" item_lista="" orden="" tipo_dato="N">30</porcentajeDiscapacidad>
+            <fechaIngresoalTrabajo descripcion="FECHA DE INGRESO AL TRABAJO (aaaa/mm/dd)" item_lista="" orden="" tipo_dato="D">13-jul-2019</fechaIngresoalTrabajo>
+            <puestoTrabajo descripcion="PUESTO DE TRABAJO (CIUO)" item_lista="" lineas="1" orden="" tipo_dato="T">OBRERO DE PATIO</puestoTrabajo>
+            <areaTranajo descripcion="ÁREA DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">OPERACIONES</areaTranajo>
+            <actividadesRelevantes descripcion="ACTIVIDADES RELEVANTES AL PUESTO DE TRABAJO A OCUPAR" item_lista="" lineas="1" orden="" tipo_dato="T">EMITIR INFORMES, LIMPIAR EL PUESTO DE TRABAJO</actividadesRelevantes>
+        </datos_establecimiento_frame>
+        <motivoconsultaframe descripcion="B. MOTIVO DE CONSULTA">
+            <descripcionMotivoConsulta descripcion="DESCRIPCIÓN POR EL MOTIVO DE LA CONSULTA" item_lista="" lineas="0" orden="" tipo_dato="T">CONTROL</descripcionMotivoConsulta>
+        </motivoconsultaframe>
+        <antecedentespersonalesframe descripcion="C. ANTECEDENTES PERSONALES">
+            <antecedentesPersonales descripcion="DESCRIPCIÓN DE ANTECEDENTES CLÍNICOS Y QUIRÚRGICOS" item_lista="" lineas="0" orden="" tipo_dato="T">CIRUGIA DE MAMAS
+                HIPERCOLESTEROLEMIA
+                ARTRITIS REUMATOIDEA A LOS 8 AÑOS (SUPERADA)</antecedentesPersonales>
+            <ciclos descripcion="CICLOS" item_lista="" lineas="1" orden="" tipo_dato="T">REGULARES</ciclos>
+            <fechaultimamens descripcion="FECHA DE ULTIMA MENSTRUACIÓN" item_lista="" orden="" tipo_dato="D">02-jul-2019</fechaultimamens>
+            <gestas descripcion="GESTAS" item_lista="" lineas="1" orden="" tipo_dato="T">2</gestas>
+            <partos descripcion="PARTOS" item_lista="" lineas="1" orden="" tipo_dato="T">1</partos>
+            <cesareas descripcion="CESÁREAS" item_lista="" lineas="1" orden="" tipo_dato="T">1</cesareas>
+            <abortos descripcion="ABORTOS" item_lista="" lineas="1" orden="" tipo_dato="T">0</abortos>
+            <hijosvivos descripcion="HIJOS VIVOS" item_lista="" orden="" tipo_dato="N">2</hijosvivos>
+            <hijosMuertos descripcion="HIJOS MUERTOS" item_lista="" orden="" tipo_dato="N">0</hijosMuertos>
+            <vidaSexual descripcion="VIDA SEXUAL ACTIVA" item_lista="" orden="" tipo_dato="S">SI</vidaSexual>
+            <metodoplanificacionsi descripcion="MÉTODO DE PLANIFICACIÓN" item_lista="" orden="" tipo_dato="S">SI</metodoplanificacionsi>
+            <metodoPlanificaciontipo descripcion="MÉTODO DE PLANIFICACIÓN FAMILIAR TIPO" item_lista="" lineas="1" orden="" tipo_dato="T">ANTICONCEPTIVOS ORALES</metodoPlanificaciontipo>
+            <papanicolausi descripcion="PAPANICOLAU" item_lista="" orden="" tipo_dato="S">SI</papanicolausi>
+            <papanicolautiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N">1</papanicolautiempo>
+            <papanicolauresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</papanicolauresultado>
+            <ecoMamariosi descripcion="ECO MAMARIO" item_lista="" orden="" tipo_dato="S">SI</ecoMamariosi>
+            <ecoMamariotiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N">2</ecoMamariotiempo>
+            <ecoMamarioresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</ecoMamarioresultado>
+            <colposcopiasi descripcion="COLPOSCOPIA" item_lista="" orden="" tipo_dato="S">SI</colposcopiasi>
+            <colposcopiatiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N">1</colposcopiatiempo>
+            <colposcopiaresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</colposcopiaresultado>
+            <mamografiasi descripcion="MAMOGRAFÍA" item_lista="" orden="" tipo_dato="S">SI</mamografiasi>
+            <mamografiatiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N">2</mamografiatiempo>
+            <mamografiaresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</mamografiaresultado>
+            <antigenoProstaticosi descripcion="ANTÍGENO PROSTÁTICO" item_lista="" orden="" tipo_dato="S">SI</antigenoProstaticosi>
+            <antigenoProstaticotiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N">2</antigenoProstaticotiempo>
+            <antigenoProstaticoresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</antigenoProstaticoresultado>
+            <antigenoProstaticoMPFsi descripcion="MÉTODO DE PLANIFICACIÓN FAMILIAR" item_lista="" orden="" tipo_dato="S">SI</antigenoProstaticoMPFsi>
+            <antigenoProstaticoMPFtipo descripcion="MÉTODO DE PLANIFICACIÓN FAMILIAR TIPO" item_lista="" lineas="1" orden="" tipo_dato="T">VASECTOMIA</antigenoProstaticoMPFtipo>
+            <antigenoProstaticoHijosVivos descripcion="HIJOS VIVOS" item_lista="" orden="" tipo_dato="N">2</antigenoProstaticoHijosVivos>
+            <antigenoProstaticoHijosMuertos descripcion="HIJOS MUERTOS" item_lista="" orden="" tipo_dato="N">0</antigenoProstaticoHijosMuertos>
+            <ecoProstaticosi descripcion="ECO PROSTÁTICO" item_lista="" orden="" tipo_dato="S">SI</ecoProstaticosi>
+            <ecoProstaticotiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N">2</ecoProstaticotiempo>
+            <ecoProstaticoresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T">NORMAL</ecoProstaticoresultado>
+            <ecoProstaticoMPFsi descripcion="METODO DE PLANIFICACION FAMILIAR" item_lista="" orden="" tipo_dato="S">SI</ecoProstaticoMPFsi>
+            <ecoProstaticoMPFtipo descripcion="TIPO MÉTODO DE PLANIFICACIÓN FAMILIAR" item_lista="" lineas="1" orden="" tipo_dato="T">RITMO</ecoProstaticoMPFtipo>
+            <tabacosi descripcion="CONSUME TABACO" item_lista="" orden="" tipo_dato="S">SI</tabacosi>
+            <tabacotiempo descripcion="TIEMPO DE CONSUMO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">18 MESES</tabacotiempo>
+            <tabacocantidad descripcion="CANTIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">3 DIARIOS</tabacocantidad>
+            <tabacoexconsumidor descripcion="EX CONSUMIDOR" item_lista="" orden="" tipo_dato="S">NO</tabacoexconsumidor>
+            <tabacotiempoAbstinencia descripcion="TIEMPO DE ABSTINENCIA (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <alcoholsi descripcion="CONSUME ALCOHOL" item_lista="" orden="" tipo_dato="S">SI</alcoholsi>
+            <alcoholtiempo descripcion="TIEMPO DE CONSUMO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">36 MESES</alcoholtiempo>
+            <alcoholcantidad descripcion="CANTIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">3 VECES AL MES</alcoholcantidad>
+            <alcoholexconsumidor descripcion="EX CONSUMIDOR" item_lista="" orden="" tipo_dato="S">NO</alcoholexconsumidor>
+            <alcoholtiempoAbstinencia descripcion="TIEMPO DE ABSTINENCIA (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">NO</alcoholtiempoAbstinencia>
+            <otrasdrogassi descripcion="CONSUME OTRAS DROGAS" item_lista="" orden="" tipo_dato="S">NO</otrasdrogassi>
+            <otrasdrogas descripcion="ESPECIFIQUE QUE OTRAS DROGAS" item_lista="" lineas="1" orden="" tipo_dato="T">NO</otrasdrogas>
+            <otrasdrogastiempo descripcion="TIEMPO DE CONSUMO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">NO</otrasdrogastiempo>
+            <otrasdrogascantidad descripcion="CANTIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">NO</otrasdrogascantidad>
+            <otrasdrogasexconsumidor descripcion="EX CONSUMIDOR" item_lista="" orden="" tipo_dato="S">NO</otrasdrogasexconsumidor>
+            <actividadFisicasi descripcion="REALIZA ACTIVIDAD FÍSICA" item_lista="" orden="" tipo_dato="S">SI</actividadFisicasi>
+            <actividadFisica descripcion="¿CUÁL ACTIVIDAD FÍSICA REALIZA?" item_lista="" lineas="1" orden="" tipo_dato="T">FUTBOL, NATACION, TROTE, CICLISMO</actividadFisica>
+            <actividadFisicacantidad descripcion="TIEMPO / CANTIDAD DE ACTIVIDAD FÍSICA" item_lista="" lineas="1" orden="" tipo_dato="T">FINES DE SEMANA</actividadFisicacantidad>
+            <medicacionHabitualsi descripcion="TOMA ALGUNA MEDICACIÓN HABITUAL" item_lista="" orden="" tipo_dato="S">SI</medicacionHabitualsi>
+            <medicacionhabitualcual1 descripcion="¿QUE MEDICACIÓN HABITUAL CONSUME?" item_lista="" lineas="1" orden="" tipo_dato="T">IBUPROFENO, GEMFIBROZILO</medicacionhabitualcual1>
+            <medicacionhabitualtiempo1 descripcion="TIEMPO / CANTIDAD MEDICACIÓN HABITUAL" item_lista="" lineas="1" orden="" tipo_dato="T">DIARIO</medicacionhabitualtiempo1>
+            <medicacionhabitualcual2 descripcion="¿CONSUME OTRA MEDICACIÓN HABITUAL?" item_lista="" lineas="1" orden="" tipo_dato="T">ALOPURINOL</medicacionhabitualcual2>
+            <medicacionhabitualtiempo2 descripcion="TIEMPO / CANTIDAD MEDICACIÓN HABITUAL" item_lista="" lineas="1" orden="" tipo_dato="T">3 VECES POR SEMANA</medicacionhabitualtiempo2>
+            <medicacionhabitualcual3 descripcion="¿CONSUME OTRA MEDICACIÓN HABITUAL?" item_lista="" lineas="1" orden="" tipo_dato="T">TENSIFLEX</medicacionhabitualcual3>
+            <medicacionhabitualtiempo3 descripcion="TIEMPO / CANTIDAD MEDICACIÓN HABITUAL" item_lista="" lineas="1" orden="" tipo_dato="T">1 VEZ AL MES</medicacionhabitualtiempo3>
+        </antecedentespersonalesframe>
+        <antecedentestrabajoframe descripcion="D. ANTECEDENTES DE TRABAJO">
+            <empresa0 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T">ECUA-AMERICAN</empresa0>
+            <tiempoTrabajoAT descripcion="TIEMPO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">12 MESES</tiempoTrabajoAT>
+            <puestoTrabajo0 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">AUXILIAR ENFERMERIA</puestoTrabajo0>
+            <actividadesDesempena descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T">ATENCION AL PACIENTE</actividadesDesempena>
+            <rFisico descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S">SI</rFisico>
+            <rMecanico descripcion="RIESGO MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico>
+            <rquimico descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico>
+            <rbiologico descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S">SI</rbiologico>
+            <rergonomico descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S">SI</rergonomico>
+            <rpsicosocial descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S">SI</rpsicosocial>
+            <observacionesAT descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T">NINGUNA</observacionesAT>
+            <empresa1 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T">OCUMEDICAN</empresa1>
+            <puestoTrabajo1 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">AUXILIAR ENFERMERIA</puestoTrabajo1>
+            <actividadesDesempena1 descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T">ATENCION AL PACIENTE, ASISTENTE DE MEDICO</actividadesDesempena1>
+            <tiempoTrabajoAT1 descripcion="TIEMPO DE TRABAJO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">24 MESES</tiempoTrabajoAT1>
+            <rFisico1 descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S">SI</rFisico1>
+            <rMecanico1 descripcion="MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico1>
+            <rbiologico1 descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S">SI</rbiologico1>
+            <rquimico1 descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico1>
+            <rpsicosocial1 descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S">SI</rpsicosocial1>
+            <rergonomico1 descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S">SI</rergonomico1>
+            <observacionesAT1 descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T">NINGUNA</observacionesAT1>
+            <empresa2 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T">PATOLOGIA</empresa2>
+            <puestoTrabajo2 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">RESPONSABLE DE AREA</puestoTrabajo2>
+            <actividadesDesempena2 descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T">REALIZAR INFORMES, INVENTARIO</actividadesDesempena2>
+            <tiempoTrabajoAT2 descripcion="TIEMPO DE TRABAJO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">18 MESES</tiempoTrabajoAT2>
+            <rMecanico2 descripcion="RIESGO MECÁNICO" item_lista="" orden="" tipo_dato="S">SI</rMecanico2>
+            <rquimico2 descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico2>
+            <rergonomico2 descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S">SI</rergonomico2>
+            <rFisico2 descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S">SI</rFisico2>
+            <rpsicosocial2 descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S"> </rpsicosocial2>
+            <rbiologico2 descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S">SI</rbiologico2>
+            <observacionesAT2 descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T">NINGUNA</observacionesAT2>
+            <empresa3 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T">FUNDACION </empresa3>
+            <puestoTrabajo3 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">AUXILIAR DE INSTRUMENTACION</puestoTrabajo3>
+            <actividadesDesempena3 descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T">DESINFECCION, LIMPIEZA DE AREA</actividadesDesempena3>
+            <tiempoTrabajoAT3 descripcion="TIEMPO DE TRABAJO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T">16 MESES</tiempoTrabajoAT3>
+            <rFisico3 descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S"> </rFisico3>
+            <rMecanico3 descripcion="RIESGO MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico3>
+            <rquimico3 descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico3>
+            <rpsicosocial3 descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S"> </rpsicosocial3>
+            <rbiologico3 descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S"> </rbiologico3>
+            <rergonomico3 descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S"> </rergonomico3>
+            <observacionesAT3 descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <fuec1 descripcion="FUE CALIFICADO POR EL INSTITUTO DE SEGURIDAD SOCIAL CORRESPONDIENTE:" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <fuecalificadofecha descripcion="FECHA:" item_lista="" orden="" tipo_dato="D"/>
+            <observacionesfuecalificado descripcion="OBSERVACIONES:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <fuec2 descripcion="FUE CALIFICADO POR EL INSTITUTO DE SEGURIDAD SOCIAL CORRESPONDIENTE" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <fuecalificadofecha2 descripcion="FECHA:" item_lista="" orden="" tipo_dato="D"/>
+            <observacionesfuecalificado2 descripcion="OBSERVACIONES:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </antecedentestrabajoframe>
+    </pagina0>
+    <pagina1 Id="2" IdFormato="14">
+        <p2fantecedentesfamiliares descripcion="E. ANTECEDENTES FAMILIARES (DETALLAR EL PARENTESCO)">
+            <antecedentescardio descripcion="1. ENFERMEDAD CARDIO-VASCULAR" item_lista="" orden="" tipo_dato="S"> </antecedentescardio>
+            <antecedentesmetabol descripcion="2. ENFERMEDAD METABÓLICA" item_lista="" orden="" tipo_dato="S"> </antecedentesmetabol>
+            <antecedentesneurolo descripcion="3. ENFERMEDAD NEUROLÓGICA" item_lista="" orden="" tipo_dato="S"> </antecedentesneurolo>
+            <antecedentesoncolo descripcion="4. ENFERMEDAD ONCOLÓGICA" item_lista="" orden="" tipo_dato="S"> </antecedentesoncolo>
+            <antecedentesinfecciosa descripcion="5. ENFERMEDAD INFECCIOSA" item_lista="" orden="" tipo_dato="S"> </antecedentesinfecciosa>
+            <antecedenteshereditaria descripcion="6. ENFERMEDAD HEREDITARIA / CONG[ENITA" item_lista="" orden="" tipo_dato="S"> </antecedenteshereditaria>
+            <antecedentesdisca descripcion="7. ENFERMEDAD INFECCIOSA" item_lista="" orden="" tipo_dato="S"> </antecedentesdisca>
+            <antecedentesotros descripcion="8. OTROS" item_lista="" orden="" tipo_dato="S"> </antecedentesotros>
+            <descripcionantecedentesf descripcion="Descripcion" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </p2fantecedentesfamiliares>
+        <framefactoresriesgo descripcion="F. FACTORES DE RIESGOS DEL PUESTO DE TRABAJO ACTUAL">
+            <puestotrabajo1 descripcion="PUESTO DE TRABAJO / ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actfac1 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <temperaturasaltas1 descripcion="Temperaturas Altas" item_lista="" orden="" tipo_dato="S"> </temperaturasaltas1>
+            <tempbajas1 descripcion="Temperaturas bajas" item_lista="" orden="" tipo_dato="S"> </tempbajas1>
+            <radio1 descripcion="Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </radio1>
+            <radiono1 descripcion="Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </radiono1>
+            <ruido1 descripcion="Ruido" item_lista="" orden="" tipo_dato="S"> </ruido1>
+            <vib1 descripcion="Vibración" item_lista="" orden="" tipo_dato="S"> </vib1>
+            <ilu1 descripcion="Iluminación" item_lista="" orden="" tipo_dato="S"> </ilu1>
+            <venti1 descripcion="Ventilación" item_lista="" orden="" tipo_dato="S"> </venti1>
+            <flu1 descripcion="Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </flu1>
+            <fotros1 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </fotros1>
+            <atram1 descripcion="Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </atram1>
+            <atraps1 descripcion="Atrapamiento entre superficie" item_lista="" orden="" tipo_dato="S"> </atraps1>
+            <atrapo1 descripcion="Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </atrapo1>
+            <caidaobjetos1 descripcion="Caida de objetos" item_lista="" orden="" tipo_dato="S"> </caidaobjetos1>
+            <caidamismo1 descripcion="Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </caidamismo1>
+            <caidadif2 descripcion="Caídas a diferente nivel" item_lista="" orden="" tipo_dato="S"> </caidadif2>
+            <conele1 descripcion="Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </conele1>
+            <contac1 descripcion="Contacto con superficies de trabajo" item_lista="" orden="" tipo_dato="S"> </contac1>
+            <proyecp1 descripcion="Proyección de partículas - fragmentos" item_lista="" orden="" tipo_dato="S"> </proyecp1>
+            <proyecf1 descripcion="Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </proyecf1>
+            <pincha1 descripcion="Pinchazos" item_lista="" orden="" tipo_dato="S"> </pincha1>
+            <cortes1 descripcion="Cortes" item_lista="" orden="" tipo_dato="S"> </cortes1>
+            <atrop1 descripcion="Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </atrop1>
+            <choques1 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </choques1>
+            <otrosm1 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </otrosm1>
+            <solidos1 descripcion="Sólidos" item_lista="" orden="" tipo_dato="S"> </solidos1>
+            <polvos1 descripcion="Polvos" item_lista="" orden="" tipo_dato="S"> </polvos1>
+            <humos1 descripcion="Humos" item_lista="" orden="" tipo_dato="S"> </humos1>
+            <liquidos1 descripcion="Líquidos" item_lista="" orden="" tipo_dato="S"> </liquidos1>
+            <vapores1 descripcion="Vapores" item_lista="" orden="" tipo_dato="S"> </vapores1>
+            <aerosoles1 descripcion="Aerosoles " item_lista="" orden="" tipo_dato="S"> </aerosoles1>
+            <neblinas1 descripcion="Neblinas" item_lista="" orden="" tipo_dato="S"> </neblinas1>
+            <gaseoso1 descripcion="Gaseosos" item_lista="" orden="" tipo_dato="S"> </gaseoso1>
+            <otrosq1 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </otrosq1>
+            <actfac2 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <temperaturasaltas2 descripcion="Temperaturas Altas" item_lista="" orden="" tipo_dato="S"> </temperaturasaltas2>
+            <tempbajas2 descripcion="Temperatura bajas" item_lista="" orden="" tipo_dato="S"> </tempbajas2>
+            <radio2 descripcion="Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </radio2>
+            <radiono2 descripcion="Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </radiono2>
+            <ruido2 descripcion="Ruido" item_lista="" orden="" tipo_dato="S"> </ruido2>
+            <vib2 descripcion="Vibración" item_lista="" orden="" tipo_dato="S"> </vib2>
+            <ilu2 descripcion="Iluminación" item_lista="" orden="" tipo_dato="S"> </ilu2>
+            <ven2 descripcion="Ventilación" item_lista="" orden="" tipo_dato="S"> </ven2>
+            <flu2 descripcion="Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </flu2>
+            <fotros2 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </fotros2>
+            <atram2 descripcion="Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </atram2>
+            <atraps2 descripcion="Atrapamiento entre superficie" item_lista="" orden="" tipo_dato="S"> </atraps2>
+            <atrapo2 descripcion="Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </atrapo2>
+            <caidaobjetos2 descripcion="Caida de objetos" item_lista="" orden="" tipo_dato="S"> </caidaobjetos2>
+            <caidamismo2 descripcion="Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </caidamismo2>
+            <conele2 descripcion="Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </conele2>
+            <contact2 descripcion="Contacto con superficies de trabajo" item_lista="" orden="" tipo_dato="S"> </contact2>
+            <proyecp2 descripcion="Proyección de partículas - fragmentos" item_lista="" orden="" tipo_dato="S"> </proyecp2>
+            <proyecf2 descripcion="Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </proyecf2>
+            <pincha2 descripcion="Pinchazos" item_lista="" orden="" tipo_dato="S"> </pincha2>
+            <cortes2 descripcion="Cortes" item_lista="" orden="" tipo_dato="S"> </cortes2>
+            <atrop2 descripcion="Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </atrop2>
+            <choques2 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </choques2>
+            <otrosm2 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </otrosm2>
+            <solidos2 descripcion="Sólidos" item_lista="" orden="" tipo_dato="S"> </solidos2>
+            <polvos2 descripcion="Polvos" item_lista="" orden="" tipo_dato="S"> </polvos2>
+            <humos2 descripcion="Humos" item_lista="" orden="" tipo_dato="S"> </humos2>
+            <liquidos2 descripcion="Líquidos" item_lista="" orden="" tipo_dato="S"> </liquidos2>
+            <vapores2 descripcion="Vapores" item_lista="" orden="" tipo_dato="S"> </vapores2>
+            <aerosoles2 descripcion="Aerosoles " item_lista="" orden="" tipo_dato="S"> </aerosoles2>
+            <neblinas2 descripcion="Neblinas" item_lista="" orden="" tipo_dato="S"> </neblinas2>
+            <gaseosos2 descripcion="Gaseosos" item_lista="" orden="" tipo_dato="S"> </gaseosos2>
+            <otrosq2 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </otrosq2>
+            <actfac3 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <temperaturasaltas3 descripcion="Temperaturas Altas" item_lista="" orden="" tipo_dato="S"> </temperaturasaltas3>
+            <tempbajas3 descripcion="Temperatura baja" item_lista="" orden="" tipo_dato="S"> </tempbajas3>
+            <radio3 descripcion="Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </radio3>
+            <radiono3 descripcion="Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </radiono3>
+            <ruido3 descripcion="Ruido" item_lista="" orden="" tipo_dato="S"> </ruido3>
+            <vibra3 descripcion="Vibración" item_lista="" orden="" tipo_dato="S"> </vibra3>
+            <ilu3 descripcion="Iluminación" item_lista="" orden="" tipo_dato="S"> </ilu3>
+            <ven3 descripcion="Ventilación" item_lista="" orden="" tipo_dato="S"> </ven3>
+            <flu3 descripcion="Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </flu3>
+            <fotros3 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </fotros3>
+            <atram3 descripcion="Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </atram3>
+            <atraps3 descripcion="Atrapamiento entre superficie 3" item_lista="" orden="" tipo_dato="S"> </atraps3>
+            <atrapo3 descripcion="Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </atrapo3>
+            <caidaobjetos3 descripcion="Caida de objetos" item_lista="" orden="" tipo_dato="S"> </caidaobjetos3>
+            <caidamismo3 descripcion="Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </caidamismo3>
+            <caidadif3 descripcion="Caídas a diferente nivel" item_lista="" orden="" tipo_dato="S"> </caidadif3>
+            <conele3 descripcion="Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </conele3>
+            <contsup3 descripcion="Contacto con superficies de trabajo" item_lista="" orden="" tipo_dato="S"> </contsup3>
+            <proyecp3 descripcion="Proyección de partículas - fragmentos" item_lista="" orden="" tipo_dato="S"> </proyecp3>
+            <proyecf3 descripcion="Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </proyecf3>
+            <pincha3 descripcion="Pinchazos" item_lista="" orden="" tipo_dato="S"> </pincha3>
+            <cortes3 descripcion="Cortes" item_lista="" orden="" tipo_dato="S"> </cortes3>
+            <atrop3 descripcion="Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </atrop3>
+            <choques3 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </choques3>
+            <otrosm3 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </otrosm3>
+            <solidos3 descripcion="Sólidos" item_lista="" orden="" tipo_dato="S"> </solidos3>
+            <polvos3 descripcion="Polvos" item_lista="" orden="" tipo_dato="S"> </polvos3>
+            <humos3 descripcion="Humos" item_lista="" orden="" tipo_dato="S"> </humos3>
+            <liquidos3 descripcion="Líquidos" item_lista="" orden="" tipo_dato="S"> </liquidos3>
+            <vapores3 descripcion="Vapores" item_lista="" orden="" tipo_dato="S"> </vapores3>
+            <aerosoles3 descripcion="Aerosoles " item_lista="" orden="" tipo_dato="S"> </aerosoles3>
+            <neblinas3 descripcion="Neblinas" item_lista="" orden="" tipo_dato="S"> </neblinas3>
+            <gaseosos3 descripcion="Gaseosos" item_lista="" orden="" tipo_dato="S"> </gaseosos3>
+            <otrosq3 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </otrosq3>
+            <puestoTrabajo4 descripcion="PUESTO DE TRABAJO / ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actfac4 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <temperaturasaltas4 descripcion="Temperaturas altas" item_lista="" orden="" tipo_dato="S"> </temperaturasaltas4>
+            <tempbajas4 descripcion="Temperatura baja" item_lista="" orden="" tipo_dato="S"> </tempbajas4>
+            <radio4 descripcion="Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </radio4>
+            <radiono4 descripcion="Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </radiono4>
+            <ruido4 descripcion="Ruido" item_lista="" orden="" tipo_dato="S"> </ruido4>
+            <vib4 descripcion="Vibración" item_lista="" orden="" tipo_dato="S"> </vib4>
+            <ilu4 descripcion="Iluminación" item_lista="" orden="" tipo_dato="S"> </ilu4>
+            <ven1 descripcion="Ventilación" item_lista="" orden="" tipo_dato="S"> </ven1>
+            <flu4 descripcion="Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </flu4>
+            <fotros4 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </fotros4>
+            <atram4 descripcion="Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </atram4>
+            <atraps4 descripcion="Atrapamiento entre superficie" item_lista="" orden="" tipo_dato="S"> </atraps4>
+            <atrapo4 descripcion="Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </atrapo4>
+            <caidaobjetos4 descripcion="Caida de objetos" item_lista="" orden="" tipo_dato="S"> </caidaobjetos4>
+            <caidamismo4 descripcion="Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </caidamismo4>
+            <caidadif4 descripcion="Caídas a diferente nivel" item_lista="" orden="" tipo_dato="S"> </caidadif4>
+            <conele4 descripcion="Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </conele4>
+            <contsup4 descripcion="Contacto con superficies de trabajo" item_lista="" orden="" tipo_dato="S"> </contsup4>
+            <proyecp4 descripcion="Proyección de partículas - fragmentos" item_lista="" orden="" tipo_dato="S"> </proyecp4>
+            <proyecf4 descripcion="Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </proyecf4>
+            <pincha4 descripcion="Pinchazos" item_lista="" orden="" tipo_dato="S"> </pincha4>
+            <cortes4 descripcion="Cortes" item_lista="" orden="" tipo_dato="S"> </cortes4>
+            <atrop4 descripcion="Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </atrop4>
+            <choques4 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </choques4>
+            <otrosm4 descripcion="Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </otrosm4>
+            <solidos4 descripcion="Sólidos" item_lista="" orden="" tipo_dato="S"> </solidos4>
+            <polvos4 descripcion="Polvos" item_lista="" orden="" tipo_dato="S"> </polvos4>
+            <humos4 descripcion="Humos" item_lista="" orden="" tipo_dato="S"> </humos4>
+            <liquidos4 descripcion="Líquidos" item_lista="" orden="" tipo_dato="S"> </liquidos4>
+            <vapores4 descripcion="Vapores" item_lista="" orden="" tipo_dato="S"> </vapores4>
+            <aero4 descripcion="Aerosoles " item_lista="" orden="" tipo_dato="S"> </aero4>
+            <neblinas4 descripcion="Neblinas" item_lista="" orden="" tipo_dato="S"> </neblinas4>
+            <gaseosos4 descripcion="Gaseosos" item_lista="" orden="" tipo_dato="S"> </gaseosos4>
+            <otrosq4 descripcion="Otros" item_lista="" orden="" tipo_dato="S"> </otrosq4>
+        </framefactoresriesgo>
+        <framefactores2 descripcion="">
+            <puestotrabajo1_1 descripcion="PUESTO DE TRABAJO O EL ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actividades1_1 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <virus1 descripcion="VIRUS" item_lista="" orden="" tipo_dato="S"> </virus1>
+            <hongos1 descripcion="HONGOS" item_lista="" orden="" tipo_dato="S"> </hongos1>
+            <bacterias1 descripcion="BACTERIAS" item_lista="" orden="" tipo_dato="S"> </bacterias1>
+            <parasitos1 descripcion="PARASITOS" item_lista="" orden="" tipo_dato="S"> </parasitos1>
+            <expovectores1 descripcion="EXPOSICIÓN DE VECTORES" item_lista="" orden="" tipo_dato="S"> </expovectores1>
+            <otrosb1 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosb1>
+            <manejo1 descripcion="MANEJO MANUAL DE CARGAS" item_lista="" orden="" tipo_dato="S"> </manejo1>
+            <movie1 descripcion="MOVIMIENTO REPETITIVOS" item_lista="" orden="" tipo_dato="S"> </movie1>
+            <posturasforzdas1 descripcion="POSTURAS FORZADAS" item_lista="" orden="" tipo_dato="S"> </posturasforzdas1>
+            <trabajospvd1 descripcion="TRABAJOS CON PVD" item_lista="" orden="" tipo_dato="S"> </trabajospvd1>
+            <otrose1 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrose1>
+            <monotoniat1 descripcion="MONOTONÍA DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </monotoniat1>
+            <sobrecarga1 descripcion="SOBRE CARGA LABORAL" item_lista="" orden="" tipo_dato="S"> </sobrecarga1>
+            <minuciosidad1 descripcion="MINUCIOSIDAD DE LA TAREA" item_lista="" orden="" tipo_dato="S"> </minuciosidad1>
+            <altaresponsabilidad1 descripcion="ALTA RESPONSABILIDAD" item_lista="" orden="" tipo_dato="S"> </altaresponsabilidad1>
+            <autonomiadeci1 descripcion="AUTONIMÍA EN LA TOMA DE DECISIONES" item_lista="" orden="" tipo_dato="S"> </autonomiadeci1>
+            <supervisiondire1 descripcion="SUPERVISIÓN Y ESTILO DE DIRECCIÓN DEFICIENTE" item_lista="" orden="" tipo_dato="S"> </supervisiondire1>
+            <conflicorol1 descripcion="CONFLICTO DE ROL" item_lista="" orden="" tipo_dato="S"> </conflicorol1>
+            <faltaclaridad1 descripcion="FALTA DE CLARIDAD EN LAS FUNCIONES" item_lista="" orden="" tipo_dato="S"> </faltaclaridad1>
+            <incorrectadistri1 descripcion="INCORRECTA DISTRIBUCIÓN DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </incorrectadistri1>
+            <turnosrotativos1 descripcion="TURNOS ROTATIVOS" item_lista="" orden="" tipo_dato="S"> </turnosrotativos1>
+            <relacionesinter1 descripcion="RELACIONES INTERPERSONALES" item_lista="" orden="" tipo_dato="S"> </relacionesinter1>
+            <inestabilidadlaboral1 descripcion="INESTABILIDAD LABORAL" item_lista="" orden="" tipo_dato="S"> </inestabilidadlaboral1>
+            <otrosp1 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosp1>
+            <medidaspreventivas1 descripcion="MEDIDAS PREVENTIVAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <puestotrabajo2_1 descripcion="PUESTO DE TRABAJO O ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actividades2_1 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <virus2 descripcion="VIRUS" item_lista="" orden="" tipo_dato="S"> </virus2>
+            <hongos2 descripcion="HONGOS" item_lista="" orden="" tipo_dato="S"> </hongos2>
+            <bacterias2 descripcion="BACTERIAS" item_lista="" orden="" tipo_dato="S"> </bacterias2>
+            <parasitos2 descripcion="PARASITOS" item_lista="" orden="" tipo_dato="S"> </parasitos2>
+            <expovectores2 descripcion="EXPOSICIÓN A VECTORES" item_lista="" orden="" tipo_dato="S"> </expovectores2>
+            <otrosb2 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosb2>
+            <manejo2 descripcion="MANEJO MANUAL DE CARGAS" item_lista="" orden="" tipo_dato="S"> </manejo2>
+            <movie2 descripcion="MOVIMIENTO REPETITIVOS" item_lista="" orden="" tipo_dato="S"> </movie2>
+            <posturasforzdas2 descripcion="POSTURAS FORZADAS" item_lista="" orden="" tipo_dato="S"> </posturasforzdas2>
+            <trabajospvd2 descripcion="TRABAJOS CON PVD" item_lista="" orden="" tipo_dato="S"> </trabajospvd2>
+            <otrose2 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrose2>
+            <monotoniat2 descripcion="MONOTONÍA DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </monotoniat2>
+            <sobrecarga2 descripcion="SOBRE CARGA LABORAL" item_lista="" orden="" tipo_dato="S"> </sobrecarga2>
+            <minuciosidad2 descripcion="MINUCIOSIDAD DE LA TAREA" item_lista="" orden="" tipo_dato="S"> </minuciosidad2>
+            <altaresponsabilidad2 descripcion="ALTA RESPONSABILIDAD" item_lista="" orden="" tipo_dato="S"> </altaresponsabilidad2>
+            <autonomiadeci2 descripcion="AUTONIMÍA EN LA TOMA DE DECISIONES" item_lista="" orden="" tipo_dato="S"> </autonomiadeci2>
+            <supervisiondire2 descripcion="SUPERVISIÓN Y ESTILO DE DIRECCIÓN DEFICIENTE" item_lista="" orden="" tipo_dato="S"> </supervisiondire2>
+            <conflicorol2 descripcion="CONFLICTO DE ROL" item_lista="" orden="" tipo_dato="S"> </conflicorol2>
+            <faltaclaridad2 descripcion="FALTA DE CLARIDAD EN LAS FUNCIONES" item_lista="" orden="" tipo_dato="S"> </faltaclaridad2>
+            <incorrectadistri2 descripcion="INCORRECTA DISTRIBUCIÓN DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </incorrectadistri2>
+            <turnosrotativos2 descripcion="TURNOS ROTATIVOS" item_lista="" orden="" tipo_dato="S"> </turnosrotativos2>
+            <relacionesinter2 descripcion="RELACIONES INTERPERSONALES" item_lista="" orden="" tipo_dato="S"> </relacionesinter2>
+            <inestabilidadlaboral2 descripcion="INESTABILIDAD LABORAL" item_lista="" orden="" tipo_dato="S"> </inestabilidadlaboral2>
+            <otrosp2 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosp2>
+            <medidaspreventivas2 descripcion="MEDIDAS PREVENTIVAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <puestotrabajo3_1 descripcion="PUESTO DE TRABAJO O EL ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actividades3_1 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <hongos3 descripcion="HONGOS" item_lista="" orden="" tipo_dato="S"> </hongos3>
+            <bacterias3 descripcion="BACTERIAS" item_lista="" orden="" tipo_dato="S"> </bacterias3>
+            <parasitos3 descripcion="PARASITOS" item_lista="" orden="" tipo_dato="S"> </parasitos3>
+            <expovectores3 descripcion="EXPOSICIÓN A VECTORES" item_lista="" orden="" tipo_dato="S"> </expovectores3>
+            <otrosb3 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosb3>
+            <manejo3 descripcion="MANEJO MANUAL DE CARGAS" item_lista="" orden="" tipo_dato="S"> </manejo3>
+            <movie3 descripcion="MOVIMIENTO REPETITIVOS" item_lista="" orden="" tipo_dato="S"> </movie3>
+            <posturasforzdas3 descripcion="POSTURAS FORZADAS" item_lista="" orden="" tipo_dato="S"> </posturasforzdas3>
+            <trabajospvd3 descripcion="TRABAJOS CON PVD" item_lista="" orden="" tipo_dato="S"> </trabajospvd3>
+            <otrose3 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrose3>
+            <monotoniat3 descripcion="MONOTONÍA DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </monotoniat3>
+            <sobrecarga3 descripcion="SOBRE CARGA LABORAL" item_lista="" orden="" tipo_dato="S"> </sobrecarga3>
+            <minuciosidad3 descripcion="MINUCIOSIDAD DE LA TAREA" item_lista="" orden="" tipo_dato="S"> </minuciosidad3>
+            <altaresponsabilidad3 descripcion="ALTA RESPONSABILIDAD" item_lista="" orden="" tipo_dato="S"> </altaresponsabilidad3>
+            <autonomiadeci3 descripcion="AUTONIMÍA EN LA TOMA DE DECISIONES" item_lista="" orden="" tipo_dato="S"> </autonomiadeci3>
+            <supervisiondire3 descripcion="SUPERVISIÓN Y ESTILO DE DIRECCIÓN DEFICIENTE" item_lista="" orden="" tipo_dato="S"> </supervisiondire3>
+            <conflicorol3 descripcion="CONFLICTO DE ROL" item_lista="" orden="" tipo_dato="S"> </conflicorol3>
+            <faltaclaridad3 descripcion="FALTA DE CLARIDAD EN LAS FUNCIONES" item_lista="" orden="" tipo_dato="S"> </faltaclaridad3>
+            <incorrectadistri3 descripcion="INCORRECTA DISTRIBUCIÓN DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </incorrectadistri3>
+            <turnosrotativos3 descripcion="TURNOS ROTATIVOS" item_lista="" orden="" tipo_dato="S"> </turnosrotativos3>
+            <relacionesinter3 descripcion="RELACIONES INTERPERSONALES" item_lista="" orden="" tipo_dato="S"> </relacionesinter3>
+            <inestabilidadlaboral3 descripcion="INESTABILIDAD LABORAL" item_lista="" orden="" tipo_dato="S"> </inestabilidadlaboral3>
+            <otrosp3 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosp3>
+            <medidaspreventivas3 descripcion="MEDIDAS PREVENTIVAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <puestotrabajo4_1 descripcion="PUESTO DE TRABAJO O EL ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actividades4_1 descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <virus4 descripcion="VIRUS" item_lista="" orden="" tipo_dato="S"> </virus4>
+            <hongos4 descripcion="HONGOS" item_lista="" orden="" tipo_dato="S"> </hongos4>
+            <bacterias4 descripcion="BACTERIAS" item_lista="" orden="" tipo_dato="S"> </bacterias4>
+            <parasitos4 descripcion="PARASITOS" item_lista="" orden="" tipo_dato="S"> </parasitos4>
+            <expovectores4 descripcion="EXPOSICIÓN A VECTORES" item_lista="" orden="" tipo_dato="S"> </expovectores4>
+            <otrosb4 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosb4>
+            <manejo4 descripcion="MANEJO MANUAL DE CARGAS" item_lista="" orden="" tipo_dato="S"> </manejo4>
+            <movie4 descripcion="MOVIMIENTO REPETITIVOS" item_lista="" orden="" tipo_dato="S"> </movie4>
+            <posturasforzdas4 descripcion="POSTURAS FORZADAS" item_lista="" orden="" tipo_dato="S"> </posturasforzdas4>
+            <trabajospvd4 descripcion="TRABAJOS CON PVD" item_lista="" orden="" tipo_dato="S"> </trabajospvd4>
+            <otrose4 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrose4>
+            <monotoniat4 descripcion="MONOTONÍA DE TRABAJO" item_lista="" orden="" tipo_dato="S"> </monotoniat4>
+            <sobrecarga4 descripcion="SOBRE CARGA LABORAL" item_lista="" orden="" tipo_dato="S"> </sobrecarga4>
+            <minuciosidad4 descripcion="MINUCIOSIDAD DE LA TAREA" item_lista="" orden="" tipo_dato="S"> </minuciosidad4>
+            <altaresponsabilidad4 descripcion="ALTA RESPONSABILIDAD" item_lista="" orden="" tipo_dato="S"> </altaresponsabilidad4>
+            <autonomiadeci4 descripcion="AUTONIMÍA EN LA TOMA DE DECISIONES" item_lista="" orden="" tipo_dato="S"> </autonomiadeci4>
+            <supervisiondire4 descripcion="SUPERVISIÓN Y ESTILO DE DIRECCIÓN DEFICIENTE" item_lista="" orden="" tipo_dato="S"> </supervisiondire4>
+            <conflicorol4 descripcion="CONFLICTO DE ROL" item_lista="" orden="" tipo_dato="S"> </conflicorol4>
+            <faltaclaridad4 descripcion="FALTA DE CLARIDAD EN LAS FUNCIONES" item_lista="" orden="" tipo_dato="S"> </faltaclaridad4>
+            <turnosrotativos4 descripcion="TURNOS ROTATIVOS" item_lista="" orden="" tipo_dato="S"> </turnosrotativos4>
+            <relacionesinter4 descripcion="RELACIONES INTERPERSONALES" item_lista="" orden="" tipo_dato="S"> </relacionesinter4>
+            <inestabilidadlaboral4 descripcion="INESTABILIDAD LABORAL" item_lista="" orden="" tipo_dato="S"> </inestabilidadlaboral4>
+            <otrosp4 descripcion="OTROS" item_lista="" orden="" tipo_dato="S"> </otrosp4>
+            <medidaspreventivas4 descripcion="MEDIDAS PREVENTIVAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+        </framefactores2>
+        <framegactividadesextra descripcion="G. ACTIVIDADES EXTRA LABORALES">
+            <descripcionextral descripcion="Descripción" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </framegactividadesextra>
+    </pagina1>
+</resultados>

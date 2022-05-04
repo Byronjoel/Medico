@@ -1,0 +1,144 @@
+
+package net.cubosoft.misanalisis.ws;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Clase Java para pdfResponse complex type.
+ * 
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * 
+ * <pre>
+ * &lt;complexType name="pdfResponse"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="code" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="completos" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="incompletos" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="pdf" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "pdfResponse", propOrder = {
+    "code",
+    "completos",
+    "incompletos",
+    "message",
+    "pdf"
+})
+public class PdfResponse {
+
+    protected int code;
+    protected int completos;
+    protected int incompletos;
+    protected String message;
+    protected String pdf;
+
+    /**
+     * Obtiene el valor de la propiedad code.
+     * 
+     */
+    public int getCode() {
+        return code;
+    }
+
+    /**
+     * Define el valor de la propiedad code.
+     * 
+     */
+    public void setCode(int value) {
+        this.code = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad completos.
+     * 
+     */
+    public int getCompletos() {
+        return completos;
+    }
+
+    /**
+     * Define el valor de la propiedad completos.
+     * 
+     */
+    public void setCompletos(int value) {
+        this.completos = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad incompletos.
+     * 
+     */
+    public int getIncompletos() {
+        return incompletos;
+    }
+
+    /**
+     * Define el valor de la propiedad incompletos.
+     * 
+     */
+    public void setIncompletos(int value) {
+        this.incompletos = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad message.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * Define el valor de la propiedad message.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setMessage(String value) {
+        this.message = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad pdf.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPdf() {
+        return pdf;
+    }
+
+    /**
+     * Define el valor de la propiedad pdf.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPdf(String value) {
+        this.pdf = value;
+    }
+
+}

@@ -1,0 +1,24 @@
+ <!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+
+<!--<zk xmlns="http://www.zkoss.org/2005/zul"  >-->
+  <style src="/css/cssDefault.css" />
+<window id="Winabreviaturas" title="Datos Practica"   border="normal" apply="ec.com.cubosoft.avamed.coneccion.ManejadoraAbreviaturas" closable="true" zclass="titulo" >
+    <listbox id="bo" multiple="true"  model="@{Winabreviaturas$composer.allEventsA}"
+                                                    selectedItem="@{Winabreviaturas$composer.currentAbreviatura}" height="200px" >
+        <listhead>
+            <listheader label="ID" width="30px" />
+            <listheader label="DESCRIPCION" width="110px" />
+            <listheader label="ABREVIATURA" width="110px" />
+        </listhead>
+        <listitem self="@{each='objter'}" value="@{objter}">
+            <listcell label="@{objter.id}" />
+            <listcell label="@{objter.descripcion}" />
+            <listcell label="ABREVIATURA" />
+        </listitem>
+    </listbox>
+    <button  id="listar" label="Listar" onClick=""/>
+</window>
+<!--</zk>-->

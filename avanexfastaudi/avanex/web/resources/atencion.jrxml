@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eeaa61d4-cc57-4bb6-a3c2-ae46ae0949e4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idMedico" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha2" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="medico" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     sus_lispra."descripcion" AS practica,
+     xml_resultado."estado" AS estado,
+     xml_resultado."medico" AS medico,
+     xml_resultado."fec_ini" AS fecha,
+     xml_resultado."id_orden" AS id_orden
+FROM
+     "DBA"."xml_resultado" xml_resultado 
+INNER JOIN "DBA"."sus_lispra" sus_lispra ON xml_resultado."id_practica" = sus_lispra."id"
+WHERE
+     xml_resultado."medico" = $P{medico}
+     and xml_resultado."fec_ini" BETWEEN $P{fecha} AND $P{fecha2}]]>
+	</queryString>
+	<field name="practica" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="medico" class="java.lang.String"/>
+	<field name="fecha" class="java.sql.Timestamp"/>
+	<field name="id_orden" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="1" width="167" height="48" uuid="47b23217-5ce3-4e69-8f3e-00e91fc0d1f4"/>
+				<imageExpression><![CDATA["C:\\glassfishv3\\logos\\medilcorp.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="180" y="0" width="170" height="49" forecolor="#000033" uuid="394f89b5-a8ed-4b52-87be-d5e698fcb196"/>
+				<textElement>
+					<font fontName="Arial" size="32" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="356" y="0" width="199" height="20" uuid="71317184-f161-4e1e-a62c-cd01adbd1b76"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format($P{fecha})
++"  "+new java.text.SimpleDateFormat("dd/MM/yyyy").format($P{fecha2})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="20" width="199" height="20" uuid="21912ac9-f849-4814-92dc-6dcf9c625f8a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21">
+			<staticText>
+				<reportElement x="150" y="0" width="329" height="20" uuid="0a8e964a-0b82-4bc2-86fa-82e3e6ed8506"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRACTICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="0" width="47" height="20" uuid="6a5eb090-b340-49d7-9135-d8f725969f7c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="0" width="69" height="20" uuid="77474de3-54d4-47ba-8dd0-fc83a811d9df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="1" width="60" height="20" uuid="9e2d9b82-229d-45cd-b4dd-357df4b3d883"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDEN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="150" y="0" width="329" height="20" uuid="f737b3ba-b157-4a1d-9342-12291718782c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{practica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="0" width="47" height="20" uuid="270d64f8-e355-4845-adab-ddacb7cd06df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="0" width="69" height="20" uuid="d9b0cb4d-f4ec-445f-a9dc-7e8c6d9edd31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="60" height="20" uuid="2407d067-b81c-4d2e-8184-5e4a7a45a1bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_orden}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="14">
+			<textField>
+				<reportElement x="445" y="0" width="110" height="13" uuid="fca59a82-78f2-4204-85a6-4fd1058f6d7c"/>
+				<textFieldExpression><![CDATA["TOTAL" + $V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

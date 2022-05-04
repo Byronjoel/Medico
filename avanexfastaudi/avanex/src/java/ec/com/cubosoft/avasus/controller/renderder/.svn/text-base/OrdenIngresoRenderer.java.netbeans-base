@@ -1,0 +1,352 @@
+package ec.com.cubosoft.avasus.controller.renderder;
+
+import ec.com.cubosoft.avamed.modelo.ingreso.Orden;
+import ec.com.cubosoft.avamed.modelo.ingreso.PracticaXOrden;
+import ec.com.cubosoft.avamed.modelo.persona.XmlResultado;
+import ec.com.cubosoft.avamed.procesos.AdmiNegocio;
+import ec.com.cubosoft.avamed.procesos.iReport;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.naming.NamingException;
+import org.zkoss.util.media.AMedia;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zul.Iframe;
+import org.zkoss.zul.Image;
+import org.zkoss.zul.Label;
+import org.zkoss.zul.Listbox;
+import org.zkoss.zul.Listcell;
+import org.zkoss.zul.Listhead;
+import org.zkoss.zul.Listheader;
+import org.zkoss.zul.Listitem;
+import org.zkoss.zul.Messagebox;
+import org.zkoss.zul.Row;
+import org.zkoss.zul.RowRenderer;
+import org.zkoss.zul.Vlayout;
+import org.zkoss.zul.Window;
+
+/**
+ *
+ * @author JP
+ */
+public class OrdenIngresoRenderer implements RowRenderer {
+
+    DateFormat fecha = new SimpleDateFormat("dd-MMM-yyyy");
+    DateFormat fechaHora = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
+    static final Map<String, String> ESTADO = new HashMap<String, String>() {
+
+        {
+            put("PE", "Pendiente");
+            put("CO", "Completo");
+            put("IN", "Incompleto");
+        }
+        private static final long serialVersionUID = 1L;
+    };
+
+    private PracticaXOrden getLaboratorio(Orden orden) throws NamingException {
+
+        AdmiNegocio admNegocio = new AdmiNegocio();
+        PracticaXOrden laboratorio = new PracticaXOrden();
+
+        Object table = new XmlResultado();
+        List resultados;
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        List oSQL = new ArrayList();
+        wSQL.put("practica.id ?=", "415");
+        wSQL.put("orden.id ?=", orden.getId());
+
+        resultados = admNegocio.getData(table, wSQL, null, oSQL);
+
+        for (Object resultado : resultados) {
+            XmlResultado resLaboratorio = (XmlResultado) resultado;
+            laboratorio.setOrden(orden);
+            laboratorio.setPractica(resLaboratorio.getPractica());
+            laboratorio.setStsTecnico(resLaboratorio.getEstado());
+            laboratorio.setFecIni(resLaboratorio.getFecIni());
+            laboratorio.setFecUpd(resLaboratorio.getFecUpd());
+            laboratorio.setFirstUser(resLaboratorio.getFirstUser());
+            laboratorio.setLastUser(resLaboratorio.getLastUser());
+        }
+
+        return laboratorio;
+    }
+
+    @Override
+    public void render(Row row, Object data, int index) throws Exception {
+
+        Orden orden = (Orden) data;
+        PracticaXOrden laboratorio;
+
+        row.setValue(orden);
+        row.setValign("top");
+
+        new Label(fecha.format(orden.getFecIngreso())).setParent(row);
+        new Label(String.valueOf(orden.getId())).setParent(row);
+        new Label(orden.getHistoria().getPaciente()).setParent(row);
+
+        if (orden.getOrganizacion() != null) {
+            new Label(orden.getOrganizacion().getAbreviatura()).setParent(row);
+        } else {
+            new Label("(Sin Empresa)").setParent(row);
+        }
+
+        //new Label(orden.getPracticaXorden().toString()).setParent(row);
+
+        Listbox peticiones = new Listbox();
+        List<PracticaXOrden> practicasXOrden = orden.getPracticaXorden();
+
+        laboratorio = getLaboratorio(orden);
+
+        if (laboratorio.getOrden() != null) {
+            practicasXOrden.add(laboratorio);
+        }
+
+        int peticionesCompletas = 0;
+
+        if (!(practicasXOrden.isEmpty())) {
+
+            Listhead peticionesCab = new Listhead();
+            Listheader desCab = new Listheader();
+            Listheader imgCab = new Listheader();
+
+            imgCab.setAlign("center");
+            imgCab.setWidth("15%");
+
+            desCab.setParent(peticionesCab);
+            imgCab.setParent(peticionesCab);
+
+            peticionesCab.setParent(peticiones);
+            peticionesCab.setVisible(false);
+
+            //Primero se Ordena la Lista
+
+            //ordenamos la lista por descrpcion
+            Collections.sort(practicasXOrden, new Comparator() {
+
+                @Override
+                public int compare(Object o1, Object o2) {
+                    PracticaXOrden e1 = (PracticaXOrden) o1;
+                    PracticaXOrden e2 = (PracticaXOrden) o2;
+                    return e1.getPractica().getDescripcion().compareToIgnoreCase(e2.getPractica().getDescripcion());
+                }
+            });
+
+            for (PracticaXOrden practica : practicasXOrden) {
+                Listitem peticion = new Listitem();
+                peticion.setValue(practica);
+                final Listcell desPractica = new Listcell(practica.getPractica() != null ? practica.getPractica().getDescripcion() : "", "");
+                Listcell stsPractica = new Listcell();
+                Image imageLock;
+
+                String pathImagen = null;
+                if (practica.getStsTecnico().equals("IN")) {
+                    pathImagen = "/images/editing.png";
+                } else if (practica.getStsTecnico().equals("CO")) {
+                    pathImagen = "/images/lock.png";
+                    peticionesCompletas++;
+                } else {
+                    if (practica.getStsTecnico().equals("PE")) {
+                        pathImagen = "/images/document_blank.png";
+                    }
+                }
+
+                imageLock = new Image(pathImagen);
+                imageLock.setWidth("20px");
+                imageLock.setParent(stsPractica);
+
+//                //ToolTip
+//                StringBuilder toolTip = new StringBuilder();
+//                if (practica.getFirstUser() != null) {
+//                    toolTip.append("Creado por: ");
+//                    toolTip.append(new AdmiNegocio().getUsuario(practica.getFirstUser()).getNomUsu());
+//                    toolTip.append(" / Fecha Creación: ").append(fechaHora.format(practica.getFecIni()));
+//                }
+//
+//                if (practica.getFecUpd() != null) {
+//                    toolTip.append(" / Modificada: ").append(fechaHora.format(practica.getFecUpd()));
+//                }
+//                desPractica.setTooltiptext(toolTip.toString());
+////              Fin ToolTip
+
+                //Celdas Finales para Tooltip Peticion
+                final Listcell firstUserP = new Listcell(practica.getFirstUser());
+                final Listcell fecIniP = new Listcell(fechaHora.format(practica.getFecIni()));
+                final Listcell fecUpdP = new Listcell();
+                if (practica.getFecUpd() != null) {
+                    fecUpdP.setLabel(fechaHora.format(practica.getFecUpd()));
+                }
+
+                desPractica.addEventListener(Events.ON_RIGHT_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        //ToolTip
+                        StringBuilder toolTip = new StringBuilder();
+                        if (!firstUserP.getLabel().isEmpty()) {
+                            toolTip.append("Creado por: ");
+                            toolTip.append(new AdmiNegocio().getUsuario(firstUserP.getLabel()).getNomUsu());
+                            toolTip.append(" / Fecha Creación: ").append(fecIniP.getLabel());
+                        }
+
+                        if (!fecUpdP.getLabel().isEmpty()) {
+                            toolTip.append(" / Modificada: ").append(fecUpdP.getLabel());
+                        }
+                        desPractica.setTooltiptext(toolTip.toString());
+//              Fin ToolTip
+                    }
+                });
+
+                desPractica.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        Window winMensaje = new Window();
+                        String windowMessage = "msg_informe.zul";
+                        Executions.createComponents(windowMessage, winMensaje, null);
+                        winMensaje.setBorder("normal");
+                        winMensaje.setClosable(true);
+                        winMensaje.setTitle("Vista Preliminar de Informe");
+                        final Iframe frameReporte = (Iframe) winMensaje.getFellow("reporteV", true);
+
+                        PracticaXOrden practica;
+
+                        practica = ((Listitem) desPractica.getParent()).getValue();
+
+                        Map<String, Object> wSQL = new HashMap<String, Object>();
+                        wSQL.put("orden.id", practica.getOrden().getId());
+                        wSQL.put("practica.id", practica.getPractica().getId());
+
+                        AMedia mediaCarga = loadReport(wSQL, true);
+
+                        if (mediaCarga != null) {
+                            frameReporte.setContent(mediaCarga);
+
+                            Component parent = new Window();
+
+                            //Lectura del componente del Window Principal
+                            Collection<Component> comps = Executions.getCurrent().getDesktop().getComponents();
+
+                            for (Component c : comps) {
+                                if (c.getDefinition().getName().equals("window")) {
+                                    parent = c;
+                                }
+                            }
+                            winMensaje.setParent(parent);
+                            winMensaje.doModal();
+
+                        } else {
+                            Messagebox.show("No se han encontrado informes para registro seleccionado");
+                        }
+                    }
+                });
+
+                peticion.appendChild(desPractica);
+//                ComponentsCtrl.applyForward(desPractica,"onMouseOver=onMouseOver");
+                peticion.appendChild(stsPractica);
+                peticion.setParent(peticiones);
+            }
+
+            peticiones.setParent(row);
+
+        } else {
+            new Label("(No hay peticiones)").setParent(row);
+        }
+
+        //
+
+        if (orden.getStsTecnico().equals("CO")) {       //Si la orden esta completa
+            Image imageEstadoTecnico;
+            imageEstadoTecnico = new Image("/images/status/orden-completed.png");
+            imageEstadoTecnico.setWidth("64px");
+            imageEstadoTecnico.setParent(row);
+
+        } else {        //Si la orden no esta completa
+            Vlayout estadoGroup = new Vlayout();
+//            Progressmeter barraEstado = new Progressmeter();
+            Label estadoOs = new Label(ESTADO.get(orden.getStsTecnico()));
+
+            estadoOs.setParent(estadoGroup);
+
+//            if (practicasXOrden.size() > 0) {
+//                barraEstado.setParent(estadoGroup);
+//                barraEstado.setWidth("90%");
+//                barraEstado.setValue(new Integer((peticionesCompletas * 100) / practicasXOrden.size()).intValue());
+//            }
+
+            estadoGroup.setParent(row);
+        }
+
+        //new Label(ESTADO.get(orden.getStsTecnico())).setParent(row);
+
+        //Usuario
+        final Label usuario = new Label(orden.getFirstUser());
+//        usuario.setTooltiptext(new AdmiNegocio().getUsuario(orden.getFirstUser()).getNomUsu());
+
+        //Celdas Finales para Tooltip Orden
+        final Listcell firstUser = new Listcell(orden.getFirstUser());
+        final Listcell fecIni = new Listcell(fechaHora.format(orden.getFecIni()));
+        final Listcell fecUpd = new Listcell();
+        if (orden.getFecUpd() != null) {
+            fecUpd.setLabel(fechaHora.format(orden.getFecUpd()));
+        }
+
+        usuario.addEventListener(Events.ON_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                //ToolTip
+                StringBuilder toolTip = new StringBuilder();
+                if (!firstUser.getLabel().isEmpty()) {
+                    toolTip.append("Creado por: ");
+                    toolTip.append(new AdmiNegocio().getUsuario(firstUser.getLabel()).getNomUsu());
+                    toolTip.append(" / Fecha Creación: ").append(fecIni.getLabel());
+                }
+
+                if (!fecUpd.getLabel().isEmpty()) {
+                    toolTip.append(" / Modificada: ").append(fecUpd.getLabel());
+                }
+                usuario.setTooltiptext(toolTip.toString());
+//              Fin ToolTip
+            }
+        });
+
+        usuario.setParent(row);
+        //Fin de usuario
+
+        new Label(String.valueOf(orden.getOrigen().getDescripcion())).setParent(row);
+    }
+
+    private AMedia loadReport(Map<String, Object> wSQL, boolean forceVisible) {
+
+String global ="java:global/avasus-med/AdministradorGlobalBean";
+String generico ="java:global/avasus-med/AdministradorGenericoBean";
+        iReport reportes = new iReport(global,generico);
+        try {
+            byte[] buf = reportes.getReport(wSQL, forceVisible);
+
+            if (buf != null) {
+                //byte[] buf1 = UtilPdf.marcaDeAgua(buf);
+                InputStream mediaIS = new ByteArrayInputStream(buf);
+                AMedia media = new AMedia("informe.pdf", "pdf", "application/pdf", mediaIS);
+                return media;
+            } else {
+                AMedia media1 = null;
+                return media1;
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+}

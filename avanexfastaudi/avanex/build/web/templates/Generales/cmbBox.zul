@@ -1,0 +1,25 @@
+ 
+
+ <!-- index.zul -->
+ 
+  <!-- Created on __DATE__, __TIME__  -->
+
+ <!-- @author __USER__   -->
+ <!-- @version   --> 
+ 
+
+
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+    <window id="WinCombBox" apply="${arg.controladora}" zclass="titulo" border="none" width="110px" >
+        <bandbox id="${arg.nombre}"  mold="rounded" autodrop="true" >
+            <bandpopup >
+                <listbox id="${arg.lista}" height="200px" width="300px" mold="paging" pageSize="5">
+                </listbox>
+            </bandpopup>
+        </bandbox>
+    </window>
+</zk>
+
+<!--onSelect="bd.value=self.selectedItem.label; bd.close();"-->

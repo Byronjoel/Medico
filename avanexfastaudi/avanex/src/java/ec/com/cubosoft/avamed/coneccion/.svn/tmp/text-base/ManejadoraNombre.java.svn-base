@@ -1,0 +1,1659 @@
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.modelo.practica.*;
+import javax.naming.NamingException;
+import org.w3c.dom.Document;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+
+import java.util.List;
+import ec.com.cubosoft.avamed.procesos.AdmiNegocio;
+import ec.com.cubosoft.avamed.procesos.ManejadoraXml;
+import ec.com.cubosoft.avamed.modelo.core.CsPerxgru;
+import ec.com.cubosoft.avamed.modelo.practica.NombreP;
+import ec.com.cubosoft.avamed.modelo.practica.PracticaXReporte;
+import ec.com.cubosoft.avamed.modelo.practica.Termino;
+import ec.com.cubosoft.avamed.procesos.AdmiUsuario;
+import ec.com.cubosoft.core.CSValidarString;
+import java.util.ArrayList;
+
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zul.Button;
+import org.zkoss.zul.Grid;
+import org.zkoss.zul.Listbox;
+import org.zkoss.zul.Messagebox;
+import org.zkoss.zul.Textbox;
+import org.zkoss.zul.Groupbox;
+import org.zkoss.zul.Intbox;
+import org.zkoss.zul.Listcell;
+import org.zkoss.zul.Listitem;
+
+public class ManejadoraNombre extends GenericForwardComposer {
+
+    //controladora
+    //<editor-fold defaultstate="collapsed" desc="Controladora">
+    //<editor-fold defaultstate="collapsed" desc="PLANTILLA CARGA">
+    Button btnBuscar;
+    Button btnReset;
+    Button btnCancelar;
+    Button btnSalir;
+    Button btnNuevo;
+    Button btnGuardar;
+    Button btnPreview;
+    Button btnUpdate;
+    Button btnDelete;
+    Button btnImprimir;
+    Button btnSincronizar;
+    boolean bandGuardar;
+    ProcesosSession admiSessionUsuario = new ProcesosSession();
+    CsPerxgru permisosMenuIDControles = null;
+
+    public void onCreate$WinControles() {
+        try {
+            modificarSession();
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+
+    }
+
+    private void modificarSession() {
+        try {
+            admiSessionUsuario.AgregarAtributoSession(4, page.getId(), session);
+            permisosMenuIDControles = admiSessionUsuario.ObtenerPermisosPgina(session);
+            HabilitarBotones();
+
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+
+    }
+
+    public void HabilitarBotones() {
+        try {
+            btnBuscar.setDisabled(false);
+            btnBuscar.setVisible(true);
+            btnReset.setDisabled(false);
+            btnReset.setVisible(true);
+            btnCancelar.setDisabled(false);
+            btnCancelar.setVisible(true);
+            btnSalir.setDisabled(false);
+            btnSalir.setVisible(true);
+//            btnPreview.setDisabled(false);
+//            btnPreview.setVisible(true);
+            if (permisosMenuIDControles != null) {
+                if (permisosMenuIDControles.getAlta() == 1) { //activo nuevo
+                    btnNuevo.setDisabled(false);
+                    btnNuevo.setVisible(true);
+                    bandGuardar = true;
+                } else {
+                    btnNuevo.setStyle("color: #A2B5CD;");
+
+                }
+                if (permisosMenuIDControles.getBaja() == 1) { //activo eliminacion
+                    btnDelete.setVisible(true);
+                    btnDelete.setDisabled(false);
+
+                } else {
+                    btnDelete.setStyle("color: #A2B5CD;");
+                }
+                if (permisosMenuIDControles.getModif() == 1) { //activo actualizar
+                    btnUpdate.setDisabled(false);
+                    btnUpdate.setVisible(true);
+                    bandGuardar = true;
+                } else {
+                    btnUpdate.setStyle("color: #A2B5CD;");
+                }
+                if (permisosMenuIDControles.getImprime() == 1) { //activo imprimir
+                    btnImprimir.setDisabled(false);
+                    btnImprimir.setVisible(true);
+                } else {
+                    btnImprimir.setStyle("color: #A2B5CD;");
+                }
+                if (permisosMenuIDControles.getSync() == 1) { //activo sincronizar
+                    btnSincronizar.setDisabled(false);
+                    btnSincronizar.setVisible(true);
+                } else {
+                    btnSincronizar.setStyle("color: #A2B5CD;");
+                }
+                if (bandGuardar) { //activo sincronizar
+                    btnGuardar.setDisabled(false);
+                    btnGuardar.setVisible(true);
+                } else {
+                    btnGuardar.setStyle("color: #A2B5CD;");
+                }
+            }
+
+        } catch (Exception e) {
+        }
+
+    }
+// </editor-fold>
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="BANDERAS">
+    boolean banderaSeleccionPractica = false;
+    boolean banderaSeleccionHija = false;
+    boolean banderaNuevo = false;
+    boolean banderaActualizar = false;
+    boolean banderaEliminar = false;
+    boolean banderaSincronizar = false;
+    boolean banderaHijas = false;
+    boolean CancelarGuardar = false;
+    boolean banderaActualizarC = false;
+    Integer posHija;
+    String nomPractica;
+    String auxHija;
+    Textbox identificador; //TIPO DE OBJETO DE TRABAJO
+    Intbox id; //DEVUELVE ID DE OBJETO MANEJADO Y PARA CONOCER Q TIPO DE CONTROL
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="OBJETOS CLASES REFERENCIAS">
+    AdmiNegocio admhi = new AdmiNegocio();
+    ManejadoraXml admXml = new ManejadoraXml();
+    CSValidarString validarString = new CSValidarString();
+    List<CsPerxgru> listPermisos = null;
+    CsPerxgru permisosMenuID = null;
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="ACTIVAR GRUPOS">
+
+    private void ValorIdentificador() {
+        String nom = ObtenerValorAtributo(1, nombreTabla);
+        DesactivarGrupo();
+        ActivarGrupos(nom);
+        auxHija = nom;
+    }
+
+    public void DesactivarGrupo() {
+        boolean desabilitar = false;
+        try {
+            if (auxHija.equals("DatosNombre")) {
+                DatosNombre.setVisible(false);
+                DatosCodificacion.setVisible(false);
+                desahabilitar(1);
+                desahabilitar(0);
+            } else {
+                if (auxHija.equals("DatosCodificacion")) {
+                    DatosCodificacion.setVisible(false);
+                    desabilitar = true;
+                } else {
+                    if (auxHija.equals("DatosPracticasAsociadas")) {
+                        DatosPracticasAsociadas.setVisible(false);
+                        desabilitar = true;
+                    } else {
+                        if (auxHija.equals("DatosPracticasxReporte")) {
+                            DatosPracticasxReporte.setVisible(false);
+                            desabilitar = true;
+
+                        } else {
+                            if (auxHija.equals("DatosSinonimos")) {
+                                DatosSinonimos.setVisible(false);
+                                desabilitar = true;
+
+                            } else {
+                                if (auxHija.equals("DatosTermino")) {
+                                    DatosTermino.setVisible(false);
+                                    desabilitar = true;
+                                }
+                            }
+                        }
+                    }
+                }
+            } // listas
+            if ((desabilitar) && (id.getValue() == 0)) {
+                desahabilitar(tipo);
+            }
+            if (auxHija.equals("listBoxPractica")) {
+                listBoxPractica.setVisible(false);
+            } else {
+                if (auxHija.equals("listBoxCodificacion")) {
+                    listBoxCodificacion.setVisible(false);
+                } else {
+                    if (auxHija.equals("listBoxPracticasAsociadas")) {
+                        listBoxPracticasAsociadas.setVisible(false);
+                    } else {
+                        if (auxHija.equals("listBoxPracticasxReporte")) {
+                            listBoxPracticasxReporte.setVisible(false);
+                        } else {
+                            if (auxHija.equals("listBoxSinonimos")) {
+                                listBoxSinonimos.setVisible(false);
+                            } else {
+                                if (auxHija.equals("listBoxTerminos")) {
+                                    listBoxTerminos.setVisible(false);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+        }
+    }
+
+    public void ActivarGrupos(String nom) {
+        Integer opcion = id.getValue();
+        tipo = Integer.parseInt(identificador.getValue());
+        if (nom.equals("DatosNombre")) {
+            DatosNombre.setVisible(true);
+            if ((id.getValue() == 2) || (id.getValue() == 1)) {
+                //solo vista
+                listBoxHijas.setSelectedIndex(1);
+                posHija = listBoxHijas.getSelectedIndex();
+            } else {
+                if (banderaNuevo) {
+                    DatosCodificacion.setVisible(true);
+                }
+            }
+        } else {
+            if (nom.equals("DatosCodificacion")) {
+                DatosCodificacion.setVisible(true);
+            } else {
+                if (nom.equals("DatosPracticasAsociadas")) {
+                    DatosPracticasAsociadas.setVisible(true);
+                } else {
+                    if (nom.equals("DatosPracticasxReporte")) {
+                        DatosPracticasxReporte.setVisible(true);
+                    } else {
+                        if (nom.equals("DatosSinonimos")) {
+                            DatosSinonimos.setVisible(true);
+                        } else {
+                            if (nom.equals("DatosTermino")) {
+                                DatosTermino.setVisible(true);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        if (nom.equals("listBoxPractica")) {
+            getAllNombres();
+            listBoxPractica.setVisible(true);
+        } else {
+            if (nom.equals("listBoxCodificacion")) {
+                getAllDetalle(listBoxCodificacion, 1);
+                listBoxCodificacion.setVisible(true);
+            } else {
+                if (nom.equals("listBoxPracticasAsociadas")) {
+                    getAllDetalle(listBoxPracticasAsociadas, 2);
+                    listBoxPracticasAsociadas.setVisible(true);
+                } else {
+                    if (nom.equals("listBoxPracticasxReporte")) {
+                        getAllDetalle(listBoxPracticasxReporte, 3);
+                        listBoxPracticasxReporte.setVisible(true);
+                    } else {
+                        if (nom.equals("listBoxSinonimos")) {
+                            getAllDetalle(listBoxSinonimos, 4);
+                            listBoxSinonimos.setVisible(true);
+                        } else {
+                            if (nom.equals("listBoxTerminos")) {
+                                getAllDetalle(listBoxTerminos, 5);
+                                listBoxTerminos.setVisible(true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (opcion.intValue() == 0) {
+            limpiar(tipo);
+            habilitar(tipo);
+        }
+        if (opcion.intValue() == 1) {
+            habilitar(tipo);
+        }
+    }
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="VARIABLES GENERALES">
+    String activo; //SABER EL USUARIOS ACTIVO
+
+    public String getActivo() {
+        return activo;
+    }
+
+    public String getNomPractica() {
+        nomPractica = current.getDescripcion();
+        return nomPractica;
+    }
+
+    public void setIdentificador(Textbox identificador) {
+        this.identificador = identificador;
+    }
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="MANEJO DEL XML">
+    Document doc;
+    List listTablas = null;
+    Grid GridHijas;
+
+    public void obtenerhijas() {
+        NodeList listanodosaux = null;
+        doc = admXml.getDocumento("EsquemaAvasus.xml", 0);
+        //obtener lista de a traves de una etiqueta
+        NodeList listanodos = admXml.getlistanodos("practica", doc);
+        if (listanodos.getLength() > 0) {
+            //si hay un numero de listas y recorremos
+            Node aux = listanodos.item(0);
+            listanodosaux = aux.getChildNodes();
+            obtenerlistas(listanodosaux);
+        }
+    }
+
+    private void obtenerlistas(NodeList lista) {
+        Node tabla;
+        String valor;
+        String aux;
+        Integer cont = 0;
+        Element elemento;
+        NamedNodeMap item_atributos;
+        listTablas = new ArrayList();
+        for (int i = 0; i < lista.getLength(); i++) {
+            tabla = lista.item(i);
+            if (tabla.getNodeType() == Node.ELEMENT_NODE) {
+                elemento = (Element) tabla;
+                if (elemento.getNodeName() != null) {
+                    item_atributos = elemento.getAttributes();
+                    //obtener del xml el atributos show
+                    Node val = item_atributos.item(2);
+                    valor = val.getNodeValue();
+                    aux = val.getNodeValue();
+                    boolean band = valor.equals("hija");
+                    valor = elemento.getNodeName();
+                    if (band) {
+                        listTablas.add(valor.toString());
+                    } else {
+                        if (aux.equals("padre")) {
+                            if (cont == 0) {
+                                listTablas.add(valor.toString());
+                                cont = cont + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        cargarListHijas();
+    }
+    boolean BCHijas = false;
+
+    public void cargarListHijas() {
+        int x = listBoxHijas.getItemCount();
+        if (x > 0) {
+            limpiarListbox(listBoxHijas);
+        }
+        Listitem nuevoItem;
+        for (int i = 0; i < listTablas.size(); i++) {
+            nombreTabla = (String) listTablas.get(i);
+            nombreTabla = validarString.remplazarGuiones(nombreTabla).toUpperCase();
+            nuevoItem = new Listitem(nombreTabla);
+            nuevoItem.setParent(listBoxHijas);
+
+        }
+
+    }
+
+    private String ObtenerValorAtributo(Integer tipo, String nombre) {
+        Node tabla;
+        Node Atributo = null;
+        String nombreActivar = null;
+        Element elemento;
+        NamedNodeMap item_atributos;
+        NodeList listanodos = admXml.getlistanodos(nombre, doc);
+        if (listanodos.getLength() > 0) {
+            //si hay un numero de listas y recorremos
+            for (int i = 0; i < listanodos.getLength(); i++) {
+                tabla = listanodos.item(i);
+                if (tabla.getNodeType() == Node.ELEMENT_NODE) {
+                    elemento = (Element) tabla;
+                    if (elemento.getNodeName() != null) {
+                        item_atributos = elemento.getAttributes();
+                        //obtener del xml el atributos grid
+                        switch (tipo) {
+                            case 0:
+                                Atributo = item_atributos.item(0);
+                                break;
+                            case 1:
+                                Atributo = item_atributos.item(1);
+                                break;
+                        }
+                        nombreActivar = Atributo.getNodeValue();
+                    }
+                }
+            }
+        }
+        return nombreActivar;
+    }
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="VARIABLES GENERALES PRACTICAS">
+    NombreP current = new NombreP();
+    Textbox descripcion;
+    Textbox abreviatura;
+    Textbox usuario;
+    Textbox inf1;
+    Textbox inf2;
+    Textbox inf3;
+    Groupbox DatosNombre;
+    Listbox listBoxPractica;
+
+    public NombreP getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(NombreP current) {
+        this.current = current;
+    }
+
+    public List getAllNombres() {
+        List datos = null;
+        try {
+            tipo = Integer.parseInt(identificador.getValue());
+            if (tipo == 1) {
+                datos = admhi.getData(new NombreP(), false,null);
+            } else {
+                datos = admhi.getData(new NombreP(), false,null);
+            }
+            int x = listBoxPractica.getItemCount();
+            if (x > 0) {
+                limpiarListbox(listBoxPractica);
+            }
+
+            for (Object objNom : datos) {
+                NombreP objNomb = (NombreP) objNom;
+                Listitem item = new Listitem();
+                item.setValue(objNomb);
+                Listcell idN = new Listcell(String.valueOf(objNomb.getId()));
+                idN.setParent(item);
+                Listcell DesN = new Listcell(objNomb.getDescripcion());
+                DesN.setParent(item);
+                Listcell AbreN = new Listcell(objNomb.getAbreviatura());
+                AbreN.setParent(item);
+                Listcell ResTecN = new Listcell(objNomb.getInfAd1());
+                ResTecN.setParent(item);
+                Listcell ResN = new Listcell(objNomb.getInfAd2());
+                ResN.setParent(item);
+                Listcell ResOtroN = new Listcell(objNomb.getInfAd3());
+                ResOtroN.setParent(item);
+                item.setParent(listBoxPractica);
+
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="VARIABLES GENERALES DETALLE">
+    String nombreTabla;
+    Textbox descripcionDetalle;
+    Listbox listBoxCodificacion;
+    Groupbox DatosCodificacion;
+    Textbox descripcionCodificacion;
+    Groupbox DatosPracticasAsociadas;
+    Listbox listBoxPracticasAsociadas;
+    Textbox descripcionPracticaAsociada;
+    Groupbox DatosPracticasxReporte;
+    Groupbox DatosSinonimos;
+    Groupbox DatosTermino;
+    Listbox listBoxPracticasxReporte;
+    Listbox listBoxReporte;
+    Listbox listBoxReportexEmpresa;
+    Listbox listBoxSinonimos;
+    Listbox listBoxTerminos;
+    Textbox descripcionPracticaxReporte;
+    Textbox descripcionSinonimos;
+    Textbox descripcionTermino;
+    Textbox unidadTermino;
+    Textbox defecto;
+    Textbox grupoTermino;
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="Get y Set Currents">
+    Codificacion currentCodificacion = new Codificacion();
+    PracticaAsociada currentPracticaAsociada = new PracticaAsociada();
+    PracticaXReporte currentPracticaxReporte = new PracticaXReporte();
+    Sinonimo currentSinonimo = new Sinonimo();
+    Termino currentTermino = new Termino();
+
+    public Codificacion getCurrentCodificacion() {
+        return currentCodificacion;
+    }
+
+    public void setCurrentCodificacion(Codificacion currentCodificacion) {
+        this.currentCodificacion = currentCodificacion;
+    }
+
+    public PracticaAsociada getCurrentPracticaAsociada() {
+        return currentPracticaAsociada;
+    }
+
+    public void setCurrentPracticaAsociada(PracticaAsociada currentPracticaAsociada) {
+        this.currentPracticaAsociada = currentPracticaAsociada;
+    }
+
+    public PracticaXReporte getCurrentPracticaxReporte() {
+        return currentPracticaxReporte;
+    }
+
+    public void setCurrentPracticaxReporte(PracticaXReporte currentPracticaxReporte) {
+        this.currentPracticaxReporte = currentPracticaxReporte;
+    }
+
+    public Sinonimo getCurrentSinonimo() {
+        return currentSinonimo;
+    }
+
+    public void setCurrentSinonimo(Sinonimo currentSinonimo) {
+        this.currentSinonimo = currentSinonimo;
+    }
+
+    public Termino getCurrentTermino() {
+        return currentTermino;
+    }
+
+    public void setCurrentTermino(Termino currentTermino) {
+        this.currentTermino = currentTermino;
+    }
+
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="Get de ListBox">
+    private void limpiarListbox(Listbox lbxDetalle) {
+        int x = lbxDetalle.getItemCount();
+        while (lbxDetalle.getItemCount() > 0) {
+            for (int i = 0; i < lbxDetalle.getItemCount(); i++) {
+                lbxDetalle.removeItemAt(i);
+            }
+        }
+
+        x = lbxDetalle.getItemCount();
+    }
+
+    public List getAllCodificacion() {
+        List datos = null;
+        try {
+            tipo = Integer.parseInt(identificador.getValue());
+            if (tipo == 1) {
+                datos = getAllDetalle(listBoxCodificacion, tipo);
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+
+    public List getAllPracticasAsociadas() {
+        List datos = null;
+        try {
+            tipo = Integer.parseInt(identificador.getValue());
+            if (tipo == 2) {
+                datos = getAllDetalle(listBoxPracticasAsociadas, tipo);
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+
+    public List getAllSinonimos() {
+        List datos = null;
+        try {
+            tipo = Integer.parseInt(identificador.getValue());
+            if (tipo == 4) {
+                datos = getAllDetalle(listBoxSinonimos, tipo);
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+
+    public List getAllTerminos() {
+        List datos = null;
+        try {
+            tipo = Integer.parseInt(identificador.getValue());
+            if (tipo == 5) {
+                datos = getAllDetalle(listBoxTerminos, tipo);
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+
+    public List getAllDetalle(Listbox lbxDetalle, Integer tipo) {
+        int idCu = 0;
+        List datos = null;
+        try {
+            if (tipo >= 1) {
+//                lbxDetalle.getChildren().clear();
+                limpiarListbox(lbxDetalle);
+                idCu = current.getId();
+                datos = admhi.getObjetosA(nombreTabla, idCu, false);
+                for (Object objDetalle : datos) {
+                    Listitem item = new Listitem();
+                    Listcell idD = null;
+                    Listcell DesD = null;
+                    Listcell UsrD = null;
+                    switch (tipo) {
+                        case 1: //CODIFICAION
+                            Codificacion objDetC = (Codificacion) objDetalle;
+                            item.setValue(objDetC);
+                            idD = new Listcell(String.valueOf(objDetC.getId()));
+                            DesD = new Listcell(objDetC.getDescripcion());
+                            UsrD = new Listcell(objDetC.getLastUser());
+                            break;
+                        case 2: //PRACTICA ASOCIADA
+                            PracticaAsociada objDetPA = (PracticaAsociada) objDetalle;
+                            item.setValue(objDetPA);
+                            idD = new Listcell(String.valueOf(objDetPA.getId()));
+                            DesD = new Listcell(objDetPA.getDescripcion());
+                            UsrD = new Listcell(objDetPA.getLastUser());
+                            break;
+                        case 3: //PRACTICA X REPORTE
+                            PracticaXReporte objDetPR = (PracticaXReporte) objDetalle;
+                            item.setValue(objDetPR);
+                            idD = new Listcell(String.valueOf(objDetPR.getId()));
+//                            DesD = new Listcell(objDetPR.getNombre().getDescripcion());
+                            UsrD = new Listcell(objDetPR.getLastUser());
+                            break;
+                        case 4: //SINONIMO
+                            Sinonimo objDetS = (Sinonimo) objDetalle;
+                            item.setValue(objDetS);
+                            idD = new Listcell(String.valueOf(objDetS.getId()));
+//                            DesD = new Listcell(objDetS.get Nombre().getDescripcion());
+                            UsrD = new Listcell(objDetS.getLastUser());
+                            break;
+                        case 5: //TERMINO
+                            Termino objDetT = (Termino) objDetalle;
+                            item.setValue(objDetT);
+                            idD = new Listcell(String.valueOf(objDetT.getId()));
+//                            DesD = new Listcell(objDetT.getNombre().getDescripcion());
+                            UsrD = new Listcell(objDetT.getLastUser());
+                            break;
+
+                    }
+                    idD.setParent(item);
+                    DesD.setParent(item);
+                    UsrD.setParent(item);
+                    item.setParent(lbxDetalle);
+                }
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+
+    public List getAllPracticasxReporte() {
+        int idCur = 0;
+        List datos = null;
+        try {
+            tipo = Integer.parseInt(identificador.getValue());
+            if (tipo == 3) {
+                idCur = current.getId();
+                datos = admhi.getobjetosReportes(nombreTabla, idCur, false);
+            }
+        } catch (Exception e) {
+        }
+        return datos;
+    }
+
+    public List getallAbreviaturas() {
+        try {
+            List datosAbreviaturas = null;
+            datosAbreviaturas = admhi.getData(new Abreviatura(), true,null);
+            return datosAbreviaturas;
+        } // </editor-fold>
+        //<editor-fold defaultstate="collapsed" desc="seleccion ListBox Hijas">
+        catch (NamingException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="seleccion ListBox Hijas">
+
+    public void onSelect$listBoxPractica() {
+        banderaSeleccionPractica = true;
+        current = (NombreP) listBoxPractica.getSelectedItem().getValue();
+        DesactivarGrupo();
+        desahabilitar(0);
+        listBoxHijas.setVisible(true);
+        String nom = ObtenerValorAtributo(0, "NombreP");
+        ActivarGrupos(nom);
+        identificador.setValue(posHija.toString());
+        nombreTabla = (String) listTablas.get(posHija);
+        nom = ObtenerValorAtributo(1, nombreTabla);
+        ActivarGrupos(nom);
+        auxHija = nom;
+    }
+    boolean BHijaSeleccion = false;
+
+    public void onSelect$listBoxCodificacion() {
+        currentCodificacion = (Codificacion) listBoxCodificacion.getSelectedItem().getValue();
+        BHijaSeleccion = true;
+    }
+
+    public void onSelect$listBoxPracticasAsociadas() {
+        currentPracticaAsociada = (PracticaAsociada) listBoxPracticasAsociadas.getSelectedItem().getValue();
+        BHijaSeleccion = true;
+    }
+
+    public void onSelect$listBoxPracticasxReporte() {
+        currentPracticaxReporte = (PracticaXReporte) listBoxPracticasxReporte.getSelectedItem().getValue();
+        BHijaSeleccion = true;
+    }
+
+    public void onSelect$listBoxSinonimos() {
+        currentSinonimo = (Sinonimo) listBoxSinonimos.getSelectedItem().getValue();
+        BHijaSeleccion = true;
+    }
+
+    public void onSelect$listBoxTerminos() {
+        currentTermino = (Termino) listBoxTerminos.getSelectedItem().getValue();
+        BHijaSeleccion = true;
+    }
+// </editor-fold>
+    AdmiUsuario admUsuario = new AdmiUsuario();
+    //<editor-fold defaultstate="collapsed" desc="CARGA DE LA PAGINA">
+    boolean BCP = false;
+
+    public void onCreate$WinPracticas() {
+
+        obtenerhijas();
+        mantenimiento(4);
+        BCP = true;
+
+    }
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="EVENTOS DE CONTROL">
+    Integer tipo;
+    String nombreTablaModificar = "";
+
+    public void onClick$btnGuardar() throws InterruptedException {
+        tipo = Integer.parseInt(identificador.getValue());
+        try {
+            if ((CancelarGuardar)) {
+                if (id.getValue() == 0) {
+                    guardarNuevo();
+                } else {
+                    if ((banderaSeleccionPractica) || (BHijaSeleccion)) {
+                        guardarActualizar();
+                    } else {
+                        Messagebox.show("Seleccione un registro", "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            id.setValue(2);
+            Messagebox.show("Informacion Incompleta", "Error", Messagebox.OK, Messagebox.ERROR);
+            mantenimiento(3);
+
+        }
+    }
+    boolean bandeDatos = false;
+
+    public void guardarNuevo() throws InterruptedException {
+        String f = "";
+        int ide;
+        try {
+            switch (tipo) {
+                case 0:
+                    current.setFirstUser(activo);
+                    if (validarDatos(0)) {
+//                        f = admhi.nuevo(current);
+                    }
+                    if (!(f.equals(""))) {
+                        if (validarDatos(1)) {
+//                            currentCodificacion.setNombre(current);
+                            currentCodificacion.setFirstUser(activo);
+//                            f = admhi.nuevo(currentCodificacion);
+                        } else {
+                            Messagebox.show("Un Registro no ingresado", "Error", Messagebox.OK, Messagebox.ERROR);
+                        }
+                    }
+                    break;
+                case 1: //CODIFICAION
+                    currentCodificacion.setFirstUser(activo);
+                    ide = current.getId();
+                    if (validarDatos(1) && (ide != 0)) {
+//                        currentCodificacion.setNombre(current);
+//                        f = admhi.nuevo(currentCodificacion);
+                    }
+                    break;
+                case 2: //PRACTICA ASOCIADA
+                    currentPracticaAsociada.setFirstUser(activo);
+                    ide = current.getId();
+                    if (validarDatos(2) && (ide != 0)) {
+//                        currentPracticaAsociada.setNombre(current);
+//                        f = admhi.nuevo(currentPracticaAsociada);
+                    }
+                    break;
+                case 3: //PRACTICA X REPORTE
+                    currentPracticaxReporte.setFirstUser(activo);
+                    ide = current.getId();
+                    if (validarDatos(3) && (ide != 0)) {
+//                        currentPracticaxReporte.setNombre(current);
+//                        f = admhi.nuevo(currentPracticaxReporte);
+                    }
+                    break;
+                case 4: //SINONIMO
+                    currentSinonimo.setFirstUser(activo);
+                    ide = current.getId();
+                    if (validarDatos(4) && (ide != 0)) {
+//                        currentSinonimo.setNombre(current);
+//                        f = admhi.nuevo(currentSinonimo);
+                    }
+                    break;
+                case 5: //TERMINO
+                    currentTermino.setFirstUser(activo);
+                    ide = current.getId();
+                    if (validarDatos(5) && (ide != 0)) {
+//                        currentTermino.setNombre(current);
+//                        f = admhi.nuevo(currentTermino);
+                    }
+                    break;
+            }
+            if ((f.equals("")) || (f.equals("0"))) {
+                id.setValue(2);
+                Messagebox.show("Error Registro no ingresado", "Error", Messagebox.OK, Messagebox.ERROR);
+                mantenimiento(4);
+            } else {
+                if (!(banderaNuevo)) {
+                    limpiar(tipo);
+                    DesactivarGrupo();
+                } else {
+                    listBoxHijas.setVisible(false);
+                }
+                Messagebox.show("REGISTRO INGRESADO...Desea Ingresar otro?", "Pregunta", Messagebox.NO | Messagebox.CANCEL | Messagebox.YES, Messagebox.QUESTION, new EventListener() {
+
+                    public void onEvent(Event event) throws Exception {
+                        if (((Integer) event.getData()).intValue() == Messagebox.YES) {
+                            if (!(banderaNuevo)) {
+                                tipo = Integer.parseInt(identificador.getValue());
+                                banderaHijas = true;
+                                nuevo(tipo);
+                            } else {
+                                bandeDatos = true;
+                                String nom = "DatosNombre";
+                                listBoxHijas.setSelectedIndex(1);
+                                identificador.setValue("1");
+                                tipo = Integer.parseInt(identificador.getValue());
+                                ActivarGrupos(nom);
+                                desahabilitar(0);
+                                banderaNuevo = false;
+                                banderaSeleccionPractica = true;
+                                listBoxHijas.setVisible(true);
+                                auxHija = "";
+                                selecionHija();
+                            }
+                            return;
+                        } else {
+                            if (((Integer) event.getData()).intValue() == Messagebox.CANCEL) {
+                                if (!(banderaNuevo)) {
+                                    bandeDatos = true;
+                                    id.setValue(2);
+                                    mantenimiento(3);
+                                } else {
+                                    bandeDatos = true;
+                                    String nom = "DatosNombre";
+                                    ActivarGrupos(nom);
+                                    desahabilitar(0);
+                                    listBoxHijas.setSelectedIndex(1);
+                                    banderaNuevo = false;
+                                    banderaSeleccionPractica = true;
+                                    auxHija = "";
+                                    selecionHija();
+                                }
+                                return;
+                            } else {
+                                //si escoge no regresamos a la practica escogida  seleccionamos el primero y mostramos el listbox del primero
+                                if (((Integer) event.getData()).intValue() == Messagebox.NO) {
+                                    bandeDatos = false;
+                                    mantenimiento(4);
+                                    id.setValue(2);
+                                    return;
+                                }
+
+                            }
+                        }
+                    }
+                });
+            }
+        } catch (Exception e) {
+            id.setValue(2);
+            Messagebox.show("Informacion Incompleta", "Error", Messagebox.OK, Messagebox.ERROR);
+            mantenimiento(3);
+
+        }
+    }
+
+    public void guardarActualizar() throws InterruptedException {
+        boolean bandera = false;
+        String f = "";
+        try {
+            switch (tipo) {
+                case 0:
+                    current.setLastUser(activo);
+                    if (validarDatos(0)) {
+                        bandera = admhi.actualizar(current);
+                        f = Integer.toString(current.getId());
+                        desahabilitar(tipo);
+                    }
+                    break;
+                case 1: //CODIFICAION
+                    currentCodificacion.setLastUser(activo);
+                    if (validarDatos(1)) {
+                        bandera = admhi.actualizar(currentCodificacion);
+                        f = Integer.toString(current.getId());
+                    }
+                    break;
+                case 2: //PRACTICA ASOCIADA
+                    currentPracticaAsociada.setLastUser(activo);
+                    if (validarDatos(2)) {
+                        bandera = admhi.actualizar(currentPracticaAsociada);
+                        f = Integer.toString(current.getId());
+                    }
+                    break;
+                case 3: //PRACTICA X REPORTE
+                    currentPracticaxReporte.setLastUser(activo);
+                    if (validarDatos(3)) {
+                        bandera = admhi.actualizar(currentPracticaxReporte);
+                        f = Integer.toString(current.getId());
+                    }
+                    break;
+                case 4: //SINONIMO
+                    currentSinonimo.setLastUser(activo);
+                    if (validarDatos(4)) {
+                        bandera = admhi.actualizar(currentSinonimo);
+                        f = Integer.toString(current.getId());
+                    }
+                    break;
+                case 5: //TERMINO
+                    currentTermino.setLastUser(activo);
+                    if (validarDatos(5)) {
+                        bandera = admhi.actualizar(currentTermino);
+                        f = Integer.toString(current.getId());
+                    }
+                    break;
+            }
+            if ((bandera == false) && (f.equals(""))) {
+                id.setValue(2);
+                Messagebox.show("No se pudo actualizar el registro", "Error", Messagebox.OK, Messagebox.INFORMATION);
+                mantenimiento(4);
+            } else {
+                Messagebox.show("REGISTRO ACTUALIZADO", "Pregunta", Messagebox.OK, Messagebox.INFORMATION, new EventListener() {
+
+                    public void onEvent(Event event) throws Exception {
+                        if (((Integer) event.getData()).intValue() == Messagebox.OK) {
+                            //mostramos current y activamos el grid de acuerdo a la pos de hija
+                            //si  bandera aux=false esta modificada la practica
+                            if (banderaActualizarC) {
+                                identificador.setValue("1");
+                                tipo = Integer.parseInt(identificador.getValue());
+                                banderaActualizarC = false;
+                                auxHija = nombreTablaModificar;
+                                DesactivarGrupo();
+                                desahabilitar(0);
+                            }
+                            id.setValue(2);
+                            mantenimiento(4);
+                            return;
+//                        } else {
+//                            if (((Integer) event.getData()).intValue() == Messagebox.CANCEL) {
+//                                mantenimiento(3);
+//                                id.setValue(2);
+//                                return;
+//                            } else {
+//                                //si escoge nos regresamos a la practica escogida
+//
+//                            }
+                        }
+                    }
+                });
+            }
+        } catch (Exception e) {
+            id.setValue(2);
+            Messagebox.show("Informacion Incompleta", "Error", Messagebox.OK, Messagebox.ERROR);
+            mantenimiento(3);
+
+        }
+    }
+
+    public void onClick$btnNuevo() throws InterruptedException {
+        if (!(CancelarGuardar)) {
+            CancelarGuardar = true;
+            id.setValue(0);
+            if (!(identificador.getValue().equals("0"))) {
+                posHija = listBoxHijas.getSelectedIndex();
+                identificador.setValue(posHija.toString());
+                tipo = Integer.parseInt(identificador.getValue());
+                if ((banderaSeleccionPractica) || (posHija != 0)) {
+                    //NUEVOS DETALLES DE UNA PRACTICA
+                    nuevo(tipo);
+                    listBoxHijas.setVisible(true);
+                }
+            } else {
+                //PRACTICA NUEVA
+                banderaNuevo = true;
+                listBoxHijas.setVisible(true);
+                identificador.setValue("0");
+                tipo = Integer.parseInt(identificador.getValue());
+                nuevo(tipo);
+            }
+        } else {
+            Messagebox.show("Primero Cancele el proceso", "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+
+        }
+    }
+
+    public void onClick$cancelar() {
+        mantenimiento(4);
+    }
+
+    public void nuevo(int tipo) {
+        switch (tipo) {
+            case 0: //CODIFICACION
+                if (banderaNuevo) {
+                    current = new NombreP();
+                    current.setFirstUser(activo);
+                    currentCodificacion = new Codificacion();
+                }
+                break;
+            case 1: //CODIFICACION
+                currentCodificacion = new Codificacion();
+                break;
+            case 2: //PRACTICA ASOCIADA
+                currentPracticaAsociada = new PracticaAsociada();
+                break;
+            case 3: //PRACTICA X REPORTE
+                currentPracticaxReporte = new PracticaXReporte();
+                break;
+            case 4: //SINONIMO
+                currentSinonimo = new Sinonimo();
+                break;
+            case 5: //TERMINO
+                currentTermino = new Termino();
+                break;
+        }
+        mantenimiento(0);
+    }
+
+    public void onClick$btnUpdate() throws InterruptedException {
+        try {
+            if (!(CancelarGuardar)) {
+                if (banderaSeleccionPractica) {
+                    CancelarGuardar = true;
+                    banderaActualizar = true;
+                    id.setValue(1);
+                    tipo = Integer.parseInt(identificador.getValue());
+                    if (!(BHijaSeleccion)) {
+                        //ACTUALIZAR LA PRACTICA
+                        identificador.setValue("0");
+                        nombreTablaModificar = auxHija;
+                        banderaActualizarC = true;
+                        tipo = Integer.parseInt(identificador.getValue());
+                    }
+                    actualizar(tipo);
+                } else {
+                    Messagebox.show("Seleccione un registro", "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+                }
+            } else {
+                Messagebox.show("Primero Cancele el proceso", "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+            }
+        } catch (Exception e) {
+            Messagebox.show("No puede Actualizar", "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+
+        }
+    }
+
+    public void actualizar(int tipo) {
+        mantenimiento(1);
+    }
+
+    public void onClick$btnDelete() throws InterruptedException {
+        banderaEliminar = true;
+        if (!(CancelarGuardar)) {
+            if ((banderaSeleccionPractica) || (banderaSeleccionHija)) {
+                Messagebox.show("Desea Eliminar el Regsitro?", "Pregunta", Messagebox.OK | Messagebox.CANCEL, Messagebox.QUESTION, new EventListener() {
+
+                    public void onEvent(Event event) throws Exception {
+                        if (((Integer) event.getData()).intValue() != Messagebox.CANCEL) {
+                            eliminar();
+                            mantenimiento(4);
+                            return;
+
+                        } else {
+                            mantenimiento(3);
+                            return;
+                        }
+                    }
+                });
+            } else {
+            }
+        } else {
+            Messagebox.show("Primero Cancele el proceso", "INFORMACION", Messagebox.OK, Messagebox.INFORMATION);
+        }
+    }
+
+    public void eliminar() throws InterruptedException {
+        try {
+            DatosNombre.setVisible(false);
+            Byte reg = 1;
+            tipo = Integer.parseInt(identificador.getValue());
+            boolean bandera = false;
+            switch (tipo) {
+                case 1:
+                    if (!(BHijaSeleccion)) {
+                        current.setLockReg(reg);
+                        bandera = admhi.actualizar(current);
+                    } else {
+                        currentCodificacion.setLockReg(reg);
+                        bandera = admhi.actualizar(currentCodificacion);
+                    }
+                    break;
+                case 2:
+                    if (BHijaSeleccion) {
+                        currentPracticaAsociada.setLockReg(reg);
+                        bandera = admhi.actualizar(currentPracticaAsociada);
+                    }
+                    break;
+                case 3:
+                    currentPracticaxReporte.setLockReg(reg);
+                    bandera = admhi.actualizar(currentPracticaxReporte);
+                    break;
+                case 4:
+                    currentSinonimo.setLockReg(reg);
+                    bandera = admhi.actualizar(currentSinonimo);
+                    break;
+                case 5:
+                    currentTermino.setLockReg(reg);
+                    bandera = admhi.actualizar(currentTermino);
+                    break;
+            }
+            if (bandera) {
+                Messagebox.show("Registro Eliminado", "Information", Messagebox.OK, Messagebox.INFORMATION);
+            }
+        } catch (Exception e) {
+            Messagebox.show("No puede Eliminar el Registro", "Error", Messagebox.OK, Messagebox.ERROR);
+
+        }
+    }
+
+    public void onClick$btBuscar() {
+        tipo = Integer.parseInt(identificador.getValue());
+        switch (tipo) {
+            case 1:
+                break;
+        }
+    }
+
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="MANTENIMIENTO LISTBOX Y DATOS">
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="Get y Set textBox">
+    //<editor-fold defaultstate="collapsed" desc="Get y Set Nombre">
+    public Textbox getAbreviatura() {
+//        abreviatura.setValue(current.getAbreviatura());
+        return abreviatura;
+    }
+
+    public void setAbreviatura(Textbox abreviatura) {
+//        current.setAbreviatura(abreviatura.getValue());
+        this.abreviatura = abreviatura;
+    }
+
+    public Textbox getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(Textbox descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Textbox getInf1() {
+        return inf1;
+    }
+
+    public void setInf1(Textbox inf1) {
+        this.inf1 = inf1;
+    }
+
+    public Textbox getInf2() {
+        return inf2;
+    }
+
+    public void setInf2(Textbox inf2) {
+        this.inf2 = inf2;
+    }
+
+    public Textbox getInf3() {
+        return inf3;
+    }
+
+    public void setInf3(Textbox inf3) {
+        this.inf3 = inf3;
+    }
+
+    public Textbox getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Textbox usuario) {
+        this.usuario = usuario;
+    }
+    // </editor-fold>
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="HABILITAR Y LIMPIAR TEXT">
+
+    private void mantenimiento(Integer opc) {
+        String nom;
+//        opc = 0 quiere decir nuevo =1 actualizar =2 cancelar de la practica =3 cancelar de las hijas =4,
+        switch (opc) {
+            case 0: //nuevo
+                tipo = Integer.parseInt(identificador.getValue());
+                nombreTabla = (String) listTablas.get(tipo);
+                nom = ObtenerValorAtributo(0, nombreTabla);
+                if (!(banderaHijas)) {
+                    DesactivarGrupo();
+                }
+                ActivarGrupos(nom);
+                auxHija = nom;
+                break;
+            case 1: //Actualizar
+                nombreTabla = (String) listTablas.get(tipo);
+                nom = ObtenerValorAtributo(0, nombreTabla);
+                if (tipo >= 1) {
+                    //se actualizo la practica
+                    //si desactivar el anterior
+                    nom = nom.replace("Datos", "listBox");
+                } else {
+                    ActivarGrupos(nom);
+                }
+                auxHija = nom;
+                break;
+            case 3: //despues de guardar, de seleccion cancelar en meseagebox presenta datos de la practica
+                listBoxHijas.setSelectedIndex(1);
+                selecionHija();
+                estadoBanderas();
+                bandeDatos = false;
+                break;
+            case 4: //pos inicial de la pag
+                DesactivarGrupo();
+                desahabilitar(0);
+                limpiar(0);
+                auxHija = "DatosNombre";
+                DesactivarGrupo();
+                listBoxHijas.setVisible(false);
+                listBoxHijas.setSelectedIndex(0);
+                getAllNombres();
+                listBoxPractica.setVisible(true);
+                auxHija = "listBoxPractica";
+                banderaSeleccionPractica = false;
+                estadoBanderas();
+                bandeDatos = false;
+                break;
+        }
+    }
+
+    public void desahabilitar(int tipo) {
+        switch (tipo) {
+            case 0: //NOMBRE
+                descripcion.setDisabled(true);
+                abreviatura.setDisabled(true);
+                inf1.setDisabled(true);
+                inf2.setDisabled(true);
+                inf3.setDisabled(true);
+                break;
+            case 1: //CODIFICACION
+                descripcionCodificacion.setDisabled(true);
+                break;
+            case 2: //PRACTICA ASOCIADA
+                descripcionPracticaAsociada.setDisabled(true);
+                break;
+            case 3: //PRACTICA X REPORTE
+                descripcionPracticaxReporte.setDisabled(true);
+                break;
+            case 4: //SINONIMO
+                descripcionSinonimos.setDisabled(true);
+                break;
+            case 5: //TERMINO
+                descripcionTermino.setDisabled(true);
+                defecto.setDisabled(true);
+                unidadTermino.setDisabled(true);
+                grupoTermino.setDisabled(true);
+                break;
+        }
+    }
+
+    public void habilitar(int tipo) {
+        switch (tipo) {
+            case 0: //NOMBRE
+                descripcion.setDisabled(false);
+                abreviatura.setDisabled(false);
+                inf1.setDisabled(false);
+                inf2.setDisabled(false);
+                inf3.setDisabled(false);
+                if (banderaNuevo) {
+                    descripcionCodificacion.setDisabled(false);
+                }
+                break;
+            case 1: //CODIFICACION
+                descripcionCodificacion.setDisabled(false);
+                break;
+
+            case 2: //PRACTICA ASOCIADA
+                descripcionPracticaAsociada.setDisabled(false);
+                break;
+
+            case 3: //PRACTICA X REPORTE
+                descripcionPracticaxReporte.setDisabled(false);
+                break;
+
+            case 4: //SINONIMO
+                descripcionSinonimos.setDisabled(false);
+                break;
+
+            case 5: //TERMINO
+                descripcionTermino.setDisabled(false);
+                defecto.setDisabled(false);
+                unidadTermino.setDisabled(false);
+                grupoTermino.setDisabled(false);
+                break;
+
+        }
+
+
+    }
+
+    public void limpiar(int tipo) {
+        switch (tipo) {
+            case 0: //NOMBRE
+                if (banderaNuevo) {
+                    descripcion.setValue(" ");
+                    abreviatura.setValue(" ");
+                    inf1.setValue(" ");
+                    inf2.setValue(" ");
+                    inf3.setValue(" ");
+                    descripcionCodificacion.setValue(" ");
+                }
+                break;
+            case 1: //CODIFICACION
+                descripcionCodificacion.setValue(" ");
+                break;
+
+            case 2: //PRACTICA ASOCIADA
+                descripcionPracticaAsociada.setValue(" ");
+                break;
+
+            case 3: //PRACTICA X REPORTE
+                descripcionPracticaxReporte.setValue(" ");
+                break;
+
+            case 4: //SINONIMO
+                descripcionSinonimos.setValue(" ");
+                break;
+
+            case 5: //TERMINO
+                descripcionTermino.setValue(" ");
+                defecto.setValue(" ");
+                unidadTermino.setValue(" ");
+                grupoTermino.setValue(" ");
+                break;
+
+        }
+
+
+    }
+
+    public void estadoBanderas() {
+        identificador.setValue("0");
+        banderaNuevo = false;
+        banderaActualizar = false;
+        banderaEliminar = false;
+        banderaSincronizar = false;
+        CancelarGuardar = false; //solo se procese cuando est en false si esta en true hay accion de por medio
+        banderaHijas = false; //para modificar o agregar en cascada
+        BHijaSeleccion = false; //verificar si esta seleccionada un registro hijo
+    }
+
+    public boolean validarDatos(int tipo) {
+        String dato;
+        boolean bandera = false;
+        int banderaD = 0;
+        int banderaA = 0;
+        int banderaI = 0;
+        int banderaE = 0;
+        switch (tipo) {
+            case 0:
+                dato = descripcion.getValue();
+                banderaD = dato.length();
+                dato = abreviatura.getText();
+                banderaA = dato.length();
+                dato = inf1.getValue();
+                banderaI = dato.length();
+                if ((banderaD > 1) && (banderaI > 1) && (banderaA > 1)) {
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+
+                break;
+            case 1: //CODIFICACION
+                dato = descripcionCodificacion.getValue();
+                banderaI = dato.length();
+                if (banderaI > 1) {
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+
+                break;
+            case 2: //PRACTICA ASOCIADA
+                dato = descripcionPracticaAsociada.getValue();
+                banderaI = dato.length();
+                if (banderaI > 1) {
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+
+                break;
+            case 3: //PRACTICA X REPORTE
+                dato = descripcionPracticaxReporte.getValue();
+                banderaI = dato.length();
+                if (banderaI > 1) {
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+
+                break;
+            case 4: //SINONIMO
+                dato = descripcionSinonimos.getValue();
+                banderaI = dato.length();
+                if (banderaI > 1) {
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+
+                break;
+            case 5: //TERMINO
+                dato = descripcionTermino.getValue();
+                banderaI = dato.length();
+                dato = defecto.getValue();
+                banderaD = dato.length();
+                dato = unidadTermino.getValue();
+                banderaA = dato.length();
+                dato = grupoTermino.getValue();
+                banderaE = dato.length();
+                if ((banderaD > 1) && (banderaI > 1) && (banderaA > 1) && (banderaE > 1)) {
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+
+                break;
+        }
+
+        return bandera;
+    }
+// </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc="CONTROL DE GRID Y DATOS SEGUN LISTBOX HIJAS">
+    Listbox listBoxHijas;
+
+    public void onSelect$listBoxHijas() throws InterruptedException {
+        if (banderaSeleccionPractica) {
+            bandeDatos = false;
+            BHijaSeleccion = false;
+            selecionHija();
+
+        } else {
+
+            Messagebox.show("Seleccione una practica", "Error", Messagebox.OK, Messagebox.ERROR);
+            mantenimiento(4);
+
+        }
+
+    }
+
+    public void selecionHija() {
+        posHija = listBoxHijas.getSelectedIndex();
+        identificador.setValue(posHija.toString());
+        nombreTabla = (String) listTablas.get(posHija);
+        tipo = Integer.parseInt(identificador.getValue());
+        if (tipo != 0) {
+            bandeDatos = true;
+        }
+
+        if ((id.getValue() == 0) && (tipo != 0) && (CancelarGuardar)) {//NUEVO
+            nuevo(tipo);
+        } else {
+            if ((id.getValue() == 1) && (!(CancelarGuardar))) {
+//                    ACTUALIZAR
+                actualizar(tipo);
+            } else {
+                if (id.getValue() == 2) {
+//                          VISUALIZACION
+                    if (tipo != 0) {
+                        ValorIdentificador();
+                    } else {
+                        ValorIdentificador();
+                        String aux1 = auxHija;
+                        auxHija = "DatosNombre";
+                        DesactivarGrupo();
+                        auxHija = aux1;
+                        listBoxHijas.setVisible(false);
+                    }
+
+                } else {
+                    CancelarGuardar = false;
+                    id.setValue(2);
+                    mantenimiento(3);
+                }
+
+            }
+        }
+    }
+}
+//<editor-fold defaultstate="collapsed" desc="plantilla">
+// hija.addEventListener(Events.ON_CLICK, new EventListener() {
+//           public void onEvent(Event event) throws Exception {
+//                    onVerificar();
+//                }
+//            });
+//public void onPersonEdit()
+//{
+//PersonFormWnd pfw = (PersonFormWnd) Executions.createComponents("/personForm.zul",
+//this, null);
+//pfw.setSelected(this.selected);
+//}
+//}
+//
+// private void cargarbusqueda(String tabla, String campoBase, String valorbusqueda, Integer tipo) {
+//        if (tipo == 1) {
+//            current = (Nombre) admhi.consultar(tabla, campoBase, valorbusqueda);
+//            if (current != null) {
+//                if (current.getLastUser() == null) {
+//                    usuario.setText(current.getFirstUser());
+//                } else {
+//                    usuario.setText(current.getLastUser());
+//                }
+//                id.setValue((current.getId()));
+//                listaPracticas.setVisible(false);
+//
+//            }
+//
+//        }
+////    }
+//   <button label="fs" forward="onVerificar" />
+//  public void onVerificar(Event evt) {
+//       alert("holsa");
+//    }
+////////////////MANTENIMIENTO/////////
+// private void mantenimiento(Integer opc) {
+////        opc = 0 quiere decir nuevo =1 actualizar =2 cancelar
+//        String nom;
+//        Integer tipo = Integer.parseInt(identificador.getValue());
+//        //si es nuevo o actualizar
+//        if ((opc == 0) || (opc == 1)) {
+//            nombreTabla = (String) listTablas.get(tipo);
+//            nom = ObtenerValorAtributo(0, nombreTabla);
+//            if (!(banderaAux)) {
+//                DesactivarGrupo();
+//                boolean b = nombreTablaModificar.equals("");
+//                if ((banderaActualizarC) && (opc == 1)) {
+//                    {
+//                        nom = nombreTablaModificar.replace("Datos", "listBox");
+//                    }
+//                }
+//            }
+//            ActivarGrupos(nom);
+//            auxHija = nom;
+//        } else {
+//
+//            if (opc == 3) {
+//                //despues de guardar
+//                String aux1 = auxHija;
+//                auxHija = "DatosNombre";
+//                DesactivarGrupo();
+//                auxHija = aux1;
+//                DesactivarGrupo();
+//                ActivarGrupos("listBoxPractica");
+//                auxHija = "listBoxPractica";
+//                banderaActualizar = false;
+//                identificador.setValue("0");
+//                listBoxHijas.setSelectedIndex(0);
+//                banderaNuevo = false;
+//                banderaEliminar = false;
+//                banderaSincronizar = false;
+//                banderaSeleccion = false;
+//            } else {
+//                if (opc == 4) {
+//                    DesactivarGrupo();
+//                    banderaActualizar = false;
+//                    banderaNuevo = false;
+//                    banderaEliminar = false;
+//                    banderaSincronizar = false;
+//                }
+//            }
+//        }
+//    }
+////////////////MANTENIMIENTO/////////
+// </editor-fold>
+//if ((opc == 0) || (opc == 3)) //            es para nuevo o post aun proceso
+//                {
+//                    limpiarPractica();
+//                    if (opc == 0)//nuevo
+//                    {
+//                        habilitarPractica();
+//                        listBoxPractica.setVisible(false);
+//                        DatosNombre.setVisible(true);
+//                        DatosCodificacion.setVisible(true);
+//                    } else { //si es tres es despues de guardar o cancelar
+//                        desahabilitarPractica();
+//                        DatosNombre.setVisible(false);
+//                        listBoxPractica.setVisible(true);
+//                        DatosCodificacion.setVisible(false);
+//                    }
+//
+//                } else //            es actualizacion
+//                {
+//                    habilitarPractica();
+//                    DatosNombre.setVisible(true);
+//                    listBoxPractica.setVisible(false);
+//                }
+

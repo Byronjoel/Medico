@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+    <datos_generales_standar>
+        <pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+        <pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+        <estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+        <estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+        <canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+        <canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+        <parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+        <parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+        <etnia descripcion="ETNIA" orden="0" tipo_dato="T">MESTIZO</etnia>
+        <practica descripcion="PRACTICA" orden="0" tipo_dato="L">1247</practica>
+        <nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">PRUEBA - CONSENTIMIENTO</nombre_practica>
+        <solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">.</solicitante>
+        <paciente descripcion="NOMBRE" orden="0" tipo_dato="L">PRUEBAS PRUEBAS</paciente>
+        <nombres descripcion="NOMBRES" orden="0" tipo_dato="L">PRUEBAS</nombres>
+        <ruc descripcion="RUC" orden="0" tipo_dato="L">12345</ruc>
+        <ciiu descripcion="ciiu" orden="0" tipo_dato="L">PPP</ciiu>
+        <apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">PRUEBAS</apellidos>
+        <fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1990/11/27</fecha_nace>
+        <id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+        <empresa descripcion="EMPRESA" orden="0" tipo_dato="L">PRUEBA ANTECE</empresa>
+        <identificacion descripcion="CI" orden="0" tipo_dato="L">050144418</identificacion>
+        <estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+        <id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">3504</id_orden>
+        <telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0987274785// 032946061</telefono>
+        <sexo descripcion="SEXO" orden="0" tipo_dato="L">FEMENINO</sexo>
+        <profesion descripcion="PROFESION" orden="0" tipo_dato="L">ING</profesion>
+        <edad descripcion="EDAD" orden="0" tipo_dato="L">19 AÑOS </edad>
+        <ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">cargo</ocupacion>
+        <instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+        <ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">QUITO</ciudad_nace>
+        <direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">..</direccion_paciente>
+        <titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SRA</titulo_paciente>
+        <medico descripcion="MEDICO" orden="0" tipo_dato="L">Lcdo. PRUEBAS MEDICO PRUEBAS</medico>
+        <especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L">Pruebas</especialidad>
+        <cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L">1234</cod_med>
+        <titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Lcdo.</titulo_medico>
+        <fecha descripcion="FECHA" orden="0" tipo_dato="L">2010/11/15</fecha>
+        <fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2010/11/15 07:29:36</fecha_hora>
+        <dx descripcion="DIAGNOSTICO" orden="0"/>
+        <recomendaciones descripcion="RECOMENDACIONES" orden="0"/>
+        <prescripciones descripcion="PRESCRIPCIONES" orden="0"/>
+        <estado descripcion="ESTADO" orden="0" tipo_dato="L">IN</estado>
+    </datos_generales_standar>
+    <pagina0 Id="1" IdFormato="5941">
+        <enfermedad_actual descripcion="H. ENFERMEDAD ACTUAL">
+            <enf_actual descripcion="Descripción" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </enfermedad_actual>
+        <rev_osis descripcion="I. REVISIÓN DE ÓRGANOS Y SISTEMAS (EN CASO DE EXISTIR PATOLOGÍA,  DESCRIBIR ABAJO ANOTANDO EL NUMERAL)">
+            <revos_panex descripcion="1. PIEL - ANEXOS" item_lista="" orden="" tipo_dato="S"> </revos_panex>
+            <revos_osenti descripcion="2. ÓRGANOS DE LOS SENTIDOS" item_lista="" orden="3010" tipo_dato="S"> </revos_osenti>
+            <revos_respira descripcion="3. RESPIRATORIO" item_lista="" orden="3020" tipo_dato="S"> </revos_respira>
+            <revos_cardio descripcion="4. CARDIO-VASCULAR" item_lista="" orden="3030" tipo_dato="S"> </revos_cardio>
+            <revos_diges descripcion="5. DIGESTIVO" item_lista="" orden="3040" tipo_dato="S"> </revos_diges>
+            <revos_genito descripcion="6. GENITO - URINARIO" item_lista="" orden="3050" tipo_dato="S"> </revos_genito>
+            <revos_esque descripcion="7. MÚSCULO ESQUELÉTICO" item_lista="" orden="3060" tipo_dato="S"> </revos_esque>
+            <revos_endocri descripcion="8. ENDOCRINO" item_lista="" orden="3070" tipo_dato="S"> </revos_endocri>
+            <revos_hemo descripcion="9. HEMO LINFÁTICO" item_lista="" orden="3080" tipo_dato="S"> </revos_hemo>
+            <revos_nervio descripcion="10. NERVIOSO" item_lista="" orden="3090" tipo_dato="S"> </revos_nervio>
+            <revos_descrip descripcion="Descripcion" item_lista="" lineas="0" orden="3100" tipo_dato="T"/>
+        </rev_osis>
+        <cons_vita descripcion="J. CONSTANTES VITALES Y ANTROPOMETRÍA">
+            <cva_prea descripcion="PRESIÓN ARTERIAL (mmHg)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <cva_temp descripcion="TEMPERATURA (°C)" item_lista="" lineas="1" orden="3120" tipo_dato="T"/>
+            <cva_frecc descripcion=" FRECUENCIA CARDIACA (Lat/min)" item_lista="" lineas="1" orden="3130" tipo_dato="T"/>
+            <cva_satu descripcion="SATURACIÓN DE OXÍGENO (O2%)" item_lista="" lineas="1" orden="3140" tipo_dato="T"/>
+            <cva_frecr descripcion="FRECUENCIA RESPIRATORIA (fr/min)" item_lista="" lineas="1" orden="3150" tipo_dato="T"/>
+            <cva_peso descripcion="PESO (Kg)" item_lista="" orden="3160" tipo_dato="N"/>
+            <cva_talla descripcion="TALLA (cm)" item_lista="" orden="3170" tipo_dato="N"/>
+            <cva_masa descripcion="ÍNDICE DE MASA CORPORAL (Kg/m2)" item_lista="" lineas="1" orden="3180" tipo_dato="T"/>
+            <cva_perime descripcion="PERÍMETRO ABDOMINAL (cm)" item_lista="" lineas="1" orden="3190" tipo_dato="T"/>
+        </cons_vita>
+        <fisico_regional_frame1 descripcion="k. EXAMEN FISICO REGIONAL">
+            <cicatrices descripcion="cicatrices" item_lista="" orden="" tipo_dato="S"> </cicatrices>
+            <tatuajes descripcion="tatuajes" item_lista="" orden="15001" tipo_dato="S"> </tatuajes>
+            <piel_faneras descripcion="Piel y faneras" item_lista="" orden="15002" tipo_dato="S"> </piel_faneras>
+            <parpados descripcion="párpados" item_lista="" orden="15003" tipo_dato="S"> </parpados>
+            <conjuntivas descripcion="conjuntivas" item_lista="" orden="15004" tipo_dato="S"> </conjuntivas>
+            <pupilas descripcion="pupilas" item_lista="" orden="15005" tipo_dato="S"> </pupilas>
+            <cornea descripcion="córnea" item_lista="" orden="15006" tipo_dato="S"> </cornea>
+            <motilidad descripcion="motilidad" item_lista="" orden="15007" tipo_dato="S"> </motilidad>
+            <c_auditivo_externo descripcion="C. auditivo externo" item_lista="" orden="15008" tipo_dato="S"> </c_auditivo_externo>
+            <pabellon descripcion="Pabellón" item_lista="" orden="15009" tipo_dato="S"> </pabellon>
+            <timpanos descripcion="Tímpanos" item_lista="" orden="15010" tipo_dato="S"> </timpanos>
+            <labios descripcion="Labios" item_lista="" orden="15011" tipo_dato="S"> </labios>
+            <lengua descripcion="lengua" item_lista="" orden="15012" tipo_dato="S"> </lengua>
+            <faringe descripcion="faringe" item_lista="" orden="15013" tipo_dato="S"> </faringe>
+            <amigdalas descripcion="Amígdalas" item_lista="" orden="15014" tipo_dato="S"> </amigdalas>
+            <dentadura descripcion="dentadura" item_lista="" orden="15015" tipo_dato="S"> </dentadura>
+            <tabique descripcion="tabique" item_lista="" orden="15016" tipo_dato="S"> </tabique>
+            <cornetes descripcion="cornetes" item_lista="" orden="15017" tipo_dato="S"> </cornetes>
+            <mucosas descripcion="mucosas" item_lista="" orden="15018" tipo_dato="S"> </mucosas>
+            <senos_paranasales descripcion="Senos paranasales" item_lista="" orden="15019" tipo_dato="S"> </senos_paranasales>
+            <tiroides_masas descripcion="Tiroides/ masas" item_lista="" orden="15020" tipo_dato="S"> </tiroides_masas>
+            <movilidad descripcion="movilidad" item_lista="" orden="15021" tipo_dato="S"> </movilidad>
+            <mamas descripcion="mamas" item_lista="" orden="15022" tipo_dato="S"> </mamas>
+            <corazon descripcion="Corazón" item_lista="" orden="15023" tipo_dato="S"> </corazon>
+            <pulmones descripcion="Pulmones" item_lista="" orden="15024" tipo_dato="S"> </pulmones>
+            <parrilla_costal descripcion="Parrilla costal" item_lista="" orden="15025" tipo_dato="S"> </parrilla_costal>
+            <visceras descripcion="Vísceras" item_lista="" orden="15026" tipo_dato="S"> </visceras>
+            <pared_abdominal descripcion="Pared Abdominal" item_lista="" orden="15027" tipo_dato="S"> </pared_abdominal>
+            <flexibilidad descripcion="Flexibilidad" item_lista="" orden="15028" tipo_dato="S"> </flexibilidad>
+            <desviacion descripcion="Desviación" item_lista="" orden="15029" tipo_dato="S"> </desviacion>
+            <dolor descripcion="dolor" item_lista="" orden="15030" tipo_dato="S"> </dolor>
+            <pelvis descripcion="pelvis" item_lista="" orden="15031" tipo_dato="S"> </pelvis>
+            <genitales descripcion="Genitales" item_lista="" orden="15032" tipo_dato="S"> </genitales>
+            <vascular descripcion="Vascular" item_lista="" orden="15033" tipo_dato="S"> </vascular>
+            <miembros_superiores descripcion="Miembros superiores" item_lista="" orden="15034" tipo_dato="S"> </miembros_superiores>
+            <miembros_inferiores descripcion="Miembros inferiores" item_lista="" orden="15035" tipo_dato="S"> </miembros_inferiores>
+            <fuerza descripcion="fuerza" item_lista="" orden="15036" tipo_dato="S"> </fuerza>
+            <sensibilidad descripcion="sensibilidad" item_lista="" orden="15037" tipo_dato="S"> </sensibilidad>
+            <marcha descripcion="Marcha" item_lista="" orden="15038" tipo_dato="S"> </marcha>
+            <reflejos descripcion="reflejos" item_lista="" orden="15039" tipo_dato="S"> </reflejos>
+            <observaciones_regiones1 descripcion="Observaciones:" item_lista="" lineas="0" orden="15040" tipo_dato="T"/>
+        </fisico_regional_frame1>
+        <bh descripcion="BIOMETRIA HEMATICA">
+            <bh_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <bh_resul descripcion="Resultado" item_lista="" lineas="0" orden="3630" tipo_dato="T"/>
+        </bh>
+        <resul_exalab descripcion="L. RESULTADOS DE EXÁMENES GENERALES Y ESPECÍFICOS DE ACUERDO AL RIESGO Y PUESTO DE TRABAJO (IMAGEN, LABORATORIO Y OTROS)"/>
+        <qs descripcion="QUIMICA SANGUINEA (Glucosa, Creatinina, Acido Urico)">
+            <qs_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <qs_resul descripcion="Resultado" item_lista="" lineas="0" orden="3650" tipo_dato="T"/>
+        </qs>
+        <pl descripcion="PERFIL LIPIDO (Colesterol, Trigliceridos, HDL, LDL)">
+            <pl_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <pl_resul descripcion="Resultado" item_lista="" lineas="0" orden="3670" tipo_dato="T"/>
+        </pl>
+        <pt descripcion="PRUEBAS TOXICOLOGICAS">
+            <pt_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <pt_resul descripcion="Resultado" item_lista="" lineas="0" orden="3690" tipo_dato="T"/>
+        </pt>
+        <alc descripcion="ALCOHOLEMIA">
+            <alc_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <alc_resul descripcion="Resultado" item_lista="" lineas="0" orden="3710" tipo_dato="T"/>
+        </alc>
+        <vo descripcion="VALORACIÓN OFTALMOLÓGICA">
+            <vo_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <vo_resul descripcion="Resultado" item_lista="" lineas="0" orden="3730" tipo_dato="T"/>
+        </vo>
+        <au descripcion="AUDIOMETRIA">
+            <au_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <au_resul descripcion="Resultado" item_lista="" lineas="0" orden="3750" tipo_dato="T"/>
+        </au>
+        <es descripcion="ESPIROMETRIA">
+            <es_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <es_resul descripcion="Resultado" item_lista="" lineas="0" orden="3770" tipo_dato="T"/>
+        </es>
+        <el descripcion="ELECTROCARDIOGRAMA">
+            <el_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <el_resul descripcion="Resultado" item_lista="" lineas="0" orden="3790" tipo_dato="T"/>
+        </el>
+        <st descripcion="RX STÁNDAR DE TÓRAX">
+            <st_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <st_resul descripcion="Resultado" item_lista="" lineas="0" orden="3810" tipo_dato="T"/>
+        </st>
+        <rxl descripcion="RX LUMBAR APL">
+            <rxl_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <rxl_resul descripcion="Resultado" item_lista="" lineas="0" orden="3830" tipo_dato="T"/>
+        </rxl>
+        <rml descripcion="RM LUMBAR">
+            <rml_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <rml_resul descripcion="Resultado" item_lista="" lineas="0" orden="3850" tipo_dato="T"/>
+        </rml>
+        <vos descripcion="VALORCIÓN OSTEOMUSCULAR">
+            <vos_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <vos_resul descripcion="Resultado" item_lista="" lineas="0" orden="3870" tipo_dato="T"/>
+        </vos>
+        <vtr descripcion="VALORCIÓN TRAUMATOLOGICA">
+            <vtr_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <vtr_resul descripcion="Resultado" item_lista="" lineas="0" orden="3890" tipo_dato="T"/>
+        </vtr>
+        <otr descripcion="OTROS">
+            <otr_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <otr_resul descripcion="Resultado" item_lista="" lineas="0" orden="3910" tipo_dato="T"/>
+        </otr>
+        <jobs descripcion="OBSERVACIONES GENERALES">
+            <jobs_resul descripcion="Resultado" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </jobs>
+        <m_diagnostico_frame descripcion="M. DIAGNOSTICO">
+            <dx descripcion="Diagnostico:" orden="" tipo_dato="G"/>
+            <predef1 descripcion="Tipo Diagnóstico 1:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="15061" tipo_dato="L"/>
+            <predef2 descripcion="Tipo Diagnóstico 2:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1350" tipo_dato="L"/>
+            <predef3 descripcion="Tipo Diagnóstico 3:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1380" tipo_dato="L"/>
+            <predef4 descripcion="Tipo Diagnóstico 4:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1400" tipo_dato="L"/>
+            <predef5 descripcion="Tipo Diagnóstico 5:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1420" tipo_dato="L"/>
+            <predef6 descripcion="Tipo Diagnóstico 6:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1440" tipo_dato="L"/>
+            <predef7 descripcion="Tipo Diagnóstico 7:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1460" tipo_dato="L"/>
+            <predef8 descripcion="Tipo Diagnóstico 8:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1568" tipo_dato="L"/>
+            <predef9 descripcion="Tipo Diagnóstico 9:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1512" tipo_dato="L"/>
+            <predef10 descripcion="Tipo Diagnóstico 10:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1518" tipo_dato="L"/>
+            <predef11 descripcion="Tipo Diagnóstico 11:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1520" tipo_dato="L"/>
+            <predef12 descripcion="Tipo Diagnóstico 12:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1529" tipo_dato="L"/>
+            <predef13 descripcion="Tipo Diagnóstico 13:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1535" tipo_dato="L"/>
+            <predef14 descripcion="Tipo Diagnóstico 14:" item_lista="PRESUNTIVO/DEFINITIVO/" orden="5268" tipo_dato="L"/>
+        </m_diagnostico_frame>
+        <aptitud_medica_frame descripcion="N. APTITUD MÉDICA PARA EL TRABAJO">
+            <aptitud_observacion descripcion="Observación" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <aptitud descripcion="Aptitud:" item_lista="APTO/APTO EN OBSERVACION/APTO CON LIMITACIONES/NO APTO/" orden="15071" tipo_dato="L"/>
+        </aptitud_medica_frame>
+    </pagina0>
+    <pagina1 Id="2" IdFormato="5943">
+        <recomendaciones_tratamiento_frame descripcion="O. RECOMENDACIONES Y/O TRATAMIENTO">
+            <descripcion_tratamiento descripcion="Generales:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <recoaptitu descripcion="Recomendaciones de aptitud:" item_lista="" lineas="0" orden="15081" tipo_dato="T"/>
+        </recomendaciones_tratamiento_frame>
+    </pagina1>
+    <pagina2 Id="3" IdFormato="5944">
+        <datos_empresa_vacu descripcion="A. DATOS DEL ESTABLECIMIENTO - EMPRESA Y USUARIO"/>
+        <inmuniza descripcion="B. INMUNIZACIONES"/>
+        <tdif descripcion="Tétanos - Difteria"/>
+        <td_una descripcion="PRIMERA DOSIS">
+            <td1_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <td1_lote descripcion="Lote" item_lista="" lineas="1" orden="15000" tipo_dato="T"/>
+            <td1_esque descripcion="Esquema Completo" item_lista="" orden="15010" tipo_dato="S"> </td1_esque>
+            <td1_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15020" tipo_dato="T"/>
+            <td1_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15030" tipo_dato="T"/>
+            <td1_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15040" tipo_dato="T"/>
+        </td_una>
+        <td_dos descripcion="SEGUNDA DOSIS">
+            <td2_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <td2_lote descripcion="Lote" item_lista="" lineas="1" orden="15060" tipo_dato="T"/>
+            <td2_esque descripcion="Esquema Completo" item_lista="" orden="15070" tipo_dato="S"> </td2_esque>
+            <td2_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15075" tipo_dato="T"/>
+            <td2_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15080" tipo_dato="T"/>
+            <td2_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15090" tipo_dato="T"/>
+        </td_dos>
+        <td_tres descripcion="TERCERA DOSIS">
+            <td3_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <td3_lote descripcion="Lote" item_lista="" lineas="1" orden="15110" tipo_dato="T"/>
+            <td3_esque descripcion="Esquema Completo" item_lista="" orden="15120" tipo_dato="S"> </td3_esque>
+            <td3_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15130" tipo_dato="T"/>
+            <td3_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15140" tipo_dato="T"/>
+            <td3_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15150" tipo_dato="T"/>
+        </td_tres>
+        <td_cuatro descripcion="CUARTA DOSIS">
+            <td4_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <td4_lote descripcion="Lote" item_lista="" lineas="1" orden="15170" tipo_dato="T"/>
+            <td4_esque descripcion="Esquema Completo" item_lista="" orden="15180" tipo_dato="S"> </td4_esque>
+            <td4_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15190" tipo_dato="T"/>
+            <td4_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15200" tipo_dato="T"/>
+            <td4_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15210" tipo_dato="T"/>
+        </td_cuatro>
+        <td_quinto descripcion="QUINTO DOSIS">
+            <td5_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <td5_lote descripcion="Lote" item_lista="" lineas="1" orden="15230" tipo_dato="T"/>
+            <td5_esque descripcion="Esquema Completo" item_lista="" orden="15240" tipo_dato="S"> </td5_esque>
+            <td5_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15250" tipo_dato="T"/>
+            <td5_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15260" tipo_dato="T"/>
+            <td5_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15270" tipo_dato="T"/>
+        </td_quinto>
+        <hep_a descripcion="Hepatitis A"/>
+        <ha_una descripcion="PRIMERA DOSIS">
+            <ha1_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <ha1_lote descripcion="Lote" item_lista="" lineas="1" orden="15290" tipo_dato="T"/>
+            <ha1_esque descripcion="Esquema Completo" item_lista="" orden="15300" tipo_dato="S"> </ha1_esque>
+            <ha1_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15310" tipo_dato="T"/>
+            <ha1_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15320" tipo_dato="T"/>
+            <ha1_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15330" tipo_dato="T"/>
+        </ha_una>
+        <ha_dos descripcion="SEGUNDA DOSIS">
+            <ha2_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <ha2_lote descripcion="Lote" item_lista="" lineas="1" orden="15350" tipo_dato="T"/>
+            <ha2_esque descripcion="Esquema Completo" item_lista="" orden="15360" tipo_dato="S"> </ha2_esque>
+            <ha2_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15370" tipo_dato="T"/>
+            <ha2_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15380" tipo_dato="T"/>
+            <ha2_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15390" tipo_dato="T"/>
+        </ha_dos>
+        <ha_tres descripcion="TERCERA DOSIS">
+            <ha3_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <ha3_lote descripcion="Lote" item_lista="" lineas="1" orden="15310" tipo_dato="T"/>
+            <ha3_esque descripcion="Esquema Completo" item_lista="" orden="15320" tipo_dato="S"> </ha3_esque>
+            <ha3_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15330" tipo_dato="T"/>
+            <ha3_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15340" tipo_dato="T"/>
+            <ha3_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15350" tipo_dato="T"/>
+        </ha_tres>
+        <hep_b descripcion="Hepatitis B"/>
+        <hb_una descripcion="PRIMERA DOSIS">
+            <hb1_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <hb1_lote descripcion="Lote" item_lista="" lineas="1" orden="15370" tipo_dato="T"/>
+            <hb1_esque descripcion="Esquema Completo" item_lista="" orden="15380" tipo_dato="S"> </hb1_esque>
+            <hb1_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15390" tipo_dato="T"/>
+            <hb1_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15400" tipo_dato="T"/>
+            <hb1_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15410" tipo_dato="T"/>
+        </hb_una>
+        <hb_dos descripcion="SEGUNDA DOSIS">
+            <hb2_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <hb2_lote descripcion="Lote" item_lista="" lineas="1" orden="15430" tipo_dato="T"/>
+            <hb2_esque descripcion="Esquema Completo" item_lista="" orden="15440" tipo_dato="S"> </hb2_esque>
+            <hb2_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15450" tipo_dato="T"/>
+            <hb2_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15460" tipo_dato="T"/>
+            <hb2_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15470" tipo_dato="T"/>
+        </hb_dos>
+        <hb_tres descripcion="TERCERA DOSIS">
+            <hb3_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <hb3_lote descripcion="Lote" item_lista="" lineas="1" orden="15490" tipo_dato="T"/>
+            <hb3_esque descripcion="Esquema Completo" item_lista="" orden="15500" tipo_dato="S"> </hb3_esque>
+            <hb3_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15510" tipo_dato="T"/>
+            <hb3_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15520" tipo_dato="T"/>
+            <hb3_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15530" tipo_dato="T"/>
+        </hb_tres>
+        <ie_uni descripcion="Influenza estacionaria (Dosis única)">
+            <ie1_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <ie1_lote descripcion="Lote" item_lista="" lineas="1" orden="15550" tipo_dato="T"/>
+            <ie1_esque descripcion="Esquema Completo" item_lista="" orden="15560" tipo_dato="S"> </ie1_esque>
+            <ie1_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15570" tipo_dato="T"/>
+            <ie1_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15580" tipo_dato="T"/>
+            <ie1_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15590" tipo_dato="T"/>
+        </ie_uni>
+        <fa_uni descripcion="Fiebre Amarilla (Dosis única)">
+            <fa1_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <fa1_lote descripcion="Lote" item_lista="" lineas="1" orden="15610" tipo_dato="T"/>
+            <fa1_esque descripcion="Esquema Completo" item_lista="" orden="15620" tipo_dato="S"> </fa1_esque>
+            <fa1_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15630" tipo_dato="T"/>
+            <fa1_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15640" tipo_dato="T"/>
+            <fa1_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15650" tipo_dato="T"/>
+        </fa_uni>
+        <srubeola descripcion="Sarampión-Rubéola"/>
+        <sr_una descripcion="PRIMERA DOSIS">
+            <sr1_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <sr1_lote descripcion="Lote" item_lista="" lineas="1" orden="15670" tipo_dato="T"/>
+            <sr1_esque descripcion="Esquema Completo" item_lista="" orden="15680" tipo_dato="S"> </sr1_esque>
+            <sr1_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15690" tipo_dato="T"/>
+            <sr1_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15700" tipo_dato="T"/>
+            <sr1_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15710" tipo_dato="T"/>
+        </sr_una>
+        <sr_dos descripcion="SEGUNDA DOSIS">
+            <sr2_fecha descripcion="Fecha" item_lista="" orden="" tipo_dato="D"/>
+            <sr2_lote descripcion="Lote" item_lista="" lineas="1" orden="15730" tipo_dato="T"/>
+            <sr2_esque descripcion="Esquema Completo" item_lista="" orden="15740" tipo_dato="S"> </sr2_esque>
+            <sr2_respon descripcion="Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15750" tipo_dato="T"/>
+            <sr2_estable descripcion="Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15760" tipo_dato="T"/>
+            <sr2_obs descripcion="Observaciones" item_lista="" lineas="1" orden="15770" tipo_dato="T"/>
+        </sr_dos>
+        <inmuno_empresa descripcion="INMUNIZACIONES DE ACUERDO AL TIPO DE EMPRESA Y RIESGO"/>
+        <empin1 descripcion="INMUNIZACIÓN 1">
+            <inmuni1 descripcion="Describa primera Inmunización 1" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <in11_fecha descripcion="Dosis 1: Fecha" item_lista="" orden="15785" tipo_dato="D"/>
+            <in11_lote descripcion="Dosis 1: Lote" item_lista="" lineas="1" orden="15790" tipo_dato="T"/>
+            <in11_esque descripcion="Dosis 1: Esquema Completo" item_lista="" orden="15800" tipo_dato="S"> </in11_esque>
+            <in11_respon descripcion="Dosis 1: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15810" tipo_dato="T"/>
+            <in11_estable descripcion="Dosis 1: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15820" tipo_dato="T"/>
+            <in11_obs descripcion="Dosis 1: Observaciones" item_lista="" lineas="1" orden="15830" tipo_dato="T"/>
+            <in12_fecha descripcion="Dosis 2: Fecha" item_lista="" orden="15840" tipo_dato="D"/>
+            <in12_lote descripcion="Dosis 2: Lote" item_lista="" lineas="1" orden="15850" tipo_dato="T"/>
+            <in12_esque descripcion="Dosis 2: Esquema Completo" item_lista="" orden="15860" tipo_dato="S"> </in12_esque>
+            <in12_respon descripcion="Dosis 2: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15870" tipo_dato="T"/>
+            <in12_estable descripcion="Dosis 2: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15880" tipo_dato="T"/>
+            <in12_obs descripcion="Dosis 2: Observaciones" item_lista="" lineas="1" orden="15890" tipo_dato="T"/>
+            <in13_fecha descripcion="Dosis 3: Fecha" item_lista="" orden="15900" tipo_dato="D"/>
+            <in13_lote descripcion="Dosis 3: Lote" item_lista="" lineas="1" orden="15910" tipo_dato="T"/>
+            <in13_esque descripcion="Dosis 3: Esquema Completo" item_lista="" orden="15920" tipo_dato="S"> </in13_esque>
+            <in13_respon descripcion="Dosis 3: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15930" tipo_dato="T"/>
+            <in13_estable descripcion="Dosis 3: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15940" tipo_dato="T"/>
+            <in13_obs descripcion="Dosis 3: Observaciones" item_lista="" lineas="1" orden="15940" tipo_dato="T"/>
+            <in14_fecha descripcion="Dosis 4: Fecha" item_lista="" orden="15950" tipo_dato="D"/>
+            <in14_lote descripcion="Dosis 4: Lote" item_lista="" lineas="1" orden="15960" tipo_dato="T"/>
+            <in14_esque descripcion="Dosis 4: Esquema Completo" item_lista="" orden="15970" tipo_dato="S"> </in14_esque>
+            <in14_respon descripcion="Dosis 4: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="15980" tipo_dato="T"/>
+            <in14_estable descripcion="Dosis 4: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="15990" tipo_dato="T"/>
+            <in14_obs descripcion="Dosis 4: Observaciones" item_lista="" lineas="1" orden="16000" tipo_dato="T"/>
+            <in15_fecha descripcion="Dosis 5: Fecha" item_lista="" orden="16010" tipo_dato="D"/>
+            <in15_lote descripcion="Dosis 5: Lote" item_lista="" lineas="1" orden="16020" tipo_dato="T"/>
+            <in15_esque descripcion="Dosis 5: Esquema Completo" item_lista="" orden="16030" tipo_dato="S"> </in15_esque>
+            <in15_respon descripcion="Dosis 5: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16040" tipo_dato="T"/>
+            <in15_estable descripcion="Dosis 5: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16050" tipo_dato="T"/>
+            <in15_obs descripcion="Dosis 5: Observaciones" item_lista="" lineas="1" orden="16060" tipo_dato="T"/>
+        </empin1>
+        <empin2 descripcion="INMUNIZACIÓN 2">
+            <inmuni2 descripcion="Describa primera Inmunización 2" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <in21_fecha descripcion="Dosis 1: Fecha" item_lista="" orden="15785" tipo_dato="D"/>
+            <in21_lote descripcion="Dosis 1: Lote" item_lista="" lineas="1" orden="16080" tipo_dato="T"/>
+            <in21_esque descripcion="Dosis 1: Esquema Completo" item_lista="" orden="16090" tipo_dato="S"> </in21_esque>
+            <in21_respon descripcion="Dosis 1: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16100" tipo_dato="T"/>
+            <in21_estable descripcion="Dosis 1: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16110" tipo_dato="T"/>
+            <in21_obs descripcion="Dosis 1: Observaciones" item_lista="" lineas="1" orden="16120" tipo_dato="T"/>
+            <in22_fecha descripcion="Dosis 2: Fecha" item_lista="" orden="16130" tipo_dato="D"/>
+            <in22_lote descripcion="Dosis 2: Lote" item_lista="" lineas="1" orden="16140" tipo_dato="T"/>
+            <in22_esque descripcion="Dosis 2: Esquema Completo" item_lista="" orden="16150" tipo_dato="S"> </in22_esque>
+            <in22_respon descripcion="Dosis 2: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16160" tipo_dato="T"/>
+            <in22_estable descripcion="Dosis 2: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16170" tipo_dato="T"/>
+            <in22_obs descripcion="Dosis 2: Observaciones" item_lista="" lineas="1" orden="16180" tipo_dato="T"/>
+            <in23_fecha descripcion="Dosis 3: Fecha" item_lista="" orden="16190" tipo_dato="D"/>
+            <in23_lote descripcion="Dosis 3: Lote" item_lista="" lineas="1" orden="16200" tipo_dato="T"/>
+            <in23_esque descripcion="Dosis 3: Esquema Completo" item_lista="" orden="16210" tipo_dato="S"> </in23_esque>
+            <in23_respon descripcion="Dosis 3: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16220" tipo_dato="T"/>
+            <in23_estable descripcion="Dosis 3: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16240" tipo_dato="T"/>
+            <in23_obs descripcion="Dosis 3: Observaciones" item_lista="" lineas="1" orden="16250" tipo_dato="T"/>
+            <in24_fecha descripcion="Dosis 4: Fecha" item_lista="" orden="16260" tipo_dato="D"/>
+            <in24_lote descripcion="Dosis 4: Lote" item_lista="" lineas="1" orden="16270" tipo_dato="T"/>
+            <in24_esque descripcion="Dosis 4: Esquema Completo" item_lista="" orden="16280" tipo_dato="S"> </in24_esque>
+            <in24_respon descripcion="Dosis 4: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16290" tipo_dato="T"/>
+            <in24_estable descripcion="Dosis 4: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16300" tipo_dato="T"/>
+            <in24_obs descripcion="Dosis 4: Observaciones" item_lista="" lineas="1" orden="16310" tipo_dato="T"/>
+            <in25_fecha descripcion="Dosis 5: Fecha" item_lista="" orden="16320" tipo_dato="D"/>
+            <in25_lote descripcion="Dosis 5: Lote" item_lista="" lineas="1" orden="16330" tipo_dato="T"/>
+            <in25_esque descripcion="Dosis 5: Esquema Completo" item_lista="" orden="16340" tipo_dato="S"> </in25_esque>
+            <in25_respon descripcion="Dosis 5: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16350" tipo_dato="T"/>
+            <in25_estable descripcion="Dosis 5: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16360" tipo_dato="T"/>
+            <in25_obs descripcion="Dosis 5: Observaciones" item_lista="" lineas="1" orden="16370" tipo_dato="T"/>
+        </empin2>
+        <empin3 descripcion="INMUNIZACIÓN 3">
+            <inmuni3 descripcion="Describa primera Inmunización 3" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <in31_fecha descripcion="Dosis 1: Fecha" item_lista="" orden="15785" tipo_dato="D"/>
+            <in31_lote descripcion="Dosis 1: Lote" item_lista="" lineas="1" orden="16390" tipo_dato="T"/>
+            <in31_esque descripcion="Dosis 1: Esquema Completo" item_lista="" orden="16400" tipo_dato="S"> </in31_esque>
+            <in31_respon descripcion="Dosis 1: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16410" tipo_dato="T"/>
+            <in31_estable descripcion="Dosis 1: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16420" tipo_dato="T"/>
+            <in31_obs descripcion="Dosis 1: Observaciones" item_lista="" lineas="1" orden="16430" tipo_dato="T"/>
+            <in32_fecha descripcion="Dosis 2: Fecha" item_lista="" orden="16440" tipo_dato="D"/>
+            <in32_lote descripcion="Dosis 2: Lote" item_lista="" lineas="1" orden="16450" tipo_dato="T"/>
+            <in32_esque descripcion="Dosis 2: Esquema Completo" item_lista="" orden="16460" tipo_dato="S"> </in32_esque>
+            <in32_respon descripcion="Dosis 2: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16470" tipo_dato="T"/>
+            <in32_estable descripcion="Dosis 2: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16480" tipo_dato="T"/>
+            <in32_obs descripcion="Dosis 2: Observaciones" item_lista="" lineas="1" orden="16490" tipo_dato="T"/>
+            <in33_fecha descripcion="Dosis 3: Fecha" item_lista="" orden="16500" tipo_dato="D"/>
+            <in33_lote descripcion="Dosis 3: Lote" item_lista="" lineas="1" orden="16510" tipo_dato="T"/>
+            <in33_esque descripcion="Dosis 3: Esquema Completo" item_lista="" orden="16520" tipo_dato="S"> </in33_esque>
+            <in33_respon descripcion="Dosis 3: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16530" tipo_dato="T"/>
+            <in33_estable descripcion="Dosis 3: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16540" tipo_dato="T"/>
+            <in33_obs descripcion="Dosis 3: Observaciones" item_lista="" lineas="1" orden="16550" tipo_dato="T"/>
+            <in34_fecha descripcion="Dosis 4: Fecha" item_lista="" orden="16560" tipo_dato="D"/>
+            <in34_lote descripcion="Dosis 4: Lote" item_lista="" lineas="1" orden="16570" tipo_dato="T"/>
+            <in34_esque descripcion="Dosis 4: Esquema Completo" item_lista="" orden="16580" tipo_dato="S"> </in34_esque>
+            <in34_respon descripcion="Dosis 4: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16590" tipo_dato="T"/>
+            <in34_estable descripcion="Dosis 4: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16600" tipo_dato="T"/>
+            <in34_obs descripcion="Dosis 4: Observaciones" item_lista="" lineas="1" orden="16610" tipo_dato="T"/>
+            <in35_fecha descripcion="Dosis 5: Fecha" item_lista="" orden="16620" tipo_dato="D"/>
+            <in35_lote descripcion="Dosis 5: Lote" item_lista="" lineas="1" orden="16630" tipo_dato="T"/>
+            <in35_esque descripcion="Dosis 5: Esquema Completo" item_lista="" orden="16640" tipo_dato="S"> </in35_esque>
+            <in35_respon descripcion="Dosis 5: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16650" tipo_dato="T"/>
+            <in35_estable descripcion="Dosis 5: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16660" tipo_dato="T"/>
+            <in35_obs descripcion="Dosis 5: Observaciones" item_lista="" lineas="1" orden="16670" tipo_dato="T"/>
+        </empin3>
+        <empin4 descripcion="INMUNIZACIÓN 4">
+            <inmuni4 descripcion="Describa primera Inmunización 4" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <in41_fecha descripcion="Dosis 1: Fecha" item_lista="" orden="16985" tipo_dato="D"/>
+            <in41_lote descripcion="Dosis 1: Lote" item_lista="" lineas="1" orden="16690" tipo_dato="T"/>
+            <in41_esque descripcion="Dosis 1: Esquema Completo" item_lista="" orden="16700" tipo_dato="S"> </in41_esque>
+            <in41_respon descripcion="Dosis 1: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16710" tipo_dato="T"/>
+            <in41_estable descripcion="Dosis 1: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16720" tipo_dato="T"/>
+            <in41_obs descripcion="Dosis 1: Observaciones" item_lista="" lineas="1" orden="16730" tipo_dato="T"/>
+            <in42_fecha descripcion="Dosis 2: Fecha" item_lista="" orden="16740" tipo_dato="D"/>
+            <in42_lote descripcion="Dosis 2: Lote" item_lista="" lineas="1" orden="16750" tipo_dato="T"/>
+            <in42_esque descripcion="Dosis 2: Esquema Completo" item_lista="" orden="16760" tipo_dato="S"> </in42_esque>
+            <in42_respon descripcion="Dosis 2: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16770" tipo_dato="T"/>
+            <in42_estable descripcion="Dosis 2: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16780" tipo_dato="T"/>
+            <in42_obs descripcion="Dosis 2: Observaciones" item_lista="" lineas="1" orden="16790" tipo_dato="T"/>
+            <in43_fecha descripcion="Dosis 3: Fecha" item_lista="" orden="16800" tipo_dato="D"/>
+            <in43_lote descripcion="Dosis 3: Lote" item_lista="" lineas="1" orden="16810" tipo_dato="T"/>
+            <in43_esque descripcion="Dosis 3: Esquema Completo" item_lista="" orden="16820" tipo_dato="S"> </in43_esque>
+            <in43_respon descripcion="Dosis 3: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16830" tipo_dato="T"/>
+            <in43_estable descripcion="Dosis 3: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16840" tipo_dato="T"/>
+            <in43_obs descripcion="Dosis 3: Observaciones" item_lista="" lineas="1" orden="16850" tipo_dato="T"/>
+            <in44_fecha descripcion="Dosis 4: Fecha" item_lista="" orden="16860" tipo_dato="D"/>
+            <in44_lote descripcion="Dosis 4: Lote" item_lista="" lineas="1" orden="16870" tipo_dato="T"/>
+            <in44_esque descripcion="Dosis 4: Esquema Completo" item_lista="" orden="16880" tipo_dato="S"> </in44_esque>
+            <in44_respon descripcion="Dosis 4: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16890" tipo_dato="T"/>
+            <in44_estable descripcion="Dosis 4: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16900" tipo_dato="T"/>
+            <in44_obs descripcion="Dosis 4: Observaciones" item_lista="" lineas="1" orden="16910" tipo_dato="T"/>
+            <in45_fecha descripcion="Dosis 5: Fecha" item_lista="" orden="16920" tipo_dato="D"/>
+            <in45_lote descripcion="Dosis 5: Lote" item_lista="" lineas="1" orden="16930" tipo_dato="T"/>
+            <in45_esque descripcion="Dosis 5: Esquema Completo" item_lista="" orden="16940" tipo_dato="S"> </in45_esque>
+            <in45_respon descripcion="Dosis 5: Nombres completos del responsable de la vacunación" item_lista="" lineas="1" orden="16950" tipo_dato="T"/>
+            <in45_estable descripcion="Dosis 5: Establecimiento de salud donde se colocó la vacuna" item_lista="" lineas="1" orden="16960" tipo_dato="T"/>
+            <in45_obs descripcion="Dosis 5: Observaciones" item_lista="" lineas="1" orden="16970" tipo_dato="T"/>
+        </empin4>
+    </pagina2>
+    <pagina3 Id="4" IdFormato="5945">
+        <datos_empresa_cer descripcion="A. DATOS DEL ESTABLECIMIENTO - EMPRESA Y USUARIO"/>
+        <dper descripcion="B. DATOS GENERALES "/>
+        <ap_medicat_cer descripcion="C. CONCEPTO PARA APTITUD LABORAL">
+            <aptitud descripcion="APTITUD:" item_lista="APTO/APTO EN OBSERVACION/APTO CON LIMITACIONES/NO APTO/" orden="" tipo_dato="L"/>
+            <aptitud_observacion descripcion="DETALLE DE OBSERVACIONES" item_lista="" lineas="0" orden="20758" tipo_dato="T"/>
+        </ap_medicat_cer>
+        <condicion descripcion="D. CONDICIONES DE SALUD AL MOMENTO DEL RETIRO">
+            <cond_sati descripcion="CONDICIÓN SATISFACTORIA" item_lista="" orden="" tipo_dato="S"> </cond_sati>
+            <cond_obs descripcion="OBSERVACIONES RELACIONADAS CON LAS CONDICIONES DE SALUD AL MOMENTO DEL RETIRO:" item_lista="" lineas="0" orden="20751" tipo_dato="T"/>
+        </condicion>
+        <cer_recom descripcion="RECOMENDACIONES">
+            <recoaptitu descripcion="DETALLE DE LAS RECOMENDACIONES LABORALES" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </cer_recom>
+    </pagina3>
+</resultados>
+

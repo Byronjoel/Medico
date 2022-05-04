@@ -1,0 +1,46 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="css/messages.css" />
+    <borderlayout width="700px" height="100px">
+        <north title="Confirmar datos"></north>
+        <center>
+            <div >
+                <div align="center">
+                    <hbox>
+                        <label id="datos"  style="color: #d13716;font-weight: bold; font-size: 18px;font-family: arial, sans-serif;" ></label>
+                    </hbox>
+                </div>
+                <div align="center" style="top:35%; left:2%; position: absolute;" width="100%">
+                    <space height="50px"  />
+                </div>
+                <div align="center" style="top:35%; left:2%; position: absolute;" width="100%">
+                    <hbox>
+                        <button id="MsgCancel" width="95%"   label="Continuar" style="border: 1px solid #2E8B57;  background-color:#778899;font-size: 14px; font-weight: bold;  width: 200px;"  >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winMsgCompleto.onClose();
+                                ]]>
+                            </attribute>                                                            
+                        </button>
+                        <space width="50px" />
+                        <button id="MsgConfirmar"  width="95%" label="Actualizar" style="border: 1px solid #2E8B57;background-color:#778899; font-size: 14px; font-weight: bold;  width: 200px;" />
+                        <space width="50px" />
+                        <button id="MsgNuevo" width="95%" label="Nuevo" style=" border: 1px solid #2E8B57; background-color:#778899; font-size: 14px; font-weight: bold; width: 200px;"  />  
+                        <space width="50px" />
+                        <button id="MsgSalir" width="95%" label="Salir" style="border: 1px solid #2E8B57;background-color:#778899; font-size: 14px; font-weight: bold; width: 200px;" >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winMsgCompleto.onClose();
+                                ]]>
+                            </attribute>                                                            
+                        </button>
+                       
+                     
+                    </hbox>
+                </div>
+          
+            </div>
+        </center>
+    </borderlayout>
+</zk>

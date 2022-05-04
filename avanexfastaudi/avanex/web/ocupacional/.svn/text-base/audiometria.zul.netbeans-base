@@ -1,0 +1,31 @@
+<?page title="Audiometria" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="/css/messages.css" />
+    <zscript>
+        javax.servlet.http.HttpSession sesion = (javax.servlet.http.HttpSession) session.getNativeSession();
+        String jsessionID = sesion.getId();
+        System.out.println( "Wrote to session:" + jsessionID ) ;
+    </zscript>
+    <borderlayout>
+        <center flex="1">
+            <html>
+                    <![CDATA[ <applet id="idAudiometria"
+                    code="examen.ImagenExamen" width="100%"
+                    height="100%" MAYSCRIPT >
+                    <param name="JSESSIONID" value="${jsessionID}">
+                    </applet> ]]>
+            </html>
+        </center>
+        <south height="45px">
+            <div align="center">
+                <separator />
+                <button label="Cerrar" sclass="button_validate" id="btnClose">
+                    <!--attribute name="onClick"><![CDATA[
+                            winAudio.onClose();
+                        ]]>
+                    </attribute-->    
+                </button>
+            </div>
+        </south>
+    </borderlayout>
+</zk>

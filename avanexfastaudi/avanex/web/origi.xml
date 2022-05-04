@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+<datos_generales_standar>
+<pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+<pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+<estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+<estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+<canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+<canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+<parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+<parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+<etnia descripcion="ETNIA" orden="0" tipo_dato="T">MESTIZO</etnia>
+<practica descripcion="PRACTICA" orden="0" tipo_dato="L">80</practica>
+<nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">ELECTROCARDIOGRAMA</nombre_practica>
+<solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">.</solicitante>
+<paciente descripcion="NOMBRE" orden="0" tipo_dato="L">LUIS ARAQUE MENACHO</paciente>
+<nombres descripcion="NOMBRES" orden="0" tipo_dato="L">LUIS</nombres>
+<ruc descripcion="RUC" orden="0" tipo_dato="L">.</ruc>
+<ciiu descripcion="ciiu" orden="0" tipo_dato="L">.</ciiu>
+<apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">ARAQUE MENACHO</apellidos>
+<fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1979/02/13</fecha_nace>
+<id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">631678</id_historia>
+<empresa descripcion="EMPRESA" orden="0" tipo_dato="L">SSO ECUADOR </empresa>
+<identificacion descripcion="CI" orden="0" tipo_dato="L">1002882007</identificacion>
+<estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">CASADO</estado_civil>
+<id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">1076893</id_orden>
+<telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0992609702</telefono>
+<sexo descripcion="SEXO" orden="0" tipo_dato="L">MASCULINO</sexo>
+<profesion descripcion="PROFESION" orden="0" tipo_dato="L">NINGUNA</profesion>
+<edad descripcion="EDAD" orden="0" tipo_dato="L">40 AÑOS </edad>
+<ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">BODEGUERO</ocupacion>
+<instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+<ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">IMBABURA</ciudad_nace>
+<direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">MARIANITAS</direccion_paciente>
+<titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SR</titulo_paciente>
+<medico descripcion="MEDICO" orden="0" tipo_dato="L">Dr. CHRISTIAN ANDRADE PROAÑO</medico>
+<especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L">Cardiólogo</especialidad>
+<cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L">9502</cod_med>
+<titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Dr.</titulo_medico>
+<fecha descripcion="FECHA" orden="0" tipo_dato="L">2019/08/08</fecha>
+<fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2019/08/08 08:03:43</fecha_hora>
+<dx descripcion="DIAGNOSTICO" orden="0"/>
+<recomendaciones descripcion="RECOMENDACIONES" orden="0"/>
+<prescripciones descripcion="PRESCRIPCIONES" orden="0"/>
+<estado descripcion="ESTADO" orden="0" tipo_dato="L">IN</estado>
+</datos_generales_standar>
+<pagina0 Id="1" IdFormato="5021">
+<resultado descripcion="ELECTROCARDIOGRAMA">
+<motivo_examen descripcion="MOTIVO DEL EXAMEN" item_lista="" lineas="0" orden="" tipo_dato="T">Chequeo médico</motivo_examen>
+<datos descripcion="DATOS ELECTROCARDIOFRAFICOS" item_lista="" lineas="0" orden="10" tipo_dato="T">Trazo registrado a 10 mm/mV, 25 mm/seg.                                                                                                                       Ritmo sinusal, FC 50 Ipm, eje QRS +60 grados.                                                                                                                                                            PR 180 mseg, QRS 90 mseg, QT 420 mseg.                                                                                                                                  No se observa alteraciones de la repolarización ventricular .</datos>
+<conclusion descripcion="DIAGNOSTICO" item_lista="" lineas="0" orden="20" tipo_dato="T">Bradicardia sinusal por lo demás trazo dentro de parámetros normales.</conclusion>
+</resultado>
+</pagina0>
+</resultados>
+
+   
+    

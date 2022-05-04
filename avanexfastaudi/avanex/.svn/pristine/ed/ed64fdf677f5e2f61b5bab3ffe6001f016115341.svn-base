@@ -1,0 +1,30 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="500px" height="150px">
+        <north title="El Informe se abrira para edición bajo un permiso Especial"></north>
+        <center>
+            <div>
+                <div align="center">
+                    <hbox>
+                        <label>Desea Editarlo?</label>
+                    </hbox>
+                </div>
+                <div align="center" style="top:35%; left:10%; position: absolute;">
+                    <hbox>
+                         <div width="30px"></div>
+                        <button id="MsgEditar" label="Si, deseo Editar" sclass="button_save1" />
+                        <div width="30px"></div>
+                        <button id="MsgCancel" label="No, solo deseo Revisar" sclass="button_cancel" >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winEditarHistoria.onClose();
+                                ]]>
+                            </attribute>
+                        </button>
+                    </hbox>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

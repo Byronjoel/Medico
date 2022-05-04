@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="28" bottomMargin="14" uuid="fd4636de-115c-45b6-a088-68b51ed982c3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="336"/>
+	<field name="id_historia" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_historia]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/nombres]]></fieldDescription>
+	</field>
+	<field name="pais_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_codigo]]></fieldDescription>
+	</field>
+	<field name="pais_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_descripcion]]></fieldDescription>
+	</field>
+	<field name="estado_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_codigo]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/edad]]></fieldDescription>
+	</field>
+	<field name="estado_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_descripcion]]></fieldDescription>
+	</field>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="canton_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_descripcion]]></fieldDescription>
+	</field>
+	<field name="parroquia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_codigo]]></fieldDescription>
+	</field>
+	<field name="parroquia_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_descripcion]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/apellidos]]></fieldDescription>
+	</field>
+	<field name="identificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/identificacion]]></fieldDescription>
+	</field>
+	<field name="titulopaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/titulo_paciente]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/sexo]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/medico]]></fieldDescription>
+	</field>
+	<field name="cod_med" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/cod_med]]></fieldDescription>
+	</field>
+	<field name="empresa" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/empresa]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="dx" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/diagnosticos/dx]]></fieldDescription>
+	</field>
+	<field name="aptitud" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/cm/aptitud]]></fieldDescription>
+	</field>
+	<field name="imagen" class="java.lang.String">
+		<fieldDescription><![CDATA["C:\\glassfishv3\\logos\\geoilgas.png"]]></fieldDescription>
+	</field>
+	<field name="recomendaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reco/recomendaciones]]></fieldDescription>
+	</field>
+	<field name="reg_min_trabajo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina3/cm/reg_min_trabajo]]></fieldDescription>
+	</field>
+	<field name="tipo_informe" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/vtraumatolo/tipo_informe]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="3" width="272" height="48" uuid="0c5529d0-1973-469c-ba9f-496829ced318"/>
+				<imageExpression><![CDATA["C:\\glassfishv3\\logos\\icono.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="620" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="511" height="620" uuid="524c83fa-561b-4fd1-8eb1-4fff3e350cb3">
+					<property name="nombre" value="cm"/>
+					<property name="descripcion" value="Cetificado Médico"/>
+				</reportElement>
+				<textField isBlankWhenNull="true">
+					<reportElement x="409" y="11" width="102" height="15" uuid="db4c5c6c-e36e-416a-a3b2-96ce13820f99"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MMM/yyyy").format(new Date($F{fecha}))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="175" y="51" width="204" height="18" uuid="6770d0ae-a123-4764-823a-3682a24d5c5c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="13" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CERTIFICADO MÉDICO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="13" y="87" width="476" height="81" uuid="9dbdb20a-e972-43dc-979d-379570dc3e4a"/>
+					<textElement textAlignment="Justified">
+						<font size="11" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{sexo}.equalsIgnoreCase("FEMENINO") ? "El suscrito cirujano ortopédico y traumatólogo certifica que la "+$F{titulopaciente}+". "+$F{apellidos}+" "+$F{nombres}  : "El suscrito cirujano ortopédico y traumatólogo certifica que el "+$F{titulopaciente}+". "+$F{apellidos}+" "+$F{nombres})+", CI "+$F{identificacion}+", luego del chequeo de traumatología (valoración músculo - esquelética y radiológica) presenta los siguientes diagnosticos."]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="13" y="512" width="100" height="20" uuid="eedf79a5-520d-4473-897a-8fb74d59ea86"/>
+					<text><![CDATA[Atentamente,]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="562" width="247" height="20" uuid="96ff97b6-0d35-469b-b2fd-66139e3b72fa"/>
+					<textFieldExpression><![CDATA[$F{medico}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="582" width="247" height="20" uuid="bebb2f01-a650-4bdc-9054-9547a7c83251"/>
+					<textFieldExpression><![CDATA[$F{cod_med}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="13" y="131" width="476" height="5" uuid="4bbd890e-489a-410a-abce-bbe9e22d5b0d">
+						<property name="orden" value="15200"/>
+						<property name="nombre" value="aptitud"/>
+						<property name="descripcion" value="Aptitud"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="APTO/NO APTO/ APTO CON RESTRICCIONES/"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="11" isBold="false"/>
+					</textElement>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="11" width="127" height="15" uuid="88eeadc2-ce6c-4380-a9f6-142406fcf583"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$F{canton_descripcion}.equals(null)?"Quito ,":$F{canton_descripcion}+" ,"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="13" y="379" width="460" height="131" uuid="ffc49592-5d76-4db8-9eb0-cdc5d161d379"/>
+					<textFieldExpression><![CDATA[$F{recomendaciones}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="13" y="314" width="476" height="46" uuid="0b94cf21-14dd-4416-b85a-aa746be3fb60">
+						<printWhenExpression><![CDATA[$F{tipo_informe}.equalsIgnoreCase( "PREOCUPACIONAL" )]]></printWhenExpression>
+					</reportElement>
+					<textFieldExpression><![CDATA[( $F{sexo}.equalsIgnoreCase("FEMENINO") ? "La trabajadora al momento de este examen es " +$F{aptitud}+" para realizar esfuerzo físico moderado." : "El trabajador al momento de este examen es " +$F{aptitud}+" para realizar sus actividades laborales.")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="13" y="161" width="476" height="151" uuid="896f5746-6eb2-4a79-96dd-bdd3a4e17b1e"/>
+					<textElement>
+						<font size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dx}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="13" y="362" width="139" height="15" uuid="d81935d3-6d29-4c4b-b790-ad896506c64f"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RECOMENDACIONES:]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="4" width="100" height="10" uuid="04c4b450-e112-452f-aead-8c4eae014e10"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Id. "+$F{id_orden}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="17" width="67" height="8" uuid="d018675f-2918-4632-b209-2224ae5d287b"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{canton_codigo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="201" y="1" width="310" height="32" uuid="2f5de8c1-1355-4d87-9f49-94909b3e4987"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Quito: Av. América N33-42 y Rumipamba     PBX: +593 2 2255138
+PBX: +593 2 3947880
+Guayaquil: Av.Francisco Boloña 107 y Av. Kennedy solar 3 mz 21     PBX: +593 4 2691984
+Cuenca: Av. Paseo de los Cañaris 4-61 y Cacique Duma     PBX: +593 7 2806492
+www.ecua-american.com]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

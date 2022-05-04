@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Administradora" id="m_administradora" ?>
+<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="newControl" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>
+<!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+     <style src="/css/cssDefault.css" />
+    <window id="WinAdmi" closable="true" zclass="titulo" border="normal" apply="ec.com.cubosoft.avamed.coneccion.ControladoraHistorias">
+        <borderlayout  height="1300px">
+            <north size="90px"  height="120px" splittable="true" collapsible="true">
+                <include src="/templates/Menu.zul"/>
+            </north>
+            <center>
+                <borderlayout  height="1000px"  >
+                    <north border="none" height="150px" splittable="true" collapsible="true" >
+                        <!--                                DATOS DE BUSQUEDA-->
+                        <vbox>
+                            <separator/>
+                            <hbox>
+                                <space spacing="95%"/>
+                                <include src="/templates/Generales/FiltroFechas.zul"/>
+                                <space spacing="20%"/>
+                                <hbox>
+                                    <vbox>
+                                        <vbox>
+                                            <label value="Orden: " sclass="Blabel" />
+                                            <textbox id="bOrden"  sclass="Blabel" />
+                                        </vbox>
+                                        <vbox>
+                                            <label value="Historia:" sclass="Blabel" />
+                                            <textbox  id="bHistorial" sclass="Blabel" />
+                                        </vbox>
+                                    </vbox>
+                                    <vbox>
+                                        <vbox>
+                                            <label value="Practica:" sclass="Blabel" />
+                                            <newCmbBox controladora="ec.com.cubosoft.avamed.coneccion.ControladoraHistoria" nombre="bbPracticas" lista="LbxPracticas" />
+<!--                                             <include src="/templates/Generales/Combobox.zul"/>-->
+<!--                                            <combobox  id="bPractica" width="200px" sclass="Blabel" />-->
+                                        </vbox>
+                                        <vbox>
+                                            <label value="Area:"  sclass="Blabel"  />
+                                            <newCmbBox controladora="ec.com.cubosoft.avamed.coneccion.ControladoraHistoria" nombre="bbAreas" lista="LbxAreas"/>
+                                        </vbox>
+                                    </vbox>
+                                </hbox>
+                            </hbox>
+
+                        </vbox>
+                    </north>
+                    <west border="normal" width="150px" >
+                        <groupbox >
+                            <newControl controladora="ec.com.cubosoft.avamed.coneccion.ControladoraHistorias"/>
+                        </groupbox>
+                    </west>
+                                         
+                    <center>
+                    </center>
+                </borderlayout>
+            </center>
+        </borderlayout>
+    </window>
+</zk>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Receta" id="m_receta" ?>
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+    <style src="/css/cssDefault.css" />
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+    <style src="/css/edicion-aux.css" />
+    <borderlayout id="antecedentes" apply="ec.com.cubosoft.avamed.coneccion.ControladoraAntecedentes" sclass="detalle-listado">
+        <north height="25px" border="0"  style="border:none;">
+            <div align="center" style="border: 1px outset;" sclass="antecedente-cab">
+                <label value="ANTECEDENTES" style="font-size: 26px; color:#051a20;"/>
+            </div>
+        </north>
+        <center  border="0"  > 
+           
+            <grid id="gridAnt" visible="true" vflex="true" >
+                <!--custom-attributes org.zkoss.zul.grid.preloadSize="100"/-->
+                <custom-attributes org.zkoss.zul.grid.initRodSize="100"/>
+                <columns>
+                    <column width="45%"/>
+                    <column width="55%" />
+                    <column visible="false"/>
+                </columns>
+                <rows id="rowsAnt" />
+                <!--                <foot>
+                    <footer span="6" id="footer_resultados" class="footer_right" />
+                </foot>-->
+            </grid>
+        </center>
+        <!--        <south>
+            <button id="btnGuardarA" label="GUARDAR" visible="false"/>
+        </south>-->
+    </borderlayout>
+    <textbox id="numFormato" visible="false" />
+    <textbox id="modificar" visible="false" />
+</zk>
+
+

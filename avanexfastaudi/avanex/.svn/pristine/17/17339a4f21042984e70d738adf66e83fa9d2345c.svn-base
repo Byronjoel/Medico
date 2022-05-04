@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+<div align="center" style="top:35%; left:30%; position:center; "  >
+<label>Se han encontrado las siguientes ordenes para el paciente</label>
+<div></div>
+<label>Por favor escoja una Orden:</label>
+</div>
+<listbox id="listaOrdenes" mold="paging" pageSize="10" pagingPosition="bottom" sclass="detalle-listado"  >
+	<listhead>
+		<listheader label="Orden" sort="auto" align="center"/>
+		<listheader label="Fecha" sort="auto" align="center"/>
+		<listheader label="Empresa" sort="auto" width="50%" align="center"/>
+	</listhead>
+</listbox>
+</zk>

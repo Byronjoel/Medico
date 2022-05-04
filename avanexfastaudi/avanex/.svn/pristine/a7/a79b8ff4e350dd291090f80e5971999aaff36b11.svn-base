@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>
+<zk xmlns="http://www.zkoss.org/2005/zul" use="" >
+
+    <style dynamic="true" >
+                .titulo {
+                        color: blue;
+			font-family: arial, sans-serif;
+                        font-size: 28px;
+                        background:
+		}
+                .button
+                {
+                 border: 1px outset;
+                 background-color:white;
+                 font-size: 20;
+                 font-weight: bold;
+                color: blue
+                }
+                .z-textbox {
+                     color: blue;
+                    border: 3px outset blue;
+                    font-size: 18px;
+                }
+                .z-label
+                {
+
+                 color: blue;
+                padding:5px"
+                font-style: italic;
+                font-weight: bold;
+                font-size:16px;
+              font-family: arial, sans-serif;
+                }
+                 .label
+                {
+                background-color:white;
+                 color: blue;
+                  font-size:16px;
+
+                }
+    </style>
+ <!-- index.zul -->
+ 
+  <!-- Created on __DATE__, __TIME__  -->
+
+ <!-- @author __USER__   -->
+ <!-- @version   --> 
+ 
+    <window id="Window" title="Datos "   border="normal" apply="ec.com.cubosoft.avamed.coneccion.manejadoranombre" closable="true" zclass="titulo" >
+        <groupbox >
+        <!--INFORMACION USUARIO-->
+            <hbox align="center"  >
+                <label id="" value="USUARIO: " />
+                <label value="@{WinPracticas$composer.activo, load-after='WinPracticas.onCreate'}" />
+            </hbox>
+       <!--DIVICION LA PAGINA-->
+            <borderlayout height="750px">
+           <!--PARTE NORTE-->
+                <north id="norte" height="50px" border="normal">
+                    <groupbox >
+                    <!--TOOL BAR OPCIONES-->
+                        <toolbar>
+                            <toolbarbutton label="Menu" style="font-size:18px;" />
+                            <toolbarbutton label="Salir"  style="font-size:18px;" />
+                        </toolbar>
+                    <!--GRUPO DE BUSQUEDA-->
+                        <groupbox id="GrupoBusquedar" visible="false" mold="3d">
+                        <!--DIFERENTES GRUPOS BUSQUEDAS-->
+                            <groupbox id="grupo1" visible="false" mold="3d">
+                            </groupbox>
+                        </groupbox>
+                    </groupbox>
+                </north>
+                <center>
+                <!--BORDER DEL CENTRO-->
+                    <borderlayout height="600px">
+                    <!--ESTE LOS CONTROLES PRINCIPALES-->
+                        <west border="normal" width="150px" >
+                            <groupbox width="150" mold="3d" height="600px">
+                                <vbox >
+                                    <button id="nuevo" label="NUEVO" width="110px" height="35px" visible="true" disabled="true"  zclass="button" />
+                                    <button id="guardar" label="GUARDAR" width="110px" height="35px" visible="true" disabled="true" zclass="button" />
+                                    <button id="update" label="MODIFICAR" width="110px" height="35px" visible="true" disabled="true" zclass="button" />
+                                    <button id="delete" label="ELIMINAR" width="110px" height="35px" visible="true" disabled="true" zclass="button" />
+                                    <button id="imprimir" label="IMPRIMIR" width="110px" height="35px" visible="true" disabled="true" zclass="button" />
+                                    <button id="sincronizar" label="SINCRONIZAR" width="110px" height="35px" visible="true" disabled="true" zclass="button" />
+                                </vbox>
+                            </groupbox>
+                        </west>
+                    <!--CENTRO  LOS DATOS Y GRID-->
+                        <center border="normal"  >
+                        <!--GRUPOS DE GRIDS-->
+                            <groupbox  id="GrupoPadre" visible="true" height="500px" >
+                                                <!--GRID PRACTICA-->
+                                <groupbox id="listaPracticas" visible="true" height="450px"  >
+                                    <listbox id="box" multiple="true" height="400px" model="@{WinPracticas$composer.allEvents,  load-when='guardar.onClick, delete.onClick, update.onClick'}"
+                                                    selectedItem="@{WinPracticas$composer.current}" >
+                                        <listhead>
+                                            <listheader label="ID" width="30px" />
+                                            <listheader label="DESCRIPCION" width="120px" />
+                                            <listheader label="ABREVIATURA" width="100px" />
+                                            <listheader label="RESUMEN TECNICO" width="100px"  />
+                                            <listheader label="RESUMEN" width="100px" />
+                                            <listheader label="OTRO" width="100px" />
+                                            <listheader label="ADICIONALES" width="100px" />
+                                        </listhead>
+                                        <listitem self="@{each='obj'}" value="@{obj}">
+                                            <listcell label="@{obj.id}" />
+                                            <listcell label="@{obj.descripcion}" />
+                                            <listcell label="@{obj.abreviatura}" />
+                                            <listcell label="@{obj.infAd1}" />
+                                            <listcell label="@{obj.infAd2}" />
+                                            <listcell label="@{obj.infAd3}" />
+                                        </listitem>
+                                    </listbox>
+                                </groupbox>
+                            </groupbox>
+                        </center>
+                    </borderlayout>
+                </center>
+            </borderlayout>
+        </groupbox>
+    </window>
+</zk>

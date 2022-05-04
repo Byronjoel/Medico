@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/avasus/!svn/ver/1092/AVASUS/WebAvasus/web/WEB-INF
+END
+lang-addon.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/avasus/!svn/ver/69/AVASUS/WebAvasus/web/WEB-INF/lang-addon.xml
+END
+zk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/avasus/!svn/ver/843/AVASUS/WebAvasus/web/WEB-INF/zk.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/avasus/!svn/ver/1092/AVASUS/WebAvasus/web/WEB-INF/web.xml
+END
+glassfish-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/avasus/!svn/ver/899/AVASUS/WebAvasus/web/WEB-INF/glassfish-web.xml
+END

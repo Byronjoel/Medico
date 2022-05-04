@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit"?>-->
+<?page title="Practicas" id="m_nombres" ?>
+<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="newControl" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>
+<!--
+index.zul{{IS_NOTE
+	Purpose:
+<?taglib uri="/WEB-INF/tld/web/core.dsp.tld" prefix="c" ?>
+	Description:
+	History:
+		Mon Jun 12 21:23:35     2006, Created by tomyeh
+		Fri May 01 04:36:35     2009, Modified by stera
+}}IS_NOTE
+Copyright (C) 2006 Potix Corporation. All Rights Reserved.
+{{IS_RIGHT
+}}IS_RIGHT
+-->
+<zk xmlns="http://www.zkoss.org/2005/zul" use="" >
+    
+    <style src="/css/cssDefault.css" />
+    <intbox id="id"  value="2"/>
+    <window id="WinPracticas"  title="Datos Practica" apply="ec.com.cubosoft.avamed.coneccion.ManejadoraNombre" closable="true" zclass="titulo" border="normal" >
+        <!--<groupbox id="wpractica" mold="3d" >-->
+        <textbox  id="identificador" value="0"/>
+        <borderlayout  height="1300px">
+            <north size="90px"  height="120px" splittable="true" collapsible="true">
+                <include src="/templates/Menu.zul"/>
+            </north>
+            <center>
+                <borderlayout  height="1000px"  >
+                    <north border="none" height="150px" splittable="true" collapsible="true" >
+                        <!--                                DATOS DE BUSQUEDA-->
+                        <vbox>
+                            <separator/>
+                            <hbox>
+                                <space spacing="95%"/>
+<!--<newFechas controladora="ec.com.cubosoft.avamed.coneccion.ManejadoraNombre"/>-->
+                                <space spacing="20%"/>
+                               
+                            </hbox>
+                        </vbox>
+                    </north>
+                    <west border="normal" width="150px" >
+                        <groupbox >
+                            <newControl controladora="ec.com.cubosoft.avamed.coneccion.ManejadoraNombre"/>
+                        </groupbox>
+                    </west>
+                    <center>
+                        <groupbox width="850px" >
+                            <vbox>
+                                <hbox>
+                                    <groupbox id="DatosNombre" visible="false" height="150px" >
+                                        <caption label="PRACTICA:"/>
+                                        <grid id="identificacion" width="950px"  >
+                                            <rows>
+                                                <row>
+                                                    <hbox  >
+                                                        <label value="Descripcion:"  width="20px"/>
+                                                        <space  spacing="47px" />
+                                                        <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcion"  multiline="true" disabled="true"/>
+                                                <!--onChanging="if (event.value.length() > 0);" />                                                -->
+                                                    </hbox>
+                                                    <hbox>
+                                                        <label value="Abreviatura:" width="20px" />
+                                                        <space  spacing="65px" />
+<!--                                                        value="@{WinPracticas$composer.current.abreviatura, save-when='self.onChange'}"-->
+                                                                                                                <textbox width="300px" constraint="no empty:No puede ser nulo" id="abreviatura"   multiline="true" disabled="true" />
+                                                    </hbox>
+                                                </row>
+                                                <row>
+                                                    <hbox>
+                                                        <label value=" Usuario:" width="20px" />
+                                                        <space  spacing="75px" />
+                                                        <textbox width="300px" id="usuario"  disabled="true" />
+                                                    </hbox>
+                                                    <hbox>
+                                                        <label value=" Resumen Tecnico:" width="20px"/>
+                                                        <space  spacing="17px" />
+                                                        <textbox width="300px" id="inf1"  disabled="true" />
+                                                    </hbox>
+                                                </row>
+                                                <row>
+                                                    <hbox>
+                                                        <label value=" Resumen:" width="20px"/>
+                                                        <space  spacing="60px" />
+                                                        <textbox  width="300px" id="inf2"   disabled="true" />
+                                                    </hbox>
+                                                    <hbox>
+                                                        <label value=" Otro:" width="20px"/>
+                                                        <space  spacing="120px" />
+                                                        <textbox width="300px" id="inf3"   disabled="true" />
+                                                    </hbox>
+                                                </row>
+                                            </rows>
+                                        </grid>
+                                    </groupbox>
+                                 <!--LISTBOXHIJAS-->
+                                    <listbox id="listBoxHijas" multiple="true" height="200px" width="150px" visible="false">
+                                        <listhead  sizable="true" >
+                                            <listheader label="OPCIONES"  style="font-size:16px;" />
+                                        </listhead>
+                                    </listbox>
+                                </hbox>
+                                <space spacing="10px" />
+                                <vbox>
+                                    <groupbox id="GRUPO" visible="true" height="550px" mold="3d"  >
+<!--LIST BOX-->
+                                                    <!--<label value="@{WinPracticas$composer.nomPractica, load-after='listBoxPractica.onSelect'}" visible="true"/>-->
+               <!--LISTABOXPRACTICA-->
+                                        <listbox id="listBoxPractica" multiple="true"  mold="paging"
+                                                     height="500px" width="1000px" draggable="true" visible="false">
+                                            <auxhead>
+                                                <auxheader label="INFORMACION DE LAS PRACTICAS" colspan="6" style="font-size:22px;" align="center"  />
+                                            </auxhead>
+                                            <listhead  sizable="true" >
+                                                <listheader label="ID"  visible="false" style="font-size:16px;"  />
+                                                <listheader label="DESCRIPCION" style="font-size:16px;" width="260px"/>
+                                                <listheader label="ABREVIATURA"  style="font-size:16px;" width="240px" />
+                                                <listheader label="RESUMEN TECNICO"  style="font-size:16px;" width="250px"/>
+                                                <listheader label="RESUMEN" style="font-size:16px;" width="130px"/>
+                                                <listheader label="OTRO"  style="font-size:16px;" width="110px"/>
+                                            </listhead>
+                                            <auxhead visible="false">
+                                                <auxheader colspan="1" >
+                                                    <textbox id="descripcionBPractica"  width="250px" />
+                                                </auxheader>
+                                                <auxheader colspan="1"  >
+                                                    <textbox id="abreviaturaBPractica" width="230px" />
+                                                </auxheader>
+                                                <auxheader colspan="1" >
+                                                    <textbox id="infBAd1"  width="240px"  />
+                                                </auxheader>
+                                                <auxheader  colspan="1"   >
+                                                    <textbox id="infBAd2" width="120px"/>
+                                                </auxheader>
+                                                <auxheader colspan="1"  >
+                                                    <textbox id="infBAd3"  width="100px"/>
+                                                </auxheader>
+                                            </auxhead>
+
+                                        </listbox>
+                 <!--LISTABOXCODIFICACION-->
+                                        <listbox id="listBoxCodificacion" multiple="true"  height="500px"  width="1000px"  draggable="true" visible="false" >
+                                            <auxhead>
+                                                <auxheader label="INFORMACION CODIFICACION" colspan="6" style="font-size:22px;" align="center"  />
+                                            </auxhead>
+                                            <listhead  sizable="true" >
+                                                <listheader label="ID"  style="font-size:16px;" visible="false"/>
+                                                <listheader label="DESCRIPCION" style="font-size:16px;" width="600px" />
+                                                <listheader label="USUARIO" style="font-size:16px;" width="400px"/>
+                                            </listhead>
+                                            <auxhead visible="false">
+                                                <auxheader colspan="1" >
+                                                    <textbox id="descripcionBCodificacion"  width="250px" />
+                                                </auxheader>
+                                            </auxhead>
+                                          
+                                        </listbox>
+                   <!--LISTABOXPRACTICASASOCIADAS-->
+                                        <listbox id="listBoxPracticasAsociadas" multiple="true"  height="500px" width="1000px"  draggable="true" visible="false" >
+                                            <auxhead>
+                                                <auxheader label="INFORMACION PRACTICAS ASOCIADAS" colspan="6" style="font-size:22px;" align="center"  />
+                                            </auxhead>
+                                            <listhead  sizable="true" >
+                                                <listheader label="ID"  style="font-size:16px;" visible="false"/>
+                                                <listheader label="DESCRIPCION" style="font-size:16px;" width="600px"/>
+                                                <listheader label="USUARIO" style="font-size:16px;" width="400px"/>
+                                            </listhead>
+                                            <auxhead visible="false">
+                                                <auxheader colspan="1" >
+                                                    <textbox id="descripcionBPracticaAsociada"  width="250px" />
+                                                </auxheader>
+                                            </auxhead>
+                                            
+                                        </listbox>
+                    <!--LISTABOXPRACTICAXREPORTE-->
+                                        <listbox id="listBoxPracticasxReporte" multiple="true"  height="500px"  width="1000px"  draggable="true" visible="false"  >
+                                            <auxhead>
+                                                <auxheader label="INFORMACION REPORTES DE PRACTICAS " colspan="6" style="font-size:22px;" align="center"  />
+                                            </auxhead>
+                                            <listhead  sizable="true" >
+                                                <listheader label="ID"  style="font-size:16px;" visible="false"/>
+                                                <listheader label="DESCRIPCION" style="font-size:16px;" width="600px" />
+                                                <listheader label="USUARIO" style="font-size:16px;" width="400px" />
+                                            </listhead>
+                                            <auxhead visible="false">
+                                                <auxheader colspan="1" >
+                                                    <textbox id="descripcionBPracticaReporte"  width="250px" />
+                                                </auxheader>
+
+                                            </auxhead>
+                                        </listbox>
+                   <!--LISTABOXSINONIMO-->
+                                        <listbox id="listBoxSinonimos" multiple="true"  height="500px"  width="1000px"  draggable="true" visible="false">
+                                            <auxhead>
+                                                <auxheader label="INFORMACION SINONIMOS" colspan="6" style="font-size:22px;" align="center"  />
+                                            </auxhead>
+                                            <listhead  sizable="true" >
+                                                <listheader label="ID"  style="font-size:16px;" visible="false" />
+                                                <listheader label="DESCRIPCION" style="font-size:16px;" width="600px" />
+                                                <listheader label="USUARIO" style="font-size:16px;" width="400px"/>
+                                            </listhead>
+                                            <auxhead visible="false">
+                                                <auxheader colspan="1" >
+                                                    <textbox id="descripcionBSinonimos"  width="250px" />
+                                                </auxheader>
+                                            </auxhead>
+                                        </listbox>
+                  <!--LISTABOXTERMINO-->
+<!--                  model="@{WinPracticas$composer.AllTerminos,  load-after='listBoxHijas.onSelect, guardar.onClick, delete.onClick'}"-->
+                                        <listbox id="listBoxTerminos" multiple="true"  height="500px"  width="1000px"  draggable="true" visible="false" >
+                                            <auxhead>
+                                                <auxheader label="INFORMACION DE TERMINOS" colspan="6" style="font-size:22px;" align="center"  />
+                                            </auxhead>
+                                            <listhead  sizable="true" >
+                                                <listheader label="ID"  style="font-size:16px;" visible="false"/>
+                                                <listheader label="DESCRIPCION" style="font-size:16px;" width="600px"/>
+                                                <listheader label="USUARIO" style="font-size:16px;" width="400px"/>
+                                            </listhead>
+                                            <auxhead visible="false">
+                                                <auxheader colspan="1" >
+                                                    <textbox id="descripcionBTerminos"  width="250px" />
+                                                </auxheader>
+                                            </auxhead>
+                                        </listbox>
+ <!--DATOS DETALLES-->
+                     <!--DATOS CODIFICACION-->
+                                        <groupbox id="DatosCodificacion" visible="false"  mold="3d" height="150px" width="950px">
+                                            <caption label="Datos Codificacion:"/>
+                                            <grid  width="900px"  >
+                                                            <!--if="${newBtn}" newBtn bandera Script-->
+                                                <rows>
+                                                    <row>
+                                                        <hbox  >
+                                                            <label value="Descripcion:"  width="20px"/>
+                                                            <space  spacing="45px" />
+                                                            <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcionCodificacion" value="@{WinPracticas$composer.currentCodificacion.descripcion, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                </rows>
+                                            </grid>
+                                        </groupbox>
+                     <!--DATOS PRACTICA ASOCIADA-->
+                                        <groupbox id="DatosPracticasAsociadas" visible="false"  mold="3d" height="150px" width="950px">
+                                            <caption label="Datos Practica Asociada:"/>
+                                            <grid  width="900px"  >
+                                                            <!--if="${newBtn}" newBtn bandera Script-->
+                                                <rows>
+                                                    <row>
+                                                        <hbox>
+                                                            <label value="Descripcion:"  width="20px"/>
+                                                            <space  spacing="45px" />
+                                                            <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcionPracticaAsociada" value="@{WinPracticas$composer.currentPracticaAsociada.descripcion, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                </rows>
+                                            </grid>
+                                        </groupbox>
+                  <!--DATOS PRACTICA X REPORTE-->
+                                        <groupbox id="DatosPracticasxReporte" visible="false"  mold="3d" height="150px" width="950px">
+                                            <caption label="Datos Practica Reporte:"/>
+                                            <grid  width="900px"  >
+                                                <rows>
+                                                    <row>
+                                                        <hbox  >
+                                                            <label value="Descripcion:"  width="20px"/>
+                                                            <space  spacing="45px" />
+                                                            <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcionPracticaxReporte"  value="@{WinPracticas$composer.currentPracticaxReporte.descripcion, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                </rows>
+                                            </grid>
+                                        </groupbox>
+                   <!--DATOS SINONIMOS-->
+                                        <groupbox id="DatosSinonimos" visible="false" mold="3d" height="150px" width="950px">
+                                            <caption label="Datos Sinonimos:"/>
+                                            <grid  width="900px"  >
+                                                <rows>
+                                                    <row>
+                                                        <hbox>
+                                                            <label value="Descripcion:"  width="20px"/>
+                                                            <space  spacing="45px" />
+                                                            <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcionSinonimos" value="@{WinPracticas$composer.currentSinonimo.descripcion, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                </rows>
+                                            </grid>
+                                        </groupbox>
+                <!--DATOS TERMINO-->
+                                        <groupbox id="DatosTermino" visible="false" mold="3d" height="250px" width="950px" >
+                                            <caption label="Datos Termino:"/>
+                                            <grid  width="900px"  >
+                                                         <!--   if="${newBtn}" newBtn bandera Script
+                                                            value="@{WinPracticas$composer.currentTermino.descripcion, load-after='consultar.onClick'}"-->
+                                                <rows>
+                                                    <row>
+                                                        <hbox>
+                                                            <label value="Descripcion:"  width="20px"/>
+                                                            <space  spacing="45px" />
+                                                            <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcionTermino" value="@{WinPracticas$composer.currentTermino.descripcion, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                        <hbox>
+                                                            <label value="Unidad:" />
+                                                            <space  spacing="65px" />
+                                                            <textbox  id="unidadTermino" constraint="no empty:No puede ser nulo" value="@{WinPracticas$composer.currentTermino.unidad, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                    <row>
+                                                        <hbox>
+                                                            <label value="Defecto:" />
+                                                            <space  spacing="45px" />
+                                                            <textbox  id="defecto" constraint="no empty:No puede ser nulo" value="@{WinPracticas$composer.currentTermino.xdefecto, save-when='self.onChange'}" disabled="true"  />
+                                                        </hbox>
+                                                        <hbox>
+                                                            <label value="Grupo:" />
+                                                            <space  spacing="65px" />
+                                                            <textbox  id="grupoTermino" constraint="no empty:No puede ser nulo" value="@{WinPracticas$composer.currentTermino.grupo, save-when='self.onChange'}" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                    <row>
+                                                        <hbox>
+                                                            <label value="Abreviatura:" />
+                                                            <space  spacing="45px" />
+<!--                                                            <zscript>
+                                                                                 import java.util.List;
+                                                                                 import java.util.ArrayList;
+                                                                                 import org.zkoss.zul.SimpleListModel;
+                                                                                 import org.zkoss.zul.ListModel;
+                                                                                 import ec.com.cubosoft.avamed.fuente.practica.Abreviatura;
+                                                                                 import ec.com.cubosoft.avamed.coneccion.ManejadoraNombre;
+                                                                                 ManejadoraNombre objm=new ManejadoraNombre();
+                                                                                 List datos = objm.getallAbreviaturas();
+                                                                                 String[] datocombo = new String[datos.size()];
+                                                                                 Integer a=0;
+                                                                                 for (Object objt : datos) {
+                                                                                     Abreviatura objabre = (Abreviatura) objt;
+                                                                                     datocombo[a]=objabre.getDescripcion().toString();
+                                                                                     a++;
+                                                                                 }
+                                                                                 ListModel combo = new SimpleListModel(datocombo);
+                                                            </zscript>
+                                                            <combobox id="comboabreviaturas" model="${combo}" width="30px"  />-->
+                                                        </hbox>
+                                                        <hbox>
+                                                            <label value="Formula:" />
+                                                            <space  spacing="65px" />
+                                                            <textbox  id="formulaTermino" constraint="no empty:No puede ser nulo" disabled="true" />
+                                                        </hbox>
+                                                    </row>
+                                                </rows>
+                                            </grid>
+                                        </groupbox>
+                                    </groupbox>
+                                </vbox>
+                            </vbox>
+                        </groupbox>
+
+                    </center>
+               
+                </borderlayout>
+            </center>
+        </borderlayout>
+        <!--</groupbox>-->
+    </window>
+</zk>
+
+
+<!--
+ LISTABOXREPORTE
+                                                    <listbox id="listBoxReporte" multiple="true"  height="500px" width="500px" draggable="true" visible="false" model="@{WinPracticas$composer.AllReporte,  load-after='listBoxHijas.onSelect, guardar.onClick, delete.onClick'}"
+                                                    selectedItem="@{WinPracticas$composer.currentDetalle}" >
+                                                        <auxhead>
+                                                            <auxheader label="INFORMACION" colspan="6" style="font-size:22px;" align="center"  />
+                                                        </auxhead>
+                                                        <listhead  sizable="true" >
+                                                            <listheader label="ID"  style="font-size:16px;" />
+                                                            <listheader label="DESCRIPCION" style="font-size:16px;" width="260px"/>
+                                                        </listhead>
+                                                        <auxhead visible="false">
+                                                            <auxheader colspan="1" >
+                                                                <textbox id="descripcionBReporte"  width="250px" />
+                                                            </auxheader>
+                                                        </auxhead>
+                                                        <listitem self="@{each='objR'}" value="@{objR}">
+                                                            <listcell label="@{objR.id}"  />
+                                                            <listcell label="@{objR.descripcion}" />
+                                                        </listitem>
+                                                    </listbox>
+                  LISTABOXREPORTEXEMPRESA
+                                                    <listbox id="listBoxReportexEmpresa" multiple="true"  height="500px" width="500px" draggable="true" visible="false" model="@{WinPracticas$composer.AllReportexEmpresa,  load-after='listBoxHijas.onSelect, guardar.onClick, delete.onClick'}"
+                                                    selectedItem="@{WinPracticas$composer.currentDetalle}" >
+                                                        <auxhead>
+                                                            <auxheader label="INFORMACION" colspan="6" style="font-size:22px;" align="center"  />
+                                                        </auxhead>
+                                                        <listhead  sizable="true" >
+                                                            <listheader label="ID"  style="font-size:16px;" />
+                                                            <listheader label="DESCRIPCION" style="font-size:16px;" width="260px"/>
+                                                        </listhead>
+                                                        <auxhead visible="false">
+                                                            <auxheader colspan="1" >
+                                                                <textbox id="descripcionBReporteEmpresa"  width="250px" />
+                                                            </auxheader>
+                                                        </auxhead>
+                                                        <listitem self="@{each='objRE'}" value="@{objRE}">
+                                                            <listcell label="@{objRE.id}"  />
+                                                            <listcell label="@{objRE.descripcion}" />
+                                                        </listitem>
+                                                    </listbox>-->
+                                                    <!--<groupbox id="DatosAbreviatura" visible="false" height="150px" width="950px">
+                                                        <caption label="ABREVIATURA:"/>
+                                                        <grid  width="950px"  >
+                                                            if="${newBtn}" newBtn bandera Script
+                                                            <rows>
+                                                                <row>
+                                                                    <hbox  >
+                                                                        <label value="Descripcion:"  width="20px"/>
+                                                                        <space  spacing="45px" />
+                                                                        <textbox width="300px"  constraint="no empty:No puede ser nulo" id="descripcionAbreviatura" disabled="true" />
+                                                                    </hbox>
+
+                                                                    <hbox>
+                                                                        <label value="Texto:" width="50px"/>
+                                                                        <space  spacing="57px" />
+                                                                        <textbox width="300px" id="texto"   multiline="true" disabled="true" />
+                                                                    </hbox>
+                                                                </row>
+                                                                <row spans="2">
+                                                                    <hbox>
+                                                                        <label value="Codigo:" width="20px" />
+                                                                        <space  spacing="75px" />
+                                                                        <textbox width="300px" constraint="no empty:No puede ser nulo" id="codigo"   disabled="true" />
+                                                                    </hbox>
+                                                                </row>
+                                                            </rows>
+                                                        </grid>
+                                                    </groupbox>-->
+
+<!--                                                    granzzared@hotmail.com-->

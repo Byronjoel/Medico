@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Diagnosticos" id="m_diagnosticos" ?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="/css/cssDefault.css" />
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+    <style src="/css/edicion-aux.css" />
+    <borderlayout style="border: 2px solid #0B789C;">
+        <north  size="98%" >
+            <borderlayout>
+                <west size="50%"  title="CATALOGO" >
+                    <grid id="grdDiagnosticos"  vflex="1"  apply="ec.com.cubosoft.avamed.coneccion.ControladoraHistoria" sclass="detalle-listado">
+                        <columns>
+                            <column label="DETALLE" width="75%" />
+                            <column label="CODIGO" width="15%" />
+                            <column label="ctrl" width="8%" />
+                        </columns>
+                        <auxhead sclass="category-center">
+                            <auxheader colspan="1">
+                                <image src="/images/filtro.png" />
+                                <textbox id="ftrDescripcion" width="90%" onChange="" />
+                            </auxheader>
+                        </auxhead>
+                        <rows id="RowDxBase">
+                        </rows>
+                        <foot>
+                            <footer label="Total de items" span="6" id="footer_ciediez" class="footer_right" />
+                        </foot>
+                    </grid>
+                </west>
+                <east size="50%"  flex="false" title="DIAGNOSTICOS">
+                    <borderlayout>
+                        <north height="85%" >
+                            <grid id="result" vflex="1"  height="100%" sclass="detalle-listado">
+                                <columns>
+                                    <column label="DETALLE" width="45%" />
+                                    <column label="OBSERVACIÓN" width="45%" />
+                                    <column label="ctrl" width="8%" />
+                                </columns>
+                                <rows id="RowDxSelect">
+                                </rows>
+                                <foot>
+                                    <footer label="Total de items" span="6" sclass="footer_right" />
+                                </foot>
+                            </grid>
+                        </north>
+                    </borderlayout>
+                </east>
+            </borderlayout>
+        </north>
+    </borderlayout>
+</zk>
+
+

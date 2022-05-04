@@ -1,0 +1,74 @@
+
+
+lunes, 28 de diciembre de 2015 11:51	Formulario: Ordenes de atención
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query to backend;
+Could not send Query to backend.
+
+MSGSYNTAXselect  ingreso.orden.id ,           ingreso.orden.id_historia ,           ingreso.orden.id_empresa ,           ingreso.orden.id_plan ,           ingreso.orden.id_origen ,           ingreso.orden.id_referencia ,           ingreso.orden.nro_externo ,           ingreso.orden.sts_admin ,           ingreso.orden.sts_tecnico ,           ingreso.orden.observaciones ,           ingreso.orden.fec_ingreso ,           ingreso.orden.fec_entrega ,           ingreso.orden.fec_ini ,           ingreso.orden.fec_upd ,           ingreso.orden.lock_reg ,           ingreso.orden.first_user ,           ingreso.orden.first_oid ,           ingreso.orden.last_oid ,           ingreso.orden.last_user ,           persona.get_dato(id_historia,'NAME') as paciente,           persona.get_dato(id_historia,'EDAP') as edad,           organizacion.get_dato(id_empresa,'NAME') as empresa    from ingreso.orden WHERE ( orden.id >= 489561 ) AND ( orden.id <= 489561 )
+
+
+--------------------------------------------------------------------------------
+martes, 26 de enero de 2016 11:50	Formulario: Peticiones
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+No response from the backend;
+No response from the backend.
+
+MSGSYNTAX  select  ingreso.practica_x_orden.id_orden ,           ingreso.practica_x_orden.id ,           ingreso.practica_x_orden.valor_paciente ,           ingreso.practica_x_orden.valor_seguro ,           ingreso.practica_x_orden.fec_atencion ,           ingreso.practica_x_orden.id_plan ,           ingreso.practica_x_orden.sts_admin ,           ingreso.practica_x_orden.sts_tecnico ,           ingreso.practica_x_orden.fec_upd ,           ingreso.practica_x_orden.fec_ini ,           ingreso.practica_x_orden.first_user ,           ingreso.practica_x_orden.last_user ,           ingreso.practica_x_orden.cantidad ,           ingreso.practica_x_orden.lock_reg ,           ingreso.practica_x_orden.id_practica     from ingreso.practica_x_orden      where ( ingreso.practica_x_orden.id_orden = 499838 )   
+
+
+martes, 26 de enero de 2016 11:50	Formulario: Peticiones
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAX  select  ingreso.practica_x_orden.id_orden ,           ingreso.practica_x_orden.id ,           ingreso.practica_x_orden.valor_paciente ,           ingreso.practica_x_orden.valor_seguro ,           ingreso.practica_x_orden.fec_atencion ,           ingreso.practica_x_orden.id_plan ,           ingreso.practica_x_orden.sts_admin ,           ingreso.practica_x_orden.sts_tecnico ,           ingreso.practica_x_orden.fec_upd ,           ingreso.practica_x_orden.fec_ini ,           ingreso.practica_x_orden.first_user ,           ingreso.practica_x_orden.last_user ,           ingreso.practica_x_orden.cantidad ,           ingreso.practica_x_orden.lock_reg ,           ingreso.practica_x_orden.id_practica     from ingreso.practica_x_orden      where ( ingreso.practica_x_orden.id_orden = 499838 )   
+
+
+
+
+martes, 26 de enero de 2016 11:51	Formulario: Ordenes de atención
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query(connection dead);
+Could not send Query(connection dead).
+
+MSGSYNTAXselect  ingreso.orden.id ,           ingreso.orden.id_historia ,           ingreso.orden.id_empresa ,           ingreso.orden.id_plan ,           ingreso.orden.id_origen ,           ingreso.orden.id_referencia ,           ingreso.orden.nro_externo ,           ingreso.orden.sts_admin ,           ingreso.orden.sts_tecnico ,           ingreso.orden.observaciones ,           ingreso.orden.fec_ingreso ,           ingreso.orden.fec_entrega ,           ingreso.orden.fec_ini ,           ingreso.orden.fec_upd ,           ingreso.orden.lock_reg ,           ingreso.orden.first_user ,           ingreso.orden.first_oid ,           ingreso.orden.last_oid ,           ingreso.orden.last_user ,           persona.get_dato(id_historia,'NAME') as paciente,           persona.get_dato(id_historia,'EDAP') as edad,           organizacion.get_dato(id_empresa,'NAME') as empresa    from ingreso.orden WHERE ( orden.fec_ingreso >= '2016-01-26' )  AND ( orden.fec_ingreso <= '2016-01-26' ) 
+
+
+--------------------------------------------------------------------------------
+
+
+viernes, 29 de enero de 2016 12:11	Formulario: Usuarios
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query to backend;
+Could not send Query to backend.
+
+MSGSYNTAX  select  core.cs_grupos.cod_gru ,           core.cs_grupos.des_gru ,           core.cs_grupos.fec_ini ,           core.cs_grupos.lock_gru ,           core.cs_grupos.fec_upd ,           core.cs_grupos.last_user ,           core.cs_grupos.first_user     from core.cs_grupos    
+
+
+--------------------------------------------------------------------------------

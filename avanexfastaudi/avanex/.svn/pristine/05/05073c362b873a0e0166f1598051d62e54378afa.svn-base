@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Historial" id="WinHist" ?>
+<!--<?page title="Historial" id="m_administradora" ?>-->
+<!--<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="newControl" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newGrdReporte" macroURI="/templates/Generales/ReporteP.zul"?>
+<?component name="newCmbBox" macroURI="/templates/Generales/cmbBox.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>-->
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>-->
+<!--?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="activewin"?-->
+
+<!-- @author Juan Pablo Chavez  -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso  -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+
+    
+    <window id="WinHist" title="AvaSUS" border="normal" apply="ec.com.cubosoft.avamed.coneccion.ControladoraHistoriaP">
+	<button id="carga" label="cargar imagen"  upload="true"/>
+<!--		<attribute name="onUpload"><![CDATA[
+			org.zkoss.util.media.Media media = event.getMedia();
+			if (media instanceof org.zkoss.image.Image) {
+				org.zkoss.zul.Image image = new org.zkoss.zul.Image();
+				image.setContent(media);
+				image.setParent(pics);
+			} else {
+				Messagebox.show("Not an image: "+media, "Error", Messagebox.OK, Messagebox.ERROR);
+				break;
+			}
+		]]></attribute>-->
+	<!--</button>-->
+	<separator />
+	<vlayout id="pics" height="360px" style="overflow:auto" />
+    </window>
+   
+</zk>

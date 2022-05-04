@@ -1,0 +1,34 @@
+ 
+
+ <!-- index.zul -->
+ 
+  <!-- Created on __DATE__, __TIME__  -->
+
+ <!-- @author __USER__   -->
+ <!-- @version   --> 
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="/css/cssDefault_1.css" />
+  <style src="/css/cssDefault.css" />
+    <window border="none" apply="${arg.controladora}">
+        <div>
+            <vbox>
+                <hbox>
+                    <space spacing="90%"/>
+                    <label value="FECHA"  sclass="Blabel"  />
+                </hbox>
+                <hbox>
+                    <vbox>
+                        <label value="DESDE:"  sclass="Blabel" />
+                        <datebox id="FecDesde" cols="16" format="yyyy/MM/dd "
+                    onCreate="self.value = new Date()" mold="rounded"/>
+                    </vbox>
+                    <vbox>
+                        <label value="HASTA:"  sclass="Blabel" />
+                        <datebox id="FecHasta" cols="16" format="yyyy/MM/dd "
+                    onCreate="self.value = new Date()" mold="rounded"/>
+                    </vbox>
+                </hbox>
+            </vbox>
+        </div>
+    </window>
+</zk>

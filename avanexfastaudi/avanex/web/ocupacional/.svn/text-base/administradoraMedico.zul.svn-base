@@ -1,0 +1,114 @@
+ <!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+  <style src="/css/cssDefault.css" />
+<window title="Administradora Medico" border="normal" width="200px">
+    <borderlayout  height="800px">
+        <north   height="110px"  collapsible="true">
+            <include src="/templates/Menu.zul"/>
+        </north>
+        <center>
+            <borderlayout height="890px" >
+                <north border="none" height="10%" splittable="true" collapsible="true" >
+                                            <!--                                DATOS DE BUSQUEDA-->
+                    <div align="center">
+                        <hbox>
+                            <vbox>
+                                <label value="Orden: " sclass="Blabel" />
+                                <textbox id="bOrden"  sclass="Blabel" />
+                            </vbox>
+                            <vbox>
+                                <label value="Historia:" sclass="Blabel" />
+                                <textbox  id="bHistorial" sclass="Blabel" />
+                            </vbox>
+                            <vbox>
+                                <label value="Practica:" sclass="Blabel" />
+                                <bandbox id="bbPracticas" visible="false"     mold="rounded" autodrop="true"  >
+                                    <bandpopup >
+
+                                        <listbox id="LbxPracticas" height="200px" width="300px" mold="paging" pageSize="5" />
+
+                                    </bandpopup>
+                                </bandbox>
+                            </vbox>
+                            <vbox>
+                                <label value="Area:"  sclass="Blabel"  />
+                                <bandbox id="bbAreas" apply=""  mold="rounded" autodrop="true" visible="false">
+                                    <bandpopup >
+                                        <listbox id="LbxAreas" height="200px" width="300px" mold="paging" pageSize="5">
+                                        </listbox>
+                                    </bandpopup>
+                                </bandbox>
+                            </vbox>
+                        </hbox>
+                    </div>
+                </north>
+                <west border="normal" width="120px" >
+                    <div align="center" >
+                        <space/>
+                        <newControl controladora="ec.com.cubosoft.avamed.coneccion.ControladoraReportes"/>
+                    </div>
+                </west>
+                <east  width="240px" >
+                    <div id="GrpArbol" align="center" visible="false" >
+                        <label id="" value="EPISODIOS ANTERIORES" sclass="subTitulo" />
+                        <tree id="tree" height="880px"  >
+                            <treechildren id="TreePadre"/>
+                        </tree>
+                    </div>
+                </east>
+
+                <center >
+                    <vbox>
+                            <!--                                emptyMessage="No items match your search"-->
+                        <grid id="grdDatos" visible="false" >
+                            <rows sclass="row">
+                                <row sclass="row" style=" color:#A2B5CD; border: none; overflow:visible;background:#A2B5CD;" >
+                                    <label id="idNombre" width="30%" style=" color: black; font-size: 24px;"/>
+                                    <space spacing="20%" />
+                                    <label id="idEmpresa" width="50%"  style=" color:#778899; font-size: 24px;"/>
+                                </row>
+                                <row style=" color: #A2B5CD; border: none; overflow:visible;background:#A2B5CD;" >
+                                    <label id="idSexo" width="30%" style=" font-size: 20px;" />
+                                    <label id="idEdad"  width="15%" style=" font-size: 20px;" />
+                                    <label id="idCI" width="55%" style=" font-size: 20px;" />
+                                </row>
+                                <row style=" color: #27408B; border: none; overflow:visible;background:#A2B5CD;" >
+                                    <hlayout>
+                                        <label value="id. Historia:  " width="15%" style=" font-size: 20px;" />
+                                        <label id="idHistoria" width="15%" style=" font-size: 20px;" />
+                                    </hlayout>
+                                    <hlayout>
+                                        <label value="id. Orden:  " width="15%" style=" font-size: 20px;" />
+                                        <label id="idOrden" width="30%" style=" font-size: 20px;" />
+                                    </hlayout>
+                                    <label id="idECivil" width="40%" style=" font-size: 20px;"/>
+                                </row>
+                            </rows>
+                        </grid>
+                        <grid id="GrdDatosPeronales" visible="false">
+<!--                                        <columns >
+                                            <column label="Descripcion" hflex="3"  width="150px" />
+                                            <column label="Valor" hflex="8" width="200px" />
+                                            <column id="ClmOrdenD" label="Orden"  hflex="2" width="11px"  />
+                                            <column label="Nombre" hflex="3"  width="150px" />
+                                        </columns>-->
+                            <rows id="GrdFilasDatos" />
+                        </grid>
+                        <grid id="GrdReporte" visible="false" height="475px" fixedLayout="true">
+                            <columns >
+                                <column label="Descripcion"   width="65%" />
+                                <column label="Valor"  width="35%" />
+                                <column id="ClmOrden"   width="0%" visible="false" />
+                                <column label="Nombre"  width="0%" visible="false" />
+                            </columns>
+                            <rows id="GrdFilas" />
+                        </grid>
+                    </vbox>
+
+                </center>
+
+            </borderlayout>
+        </center>
+    </borderlayout>
+   
+</window>

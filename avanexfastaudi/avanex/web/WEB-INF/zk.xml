@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : zk.xml
+    Created on : 7 de agosto de 2011, 12:59 PM
+    Author     : Juan Pablo Chavez
+    Description:
+        Purpose of the document follows.
+-->
+
+<zk>
+    <preference>
+        <name>org.zkoss.zk.ui.WebApp.name</name>
+        <value>AvaSUS</value>
+    </preference>
+    <session-config>
+        <device-type>ajax</device-type>
+        <timeout-message>La sesión ha expirado, por favor ingrese de nuevo.</timeout-message>
+    </session-config>
+    <session-config>
+        <device-type>ajax</device-type>   
+        <timeout-uri>/login.zul</timeout-uri>   
+    </session-config>
+    <session-config>
+        <device-type>ajax</device-type>
+        <automatic-timeout/>
+    </session-config>
+    <library-property>
+        <name>org.zkoss.zul.progressbox.position</name>
+        <value>center</value>
+    </library-property>
+    <library-property>
+        <name>org.zkoss.web.preferred.locale</name>
+        <value>ES_MX</value>
+    </library-property>
+    <system-config>
+        <ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+    </system-config>
+    <system-config>
+        <max-upload-size>-1</max-upload-size>
+    </system-config>
+</zk>

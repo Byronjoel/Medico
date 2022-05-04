@@ -1,0 +1,32 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="300px" height="90px">
+        <north title="Estado de la orden"></north>
+        <center>
+            <div>
+                <div align="center">
+                    <hbox>
+                        <label>Qué es lo que desea hacer?</label>
+                    </hbox>
+                </div>
+
+                <div align="center" style="top:35%; left:2%; position: absolute;">
+                    <hbox>
+                        <button id="idArchivar" label="Archivar??" />
+                        <div width="15px"></div>
+                        <button id="idAuditar" label="Auditar??"  />  
+                        <div width="15px"></div>
+                        <button id="idCancel" label="Cancelar"  >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winMsgEstado.onClose();
+                                ]]>
+                            </attribute>                                                            
+                        </button>
+                    </hbox>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

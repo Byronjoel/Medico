@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="/css/messages.css" />
+    <borderlayout id="borde" width="500px" height="400px" >
+        <center flex="true">
+            <iframe id="reporteV" width="100%" height="80%" />
+        </center>
+        <south sclass="south_validate">
+            <div align="center">
+                <hbox visible="false">
+                    <button id="cbMsgValidate" label="Validar y Terminar Informe" 
+                    sclass="button_validate" > 
+                    </button>
+                </hbox>
+
+            </div>
+        </south>
+    </borderlayout>
+</zk>

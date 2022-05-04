@@ -1,0 +1,31 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="270px" height="100px">
+        <north title="Este Informe ya tiene resultado del examen"></north>
+        <center>
+            <div>
+                <div align="center">
+                    <hbox>
+                        <label>Desea eliminar ese registro y agregar uno nuevo?</label>
+                    </hbox>
+                </div>
+
+                <div align="center" style="top:35%; left:10%; position: absolute;">
+                    <hbox>
+                         <div width="30px"></div>
+                        <button id="MsgEditar" label="Nuevo" sclass="button_save1" />
+                        <div width="30px"></div>
+                        <button id="MsgCancel" label="Cancelar" sclass="button_cancel" >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winEditar.onClose();
+                                ]]>
+                            </attribute>
+                        </button>
+                    </hbox>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

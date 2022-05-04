@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Login"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./about"?>
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:c="client">
+    <zscript>
+        String ip = session.getRemoteAddr();
+        String ver = application.getInitParameter("version");   
+        String browser = Executions.getCurrent().getHeader("user-agent");
+    </zscript>
+    
+    <style src="/css/login.css" />
+    <window id="about" title="AvaSUS" mode="modal" border="normal" width="45%" 
+    position="center" closable="true" action="show: slideDown;hide: slideUp">
+        <caption image="/images/logos/avasus_title.png" label="Acerca de ..."/>
+        <div align="center" style="top:35%; left:30%; position:center; "  >
+            <div height= "20px"></div>
+            <vbox align="center">
+                <label>AvaSUS</label>
+                <label value= "Versión ${ver}" />
+                <div/>
+                <label value= "do it by Cubosoft (c) 2012" />
+                <div/>
+                <label value= "www.cubosoft.com.ec" />
+                <label value= "(+593) 08 3010.893" />
+                <label value= "(+593) 09 5803.797" />
+                <label value= "Ecuador" />
+                <space/>
+                <label>El Browser que está utilizando:</label>
+                <label value= "${browser}" />
+            </vbox>
+            <div height= "20px"></div>
+        </div>
+        
+        <attribute name="onClose"><![CDATA[
+                execution.sendRedirect("/ocupacional/menu.zul"); ]]>
+        </attribute>
+    </window>
+</zk>

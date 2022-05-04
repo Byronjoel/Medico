@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+    <datos_generales_standar>
+        <pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+        <pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+        <estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+        <estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+        <canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+        <canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+        <parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+        <parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+        <etnia descripcion="ETNIA" orden="0" tipo_dato="T">MESTIZO</etnia>
+        <practica descripcion="PRACTICA" orden="0" tipo_dato="L">1247</practica>
+        <nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">PRUEBA - CONSENTIMIENTO</nombre_practica>
+        <solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">dfgdf</solicitante>
+        <paciente descripcion="NOMBRE" orden="0" tipo_dato="L">PRUEBAS PRUEBAS</paciente>
+        <nombres descripcion="NOMBRES" orden="0" tipo_dato="L">PRUEBAS</nombres>
+        <apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">PRUEBAS</apellidos>
+        <fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1990/11/27</fecha_nace>
+        <id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+        <empresa descripcion="EMPRESA" orden="0" tipo_dato="L">ECUABARNICES S.A.</empresa>
+        <identificacion descripcion="CI" orden="0" tipo_dato="L">050144418</identificacion>
+        <estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+        <id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">177</id_orden>
+        <telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0987274785// 032946061</telefono>
+        <sexo descripcion="SEXO" orden="0" tipo_dato="L">FEMENINO</sexo>
+        <profesion descripcion="PROFESION" orden="0" tipo_dato="L">ING</profesion>
+        <edad descripcion="EDAD" orden="0" tipo_dato="L">25 AÑOS </edad>
+        <ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">cargo</ocupacion>
+        <instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+        <ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">QUITO</ciudad_nace>
+        <direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">..</direccion_paciente>
+        <titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SRA</titulo_paciente>
+        <medico descripcion="MEDICO" orden="0" tipo_dato="L">Lcdo. PRUEBAS MEDICO PRUEBAS</medico>
+        <especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L">Pruebas</especialidad>
+        <cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L">1234</cod_med>
+        <titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Lcdo.</titulo_medico>
+        <fecha descripcion="FECHA" orden="0" tipo_dato="L">2016/04/01</fecha>
+        <fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2016/04/01 00:00:00</fecha_hora>
+        <dx descripcion="DIAGNOSTICO" orden="0">1.  DERMATITIS   [obser dera]  
+            2.   DERMATOSIS NO INFECCIOSA DEL PARPADO    [obser]  
+            3.  DISPLASIA DE CADERA    [asdf]  
+        </dx>
+        <recomendaciones descripcion="RECOMENDACIONES" orden="0"/>
+        <prescripciones descripcion="PRESCRIPCIONES" orden="0"/>
+        <estado descripcion="ESTADO" orden="0" tipo_dato="L">IN</estado>
+    </datos_generales_standar>
+    <pagina0 Id="1" IdFormato="5312">
+        <fisico_regional_frame1 descripcion="S/D">
+            <cicatrices descripcion="cicatrices" item_lista="" orden="" tipo_dato="S">SI </cicatrices>
+            <tatuajes descripcion="tatuajes" item_lista="" orden="15001" tipo_dato="S"> </tatuajes>
+            <piel_faneras descripcion="Piel y faneras" item_lista="" orden="15002" tipo_dato="S"> </piel_faneras>
+            <parpados descripcion="párpados" item_lista="" orden="15003" tipo_dato="S"> </parpados>
+            <conjuntivas descripcion="conjuntivas" item_lista="" orden="15004" tipo_dato="S"> </conjuntivas>
+            <pupilas descripcion="pupilas" item_lista="" orden="15005" tipo_dato="S"> </pupilas>
+            <cornea descripcion="córnea" item_lista="" orden="15006" tipo_dato="S"> </cornea>
+            <motilidad descripcion="motilidad" item_lista="" orden="15007" tipo_dato="S"> </motilidad>
+            <c_auditivo_externo descripcion="C. auditivo externo" item_lista="" orden="15008" tipo_dato="S"> </c_auditivo_externo>
+            <pabellon descripcion="Pabellón" item_lista="" orden="15009" tipo_dato="S"> </pabellon>
+            <timpanos descripcion="Tímpanos" item_lista="" orden="15010" tipo_dato="S"> </timpanos>
+            <labios descripcion="Labios" item_lista="" orden="15011" tipo_dato="S"> </labios>
+            <lengua descripcion="lengua" item_lista="" orden="15012" tipo_dato="S"> </lengua>
+            <faringe descripcion="faringe" item_lista="" orden="15013" tipo_dato="S"> </faringe>
+            <amigdalas descripcion="Amígdalas" item_lista="" orden="15014" tipo_dato="S"> </amigdalas>
+            <dentadura descripcion="dentadura" item_lista="" orden="15015" tipo_dato="S"> </dentadura>
+            <tabique descripcion="tabique" item_lista="" orden="15016" tipo_dato="S"> </tabique>
+            <cornetes descripcion="cornetes" item_lista="" orden="15017" tipo_dato="S"> </cornetes>
+            <mucosas descripcion="mucosas" item_lista="" orden="15018" tipo_dato="S"> </mucosas>
+            <senos_paranasales descripcion="Senos paranasales" item_lista="" orden="15019" tipo_dato="S"> </senos_paranasales>
+            <tiroides_masas descripcion="Tiroides/ masas" item_lista="" orden="15020" tipo_dato="S"> </tiroides_masas>
+            <movilidad descripcion="movilidad" item_lista="" orden="15021" tipo_dato="S"> </movilidad>
+            <mamas descripcion="mamas" item_lista="" orden="15022" tipo_dato="S"> </mamas>
+            <corazon descripcion="Corazón" item_lista="" orden="15023" tipo_dato="S"> </corazon>
+            <pulmones descripcion="Pulmones" item_lista="" orden="15024" tipo_dato="S"> </pulmones>
+            <parrilla_costal descripcion="Parrilla costal" item_lista="" orden="15025" tipo_dato="S"> </parrilla_costal>
+            <visceras descripcion="Vísceras" item_lista="" orden="15026" tipo_dato="S"> </visceras>
+            <pared_abdominal descripcion="Pared Abdominal" item_lista="" orden="15027" tipo_dato="S"> </pared_abdominal>
+            <flexibilidad descripcion="Flexibilidad" item_lista="" orden="15028" tipo_dato="S"> </flexibilidad>
+            <desviacion descripcion="Desviación" item_lista="" orden="15029" tipo_dato="S"> </desviacion>
+            <dolor descripcion="dolor" item_lista="" orden="15030" tipo_dato="S"> </dolor>
+            <pelvis descripcion="pelvis" item_lista="" orden="15031" tipo_dato="S"> </pelvis>
+            <genitales descripcion="Genitales" item_lista="" orden="15032" tipo_dato="S"> </genitales>
+            <vascular descripcion="Vascular" item_lista="" orden="15033" tipo_dato="S"> </vascular>
+            <miembros_superiores descripcion="Miembros superiores" item_lista="" orden="15034" tipo_dato="S"> </miembros_superiores>
+            <miembros_inferiores descripcion="Miembros inferiores" item_lista="" orden="15035" tipo_dato="S"> </miembros_inferiores>
+            <fuerza descripcion="fuerza" item_lista="" orden="15036" tipo_dato="S"> </fuerza>
+            <sensibilidad descripcion="sensibilidad" item_lista="" orden="15037" tipo_dato="S"> </sensibilidad>
+            <marcha descripcion="marcha" item_lista="" orden="15038" tipo_dato="S"> </marcha>
+            <reflejos descripcion="reflejos" item_lista="" orden="15039" tipo_dato="S"> </reflejos>
+            <observaciones_regiones1 descripcion="Observaciones:" item_lista="" lineas="0" orden="15040" tipo_dato="T"/>
+        </fisico_regional_frame1>
+        <resultado_examenes_generales_frame1 descripcion="L. RESULTADOS DE EXAMENES GENERALES Y ESPECIFICOS DE ACUERDO AL RIESGO Y PUESTO DE TRABAJO(IMAGEN, LABORATORIO Y OTROS)">
+            <examen_field1 descripcion="Examen 1" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <examen_field1_fecha descripcion="Fecha " item_lista="" orden="15041" tipo_dato="D"/>
+            <examen_field1_resultado descripcion="Resultado" item_lista="" lineas="1" orden="15042" tipo_dato="T"/>
+            <examen_field2 descripcion="Examen 2" item_lista="" lineas="1" orden="15043" tipo_dato="T"/>
+            <examen_field2_fecha descripcion="Fecha" item_lista="" orden="15044" tipo_dato="D"/>
+            <examen_field2_resultados descripcion="Resultado" item_lista="" lineas="1" orden="15045" tipo_dato="T"/>
+            <examen_field3 descripcion="Examen 3" item_lista="" lineas="1" orden="15046" tipo_dato="T"/>
+            <examen_field3_fecha descripcion="Fecha" item_lista="" orden="15047" tipo_dato="D"/>
+            <examen_field3_resultados descripcion="Resultado" item_lista="" lineas="1" orden="15048" tipo_dato="T"/>
+            <examen_field4 descripcion="Examen 4" item_lista="" lineas="1" orden="15049" tipo_dato="T"/>
+            <examen_field2_fecha descripcion="Fecha" item_lista="" orden="15050" tipo_dato="D"/>
+            <examen_field4_resultados descripcion="Resultados" item_lista="" lineas="1" orden="15021" tipo_dato="T"/>
+            <observaciones_examenes1 descripcion="Observaciones:" item_lista="" lineas="0" orden="15052" tipo_dato="T"/>
+        </resultado_examenes_generales_frame1>
+        <m_diagnostico_frame descripcion="M. DIAGNOSTICO">
+            <dx descripcion="Diagnostico:" orden="" tipo_dato="G">1.  DERMATITIS   [obser dera]  
+                2.   DERMATOSIS NO INFECCIOSA DEL PARPADO    [obser]  
+                3.  DISPLASIA DE CADERA    [asdf]  
+                <dx0 cod="Z00000525" codGrp="DERMATOLOGIA" codRef="L25" tipo="ECUA">DERMATITIS</dx0>
+                <obs0 cod="Z00000525">obser dera</obs0>
+                <dx1 cod="H011" codGrp="OFTALMOLOGIA" codRef="H011" tipo="CIE10"> DERMATOSIS NO INFECCIOSA DEL PARPADO </dx1>
+                <obs1 cod="H011">obser</obs1>
+                <dx2 cod="Z00000414" codGrp="OSTEOMUSCULAR" codRef="Q65" tipo="ECUA">DISPLASIA DE CADERA </dx2>
+                <obs2 cod="Z00000414">asdf</obs2>
+            </dx>
+            <pre0 descripcion="Pre / Def" item_lista="PRESUNTIVO/DEFINITIVO/" orden="15061" tipo_dato="L">PRESUNTIVO</pre0>
+            <pres_dos descripcion="Pre / Def" item_lista="PRESUNTIVO/DEFINITIVO/" orden="1568" tipo_dato="L">PRESUNTIVO</pres_dos>
+            <pres_3 descripcion="Pre /Def" item_lista="PRESUNTIVO/DEFINITIVO/" orden="152" tipo_dato="L">PRESUNTIVO</pres_3>
+        </m_diagnostico_frame>
+        <aptitud_medica_frame descripcion="N. APTITUD MÉDICA PARA EL TRABAJO">
+            <aptitud_observacion descripcion="Observación" item_lista="" lineas="1" orden="" tipo_dato="T">sdf</aptitud_observacion>
+            <aptitud_limitacion descripcion="Llimitación" item_lista="" lineas="1" orden="15071" tipo_dato="T">asd</aptitud_limitacion>
+        </aptitud_medica_frame>
+        <recomendaciones_tratamiento_frame descripcion="O. RECOMENDACIONES Y/O TRATAMIENTO">
+            <descripcion_tratamiento descripcion="Descripción" item_lista="" lineas="0" orden="" tipo_dato="T">asdf</descripcion_tratamiento>
+        </recomendaciones_tratamiento_frame>
+    </pagina0>
+</resultados>

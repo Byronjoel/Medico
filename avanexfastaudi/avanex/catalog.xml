@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.57.8:9080/postlab-1.0/eReport?wsdl" uri="src/conf/xml-resources/web-service-references/eReport/wsdl/192.168.57.8_9080/postlab-1.0/eReport.wsdl"/>
+    <system systemId="file:/C:/Users/DESARROLLO/Desktop/respo.wsdl" uri="src/conf/xml-resources/web-service-references/respo/wsdl/respo.wsdl"/>
+    <system systemId="http://192.168.57.8:9080/reception/eReport?wsdl" uri="src/conf/xml-resources/web-service-references/eReport/wsdl/192.168.57.8_9080/reception/eReport.wsdl"/>
+</catalog>

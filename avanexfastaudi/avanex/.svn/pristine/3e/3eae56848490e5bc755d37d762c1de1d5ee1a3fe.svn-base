@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Historia" id="m_receta" ?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div align="center" style="top:35%; left:30%; position:center; " >
+        <label>Ingrese los datos:</label>
+    </div>
+    <vlayout id="valor"  style=" border: 3px solid #86b3b1;" apply="ec.com.cubosoft.avamed.coneccion.ControladoraPaciente"  >
+        <listbox id="historias"  multiple="true">
+            <listhead visible="false">
+                <listheader  width="7%" />
+                <listheader  width="15%"/>
+                <listheader  width="7%" />
+                <listheader  width="15%"/>
+                <listheader  width="7%" />
+                <listheader  width="15%"/>
+            </listhead>
+            <listitem id="datoN">
+                <listcell >
+                    <label value="Historia:"   sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <textbox id="idHistoria" disabled="true" cols="20" sclass="text-dat-vac" />
+                </listcell>
+                <listcell>
+                    <label  value="Título:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <textbox id="idTitulo" disabled="true" cols="20" sclass="text-dat-vac"/> 
+                </listcell>
+            </listitem>
+            <listitem id="datoP">
+                <listcell>
+                    <label  value="Apellidos:" sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <textbox id="idApellidos"  cols="60" sclass="text-dat-vac" disabled="true" /> 
+                </listcell>
+                <listcell>
+                    <label  value="Nombres:" sclass="label-dat"/>
+                </listcell>
+                <listcell>
+                    <textbox id="idNombres" disabled="true" cols="60"  sclass="text-dat-vac"/> 
+                </listcell>
+            </listitem>
+            <listitem>
+                <listcell>
+                    <label value="Civil:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <combobox id="idCivil" cols="30" sclass="text-dat-vac">
+                        <comboitem   label="Soltero" />
+                        <comboitem   label="Casado" />
+                        <comboitem   label="Divorciado" />
+                        <comboitem   label="Viudo" />
+                        <comboitem   label="Union Libre" />
+                    </combobox>
+                </listcell>
+                <listcell>
+                    <label width="50px" value="Instrucción:  "  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <combobox id="idInstrucción" width="300px"   cols="40" sclass="text-dat-vac">
+                        <comboitem   label="PRIMARIA" />
+                        <comboitem   label="SECUNDARIA" />
+                        <comboitem   label="SUPERIOR" />
+                        <comboitem   label="CUARTO NIVEL" />
+                        <comboitem   label="OTRO" />
+                    </combobox>
+                </listcell>
+            </listitem>
+            <listitem>
+                <listcell>
+                    <label value="Sexo:"  sclass="label-dat"   />
+                </listcell>
+                <listcell>
+                    <combobox id="idSexo"  disabled="true"   cols="20"  sclass="text-dat-vac">
+                        <comboitem   label="FEMENINO" />
+                        <comboitem   label="MASCULINO" />
+                        <comboitem   label="INDETERMINADO" />
+                        <comboitem   label="NO DECLARADO" />
+                    </combobox>
+                </listcell>        
+                <listcell>
+                    <label value="Telefono:" sclass="label-dat" />
+                </listcell>
+                <listcell>                                           
+                    <textbox id="idTelefono"  disabled="true" cols="20" sclass="text-dat-vac"/> 
+                </listcell>
+            </listitem>
+            <listitem>
+                <listcell>
+                    <label value="Fecha:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <datebox id="idFecha" disabled="true" cols="20" sclass="text-dat-vac"/> 
+                </listcell>
+                <listcell>
+                    <label value="# o Serie:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <textbox id="idNumSer"  disabled="true" cols="30" sclass="text-dat-vac"/> 
+                </listcell>
+            </listitem>
+            <listitem>
+                <listcell>
+                    <label value="Subfijo:"  sclass="label-dat" />  
+                </listcell>
+                <listcell>
+                    <textbox id="idSubfijo" cols="30" sclass="text-dat-vac"/>
+                </listcell>
+                                               
+                <listcell>
+                    <label value="Tip Sangre:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <combobox id="idTipoS" cols="30" sclass="text-dat-vac">
+                        <comboitem   label="O (+)" />
+                        <comboitem   label="O (-)" />
+                        <comboitem   label="A (+)" />
+                        <comboitem   label="A (-)" />
+                        <comboitem   label="B (+)" />
+                        <comboitem   label="B (-)" />
+                        <comboitem   label="AB (+)" />
+                        <comboitem   label="AB (-)" />
+                    </combobox>
+                </listcell>
+            </listitem>
+            <listitem>
+                <listcell>
+                    <label value="Pais Nac.:  " sclass="label-dat"/>
+                </listcell>
+                <listcell>
+                    <combobox id="idPaisNac" cols="40" sclass="text-dat-vac" />
+                </listcell>
+                                    
+                <listcell>
+                    <label value="Etnia/Raza:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <textbox id="idEtniaR" cols="40"  sclass="text-dat-vac"/>
+                </listcell>
+            </listitem>
+            <listitem>
+                <listcell>
+                    <label value="Ciudad Nac.:"  sclass="label-dat" />
+                </listcell>
+                <listcell>
+                    <combobox id="idCiudadNac" cols="40" sclass="text-dat-vac"/>
+                </listcell>
+                <listcell>
+                    <label value="Plural:  " sclass="label-dat"/>
+                </listcell>
+                <listcell>
+                    <textbox id="idPlural" cols="30" sclass="text-dat-vac" /> 
+                </listcell>
+            </listitem>
+            <listitem>
+                
+                <listcell  >
+                    <label width="50px" value="Profesión:"  sclass="label-dat" />
+                </listcell>
+                <listcell >
+                    <textbox id="idProfesion" cols="60" sclass="text-dat-vac" /> 
+                </listcell>
+                <listcell>
+                    <label value="Ocupación:  "  sclass="label-dat"/>
+                </listcell>
+                <listcell>
+                    <textbox id="idOcupacion"  cols="60" sclass="text-dat-vac" /> 
+                </listcell>
+            </listitem>
+<!--            <listitem>
+                
+            </listitem>-->
+        </listbox>
+        <button id="guardarBtn" hflex="1" label="Guardar"/>
+    </vlayout>
+<!--</window>-->
+</zk>
+<!--<zk xmlns="http://www.zkoss.org/2005/zul" >
+    <style src="/css/cssDefault.css" />
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+    <style src="css/login.css" />
+    <style src="/css/edicion-aux.css" />
+    <borderlayout id="histo" apply="ec.com.cubosoft.avamed.coneccion.ControladoraPaciente" sclass="detalle-listado">
+        <north height="16%">
+            <label value="Historia:"   sclass="label-dat" /> 
+        </north>
+        <center >
+            <listbox id="historias" width="100%"  multiple="true">
+                <listhead visible="false">
+                    <listheader  width="7%" />
+                    <listheader  width="15%"/>
+                    <listheader  width="7%" />
+                    <listheader  width="15%"/>
+                    <listheader  width="7%" />
+                    <listheader  width="15%"/>
+                </listhead>
+                <listitem>
+                    <listcell >
+                        <label value="Historia:"   sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <textbox id="idHistoria" disabled="true" cols="20" sclass="text-dat-vac" />
+                    </listcell>
+                    <listcell>
+                        <label  value="Título:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <textbox id="idTitulo" disabled="true" cols="20" sclass="text-dat-vac"/> 
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label  value="Apellidos:" sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <textbox id="idApellidos"  cols="60" sclass="text-dat-vac" disabled="true" /> 
+                    </listcell>
+                    <listcell>
+                        <label  value="Nombres:" sclass="label-dat"/>
+                    </listcell>
+                    <listcell>
+                        <textbox id="idNombres" disabled="true" cols="60"  sclass="text-dat-vac"/> 
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Civil:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <combobox id="idCivil" cols="30" sclass="text-dat-vac">
+                            <comboitem   label="Soltero" />
+                            <comboitem   label="Casado" />
+                            <comboitem   label="Divorciado" />
+                            <comboitem   label="Viudo" />
+                            <comboitem   label="Union Libre" />
+                        </combobox>
+                    </listcell>
+                    <listcell>
+                        <label value="Tipo:  "  sclass="label-dat"/>
+                    </listcell>
+                    <listcell>
+                        <combobox id="idTipo"  cols="20" sclass="text-dat-vac">
+                            <comboitem   label="Id. Nacional" />
+                            <comboitem   label="Id. Tributaria" />
+                            <comboitem   label="Pasaporte" />
+                        </combobox>
+                    </listcell>
+                                   
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Sexo:"  sclass="label-dat"   />
+                    </listcell>
+                    <listcell>
+                        <combobox id="idSexo"  disabled="true"   cols="20"  sclass="text-dat-vac">
+                            <comboitem   label="FEMENINO" />
+                            <comboitem   label="MASCULINO" />
+                            <comboitem   label="INDETERMINADO" />
+                            <comboitem   label="NO DECLARADO" />
+                        </combobox>
+                    </listcell>        
+                    <listcell>
+                        <label value="Telefono:" sclass="label-dat" />
+                    </listcell>
+                    <listcell>                                           
+                        <textbox id="idTelefono"  disabled="true" cols="20" sclass="text-dat-vac"/> 
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Fecha:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <datebox id="idFecha" disabled="true" cols="20" sclass="text-dat-vac"/> 
+                    </listcell>
+                    <listcell>
+                        <label value="# o Serie:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <textbox id="idNumSer"  disabled="true" cols="30" sclass="text-dat-vac"/> 
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Subfijo:"  sclass="label-dat" />  
+                    </listcell>
+                    <listcell>
+                        <textbox id="idSubfijo" cols="30" sclass="text-dat-vac"/>
+                    </listcell>
+                                               
+                    <listcell>
+                        <label value="Tip Sangre:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <combobox id="idTipoS" cols="30" sclass="text-dat-vac">
+                            <comboitem   label="O (+)" />
+                            <comboitem   label="O (-)" />
+                            <comboitem   label="A (+)" />
+                            <comboitem   label="A (-)" />
+                            <comboitem   label="B (+)" />
+                            <comboitem   label="B (-)" />
+                            <comboitem   label="AB (+)" />
+                            <comboitem   label="AB (-)" />
+                        </combobox>
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Pais Nac.:  " sclass="label-dat"/>
+                    </listcell>
+                    <listcell>
+                        <combobox id="idPaisNac" cols="40" sclass="text-dat-vac" />
+                    </listcell>
+                                    
+                    <listcell>
+                        <label value="Etnia/Raza:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <textbox id="idEtniaR" cols="40"  sclass="text-dat-vac"/>
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Ciudad Nac.:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <combobox id="idCiudadNac" cols="40" sclass="text-dat-vac"/>
+                    </listcell>
+                    <listcell>
+                        <label value="Plural:  " sclass="label-dat"/>
+                    </listcell>
+                    <listcell>
+                        <textbox id="idPlural" cols="30" sclass="text-dat-vac" /> 
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label width="50px" value="Instrucción:  "  sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <combobox id="idInstrucción" width="300px"   cols="40" sclass="text-dat-vac">
+                            <comboitem   label="PRIMARIA" />
+                            <comboitem   label="SECUNDARIA" />
+                            <comboitem   label="SUPERIOR" />
+                            <comboitem   label="CUARTO NIVEL" />
+                            <comboitem   label="OTRO" />
+                        </combobox>
+                    </listcell>
+                    <listcell  >
+                        <label width="50px" value="Profesión:"  sclass="label-dat" />
+                    </listcell>
+                    <listcell >
+                        <textbox id="idProfesion" cols="60" sclass="text-dat-vac" /> 
+                    </listcell>
+                </listitem>
+                <listitem>
+                    <listcell>
+                        <label value="Ocupación:  "  sclass="label-dat"/>
+                    </listcell>
+                    <listcell>
+                        <textbox id="idOcupacion"  cols="60" sclass="text-dat-vac" /> 
+                    </listcell>
+                    <listcell>
+                        <label value="Puesto:  "   sclass="label-dat" />
+                    </listcell>
+                    <listcell>
+                        <textbox id="idPuesto"  cols="50" sclass="text-dat-vac"/> 
+                    </listcell>
+                </listitem>
+                            
+            </listbox>
+        </center>
+    </borderlayout>
+    
+</zk>-->
+

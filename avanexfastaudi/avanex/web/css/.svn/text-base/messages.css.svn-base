@@ -1,0 +1,27 @@
+/* 
+    Document   : StiloDefault
+    Created on : 22/02/2011, 10:31:41 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+/*
+.root {
+    display: block;
+
+}*/
+
+.button_save1, .button_save2, .button_nosave, .button_cancel, .button_validate
+{    
+    width: 125px;
+    height: 40px;
+}
+
+.south_validate {
+    background-color: #2E8B57;
+}

@@ -1,0 +1,17 @@
+/* 
+    Document   : historia
+    Created on : 6/12/2011, 03:45:50 PM
+    Author     : JP
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.editar {
+    font-size: 22px;
+    color:#4F4F4F;
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Ingreso" id="pageIngreso" ?>
+<!--<?page title="Historial" id="m_administradora" ?>-->
+<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="botonesTabla" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newGrid" macroURI="/templates/gridGenerico.zul"?>
+<?component name="newGrdReporte" macroURI="/templates/Generales/ReporteP.zul"?>
+<?component name="newCmbBox" macroURI="/templates/Generales/cmbBox.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>
+<!--?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="activewin"?-->
+
+<!-- @author Patty Amoroso  -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:c="http://www.zkoss.org/2005/zk/client">
+  
+    <style src="/css/StiloDefault.css" />
+    <style src="/css/messages.css" />
+    
+    <window id="WinIngreso" title="AvaSUS" border="normal" height="100%" 
+        width="100%" position="parent" apply="ec.com.cubosoft.avamed.coneccion.ControladoraIngreso" 
+        maximizable="true" maximized="true" >
+        <caption id="usuario_label" label="Historia Clínica" 
+            apply="ec.com.cubosoft.avamed.coneccion.ControladoraPermisos">
+            <hlayout>
+                <toolbarbutton label="@{usuario_label$composer.usuario}" />
+            </hlayout>
+        </caption>
+        <borderlayout height="100%">
+            <north height="55px" collapsible="true">
+                <include src="/templates/Menu.zul" />
+            </north>
+            <west width="120px">
+                <div align="center">
+                    <space />
+                    <!--botonesTabla id="bBotones" controladora="ec.com.cubosoft.avamed.coneccion.ControladoraIngreso" /-->    
+                    <include id="barraBotones" src="/templates/ControlesBase.zul" />
+                </div>
+            </west>
+            <center>
+                
+                <borderlayout height="100%" >
+                    <north border="none" height="80px" >
+			<!-- DATOS DE BUSQUEDA-->
+                        <div id="cabecera" align="center">
+                            <hlayout>
+                                <vlayout>
+                                    <label value="Fecha:" />
+                                    <hlayout>
+                                        <vbox>
+                                            <label value="Desde:" sclass="Blabel"/>
+                                            <datebox id="FecDesde" cols="11" format="dd/MMM/yyyy" mold="rounded" onCreate="self.value = new Date()"/>
+                                        </vbox>
+                                        <vbox>
+                                            <label value="Hasta:" sclass="Blabel" />
+                                            <datebox id="FecHasta" cols="11" format="dd/MMM/yyyy" mold="rounded" onCreate="self.value = new Date()" />
+                                        </vbox>
+                                    </hlayout>
+                                </vlayout>
+                                <vlayout>
+                                    <label value="Orden:" />
+                                    <hlayout>
+                                        <vbox>
+                                            <label value="Desde:" sclass="Blabel" />
+                                            <textbox id="OrdenDesde" cols="10" mold="rounded" >
+                                                <attribute name="onChange"><![CDATA[
+                                                    if((!OrdenDesde.getValue().isEmpty())&&(OrdenDesde.getValue()!=null)){
+                                                        OrdenHasta.setValue(OrdenDesde.getValue());
+                                                        FecDesde.setValue(null);
+                                                        FecHasta.setValue(null);
+                                                        }
+                                                    ]]>
+                                                </attribute>    
+                                            </textbox>
+                                        </vbox>
+                                        <vbox>
+                                            <label value="Hasta:" sclass="Blabel" />
+                                            <textbox id="OrdenHasta" cols="10" mold="rounded" />
+                                        </vbox>
+                                    </hlayout>
+                                </vlayout>
+                                <vlayout>
+                                    <space />
+                                    <label value="Paciente:" sclass="Blabel" />
+                                    <textbox id="txtPacienteBusqueda" cols="25" ></textbox>
+                                </vlayout>
+                                <vlayout>
+                                    <space/>
+                                    <label value="Empresa:" sclass="Blabel" />
+                                    <bandbox id="bbEmpresa" mold="rounded" >
+                                        <bandpopup>
+                                            <listbox id="LbxEmpresas" width="300px" >
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center"/>
+                                                    <listheader label="Empresa" style="text-align:center;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vlayout>
+                                <vlayout>
+                                    <space/>
+                                    <label value="Area:" sclass="Blabel" />
+                                    <bandbox id="bbAreas" mold="rounded"  >
+                                        <bandpopup>
+                                            <listbox id="LbxAreas" width="300px">
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center"/>
+                                                    <listheader label="Area" style="text-align:center;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vlayout>
+                                <vlayout>
+                                    <space />
+                                    <label value="Práctica:" sclass="Blabel" />
+                                    <bandbox id="bbPracticas" mold="rounded"  >
+                                        <bandpopup>
+                                            <listbox id="LbxPracticas" width="300px" >
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center"/>
+                                                    <listheader label="Práctica" style="text-align:center;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vlayout>
+                                <vlayout>
+                                    <space />
+                                    <label value="Estado:" sclass="Blabel" />
+                                    <combobox id="cbEstado" width="100px" mold="rounded" >
+                                        <comboitem id="PE" label="Pendiente" />
+                                        <comboitem id="IN" label="Incompleto" />
+                                        <comboitem id="CO" label="Completo" />
+                                    </combobox>
+                                </vlayout>
+                            </hlayout>
+                        </div>
+                        <attribute name="onOK"><![CDATA[
+                            Events.postEvent("onClick",barraBotones.getFellow("btnBuscar"), null);
+                            ]]>
+                        </attribute>
+                    </north>
+                    <!-- Historial de pacientes -->
+                    <center  flex="true" border="0" >
+                        <tabbox height="100%"  >
+                            <tabs id="tabs">
+                                <tab id="tabTabla" label="Listado / Tabla" />
+                                <!--tab id="tabRegistro" label="Registro" /-->
+                            </tabs>
+                            <tabpanels>
+                                <tabpanel height="100%" >
+                                    <borderlayout>
+                                        <center vflex="true" border="0">
+                                            <grid id="GridOrdenes" height ="300px" visible="true" emptyMessage="No hay registros de ordenes">
+                                                <columns menupopup="auto"  sizable="true">
+                                                    <column label = "Fecha" width="12%"  align="center"/>
+                                                    <column label = "Orden" width="12%"  align="center" />
+                                                    <column label = "Paciente" width="35%" style="text-align:center;"/>
+                                                    <column label = "Empresa" width="20%"  style="text-align:center;"/>
+                                                    <column label = "Prácticas" width="40%" style="text-align:center;"/>
+                                                    <column label = "Estado" width="80px" align="center"/>
+                                                    <column label = "Usuario" width="10%"  align="center"/>
+                                                    <column label = "Origen" width="20%"  style="text-align:center;"/>
+                                                </columns>
+                                                <rows id="rowsTabla"/>
+                                                <foot>
+                                                    <footer span="6" id="footer_orden" class="footer_right" />
+                                                </foot>
+                                            </grid>
+                                        </center>
+                                    </borderlayout>
+                                </tabpanel>
+                                <tabpanel>
+                                </tabpanel>
+                            </tabpanels>
+                        </tabbox>
+                    </center>
+                </borderlayout>
+            </center>
+        </borderlayout>
+        <timer id="timer" delay="1500" repeats="true" onCreate="self.stop()"></timer>
+    </window>
+</zk>

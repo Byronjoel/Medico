@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="42" bottomMargin="28">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="72"/>
+	<field name="pais_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_codigo]]></fieldDescription>
+	</field>
+	<field name="pais_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_descripcion]]></fieldDescription>
+	</field>
+	<field name="estado_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_codigo]]></fieldDescription>
+	</field>
+	<field name="estado_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_descripcion]]></fieldDescription>
+	</field>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="canton_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_descripcion]]></fieldDescription>
+	</field>
+	<field name="parroquia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_codigo]]></fieldDescription>
+	</field>
+	<field name="parroquia_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_descripcion]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="pa" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/pa]]></fieldDescription>
+	</field>
+	<field name="fc" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/fc]]></fieldDescription>
+	</field>
+	<field name="fr" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/fr]]></fieldDescription>
+	</field>
+	<field name="talla" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/talla]]></fieldDescription>
+	</field>
+	<field name="peso" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/peso]]></fieldDescription>
+	</field>
+	<field name="temp" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/temp]]></fieldDescription>
+	</field>
+	<field name="imc" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/sv/imc]]></fieldDescription>
+	</field>
+	<field name="apariencia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/soge/apariencia]]></fieldDescription>
+	</field>
+	<field name="estado_nutricional" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/soge/estado_nutricional]]></fieldDescription>
+	</field>
+	<field name="actividad_sicomotora" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/soge/actividad_sicomotora]]></fieldDescription>
+	</field>
+	<field name="piel_tegumentos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reg/piel_tegumentos]]></fieldDescription>
+	</field>
+	<field name="cabeza_cuello" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reg/cabeza_cuello]]></fieldDescription>
+	</field>
+	<field name="torax" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reg/torax]]></fieldDescription>
+	</field>
+	<field name="corazon" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reg/corazon]]></fieldDescription>
+	</field>
+	<field name="pulmones" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reg/pulmones]]></fieldDescription>
+	</field>
+	<field name="abdomen" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/reg/abdomen]]></fieldDescription>
+	</field>
+	<field name="neurologico_elemental" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/neurologico/neurologico_elemental]]></fieldDescription>
+	</field>
+	<field name="el14" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/examenes1/el14]]></fieldDescription>
+	</field>
+	<field name="el15" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/examenes1/el15]]></fieldDescription>
+	</field>
+	<field name="el16" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/examenes1/el16]]></fieldDescription>
+	</field>
+	<field name="examenes_laboratorio" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/examenes1/examenes_laboratorio]]></fieldDescription>
+	</field>
+	<field name="cifosis" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/cifosis]]></fieldDescription>
+	</field>
+	<field name="lordosis" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/lordosis]]></fieldDescription>
+	</field>
+	<field name="escoliosis" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/escoliosis]]></fieldDescription>
+	</field>
+	<field name="cmuscular" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/cmuscular]]></fieldDescription>
+	</field>
+	<field name="lassegue" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/lassegue]]></fieldDescription>
+	</field>
+	<field name="motri_columna" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/motri_columna]]></fieldDescription>
+	</field>
+	<field name="dolor_columna" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/dolor_columna]]></fieldDescription>
+	</field>
+	<field name="detalle_alteracion" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/columna/detalle_alteracion]]></fieldDescription>
+	</field>
+	<field name="dolor_dorsolumbar" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/dorso_lumbar/dolor_dorsolumbar]]></fieldDescription>
+	</field>
+	<field name="motri_dorsolumbar" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/dorso_lumbar/motri_dorsolumbar]]></fieldDescription>
+	</field>
+	<field name="obs_dorsolumbar" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/dorso_lumbar/obs_dorsolumbar]]></fieldDescription>
+	</field>
+	<field name="phalen_extremidades" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/extremidades/phalen_extremidades]]></fieldDescription>
+	</field>
+	<field name="tinel_extremidades" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/extremidades/tinel_extremidades]]></fieldDescription>
+	</field>
+	<field name="dolor_extremidades" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/extremidades/dolor_extremidades]]></fieldDescription>
+	</field>
+	<field name="cajon_extremidades" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/extremidades/cajon_extremidades]]></fieldDescription>
+	</field>
+	<field name="motri_extremidades" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/extremidades/motri_extremidades]]></fieldDescription>
+	</field>
+	<field name="obs_extremidades" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/extremidades/obs_extremidades]]></fieldDescription>
+	</field>
+	<field name="oftalmologia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/examenes1/oftalmologia]]></fieldDescription>
+	</field>
+	<field name="espirometria" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina2/examenes1/espirometria]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="750" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="511" height="750"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement x="0" y="0" width="511" height="15">
+					<property name="nombre" value="examen_fisico"/>
+					<property name="descripcion" value="EXAMEN FÍSICO"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="104" height="12"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[VII. EXAMEN FÍSICO]]></text>
+				</staticText>
+				<line>
+					<reportElement x="1" y="14" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="15" width="511" height="28">
+					<property name="nombre" value="sv"/>
+					<property name="descripcion" value="SIGNOS VITALES"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="1" width="80" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SIGNOS VITALES:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="129" y="1" width="53" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PA (mmHg):]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="181" y="1" width="70" height="11">
+						<property name="orden" value="1090"/>
+						<property name="nombre" value="pa"/>
+						<property name="descripcion" value="PA:"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{pa}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="255" y="1" width="45" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FC:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="299" y="1" width="45" height="11">
+						<property name="orden" value="1100"/>
+						<property name="nombre" value="fc"/>
+						<property name="descripcion" value="FC ( x &apos; ):"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fc}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="382" y="1" width="43" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FR:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="425" y="1" width="45" height="11">
+						<property name="orden" value="1110"/>
+						<property name="nombre" value="fr"/>
+						<property name="descripcion" value="FR ( x &apos; ):"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fr}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="15" width="51" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TALLA (cm):]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="53" y="15" width="45" height="11">
+						<property name="orden" value="1120"/>
+						<property name="nombre" value="talla"/>
+						<property name="tipo_dato" value="N"/>
+						<property name="descripcion" value="TALLA ( cm ):"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{talla}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="129" y="15" width="53" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PESO (kg):]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="181" y="15" width="45" height="11">
+						<property name="orden" value="1130"/>
+						<property name="nombre" value="peso"/>
+						<property name="descripcion" value="PESO ( Kg ):"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{peso}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="255" y="15" width="45" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[IMC:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="299" y="15" width="80" height="11">
+						<property name="orden" value="1140"/>
+						<property name="nombre" value="imc"/>
+						<property name="descripcion" value="IMC:"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{imc}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="382" y="15" width="43" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TEMP:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="425" y="15" width="45" height="11">
+						<property name="orden" value="1150"/>
+						<property name="nombre" value="temp"/>
+						<property name="descripcion" value="TEMP ( ° ):"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{temp}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="13" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="128" y="0" width="1" height="27"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="380" y="0" width="1" height="27"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="253" y="0" width="1" height="27"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="100" y="15" width="27" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[cm]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="229" y="15" width="23" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Kg]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="472" y="15" width="36" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[°]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="347" y="1" width="32" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[x ']]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="472" y="1" width="36" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[x ']]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="43" width="511" height="56">
+					<property name="nombre" value="soge"/>
+					<property name="descripcion" value="SOMÁTICO GENERAL"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="1" width="122" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SOMÁTICO GENERAL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="15" width="104" height="11"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[APARIENCIA:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="29" width="104" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ESTADO NUTRICIONAL:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="43" width="116" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ACTIVIDADES PSICOMOTORAS:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="15" width="385" height="11">
+						<property name="orden" value="1160"/>
+						<property name="nombre" value="apariencia"/>
+						<property name="descripcion" value="APARIENCIA"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{apariencia}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="29" width="385" height="11">
+						<property name="orden" value="1170"/>
+						<property name="nombre" value="estado_nutricional"/>
+						<property name="descripcion" value="ESTADO NUTRICIONAL"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{estado_nutricional}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="43" width="385" height="11">
+						<property name="orden" value="1180"/>
+						<property name="nombre" value="actividad_sicomotora"/>
+						<property name="descripcion" value="ACTIVIDAD SICOMOTORA"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{actividad_sicomotora}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="13" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="27" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="41" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="55" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="119" y="14" width="1" height="41"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="99" width="511" height="99">
+					<property name="nombre" value="reg"/>
+					<property name="descripcion" value="REGIONAL"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="104" height="11"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REGIONAL:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="16" width="103" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[1. PIEL Y TEGUMENTOS:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="30" width="103" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[2. CABEZA Y CUELLO:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="44" width="103" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[3. TÓRAX:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="58" width="87" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[4. CORAZÓN:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="72" width="87" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[5. PULMONES:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="86" width="57" height="11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[6. ABDOMEN:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="16" width="385" height="11">
+						<property name="orden" value="1190"/>
+						<property name="nombre" value="piel_tegumentos"/>
+						<property name="descripcion" value="PIEL Y TEGUMENTOS"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{piel_tegumentos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="30" width="385" height="11">
+						<property name="orden" value="1200"/>
+						<property name="nombre" value="cabeza_cuello"/>
+						<property name="descripcion" value="CABEZA Y CUELLO"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cabeza_cuello}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="44" width="385" height="11">
+						<property name="orden" value="1210"/>
+						<property name="nombre" value="torax"/>
+						<property name="descripcion" value="TORAX"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{torax}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="58" width="385" height="11">
+						<property name="orden" value="1220"/>
+						<property name="nombre" value="corazon"/>
+						<property name="descripcion" value="CORAZON"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{corazon}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="72" width="385" height="11">
+						<property name="orden" value="1230"/>
+						<property name="nombre" value="pulmones"/>
+						<property name="descripcion" value="PULMONES"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{pulmones}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="123" y="86" width="385" height="11">
+						<property name="orden" value="1240"/>
+						<property name="nombre" value="abdomen"/>
+						<property name="descripcion" value="ABDOMEN:"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{abdomen}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="14" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="28" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="42" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="56" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="70" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="84" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="1" y="98" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="119" y="14" width="1" height="84"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="197" width="511" height="80">
+					<property name="nombre" value="columna"/>
+					<property name="descripcion" value="Columna"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="106" height="12"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[7. COLUMNA VERTEBRAL:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="16" width="77" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Cifosis (acentuada):]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="93" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="110" y="16" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="110" y="16" width="15" height="12">
+						<property name="orden" value="1242"/>
+						<property name="nombre" value="cifosis"/>
+						<property name="descripcion" value="Cifosis (acentuada):"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{cifosis}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="143" y="16" width="13" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="160" y="16" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="160" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{cifosis}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="185" y="16" width="82" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Lordosis (acentuada):]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="269" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="287" y="16" width="14" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="287" y="16" width="15" height="12">
+						<property name="orden" value="1244"/>
+						<property name="nombre" value="lordosis"/>
+						<property name="descripcion" value="Lordosis (acentuada)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{lordosis}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="310" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="328" y="16" width="14" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="327" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{lordosis}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="383" y="16" width="43" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Escoliosis:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="432" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="450" y="16" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="450" y="16" width="15" height="12">
+						<property name="orden" value="1246"/>
+						<property name="nombre" value="escoliosis"/>
+						<property name="descripcion" value="Escoliosis:"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{escoliosis}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="474" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="492" y="16" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="492" y="16" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{escoliosis}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="32" width="86" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Contractura Muscular:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="93" y="32" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="110" y="32" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="110" y="32" width="15" height="12">
+						<property name="orden" value="1247"/>
+						<property name="nombre" value="cmuscular"/>
+						<property name="descripcion" value="Contractura Muscular:"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{cmuscular}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="142" y="32" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="160" y="32" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="160" y="32" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{cmuscular}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="49" width="44" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Lassegue:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="53" y="49" width="25" height="12">
+						<printWhenExpression><![CDATA[$F{lassegue}.equalsIgnoreCase("NO")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(NO)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="89" y="49" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DER]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="110" y="49" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="110" y="49" width="15" height="12">
+						<property name="orden" value="1248"/>
+						<property name="nombre" value="lassegue"/>
+						<property name="descripcion" value="Lassegue:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NO/SI LADO DERECHO/SI LADO IZQUIERDO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{lassegue}.equalsIgnoreCase("SI LADO DERECHO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="139" y="49" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[IZQ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="160" y="49" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="160" y="49" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{lassegue}.equalsIgnoreCase("SI LADO IZQUIERDO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="65" width="41" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Dolor:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="93" y="65" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="110" y="65" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="110" y="65" width="15" height="12">
+						<property name="orden" value="1252"/>
+						<property name="nombre" value="dolor_columna"/>
+						<property name="descripcion" value="Dolor:"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{dolor_columna}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="142" y="65" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="160" y="65" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="160" y="65" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{dolor_columna}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="186" y="32" width="41" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Motricidad:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="236" y="32" width="37" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NORMAL]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="275" y="32" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="275" y="32" width="15" height="12">
+						<property name="orden" value="1250"/>
+						<property name="nombre" value="motri_columna"/>
+						<property name="descripcion" value="Motricidad:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NORMAL/ALTERADA/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{motri_columna}.equalsIgnoreCase("NORMAL")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="293" y="32" width="48" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ALTERADA]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="343" y="32" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="343" y="32" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{motri_columna}.equalsIgnoreCase("ALTERADA")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="185" y="47" width="44" height="28"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Detalle la Alteración:]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="236" y="47" width="271" height="30"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="237" y="49" width="269" height="28">
+						<property name="orden" value="1254"/>
+						<property name="nombre" value="detalle_alteracion"/>
+						<property name="descripcion" value="Detalle la Alteración:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{detalle_alteracion}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="79" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="277" width="511" height="48">
+					<property name="nombre" value="dorso_lumbar"/>
+					<property name="descripcion" value="Región Lumbar"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="104" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[8. REGIÓN LUMBAR:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="17" width="85" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Dolor puño percusión:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="91" y="17" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="108" y="17" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="108" y="17" width="15" height="12">
+						<property name="orden" value="1256"/>
+						<property name="nombre" value="dolor_dorsolumbar"/>
+						<property name="descripcion" value="Dolor puño percusión:"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{dolor_dorsolumbar}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="160" y="17" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="177" y="17" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="177" y="17" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{dolor_dorsolumbar}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="33" width="41" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Motricidad:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="70" y="33" width="37" height="12"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NORMAL]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="108" y="33" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="108" y="33" width="15" height="12">
+						<property name="orden" value="1258"/>
+						<property name="nombre" value="motri_dorsolumbar"/>
+						<property name="descripcion" value="Motricidad"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NORMAL/ALTERADA/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{motri_dorsolumbar}.equalsIgnoreCase("NORMAL")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="127" y="33" width="48" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ALTERADA]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="177" y="33" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="177" y="33" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{motri_dorsolumbar}.equalsIgnoreCase("ALTERADA")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="197" y="15" width="38" height="25"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Detalle la Ateración:]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="236" y="16" width="271" height="29"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="237" y="17" width="269" height="28">
+						<property name="orden" value="1260"/>
+						<property name="nombre" value="obs_dorsolumbar"/>
+						<property name="descripcion" value="Observaciones (Describa las Patologías):"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{obs_dorsolumbar}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="1" y="47" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="325" width="511" height="81">
+					<property name="nombre" value="extremidades"/>
+					<property name="descripcion" value="Extremidades"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="100" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[9. EXTREMIDADES:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="17" width="41" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Phalen:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="45" y="17" width="25" height="12">
+						<printWhenExpression><![CDATA[$F{phalen_extremidades}.equalsIgnoreCase("NO")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(NO)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="111" y="17" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DER]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="131" y="17" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="131" y="17" width="15" height="12">
+						<property name="orden" value="1262"/>
+						<property name="nombre" value="phalen_extremidades"/>
+						<property name="descripcion" value="Phalen:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NO/SI LADO DERECHO/SI LADO IZQUIERDO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{phalen_extremidades}.equalsIgnoreCase("SI LADO DERECHO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="155" y="17" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[IZQ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="175" y="17" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="17" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{phalen_extremidades}.equalsIgnoreCase("SI LADO IZQUIERDO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="33" width="41" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Tinel:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="46" y="33" width="25" height="12">
+						<printWhenExpression><![CDATA[$F{tinel_extremidades}.equalsIgnoreCase("NO")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(NO)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="111" y="33" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DER]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="131" y="33" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="131" y="33" width="15" height="12">
+						<property name="orden" value="1264"/>
+						<property name="nombre" value="tinel_extremidades"/>
+						<property name="descripcion" value="Tinel:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NO/SI LADO DERECHO/SI LADO IZQUIERDO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{tinel_extremidades}.equalsIgnoreCase("SI LADO DERECHO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="155" y="33" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[IZQ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="175" y="33" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="33" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{tinel_extremidades}.equalsIgnoreCase("SI LADO IZQUIERDO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="49" width="41" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Dolor:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="115" y="49" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[SI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="131" y="49" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="131" y="49" width="15" height="12">
+						<property name="orden" value="1266"/>
+						<property name="nombre" value="dolor_extremidades"/>
+						<property name="descripcion" value="Dolor:"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{dolor_extremidades}.equalsIgnoreCase("SI")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="159" y="49" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="175" y="49" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="49" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{dolor_extremidades}.equalsIgnoreCase("NO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="65" width="80" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Signo Cajón-rodilla:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="82" y="65" width="25" height="12">
+						<printWhenExpression><![CDATA[$F{cajon_extremidades}.equalsIgnoreCase("NO")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(NO)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="111" y="65" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DER]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="131" y="65" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="131" y="65" width="15" height="12">
+						<property name="orden" value="1267"/>
+						<property name="nombre" value="cajon_extremidades"/>
+						<property name="descripcion" value="Signo Cajón-rodilla:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NO/SI LADO DERECHO/SI LADO IZQUIERDO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{cajon_extremidades}.equalsIgnoreCase("SI LADO DERECHO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="155" y="65" width="19" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[IZQ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="175" y="65" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="65" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{cajon_extremidades}.equalsIgnoreCase("SI LADO IZQUIERDO")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="200" y="17" width="41" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Motricidad:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="269" y="17" width="38" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[NORMAL]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="313" y="17" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="313" y="17" width="15" height="12">
+						<property name="orden" value="1268"/>
+						<property name="nombre" value="motri_extremidades"/>
+						<property name="descripcion" value="Motricidad:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="NORMAL/ALTERADA/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{motri_extremidades}.equalsIgnoreCase("NORMAL")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="341" y="17" width="47" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[ALTERADA]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="395" y="17" width="15" height="12"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="395" y="17" width="15" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( ($F{motri_extremidades}.equalsIgnoreCase("ALTERADA")) ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="199" y="31" width="67" height="35"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Observaciones (Descripción de Patologías):]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="269" y="32" width="239" height="45"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="270" y="32" width="238" height="45">
+						<property name="orden" value="1270"/>
+						<property name="nombre" value="obs_extremidades"/>
+						<property name="descripcion" value="Observaciones (Describa lo Patológico)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{obs_extremidades}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="1" y="80" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="405" width="511" height="16">
+					<property name="nombre" value="neurologico"/>
+					<property name="descripcion" value="Neurológico Elemental"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="184" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[10. ENE-EXAMEN NEUROLÓGICO ELEMENTAL:]]></text>
+				</staticText>
+				<line>
+					<reportElement x="1" y="15" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="187" y="2" width="321" height="12">
+						<property name="orden" value="1272"/>
+						<property name="nombre" value="neurologico_elemental"/>
+						<property name="descripcion" value="NEUROLOGICO ELEMENTAL"/>
+						<property name="tipo_dato" value="T"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{neurologico_elemental}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="425" width="511" height="325">
+					<property name="nombre" value="examenes1"/>
+					<property name="descripcion" value="VIII. EXAMENES DE LABORATORIO (COLOQUE LOS HALLAZGOS POSITIVOS)"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="2" width="456" height="12"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[VIII.EXÁMENES DE LABORATORIO  Y ESPECIALIDADES (COLOQUE LOS HALLAZGOS POSITIVOS )]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="17" width="88" height="72"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LABORATORIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="17" width="412" height="72">
+						<property name="orden" value="2410"/>
+						<property name="nombre" value="el14"/>
+						<property name="descripcion" value="LABORATORIO:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{el14}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="93" width="88" height="31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EMO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="93" width="412" height="31">
+						<property name="orden" value="2420"/>
+						<property name="nombre" value="el15"/>
+						<property name="descripcion" value="EMO:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{el15}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="127" width="88" height="31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[COPROPARASITARIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="127" width="412" height="31">
+						<property name="orden" value="2430"/>
+						<property name="nombre" value="el16"/>
+						<property name="descripcion" value="COPROPARASITARIO:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{el16}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="161" width="88" height="74"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PRUEBAS ESPECIALES DE LABORATORIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="161" width="412" height="74">
+						<property name="orden" value="2440"/>
+						<property name="nombre" value="examenes_laboratorio"/>
+						<property name="descripcion" value="PRUEBAS ESPECIALES DE LABORATORIO:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{examenes_laboratorio}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="1" y="15" width="510" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="91" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="125" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="159" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="236" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="3" y="238" width="88" height="41"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[OFTALMOLOGÍA]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="238" width="412" height="41">
+						<property name="orden" value="2020"/>
+						<property name="nombre" value="oftalmologia"/>
+						<property name="descripcion" value="OFTALMOLOGIA:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{oftalmologia}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="280" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="96" y="282" width="412" height="41">
+						<property name="orden" value="21"/>
+						<property name="nombre" value="espirometria"/>
+						<property name="descripcion" value="ESPIROMETRÍA"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{espirometria}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="282" width="87" height="41"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ESPIROMETRÍA]]></text>
+				</staticText>
+				<line>
+					<reportElement x="93" y="15" width="1" height="310"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="0" width="511" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+			<line>
+				<reportElement x="0" y="42" width="511" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="9" width="100" height="10"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Id. "+$F{id_orden}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="4" width="51" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[P3 - FU]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{canton_codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

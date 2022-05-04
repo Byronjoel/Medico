@@ -1,0 +1,484 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.modelo.core.CsGrupos;
+import ec.com.cubosoft.avamed.modelo.core.CsPerxgru;
+import ec.com.cubosoft.avamed.modelo.core.CsUsuarios;
+import ec.com.cubosoft.avamed.modelo.organizacion.Organizacion;
+import ec.com.cubosoft.avamed.modelo.persona.XmlResultado;
+import ec.com.cubosoft.avamed.modelo.practica.*;
+import ec.com.cubosoft.avamed.procesos.*;
+import ec.com.cubosoft.avasus.controller.renderder.AreaRenderer;
+import ec.com.cubosoft.avasus.controller.renderder.OrganizacionRenderer;
+import ec.com.cubosoft.avasus.controller.renderder.PracticaRenderer;
+import ec.com.cubosoft.avamed.modelo.medico.Area;
+import java.text.SimpleDateFormat;
+import java.util.List;
+import javax.naming.NamingException;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+import org.zkoss.zk.ui.event.*;
+import org.zkoss.zul.*;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import org.zkoss.util.media.AMedia;
+
+/**
+ *
+ * @author Administrador
+ */
+public class ControladoraInforme extends GenericForwardComposer {
+
+    private Integer idArea, idPractica;
+    private Long idOrganizacion;
+    //fechas
+    SimpleDateFormat formato = new SimpleDateFormat("dd-MMM-yyyy");
+    Button btnBuscar, btnReset;
+    ProcesosSession admiSessionUsuario = new ProcesosSession();
+    CsPerxgru permisosMenuIDControles = null;
+    Textbox bCedula, bOrden, bHistoria;
+    Datebox FecHasta, FecDesde;
+    Tree arbol;
+    Iframe reporte;
+    CsGrupos objGrupoActivo;
+    CsUsuarios objUsuarioActivo;
+    Window WinInformes;
+    AdmiNegocio admNegocio;
+    Listbox LbxPracticas, LbxAreas, LbxEmpresas;
+    Bandbox bbAreas, bbPracticas, bbEmpresa;
+    Treechildren root;
+
+    public void onCreate$WinInformes() {
+        try {
+            modificarSession();
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+    }
+
+    private void modificarSession() {
+        try {
+            admiSessionUsuario.AgregarAtributoSession(4, page.getId(), session);
+            permisosMenuIDControles = admiSessionUsuario.ObtenerPermisosPgina(session);
+            objGrupoActivo = (CsGrupos) admiSessionUsuario.ObtenerAtributoSession(3, session);
+            objUsuarioActivo = (CsUsuarios) admiSessionUsuario.ObtenerAtributoSession(2, session);
+            admNegocio = new AdmiNegocio();
+
+            enableButtons();
+            loadPracticas();
+            loadEmpresas();
+            loadAreas();
+
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+    }
+
+    public void enableButtons() {
+
+        btnBuscar.addEventListener(Events.ON_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                find();
+            }
+        });
+
+        btnBuscar.setVisible(true);
+        btnReset.addEventListener(Events.ON_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                reset();
+            }
+        });
+    }
+
+    private List getInformes() throws NamingException {
+
+        Object table = new XmlResultado();
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        List oSQL = new ArrayList();
+        List data = new ArrayList();
+
+        wSQL.put("orden.id ?=", bOrden.getValue());
+        wSQL.put("fecha ?>=", FecDesde.getValue());
+        wSQL.put("fecha ?<=", FecHasta.getValue());
+        wSQL.put("historia.id ?like", bHistoria.getValue());
+        wSQL.put("historia.numId ?=", bCedula.getValue());
+        wSQL.put("orden.organizacion.id ?=", idOrganizacion);
+        wSQL.put("practica.id ?=", idPractica);
+        wSQL.put("practica.area.id ?=", idArea);
+
+        oSQL.add("idOrden");
+        oSQL.add("practica.descripcion");
+
+        data = admNegocio.getData(table, wSQL, null, oSQL);
+
+        for (Object r : data) {
+            System.out.print(((XmlResultado) r).getOrden().getId());
+        }
+
+        return data;
+    }
+
+    private void find() throws InterruptedException, NamingException {
+
+        List<XmlResultado> ListaXmlResultados = getInformes();
+
+        //Limpia el Arbol
+        cleanTree();
+        arbol.setVisible(true);
+
+        if (ListaXmlResultados.size() > 0) {
+            loadTree(ListaXmlResultados);
+        }
+    }
+
+    private void loadReport(XmlResultado resultado) {
+        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+        resultados.add(resultado);
+        loadReport(resultados);
+    }
+
+    private void loadReport(List<XmlResultado> resultados) {
+
+        reporte.setVisible(false);
+        String fileName = "resultados.pdf";
+
+        if (resultados.size() == 1) {
+            fileName = null;
+            fileName = "resultado_O" + resultados.get(0).getIdOrden() + "_P" + resultados.get(0).getIdPractica();
+        }
+
+        try {
+
+            String global = "java:global/avasus-med/AdministradorGlobalBean";
+            String generico = "java:global/avasus-med/AdministradorGenericoBean";
+            iReport reportes = new iReport(global, generico);
+            byte[] buf = reportes.getReport(resultados, false);
+
+            if (buf != null) {
+                InputStream mediaIS = new ByteArrayInputStream(buf);
+                AMedia media = new AMedia(fileName, "pdf", "application/pdf", mediaIS);
+                reporte.setContent(media);
+                reporte.setVisible(true);
+            } else {
+                Messagebox.show("El informe esta incompleto o no está cerrado, consulte con el médico responsable",
+                        "Información / Está incompleto el informe", Messagebox.OK, Messagebox.INFORMATION);
+                return;
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void loadTree(List<XmlResultado> xmlResultados) {
+
+        Treeitem itemRoot = new Treeitem("(Todos los Informes)");
+
+        Treechildren childrenRoot = new Treechildren();
+        Treechildren childrenPaciente = null;
+        Treechildren childrenOrden = null;
+
+        BigInteger idHistoria = new BigInteger("0");
+        BigInteger idOrden = new BigInteger("-1");
+        Treeitem itemHistoria = null;
+        Treeitem itemOrden = null;
+
+        itemRoot.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+            @Override
+            public void onEvent(Event event) throws Exception {
+                List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+                Treeitem itemRootClicked = (Treeitem) event.getTarget();
+
+                for (Object objeto : itemRootClicked.getChildren()) {
+                    if (objeto.getClass().getCanonicalName().
+                            equals(Treechildren.class.getCanonicalName())) {
+                        for (Object subObjeto : ((Treechildren) objeto).getChildren()) {
+                            if (subObjeto.getClass().getCanonicalName().
+                                    equals(Treeitem.class.getCanonicalName())) {
+                                resultados.addAll(getResultadoLoopHistoria(((Treeitem) subObjeto)));
+                            }
+                        }
+                    }
+                }
+
+                if (resultados.size() > 0) {
+                    loadReport(resultados);
+                } else {
+                    reporte.setVisible(false);
+                    Messagebox.show("No existen informes listos para impresión en la orden escogida.");
+                }
+            }
+        });
+
+        for (XmlResultado resultado : xmlResultados) {
+
+            //Nodo de Historia
+            if (!idHistoria.equals(resultado.getIdHistoria())) {
+                idHistoria = resultado.getIdHistoria();
+
+                //Creacion del Nodo de Historia
+                itemHistoria = new Treeitem(resultado.getHistoria().getPaciente(), resultado.getIdHistoria());
+                childrenRoot.appendChild(itemHistoria);
+                childrenPaciente = new Treechildren();
+                idOrden = new BigInteger("-1");
+
+                itemHistoria.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        System.out.append(event.getTarget().toString());
+                        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+                        Treeitem itemHistoriaClicked = (Treeitem) event.getTarget();
+
+                        resultados.addAll(getResultadoLoopHistoria(itemHistoriaClicked));
+
+                        if (resultados.size() > 0) {
+                            loadReport(resultados);
+                        } else {
+                            reporte.setVisible(false);
+                            Messagebox.show("No existen informes listos para impresión en la orden escogida.");
+                        }
+
+                    }
+                });
+            }
+
+            //Nodo de Orden
+            if (!idOrden.equals(resultado.getIdOrden())) {
+                idOrden = resultado.getIdOrden();
+                itemOrden = new Treeitem(resultado.getIdOrden().toString(), resultado.getIdOrden());
+                childrenPaciente.appendChild(itemOrden);
+                childrenPaciente.setParent(itemHistoria);
+
+                childrenOrden = new Treechildren();
+                childrenOrden.setParent(itemOrden);
+
+                itemOrden.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                    @Override
+                    public void onEvent(Event event) throws Exception {
+                        //System.out.append(event.getTarget().toString());
+                        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+                        Treeitem itemOrdenClicked = (Treeitem) event.getTarget();
+
+                        resultados.addAll(getResultadoLoopOrden(itemOrdenClicked));
+
+                        if (resultados.size() > 0) {
+                            loadReport(resultados);
+                        } else {
+                            reporte.setVisible(false);
+                            Messagebox.show("No existen informes listos para impresión en la orden escogida.");
+                        }
+                    }
+                });
+            }
+
+            //Nodo de Informes XML
+            Treeitem itemInforme = new Treeitem();
+            itemInforme.setValue(resultado);
+            Treerow rowInforme = new Treerow();
+            Treecell cellPractica = new Treecell(resultado.getPractica().getAbreviatura());
+            cellPractica.setParent(rowInforme);
+            //Imagen de estado
+            Treecell cellImgEstado = new Treecell();
+            Image imageLock;
+
+            if (resultado.getEstado().equals("IN")) {
+                imageLock = new Image("/images/editing.png");
+            } else {
+                imageLock = new Image("/images/lock.png");
+            }
+
+            imageLock.setParent(cellImgEstado);
+            cellImgEstado.setParent(rowInforme);
+            //
+            rowInforme.setParent(itemInforme);
+            itemInforme.setParent(childrenOrden);
+
+            itemInforme.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener() {
+
+                @Override
+                public void onEvent(Event event) throws Exception {
+
+                    Treeitem itemInformeClicked = (Treeitem) event.getTarget();
+                    XmlResultado resultado = (XmlResultado) itemInformeClicked.getValue();
+
+                    if (resultado.getEstado().equals("CO")) {
+                        System.out.append("Informe No. " + resultado.getId().toString());
+                        loadReport(resultado);
+                    } else {
+                        reporte.setVisible(false);
+                        Messagebox.show("Informe Incompleto, no se puede mostrar para impresión.");
+                    }
+                }
+            });
+        }
+
+        childrenRoot.setParent(itemRoot);
+        itemRoot.setParent(root);
+    }
+
+    private List<XmlResultado> getResultadoLoopHistoria(Treeitem itemHistoria) {
+        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+
+        for (Object objeto : itemHistoria.getChildren()) {
+//            System.out.print(objeto);
+            if (objeto.getClass().getCanonicalName().
+                    equals(Treechildren.class.getCanonicalName())) {
+                for (Object subObjeto : ((Treechildren) objeto).getChildren()) {
+                    //System.out.print("Subobjeto" + subObjeto.toString());
+                    //System.out.print("Subobjeto Valor" + ((Treeitem) subObjeto).getValue());
+                    if (subObjeto.getClass().getCanonicalName().
+                            equals(Treeitem.class.getCanonicalName())) {
+                        resultados.addAll(getResultadoLoopOrden(((Treeitem) subObjeto)));
+                    }
+                }
+            }
+        }
+
+        return resultados;
+    }
+
+    private List<XmlResultado> getResultadoLoopOrden(Treeitem itemOrden) {
+
+        List<XmlResultado> resultados = new ArrayList<XmlResultado>();
+
+        for (Object objeto : itemOrden.getChildren()) {
+            if (objeto.getClass().getCanonicalName().
+                    equals(Treechildren.class.getCanonicalName())) {
+
+                Treechildren children = (Treechildren) objeto;
+
+                for (Object subObjeto : children.getChildren()) {
+                    if (subObjeto.getClass().getCanonicalName().
+                            equals(Treeitem.class.getCanonicalName())) {
+
+                        Treeitem item = (Treeitem) subObjeto;
+
+                        if (item.getValue().getClass().getCanonicalName().
+                                equals(XmlResultado.class.getCanonicalName())) {
+                            XmlResultado resultado = (XmlResultado) item.getValue();
+                            if (resultado.getEstado().equals("CO")) {
+                                resultados.add(resultado);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return resultados;
+    }
+
+    public void reset() {
+        cleanTree();
+
+        bHistoria.setValue("");
+        bCedula.setValue("");
+        bOrden.setValue("");
+        FecDesde.setValue(new Date());
+        FecHasta.setValue(new Date());
+        bbAreas.setValue("");
+        bbPracticas.setValue("");
+        bbEmpresa.setValue("");
+        idArea = null;
+        idOrganizacion = null;
+        idPractica = null;
+
+        arbol.setVisible(false);
+
+        //Reporte
+        reporte.setVisible(false);
+    }
+
+    public void cleanTree() {
+        while (root.getItemCount() > 0) {
+            root.removeChild(root.getFirstChild());
+        }
+    }
+
+    public void loadAreas() throws NamingException {
+
+        Object table = new Area();
+        List oSQL = new ArrayList();
+        oSQL.add("descripcion");
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        wSQL.put("lockReg ?=", 0);
+        wSQL.put("idPadre?=", 0);
+        List objectList = admNegocio.getData(table, wSQL, null, oSQL);
+        LbxAreas.setItemRenderer(new AreaRenderer());
+        LbxAreas.setModel(new ListModelList(objectList));
+
+        bbAreas.setValue(null);
+    }
+
+    public void onSelect$LbxAreas() {
+        Area area = (Area) LbxAreas.getSelectedItem().getValue();
+        bbAreas.setValue(area.getDescripcion());
+        idArea = area.getId();
+
+        System.out.print("Area escogida = " + idArea);
+
+        bbAreas.close();
+    }
+
+    public void loadEmpresas() throws NamingException {
+
+        Object table = new Organizacion();
+        List oSQL = new ArrayList();
+        oSQL.add("abreviatura");
+
+        List objectList = admNegocio.getData(table, false, oSQL);
+
+        LbxEmpresas.setItemRenderer(new OrganizacionRenderer());
+        LbxEmpresas.setModel(new ListModelList(objectList));
+
+        bbEmpresa.setValue(null);
+    }
+
+    public void onSelect$LbxEmpresas() {
+        Organizacion empresa = (Organizacion) LbxEmpresas.getSelectedItem().getValue();
+        bbEmpresa.setValue(empresa.getAbreviatura());
+        idOrganizacion = empresa.getId();
+
+        System.out.print("Empresa escogida = " + idOrganizacion);
+
+        bbEmpresa.close();
+    }
+
+    public void loadPracticas() throws NamingException {
+
+        Object table = new NombreP();
+        List oSQL = new ArrayList();
+        oSQL.add("descripcion");
+
+        List objectList = admNegocio.getData(table, false, oSQL);
+
+        LbxPracticas.setItemRenderer(new PracticaRenderer());
+        LbxPracticas.setModel(new ListModelList(objectList));
+
+        bbPracticas.setValue(null);
+    }
+
+    public void onSelect$LbxPracticas() {
+        NombreP practica = (NombreP) LbxPracticas.getSelectedItem().getValue();
+        bbPracticas.setValue(practica.getAbreviatura());
+        idPractica = practica.getId();
+
+        System.out.print("Practica escogida = " + idPractica);
+
+        bbPracticas.close();
+    }
+}

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+<datos_generales_standar>
+<pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+<pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+<estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+<estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+<canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+<canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+<parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+<parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+<etnia descripcion="ETNIA" orden="0" tipo_dato="T">MESTIZO</etnia>
+<practica descripcion="PRACTICA" orden="0" tipo_dato="L">1247</practica>
+<nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">PRUEBA - CONSENTIMIENTO</nombre_practica>
+<solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">.</solicitante>
+<paciente descripcion="NOMBRE" orden="0" tipo_dato="L">PRUEBAS PRUEBAS</paciente>
+<nombres descripcion="NOMBRES" orden="0" tipo_dato="L">PRUEBAS</nombres>
+<ruc descripcion="RUC" orden="0" tipo_dato="L">12345</ruc>
+<ciiu descripcion="ciiu" orden="0" tipo_dato="L">PPP</ciiu>
+<apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">PRUEBAS</apellidos>
+<fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1990/11/27</fecha_nace>
+<id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+<empresa descripcion="EMPRESA" orden="0" tipo_dato="L">PRUEBA ANTECE</empresa>
+<identificacion descripcion="CI" orden="0" tipo_dato="L">050144418</identificacion>
+<estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+<id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">3504</id_orden>
+<telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0987274785// 032946061</telefono>
+<sexo descripcion="SEXO" orden="0" tipo_dato="L">FEMENINO</sexo>
+<profesion descripcion="PROFESION" orden="0" tipo_dato="L">ING</profesion>
+<edad descripcion="EDAD" orden="0" tipo_dato="L">19 AÑOS </edad>
+<ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">cargo</ocupacion>
+<instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+<ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">QUITO</ciudad_nace>
+<direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">..</direccion_paciente>
+<titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SRA</titulo_paciente>
+<medico descripcion="MEDICO" orden="0" tipo_dato="L">Lcdo. PRUEBAS MEDICO PRUEBAS</medico>
+<especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L">Pruebas</especialidad>
+<cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L">1234</cod_med>
+<titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Lcdo.</titulo_medico>
+<fecha descripcion="FECHA" orden="0" tipo_dato="L">2010/11/15</fecha>
+<fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2010/11/15 07:29:36</fecha_hora>
+</datos_generales_standar>
+<pagina0 Id="1" IdFormato="13">
+<datos_establecimiento_frame descripcion="A. DATOS DEL ESTABLECIMIENTO - EMPRESA Y USUARIO">
+<catolica descripcion="RELIGIÓN" item_lista="CÁTOLICA/EVANGÉLICA/TESTIGOS DE JEHOVÁ/MORMONA/" orden="" tipo_dato="L">TESTIGOS DE JEHOVÁ</catolica>
+<grupo_sanguineo descripcion="GRUPO SANGUÍNEO" item_lista="A+/B+/O+/AB+/A-/B-/O-/AB-/" orden="" tipo_dato="L">A+</grupo_sanguineo>
+<lateralidad descripcion="LATERALIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">12  3504</lateralidad>
+<femenino descripcion="IDENTIDAD DE GÉNERO" item_lista="FEMENINO/MASCULINO/TRANS-FEMENINO/TRANS-MASCULINO/NO SABE NO RESPONDE/" orden="" tipo_dato="L">FEMENINO</femenino>
+<siDiscapacidad descripcion="¿TIENE DISCAPACIDAD?" item_lista="" orden="" tipo_dato="S">NO</siDiscapacidad>
+<tipoDiscapacidad descripcion="TIPO DE DISCAPACIDAD" item_lista="" lineas="1" orden="" tipo_dato="T">123 3504</tipoDiscapacidad>
+<porcentajeDiscapacidad descripcion="% DE DISCAPACIDAD" item_lista="" orden="" tipo_dato="N">13504</porcentajeDiscapacidad>
+<fechaIngresoalTrabajo descripcion="FECHA DE INGRESO AL TRABAJO (aaaa/mm/dd)" item_lista="" orden="" tipo_dato="D">01-jul-2019</fechaIngresoalTrabajo>
+<puestoTrabajo descripcion="PUESTO DE TRABAJO (CIUO)" item_lista="" lineas="1" orden="" tipo_dato="T">12</puestoTrabajo>
+<areaTranajo descripcion="ÁREA DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T">5</areaTranajo>
+<actividadesRelevantes descripcion="ACTIVIDADES RELEVANTES AL PUESTO DE TRABAJO A OCUPAR" item_lista="" lineas="1" orden="" tipo_dato="T">6</actividadesRelevantes>
+<lesbiana descripcion="ORIENTACIÓN SEXUAL" item_lista="LESBIANA/GAY/BISEXUAL/HETEROSEXUAL/NO SABE NO RESPONDE/" orden="" tipo_dato="L">LESBIANA</lesbiana>
+</datos_establecimiento_frame>
+<motivo_consulta descripcion="B. MOTIVO DE CONSULTA">
+<m_consulta descripcion="MOTIVO DE LA CONSULTA" item_lista="" lineas="0" orden="" tipo_dato="T">kj</m_consulta>
+</motivo_consulta>
+<antecedentespersonalesframe1 descripcion="C. ANTECEDENTES PERSONALES">
+<antecedentesPersonales descripcion="DESCRIPCIÓN DE ANTECEDENTES CLÍNICOS Y QUIRÚRGICOS" item_lista="" lineas="0" orden="" tipo_dato="T">dg</antecedentesPersonales>
+</antecedentespersonalesframe1>
+<antecedentespersonalesframe2 descripcion="ANTECEDENTES GINECO OBSTÉTRICO">
+<ciclos descripcion="CICLOS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<fechaultimamens descripcion="FECHA DE ÚLTIMA MENSTRUACIÓN" item_lista="" orden="" tipo_dato="D"/>
+<gestas descripcion="GESTAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<partos descripcion="PARTOS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<cesareas descripcion="CESÁREAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<abortos descripcion="ABORTOS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<hijosvivos descripcion="HIJOS VIVOS" item_lista="" orden="" tipo_dato="N"/>
+<hijosMuertos descripcion="HIJOS MUERTOS" item_lista="" orden="" tipo_dato="N"/>
+<vidaSexual descripcion="VIDA SEXUAL ACTIVA" item_lista="" orden="" tipo_dato="S"> </vidaSexual>
+<metodoplanificacionsi descripcion="MÉTODO DE PLANIFICACIÓN" item_lista="" orden="" tipo_dato="S"> </metodoplanificacionsi>
+<metodoPlanificaciontipo descripcion="MÉTODO DE PLANIFICACIÓN FAMILIAR TIPO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<papanicolausi descripcion="PAPANICOLAU" item_lista="" orden="" tipo_dato="S"> </papanicolausi>
+<papanicolautiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N"/>
+<papanicolauresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<ecoMamariosi descripcion="ECO MAMARIO" item_lista="" orden="" tipo_dato="S"> </ecoMamariosi>
+<ecoMamariotiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N"/>
+<ecoMamarioresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<colposcopiasi descripcion="COLPOSCOPIA" item_lista="" orden="" tipo_dato="S"> </colposcopiasi>
+<colposcopiatiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N"/>
+<colposcopiaresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<mamografiasi descripcion="MAMOGRAFÍA" item_lista="" orden="" tipo_dato="S"> </mamografiasi>
+<mamografiatiempo descripcion="TIEMPO (años)" item_lista="" orden="" tipo_dato="N"/>
+<mamografiaresultado descripcion="RESULTADO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</antecedentespersonalesframe2>
+<antecedentespersonalesframe3 descripcion="NO APLICA PARA:M"/>
+<antecedentespersonalesframe4 descripcion="HÁBITOS TÓXICOS">
+<tabacosi descripcion="CONSUME TABACO" item_lista="" orden="" tipo_dato="S"> </tabacosi>
+<tabacotiempo descripcion="TIEMPO DE CONSUMO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<tabacocantidad descripcion="CANTIDAD" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<tabacoexconsumidor descripcion="EX CONSUMIDOR" item_lista="" orden="" tipo_dato="S"> </tabacoexconsumidor>
+<tabacotiempoAbstinencia descripcion="TIEMPO DE ABSTINENCIA (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<alcoholsi descripcion="CONSUME ALCOHOL" item_lista="" orden="" tipo_dato="S"> </alcoholsi>
+<alcoholtiempo descripcion="TIEMPO DE CONSUMO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<alcoholcantidad descripcion="CANTIDAD" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<alcoholexconsumidor descripcion="EX CONSUMIDOR" item_lista="" orden="" tipo_dato="S"> </alcoholexconsumidor>
+<alcoholtiempoAbstinencia descripcion="TIEMPO DE ABSTINENCIA (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<otrasdrogassi descripcion="CONSUME OTRAS DROGAS" item_lista="" orden="" tipo_dato="S"> </otrasdrogassi>
+<otrasdrogas descripcion="ESPECIFIQUE QUE OTRAS DROGAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<otrasdrogastiempo descripcion="TIEMPO DE CONSUMO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<otrasdrogascantidad descripcion="CANTIDAD" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<otrasdrogasexconsumidor descripcion="EX CONSUMIDOR" item_lista="" orden="" tipo_dato="S"> </otrasdrogasexconsumidor>
+<otrasdrogastiempoAbstinencia descripcion="TIEMPO DE ABSTINENCIA (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<actividadFisicasi descripcion="REALIZA ACTIVIDAD FÍSICA" item_lista="" orden="" tipo_dato="S"> </actividadFisicasi>
+<actividadFisica descripcion="¿CUÁL ACTIVIDAD FÍSICA REALIZA?" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<actividadFisicacantidad descripcion="TIEMPO / CANTIDAD DE ACTIVIDAD FÍSICA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<medicacionHabitualsi descripcion="TOMA ALGUNA MEDICACIÓN HABITUAL" item_lista="" orden="" tipo_dato="S"> </medicacionHabitualsi>
+<medicacionhabitualcual1 descripcion="¿QUE MEDICACIÓN HABITUAL CONSUME?" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<medicacionhabitualtiempo1 descripcion="TIEMPO / CANTIDAD MEDICACIÓN HABITUAL" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<medicacionhabitualcual2 descripcion="¿CONSUME OTRA MEDICACIÓN HABITUAL?" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<medicacionhabitualtiempo2 descripcion="TIEMPO / CANTIDAD MEDICACIÓN HABITUAL" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<medicacionhabitualcual3 descripcion="¿CONSUME OTRA MEDICACIÓN HABITUAL?" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<medicacionhabitualtiempo3 descripcion="TIEMPO / CANTIDAD MEDICACIÓN HABITUAL" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</antecedentespersonalesframe4>
+<antecedentestrabajoframe descripcion="D. ANTECEDENTES DE TRABAJO">
+<empresa0 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<tiempoTrabajoAT descripcion="TIEMPO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puestoTrabajo0 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<actividadesDesempena descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<rFisico descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S"> </rFisico>
+<rMecanico descripcion="RIESGO MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico>
+<rquimico descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico>
+<rbiologico descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S"> </rbiologico>
+<rergonomico descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S"> </rergonomico>
+<rpsicosocial descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S"> </rpsicosocial>
+<observacionesAT descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa1 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puestoTrabajo1 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<actividadesDesempena1 descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<tiempoTrabajoAT1 descripcion="TIEMPO DE TRABAJO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<rFisico1 descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S"> </rFisico1>
+<rMecanico1 descripcion="MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico1>
+<rbiologico1 descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S"> </rbiologico1>
+<rquimico1 descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico1>
+<rpsicosocial1 descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S"> </rpsicosocial1>
+<rergonomico1 descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S"> </rergonomico1>
+<observacionesAT1 descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa2 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puestoTrabajo2 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<actividadesDesempena2 descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<tiempoTrabajoAT2 descripcion="TIEMPO DE TRABAJO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<rMecanico2 descripcion="RIESGO MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico2>
+<rquimico2 descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico2>
+<rergonomico2 descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S"> </rergonomico2>
+<rFisico2 descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S"> </rFisico2>
+<rpsicosocial2 descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S"> </rpsicosocial2>
+<rbiologico2 descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S"> </rbiologico2>
+<observacionesAT2 descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<empresa3 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<puestoTrabajo3 descripcion="PUESTO DE TRABAJO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<actividadesDesempena3 descripcion="ACTIVIDADES QUE DESEMPEÑABA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<tiempoTrabajoAT3 descripcion="TIEMPO DE TRABAJO (meses)" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<rFisico3 descripcion="RIESGO FÍSICO" item_lista="" orden="" tipo_dato="S"> </rFisico3>
+<rMecanico3 descripcion="RIESGO MECÁNICO" item_lista="" orden="" tipo_dato="S"> </rMecanico3>
+<rquimico3 descripcion="RIESGO QUÍMICO" item_lista="" orden="" tipo_dato="S"> </rquimico3>
+<rpsicosocial3 descripcion="RIESGO PSICOSOCIAL" item_lista="" orden="" tipo_dato="S"> </rpsicosocial3>
+<rbiologico3 descripcion="RIESGO BIOLÓGICO" item_lista="" orden="" tipo_dato="S"> </rbiologico3>
+<rergonomico3 descripcion="RIESGO ERGONÓMICO" item_lista="" orden="" tipo_dato="S"> </rergonomico3>
+<observacionesAT3 descripcion="OBSERVACIONES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+</antecedentestrabajoframe>
+</pagina0>
+<pagina1 Id="2" IdFormato="14">
+<antecedentestrabajoframe12 descripcion="D. ANTECEDENTES DE TRABAJO">
+<fuec1 descripcion="FUE CALIFICADO POR EL INSTITUTO DE SEGURIDAD SOCIAL CORRESPONDIENTE:" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+<fuecalificadofecha descripcion="FECHA:" item_lista="" orden="" tipo_dato="D"/>
+<observacionesfuecalificado descripcion="OBSERVACIONES:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+<fuec2 descripcion="FUE CALIFICADO POR EL INSTITUTO DE SEGURIDAD SOCIAL CORRESPONDIENTE" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+<fuecalificadofecha2 descripcion="FECHA:" item_lista="" orden="" tipo_dato="D"/>
+<observacionesfuecalificado2 descripcion="OBSERVACIONES:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+</antecedentestrabajoframe12>
+<pfantecedentesfamiliares descripcion="E. ANTECEDENTES FAMILIARES (DETALLAR EL PARENTESCO)">
+<antecedentescardio descripcion="1. ENFERMEDAD CARDIO-VASCULAR" item_lista="" orden="" tipo_dato="S"> </antecedentescardio>
+<antecedentesmetabol descripcion="2. ENFERMEDAD METABÓLICA" item_lista="" orden="" tipo_dato="S"> </antecedentesmetabol>
+<antecedentesneurolo descripcion="3. ENFERMEDAD NEUROLÓGICA" item_lista="" orden="" tipo_dato="S"> </antecedentesneurolo>
+<antecedentesoncolo descripcion="4. ENFERMEDAD ONCOLÓGICA" item_lista="" orden="" tipo_dato="S"> </antecedentesoncolo>
+<antecedentesinfecciosa descripcion="5. ENFERMEDAD INFECCIOSA" item_lista="" orden="" tipo_dato="S"> </antecedentesinfecciosa>
+<antecedenteshereditaria descripcion="6. ENFERMEDAD HEREDITARIA / CONG[ENITA" item_lista="" orden="" tipo_dato="S"> </antecedenteshereditaria>
+<antecedentesdisca descripcion="7. ENFERMEDAD INFECCIOSA" item_lista="" orden="" tipo_dato="S"> </antecedentesdisca>
+<antecedentesotros descripcion="8. OTROS" item_lista="" orden="" tipo_dato="S"> </antecedentesotros>
+<descripcionantecedentesf descripcion="Descripcion" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+</pfantecedentesfamiliares>
+<f_riesgo descripcion="F.  FACTORES DE RIESGOS DEL PUESTO DE TRABAJO"/>
+<p_trabajo1 descripcion="PUESTO DE TRABAJO 1">
+<pt1_ptrabajo descripcion="PUESTO DE TRABAJO / ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<pt1_actividad descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<pt1_fis_taltas descripcion="FISICO: Temperaturas altas" item_lista="" orden="" tipo_dato="S"> </pt1_fis_taltas>
+<pt1_fis_tbajas descripcion="FISICO: Temperaturas bajas" item_lista="" orden="" tipo_dato="S"> </pt1_fis_tbajas>
+<pt1_fis_rioni descripcion="FISICO: Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </pt1_fis_rioni>
+<pt1_fis_rnioni descripcion="FISICO: Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </pt1_fis_rnioni>
+<pt1_fis_ruido descripcion="FISICO: Ruido" item_lista="" orden="" tipo_dato="S"> </pt1_fis_ruido>
+<pt1_fis_vibra descripcion="FISICO: Vibración" item_lista="" orden="" tipo_dato="S"> </pt1_fis_vibra>
+<pt1_fis_ilumina descripcion="FISICO: Iluminación" item_lista="" orden="" tipo_dato="S"> </pt1_fis_ilumina>
+<pt1_fis_ventila descripcion="FISICO: Ventilación" item_lista="" orden="" tipo_dato="S"> </pt1_fis_ventila>
+<pt1_fis_felec descripcion="FISICO: Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </pt1_fis_felec>
+<pt1_fis_otro descripcion="FISICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt1_fis_otro>
+<pt1_mec_amaquina descripcion="MECANICO: Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </pt1_mec_amaquina>
+<pt1_mec_asuper descripcion="MECANICO: Atrapamiento entre superficies" item_lista="" orden="" tipo_dato="S"> </pt1_mec_asuper>
+<pt1_mec_aobj descripcion="MECANICO: Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_aobj>
+<pt1_mec_cobj descripcion="MECANICO: Caída de objetos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_cobj>
+<pt1_mec_cmnivel descripcion="MECANICO: Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </pt1_mec_cmnivel>
+<pt1_mec_cdnivel descripcion="MECANICO: Caídas a diferente nivel" item_lista="" orden="" tipo_dato="S"> </pt1_mec_cdnivel>
+<pt1_mec_celec descripcion="MECANICO: Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </pt1_mec_celec>
+<pt1_mec_csupt descripcion="MECANICO: Contacto con superficies de trabajos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_csupt>
+<pt1_mec_ppf descripcion="MECANICO: Proyección de partículas – fragmentos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_ppf>
+<pt1_mec_pflu descripcion="MECANICO: Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_pflu>
+<pt1_mec_pinch descripcion="MECANICO: Pinchazos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_pinch>
+<pt1_mec_corte descripcion="MECANICO: Cortes" item_lista="" orden="" tipo_dato="S"> </pt1_mec_corte>
+<pt1_mec_avehi descripcion="MECANICO: Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </pt1_mec_avehi>
+<pt1_mec_cvehi descripcion="MECANICO: Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </pt1_mec_cvehi>
+<pt1_mec_otros descripcion="MECANICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt1_mec_otros>
+<pt1_quim_solido descripcion="QUIMICO: Sólidos" item_lista="" orden="" tipo_dato="S"> </pt1_quim_solido>
+<pt1_quim_polvo descripcion="QUIMICO: Polvo" item_lista="" orden="" tipo_dato="S"> </pt1_quim_polvo>
+<pt1_quim_humo descripcion="QUIMICO: Humos" item_lista="" orden="" tipo_dato="S"> </pt1_quim_humo>
+<pt1_quim_liqui descripcion="QUIMICO: Liquidos" item_lista="" orden="" tipo_dato="S"> </pt1_quim_liqui>
+<pt1_quim_vapor descripcion="QUIMICO: Vapores" item_lista="" orden="" tipo_dato="S"> </pt1_quim_vapor>
+<pt1_quim_aerosol descripcion="QUIMICO: Aerosoles" item_lista="" orden="" tipo_dato="S"> </pt1_quim_aerosol>
+<pt1_quim_nebli descripcion="QUIMICO: Neblinas" item_lista="" orden="" tipo_dato="S"> </pt1_quim_nebli>
+<pt1_quim_gases descripcion="QUIMICO: Gaseosos" item_lista="" orden="" tipo_dato="S"> </pt1_quim_gases>
+<pt1_quim_otros descripcion="QUIMICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt1_quim_otros>
+<pt1_bio_virus descripcion="BIOLOGICO: Virus" item_lista="" orden="" tipo_dato="S"> </pt1_bio_virus>
+<pt1_bio_hongo descripcion="BIOLOGICO: Hongos" item_lista="" orden="" tipo_dato="S"> </pt1_bio_hongo>
+<pt1_bio_bacte descripcion="BIOLOGICO: Bacterias" item_lista="" orden="" tipo_dato="S"> </pt1_bio_bacte>
+<pt1_bio_parasi descripcion="BIOLOGICO: Parasitos" item_lista="" orden="" tipo_dato="S"> </pt1_bio_parasi>
+<pt1_bio_evec descripcion="BIOLOGICO: Exposición a vectores" item_lista="" orden="" tipo_dato="S"> </pt1_bio_evec>
+<pt1_bio_animal descripcion="BIOLOGICO: Exposición a animales selváticos " item_lista="" orden="" tipo_dato="S"> </pt1_bio_animal>
+<pt1_bio_otros descripcion="BIOLOGICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt1_bio_otros>
+<pt1_erg_mmc descripcion="ERGONOMICO: Manejo manual de cargas" item_lista="" orden="" tipo_dato="S"> </pt1_erg_mmc>
+<pt1_erg_mrepe descripcion="ERGONOMICO: Movimiento repetitivos" item_lista="" orden="" tipo_dato="S"> </pt1_erg_mrepe>
+<pt1_erg_postf descripcion="ERGONOMICO: Posturas forzadas" item_lista="" orden="" tipo_dato="S"> </pt1_erg_postf>
+<pt1_erg_tpvd descripcion="ERGONOMICO: Trabajos con PVD" item_lista="" orden="" tipo_dato="S"> </pt1_erg_tpvd>
+<pt1_erg_otros descripcion="ERGONOMICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt1_erg_otros>
+<pt1_psi_mtraba descripcion="PSICOSOCIAL: Monotonía del trabajo " item_lista="" orden="" tipo_dato="S"> </pt1_psi_mtraba>
+<pt1_psi_slabo descripcion="PSICOSOCIAL: Sobrecarga laboral" item_lista="" orden="" tipo_dato="S"> </pt1_psi_slabo>
+<pt1_psi_mtarea descripcion="PSICOSOCIAL: Minuciosidad de la tarea " item_lista="" orden="" tipo_dato="S"> </pt1_psi_mtarea>
+<pt1_psi_arespon descripcion="PSICOSOCIAL: Alta responsabilidad" item_lista="" orden="" tipo_dato="S"> </pt1_psi_arespon>
+<pt1_psi_atd descripcion="PSICOSOCIAL: Autonomía  en la toma de decisiones" item_lista="" orden="" tipo_dato="S"> </pt1_psi_atd>
+<pt1_psi_supedd descripcion="PSICOSOCIAL: Supervisión y estilos de dirección deficiente" item_lista="" orden="" tipo_dato="S"> </pt1_psi_supedd>
+<pt1_psi_rol descripcion="PSICOSOCIAL: Conflicto de rol" item_lista="" orden="" tipo_dato="S"> </pt1_psi_rol>
+<pt1_psi_fcf descripcion="PSICOSOCIAL: Falta de Claridad en las funciones" item_lista="" orden="" tipo_dato="S"> </pt1_psi_fcf>
+<pt1_psi_idist descripcion="PSICOSOCIAL:  Incorrecta distribución del trabajo " item_lista="" orden="" tipo_dato="S"> </pt1_psi_idist>
+<pt1_psi_trot descripcion="PSICOSOCIAL: Turnos rotativos" item_lista="" orden="" tipo_dato="S"> </pt1_psi_trot>
+<pt1_psi_rinter descripcion="PSICOSOCIAL: Relaciones interpersonales " item_lista="" orden="" tipo_dato="S"> </pt1_psi_rinter>
+<pt1_psi_ineslab descripcion="PSICOSOCIAL: Inestabilidad laboral" item_lista="" orden="" tipo_dato="S"> </pt1_psi_ineslab>
+<pt1_psi_otros descripcion="PSICOSOCIAL: Otros" item_lista="" orden="" tipo_dato="S"> </pt1_psi_otros>
+<pt1_psi_medpreven descripcion="Medidas preventivas" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+</p_trabajo1>
+<p_trabajo2 descripcion="PUESTO DE TRABAJO 2">
+<pt2_ptrabajo descripcion="PUESTO DE TRABAJO / ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<pt2_actividad descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<pt2_fis_taltas descripcion="FISICO: Temperaturas altas" item_lista="" orden="" tipo_dato="S"> </pt2_fis_taltas>
+<pt2_fis_tbajas descripcion="FISICO: Temperaturas bajas" item_lista="" orden="" tipo_dato="S"> </pt2_fis_tbajas>
+<pt2_fis_rioni descripcion="FISICO: Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </pt2_fis_rioni>
+<pt2_fis_rnioni descripcion="FISICO: Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </pt2_fis_rnioni>
+<pt2_fis_ruido descripcion="FISICO: Ruido" item_lista="" orden="" tipo_dato="S"> </pt2_fis_ruido>
+<pt2_fis_vibra descripcion="FISICO: Vibración" item_lista="" orden="" tipo_dato="S"> </pt2_fis_vibra>
+<pt2_fis_ilumina descripcion="FISICO: Iluminación" item_lista="" orden="" tipo_dato="S"> </pt2_fis_ilumina>
+<pt2_fis_ventila descripcion="FISICO: Ventilación" item_lista="" orden="" tipo_dato="S"> </pt2_fis_ventila>
+<pt2_fis_felec descripcion="FISICO: Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </pt2_fis_felec>
+<pt2_fis_otro descripcion="FISICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt2_fis_otro>
+<pt2_mec_amaquina descripcion="MECANICO: Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </pt2_mec_amaquina>
+<pt2_mec_asuper descripcion="MECANICO: Atrapamiento entre superficies" item_lista="" orden="" tipo_dato="S"> </pt2_mec_asuper>
+<pt2_mec_aobj descripcion="MECANICO: Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_aobj>
+<pt2_mec_cobj descripcion="MECANICO: Caída de objetos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_cobj>
+<pt2_mec_cmnivel descripcion="MECANICO: Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </pt2_mec_cmnivel>
+<pt2_mec_cdnivel descripcion="MECANICO: Caídas a diferente nivel" item_lista="" orden="" tipo_dato="S"> </pt2_mec_cdnivel>
+<pt2_mec_celec descripcion="MECANICO: Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </pt2_mec_celec>
+<pt2_mec_csupt descripcion="MECANICO: Contacto con superficies de trabajos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_csupt>
+<pt2_mec_ppf descripcion="MECANICO: Proyección de partículas – fragmentos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_ppf>
+<pt2_mec_pflu descripcion="MECANICO: Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_pflu>
+<pt2_mec_pinch descripcion="MECANICO: Pinchazos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_pinch>
+<pt2_mec_corte descripcion="MECANICO: Cortes" item_lista="" orden="" tipo_dato="S"> </pt2_mec_corte>
+<pt2_mec_avehi descripcion="MECANICO: Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </pt2_mec_avehi>
+<pt2_mec_cvehi descripcion="MECANICO: Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </pt2_mec_cvehi>
+<pt2_mec_otros descripcion="MECANICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt2_mec_otros>
+<pt2_quim_solido descripcion="QUIMICO: Sólidos" item_lista="" orden="" tipo_dato="S"> </pt2_quim_solido>
+<pt2_quim_polvo descripcion="QUIMICO: Polvo" item_lista="" orden="" tipo_dato="S"> </pt2_quim_polvo>
+<pt2_quim_humo descripcion="QUIMICO: Humos" item_lista="" orden="" tipo_dato="S"> </pt2_quim_humo>
+<pt2_quim_liqui descripcion="QUIMICO: Liquidos" item_lista="" orden="" tipo_dato="S"> </pt2_quim_liqui>
+<pt2_quim_vapor descripcion="QUIMICO: Vapores" item_lista="" orden="" tipo_dato="S"> </pt2_quim_vapor>
+<pt2_quim_aerosol descripcion="QUIMICO: Aerosoles" item_lista="" orden="" tipo_dato="S"> </pt2_quim_aerosol>
+<pt2_quim_nebli descripcion="QUIMICO: Neblinas" item_lista="" orden="" tipo_dato="S"> </pt2_quim_nebli>
+<pt2_quim_gases descripcion="QUIMICO: Gaseosos" item_lista="" orden="" tipo_dato="S"> </pt2_quim_gases>
+<pt2_quim_otros descripcion="QUIMICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt2_quim_otros>
+<pt2_bio_virus descripcion="BIOLOGICO: Virus" item_lista="" orden="" tipo_dato="S"> </pt2_bio_virus>
+<pt2_bio_hongo descripcion="BIOLOGICO: Hongos" item_lista="" orden="" tipo_dato="S"> </pt2_bio_hongo>
+<pt2_bio_bacte descripcion="BIOLOGICO: Bacterias" item_lista="" orden="" tipo_dato="S"> </pt2_bio_bacte>
+<pt2_bio_parasi descripcion="BIOLOGICO: Parasitos" item_lista="" orden="" tipo_dato="S"> </pt2_bio_parasi>
+<pt2_bio_evec descripcion="BIOLOGICO: Exposición a vectores" item_lista="" orden="" tipo_dato="S"> </pt2_bio_evec>
+<pt2_bio_animal descripcion="BIOLOGICO: Exposición a animales selváticos " item_lista="" orden="" tipo_dato="S"> </pt2_bio_animal>
+<pt2_bio_otros descripcion="BIOLOGICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt2_bio_otros>
+<pt2_erg_mmc descripcion="ERGONOMICO: Manejo manual de cargas" item_lista="" orden="" tipo_dato="S"> </pt2_erg_mmc>
+<pt2_erg_mrepe descripcion="ERGONOMICO: Movimiento repetitivos" item_lista="" orden="" tipo_dato="S"> </pt2_erg_mrepe>
+<pt2_erg_postf descripcion="ERGONOMICO: Posturas forzadas" item_lista="" orden="" tipo_dato="S"> </pt2_erg_postf>
+<pt2_erg_tpvd descripcion="ERGONOMICO: Trabajos con PVD" item_lista="" orden="" tipo_dato="S"> </pt2_erg_tpvd>
+<pt2_erg_otros descripcion="ERGONOMICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt2_erg_otros>
+<pt2_psi_mtraba descripcion="PSICOSOCIAL: Monotonía del trabajo " item_lista="" orden="" tipo_dato="S"> </pt2_psi_mtraba>
+<pt2_psi_slabo descripcion="PSICOSOCIAL: Sobrecarga laboral" item_lista="" orden="" tipo_dato="S"> </pt2_psi_slabo>
+<pt2_psi_mtarea descripcion="PSICOSOCIAL: Minuciosidad de la tarea " item_lista="" orden="" tipo_dato="S"> </pt2_psi_mtarea>
+<pt2_psi_arespon descripcion="PSICOSOCIAL: Alta responsabilidad" item_lista="" orden="" tipo_dato="S"> </pt2_psi_arespon>
+<pt2_psi_atd descripcion="PSICOSOCIAL: Autonomía  en la toma de decisiones" item_lista="" orden="" tipo_dato="S"> </pt2_psi_atd>
+<pt2_psi_supedd descripcion="PSICOSOCIAL: Supervisión y estilos de dirección deficiente" item_lista="" orden="" tipo_dato="S"> </pt2_psi_supedd>
+<pt2_psi_rol descripcion="PSICOSOCIAL: Conflicto de rol" item_lista="" orden="" tipo_dato="S"> </pt2_psi_rol>
+<pt2_psi_fcf descripcion="PSICOSOCIAL: Falta de Claridad en las funciones" item_lista="" orden="" tipo_dato="S"> </pt2_psi_fcf>
+<pt2_psi_idist descripcion="PSICOSOCIAL:  Incorrecta distribución del trabajo " item_lista="" orden="" tipo_dato="S"> </pt2_psi_idist>
+<pt2_psi_trot descripcion="PSICOSOCIAL: Turnos rotativos" item_lista="" orden="" tipo_dato="S"> </pt2_psi_trot>
+<pt2_psi_rinter descripcion="PSICOSOCIAL: Relaciones interpersonales " item_lista="" orden="" tipo_dato="S"> </pt2_psi_rinter>
+<pt2_psi_ineslab descripcion="PSICOSOCIAL: Inestabilidad laboral" item_lista="" orden="" tipo_dato="S"> </pt2_psi_ineslab>
+<pt2_psi_otros descripcion="PSICOSOCIAL: Otros" item_lista="" orden="" tipo_dato="S"> </pt2_psi_otros>
+<pt2_psi_medpreven descripcion="Medidas preventivas" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+</p_trabajo2>
+<p_trabajo3 descripcion="PUESTO DE TRABAJO 3">
+<pt3_ptrabajo descripcion="PUESTO DE TRABAJO / ÁREA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<pt3_actividad descripcion="ACTIVIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<pt3_fis_taltas descripcion="FISICO: Temperaturas altas" item_lista="" orden="" tipo_dato="S"> </pt3_fis_taltas>
+<pt3_fis_tbajas descripcion="FISICO: Temperaturas bajas" item_lista="" orden="" tipo_dato="S"> </pt3_fis_tbajas>
+<pt3_fis_rioni descripcion="FISICO: Radiación Ionizante" item_lista="" orden="" tipo_dato="S"> </pt3_fis_rioni>
+<pt3_fis_rnioni descripcion="FISICO: Radiación No Ionizante" item_lista="" orden="" tipo_dato="S"> </pt3_fis_rnioni>
+<pt3_fis_ruido descripcion="FISICO: Ruido" item_lista="" orden="" tipo_dato="S"> </pt3_fis_ruido>
+<pt3_fis_vibra descripcion="FISICO: Vibración" item_lista="" orden="" tipo_dato="S"> </pt3_fis_vibra>
+<pt3_fis_ilumina descripcion="FISICO: Iluminación" item_lista="" orden="" tipo_dato="S"> </pt3_fis_ilumina>
+<pt3_fis_ventila descripcion="FISICO: Ventilación" item_lista="" orden="" tipo_dato="S"> </pt3_fis_ventila>
+<pt3_fis_felec descripcion="FISICO: Fluido eléctrico" item_lista="" orden="" tipo_dato="S"> </pt3_fis_felec>
+<pt3_fis_otro descripcion="FISICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt3_fis_otro>
+<pt3_mec_amaquina descripcion="MECANICO: Atrapamiento entre máquinas" item_lista="" orden="" tipo_dato="S"> </pt3_mec_amaquina>
+<pt3_mec_asuper descripcion="MECANICO: Atrapamiento entre superficies" item_lista="" orden="" tipo_dato="S"> </pt3_mec_asuper>
+<pt3_mec_aobj descripcion="MECANICO: Atrapamiento entre objetos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_aobj>
+<pt3_mec_cobj descripcion="MECANICO: Caída de objetos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_cobj>
+<pt3_mec_cmnivel descripcion="MECANICO: Caídas al mismo nivel" item_lista="" orden="" tipo_dato="S"> </pt3_mec_cmnivel>
+<pt3_mec_cdnivel descripcion="MECANICO: Caídas a diferente nivel" item_lista="" orden="" tipo_dato="S"> </pt3_mec_cdnivel>
+<pt3_mec_celec descripcion="MECANICO: Contacto eléctrico" item_lista="" orden="" tipo_dato="S"> </pt3_mec_celec>
+<pt3_mec_csupt descripcion="MECANICO: Contacto con superficies de trabajos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_csupt>
+<pt3_mec_ppf descripcion="MECANICO: Proyección de partículas – fragmentos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_ppf>
+<pt3_mec_pflu descripcion="MECANICO: Proyección de fluidos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_pflu>
+<pt3_mec_pinch descripcion="MECANICO: Pinchazos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_pinch>
+<pt3_mec_corte descripcion="MECANICO: Cortes" item_lista="" orden="" tipo_dato="S"> </pt3_mec_corte>
+<pt3_mec_avehi descripcion="MECANICO: Atropellamientos por vehículos" item_lista="" orden="" tipo_dato="S"> </pt3_mec_avehi>
+<pt3_mec_cvehi descripcion="MECANICO: Choques /colisión vehicular" item_lista="" orden="" tipo_dato="S"> </pt3_mec_cvehi>
+<pt3_mec_otros descripcion="MECANICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt3_mec_otros>
+<pt3_quim_solido descripcion="QUIMICO: Sólidos" item_lista="" orden="" tipo_dato="S"> </pt3_quim_solido>
+<pt3_quim_polvo descripcion="QUIMICO: Polvo" item_lista="" orden="" tipo_dato="S"> </pt3_quim_polvo>
+<pt3_quim_humo descripcion="QUIMICO: Humos" item_lista="" orden="" tipo_dato="S"> </pt3_quim_humo>
+<pt3_quim_liqui descripcion="QUIMICO: Liquidos" item_lista="" orden="" tipo_dato="S"> </pt3_quim_liqui>
+<pt3_quim_vapor descripcion="QUIMICO: Vapores" item_lista="" orden="" tipo_dato="S"> </pt3_quim_vapor>
+<pt3_quim_aerosol descripcion="QUIMICO: Aerosoles" item_lista="" orden="" tipo_dato="S"> </pt3_quim_aerosol>
+<pt3_quim_nebli descripcion="QUIMICO: Neblinas" item_lista="" orden="" tipo_dato="S"> </pt3_quim_nebli>
+<pt3_quim_gases descripcion="QUIMICO: Gaseosos" item_lista="" orden="" tipo_dato="S"> </pt3_quim_gases>
+<pt3_quim_otros descripcion="QUIMICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt3_quim_otros>
+<pt3_bio_virus descripcion="BIOLOGICO: Virus" item_lista="" orden="" tipo_dato="S"> </pt3_bio_virus>
+<pt3_bio_hongo descripcion="BIOLOGICO: Hongos" item_lista="" orden="" tipo_dato="S"> </pt3_bio_hongo>
+<pt3_bio_bacte descripcion="BIOLOGICO: Bacterias" item_lista="" orden="" tipo_dato="S"> </pt3_bio_bacte>
+<pt3_bio_parasi descripcion="BIOLOGICO: Parasitos" item_lista="" orden="" tipo_dato="S"> </pt3_bio_parasi>
+<pt3_bio_evec descripcion="BIOLOGICO: Exposición a vectores" item_lista="" orden="" tipo_dato="S"> </pt3_bio_evec>
+<pt3_bio_animal descripcion="BIOLOGICO: Exposición a animales selváticos " item_lista="" orden="" tipo_dato="S"> </pt3_bio_animal>
+<pt3_bio_otros descripcion="BIOLOGICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt3_bio_otros>
+<pt3_erg_mmc descripcion="ERGONOMICO: Manejo manual de cargas" item_lista="" orden="" tipo_dato="S"> </pt3_erg_mmc>
+<pt3_erg_mrepe descripcion="ERGONOMICO: Movimiento repetitivos" item_lista="" orden="" tipo_dato="S"> </pt3_erg_mrepe>
+<pt3_erg_postf descripcion="ERGONOMICO: Posturas forzadas" item_lista="" orden="" tipo_dato="S"> </pt3_erg_postf>
+<pt3_erg_tpvd descripcion="ERGONOMICO: Trabajos con PVD" item_lista="" orden="" tipo_dato="S"> </pt3_erg_tpvd>
+<pt3_erg_otros descripcion="ERGONOMICO: Otros" item_lista="" orden="" tipo_dato="S"> </pt3_erg_otros>
+<pt3_psi_mtraba descripcion="PSICOSOCIAL: Monotonía del trabajo " item_lista="" orden="" tipo_dato="S"> </pt3_psi_mtraba>
+<pt3_psi_slabo descripcion="PSICOSOCIAL: Sobrecarga laboral" item_lista="" orden="" tipo_dato="S"> </pt3_psi_slabo>
+<pt3_psi_mtarea descripcion="PSICOSOCIAL: Minuciosidad de la tarea " item_lista="" orden="" tipo_dato="S"> </pt3_psi_mtarea>
+<pt3_psi_arespon descripcion="PSICOSOCIAL: Alta responsabilidad" item_lista="" orden="" tipo_dato="S"> </pt3_psi_arespon>
+<pt3_psi_atd descripcion="PSICOSOCIAL: Autonomía  en la toma de decisiones" item_lista="" orden="" tipo_dato="S"> </pt3_psi_atd>
+<pt3_psi_supedd descripcion="PSICOSOCIAL: Supervisión y estilos de dirección deficiente" item_lista="" orden="" tipo_dato="S"> </pt3_psi_supedd>
+<pt3_psi_rol descripcion="PSICOSOCIAL: Conflicto de rol" item_lista="" orden="" tipo_dato="S"> </pt3_psi_rol>
+<pt3_psi_fcf descripcion="PSICOSOCIAL: Falta de Claridad en las funciones" item_lista="" orden="" tipo_dato="S"> </pt3_psi_fcf>
+<pt3_psi_idist descripcion="PSICOSOCIAL:  Incorrecta distribución del trabajo " item_lista="" orden="" tipo_dato="S"> </pt3_psi_idist>
+<pt3_psi_trot descripcion="PSICOSOCIAL: Turnos rotativos" item_lista="" orden="" tipo_dato="S"> </pt3_psi_trot>
+<pt3_psi_rinter descripcion="PSICOSOCIAL: Relaciones interpersonales " item_lista="" orden="" tipo_dato="S"> </pt3_psi_rinter>
+<pt3_psi_ineslab descripcion="PSICOSOCIAL: Inestabilidad laboral" item_lista="" orden="" tipo_dato="S"> </pt3_psi_ineslab>
+<pt3_psi_otros descripcion="PSICOSOCIAL: Otros" item_lista="" orden="" tipo_dato="S"> </pt3_psi_otros>
+<pt3_psi_medpreven descripcion="Medidas preventivas" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+</p_trabajo3>
+<framegactividadesextra descripcion="G. ACTIVIDADES EXTRA LABORALES">
+<descripcionextral descripcion="Descripción" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+</framegactividadesextra>
+</pagina1>
+</resultados>
+

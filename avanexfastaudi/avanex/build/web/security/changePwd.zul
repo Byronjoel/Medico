@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Login"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./changePwd"?>
+
+<!-- use="org.zkoss.zul.impl.MessageboxDlg"-->
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:c="client">
+    <style src="/css/login.css" />
+    <window id="changePwd" title="AvaSUS" mode="modal" border="normal" width="45%" 
+    position="center" apply="ec.com.cubosoft.avasus.controller.ChangePwd">
+        <caption image="/images/logos/avasus_title.png" label="Cambio de clave de ingreso"/>
+        <div align="center" style="top:35%; left:30%; position:center; "  >
+            <div height= "20px"></div>
+            <vbox align="center">
+                <label value="Usuario" sclass="label" />
+                <textbox id="idUser" c:onFocus="this.select()" disabled="true" sclass="textbox" value="@{changePwd$composer.usuario,load-after='changePwd.onCreate'}"/>
+                <label value="Contraseña actual" sclass="label" />
+                <textbox id="idPassword" c:onFocus="this.select()" sclass="textbox" type="password" />
+                <label value="Escriba su nueva contraseña" sclass="label" />
+                <textbox id="idNewPassword" c:onFocus="this.select()" sclass="textbox" type="password" />
+                <label value="Escriba su nueva Contraseña otra vez" sclass="label" />
+                <textbox id="idNewPassword2" c:onFocus="this.select()" sclass="textbox" type="password" />
+                <label></label>
+            </vbox>
+            <div height= "20px"></div>
+            <hbox>
+                <button id="aceptar" label="Aceptar" sclass="button_ok" />
+                <div width= "20px"></div>
+                <button id="cancelar" label="Cancelar" sclass="button_cancel" />
+            </hbox>
+            <div height= "20px"></div>
+        </div>
+       </window>
+</zk>

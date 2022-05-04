@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" printOrder="Horizontal" pageWidth="800" pageHeight="350" orientation="Landscape" columnWidth="722" leftMargin="39" rightMargin="39" topMargin="28" bottomMargin="28" uuid="f3f72dd1-274b-4445-b788-789f94175206">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/tmp/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="edad" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="usuario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="orden" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[177]]></defaultValueExpression>
+	</parameter>
+	<parameter name="area" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[23]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT pxo.fec_ini as fec,
+ pxo.id_orden,     
+ ord.id_referencia as ref,
+ ord.fec_ini, ord.des_ori origen,
+ ord.m_solicitante as med,
+ ord.cod_ord as ord,
+ concat(his.nombres,' ',  his.apellidos) as pacie,
+ nom.descripcion as prac,his.num_id as  ci,
+ are.descripcion as aread,
+are.id
+  FROM ingreso.practica_x_orden as pxo
+  inner join ingreso.orden as ord on ord.id=pxo.id_orden
+  inner join persona.historia as his on his.id=ord.id_historia
+  inner join practica.nombre as nom on nom.id=pxo.id_practica
+inner join medico.area as are on are.id=nom.id_area
+  where  pxo.id_orden=$P{orden} and nom.id_area=$P{area}]]>
+	</queryString>
+	<field name="fec" class="java.sql.Timestamp"/>
+	<field name="id_orden" class="java.lang.Long"/>
+	<field name="ref" class="java.lang.Integer"/>
+	<field name="fec_ini" class="java.sql.Timestamp"/>
+	<field name="origen" class="java.lang.String"/>
+	<field name="med" class="java.lang.String"/>
+	<field name="ord" class="java.math.BigDecimal"/>
+	<field name="pacie" class="java.lang.String"/>
+	<field name="prac" class="java.lang.String"/>
+	<field name="ci" class="java.lang.String"/>
+	<field name="aread" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="158" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="162" y="19" width="344" height="20" uuid="c8c826df-fc3b-4bc0-8e19-4a230583e50c"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="13" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ref}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="308" y="39" width="295" height="20" uuid="51c70c97-e3cc-490e-a66a-d2d9462d1d4b"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="13" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{med}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="306" y="59" width="390" height="20" uuid="57ffbf4b-9512-4155-8932-1cb01eda7594"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="13" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{origen}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="306" y="79" width="339" height="20" uuid="6d1df3e9-a8bf-4288-9e01-573f7b826558"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="13" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fec_ini}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="306" y="98" width="416" height="20" uuid="cf4f26fc-a973-4266-9b0d-576a4c3e60bb"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="15" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pacie}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="346" y="138" width="73" height="20" uuid="4ffc9cbc-2be1-43e6-90df-a9a9d28c89bc"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="14" isBold="true" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<text><![CDATA[AREA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="417" y="138" width="303" height="20" uuid="1b38e3f6-65c0-40c4-bd61-02b76c8016d2"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="14" isBold="true" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aread}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="65" y="118" width="60" height="20" uuid="f90da8af-a9aa-4da0-b17d-60412a463759"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="14" isBold="true" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<text><![CDATA[EDAD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="306" y="118" width="51" height="20" uuid="6448455f-2606-4604-9a73-c2f8c35c5e88"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="14" isBold="true" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<text><![CDATA[C.I.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Transparent" x="129" y="118" width="125" height="20" uuid="d4e24c1b-5472-427e-8233-43cc206a6128"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="14" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{edad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="357" y="118" width="250" height="20" uuid="aa0eea43-0104-4a34-96e2-8aa05baa535a"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="14" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ci}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="525" y="0" width="195" height="39" uuid="bd7c98a2-e751-41a0-b3aa-cf40d51063c6"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="20" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ord}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="62" y="0" width="341" height="20" uuid="19157e79-0d12-45ba-b719-e8e3b160080a"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="SansSerif" size="12" isUnderline="false" pdfFontName="&lt;Different Values&gt;"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{usuario}+"   "+new java.text.SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="23">
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="24" y="0" width="696" height="23" uuid="37601ad3-66be-41da-9ff1-08ad26fc0d49"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="Verdana" size="14" isUnderline="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prac}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="525" y="0" width="178" height="20" uuid="8e502463-37f9-471d-b10d-03471500997e"/>
+				<textElement verticalAlignment="Middle" markup="rtf">
+					<font fontName="Verdana" size="14" isBold="false" isUnderline="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Id. Orden "+$F{id_orden}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Historias" id="m_historias" ?>
+<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="newControl" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>
+
+
+ <!-- index.zul -->
+
+  <!-- Created on __DATE__, __TIME__  -->
+
+ <!-- @author __USER__   -->
+ <!-- @version   -->
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="/css/cssDefault.css" />
+    <window id="WinAdmiHistorias" closable="true" zclass="titulo" border="normal" apply="ec.com.cubosoft.avamed.coneccion.ControladoraHistorias">
+       <borderlayout  height="800px">
+            <north   height="110px"  collapsible="true">
+                <include src="/templates/Menu.zul"/>
+            </north>
+            <center>
+                <borderlayout height="890px" >
+                    <north border="none" height="10%" splittable="true" collapsible="true" >
+                        <div align="center">
+                            <newFechas controladora="ec.com.cubosoft.avamed.coneccion.ControladoraHistorias"/>
+                        </div>
+                    </north>
+                    <west border="normal" width="120px" >
+                        <div align="center" >
+                            <space/>
+                            <newControl controladora="ec.com.cubosoft.avamed.coneccion.ControladoraHistorias"/>
+                        </div>
+                    </west>
+                    <east  width="240px" >
+                        <div id="GrpArbol" align="center" visible="false"   >
+
+                        </div>
+                    </east>
+                    <center >
+                    </center>
+                </borderlayout>
+            </center>
+        </borderlayout>
+        
+    </window>
+</zk>

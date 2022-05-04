@@ -1,0 +1,43 @@
+/* 
+    Document   : StiloDefault
+    Created on : 22/02/2011, 10:31:41 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+/*
+.root {
+    display: block;
+
+}*/
+.grid  {
+    background: #D3D3D3;
+    border:     3px solid #828282;
+    overflow: hidden; 
+    zoom: 1;
+}
+.grid-pgi-b
+{
+    border-top: 0px solid #AAB;
+    overflow: hidden;
+}
+div.z-grid-header, div.z-grid-header tr, div.z-grid-footer  {
+    border: 0; overflow: hidden; width: 100%;
+}
+
+.z-grid-body  {
+  	background: white;
+        border: 0;
+        overflow: auto;
+        width: 100%;
+}
+
+
+
+
+

@@ -1,0 +1,77 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.modelo.practica.*;
+import javax.naming.NamingException;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+import ec.com.cubosoft.avamed.procesos.AdmiNegocio;
+import java.util.List;
+import org.zkoss.zul.TreeModel;
+
+/**
+ *
+ * @author Administrador
+ */
+public class ManejadoraLista extends GenericForwardComposer {
+
+    AdmiNegocio objdao = new AdmiNegocio();
+    NombreP current = new NombreP();
+    Object currentT = new Object();
+    TreeModel arbol;
+
+    public NombreP getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(NombreP current) {
+        this.current = current;
+    }
+
+    public List getAllEvents() throws NamingException {
+        return objdao.getObjetos("NombreP",false);
+    }
+
+    public List getAllEventsd(String ref, Integer id) throws NamingException {
+        return objdao.getObjetosA(ref, id,false);
+    }
+
+    public Object getCurrentT() {
+        return currentT;
+    }
+
+    public void setCurrentT(Object currentT) {
+        this.currentT = currentT;
+    }
+
+    @SuppressWarnings("empty-statement")
+    public void onClick$practica() {
+    }
+
+    public List getAllEventsT() {
+        try {
+            int id = current.getId();
+            List datos = null;
+            Integer tipo = 2;// Integer.parseInt(identificador.getValue());
+            switch (tipo) {
+                case 2:
+                    datos = objdao.getObjetosA("Termino", id,false);
+                    break;
+                case 3:
+                    datos = objdao.getObjetosA("Codificacion", id,false);
+                    break;
+                case 4:
+                    datos = objdao.getObjetosA("Sinonimo", id,false);
+                    break;
+                case 5:
+                    datos = objdao.getObjetosA("PracticaAsociada", id,false);
+                    break;
+            }
+            return datos;
+        } catch (NamingException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+}

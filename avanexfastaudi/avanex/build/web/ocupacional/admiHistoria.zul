@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Historial" id="m_historia" ?>
+<!--<?page title="Historial" id="m_administradora" ?>-->
+<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="newControl" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newGrdReporte" macroURI="/templates/Generales/ReporteP.zul"?>
+<?component name="newCmbBox" macroURI="/templates/Generales/cmbBox.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>
+<!--?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="activewin"?-->
+
+<!-- @author Juan Pablo Chavez  -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso  -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+        <style src="/css/ventana.css" />
+    <style src="/css/edicion-aux.css" />
+    <window id="WinHistoria" maximizable="true"   style="font-weight: bold;font-size:9px;" title="AvaSUS®     Historia Clínica    "  border="normal" apply="ec.com.cubosoft.avamed.coneccion.ControladoraHistoria" position="parent"  height="100%" width="100%"   >
+        <caption id="usuario_label" label="Historia"   apply="ec.com.cubosoft.avamed.coneccion.Controladoramenus">
+            <hlayout height="18px">
+                <toolbarbutton label="@{usuario_label$composer.usuario}" />
+                <space width="60px"/>
+                <label id="counter" />
+                <progressmeter id="pm" value="0" width="300px"/>
+                <label id="horaReferencia"  />
+            </hlayout>
+        </caption>
+        <include src="/templates/Menu.zul"  />
+        <borderlayout height="10%" >
+            <north height="50%">
+                <hbox width="100%" height="100%" pack="center" align="center" >
+                    <label value="Orden:" sclass="label-cab"  />
+                    <textbox id="bOrden" style="font-weight: bold;font-size:9px;" constraint="/[0-9]*/" />
+                    <label value="Historia:" sclass="label-cab"   />
+                    <textbox id="bHistorial"  style="font-weight: bold;font-size:9px;" constraint="/[0-9]*/"/>
+                    <label value="Area:" sclass="label-cab" />
+                     <!--style="font-weight: bold;font-size:9px;"-->
+                    <bandbox id="bbAreas" apply="" mold="rounded" autodrop="true">
+                        <bandpopup>
+                            <listbox id="LbxAreas" height="200px" width="300px">
+                                <listhead>
+                                    <listheader label="Cod." width="20%" align="center"/>
+                                    <listheader label="Area" style="text-align:center;"/>
+                                </listhead>
+                            </listbox>
+                        </bandpopup>
+                    </bandbox>
+                    <label value="Solicitante:  " sclass="Blabel" visible="false" />
+                    <label id="mSolicitante" visible="false" value="" sclass="Blabel" />
+                    <button id="cieAdmin" label="DIAGNOSTICOS" disabled="true"/>
+                </hbox>
+                <attribute name="onOK"><![CDATA[Events.postEvent("onClick",barraBotones.getFellow("btnBuscar"), null);                            ]]>
+                </attribute>           
+            </north>
+            <south height="53%" >
+                    <grid id="grdDatosRegistros" visible="false" width="100%" height="100%" oddRowSclass="none" style="border: 2px solid #86b3b1">
+                        <columns visible="false" >
+                            <column label="1" />
+                            <column label="1"/>
+                            <column label="1" width="18%"/>
+                            <column label="1" width="18%" />
+                            <column label="1" width="12%"  />
+                        </columns>
+                        <rows>
+                            <row  id="row1"  style="background: #b3cccc; border:none;" width="100%" >
+                                <cell >
+                                    <label id="idNombre" sclass="patient-name" /> 
+                                </cell> 
+                                <cell >
+                                    <label id="idEmpresa" sclass="patient-data-green2"/>
+                                </cell>
+                                <cell >
+                                    <label value="Sexo:" sclass="patient-data"/>
+                                    <label id="idSexo"  sclass="patient-data"/>
+                                </cell>
+                                <cell >
+                                    <label value="Edad:" sclass="patient-data" />
+                                    <label id="idEdad" sclass="patient-data"/>
+                                </cell>
+                                <cell  >
+                                    <label value="CI.Id.:" sclass="patient-data" />
+                                    <label id="idCI" sclass="patient-data" />
+                                </cell>
+                            </row>
+                            <row id="row2" style="background: #d1e0e0; border:none;" width="100%" visible="false">
+                                <cell >
+                                    <label value="Profesión:" sclass="patient-data-green" />
+                                    <label id="idProfesion" sclass="patient-data-green" />
+                                </cell>
+                                <cell >
+                                    <label value="Dirección:  " sclass="patient-data" />
+                                    <label id="idDireccion"   sclass="patient-data" />
+                                </cell>
+                                <cell>
+                                    <label value="Instrucción:" sclass="patient-data-green" />
+                                    <label id="idInstruccion" sclass="patient-data-green" />
+                                </cell>
+                                <cell >
+                                    <label value="id. Orden:  "   sclass="patient-data"/>
+                                    <label id="idOrden"  sclass="patient-data"/>
+                                </cell>
+                                <cell >
+                                    <label value="E.Civil:  " width="15%" sclass="patient-data" />
+                                    <label id="idECivil"  sclass="patient-data" />
+                                </cell>
+                                <cell visible="false">
+                                    <label value="id. Historia:  "  sclass="patient-data" />
+                                    <label id="idHistoria" sclass="patient-data"/>
+                                </cell>
+                            </row>
+                        </rows>
+                    </grid>
+           </south>
+        </borderlayout>
+        <borderlayout height="87%" >
+            <west width="8%" border="normal" title = "Controles"  style="border: 2px solid #86b3b1;font-weight: bold;font-size:9px;"  >
+                <include  id="barraBotones" src="/templates/ControlesBase.zul"  />
+            </west>
+            <center>
+                <tabbox id="tabbox" height="93%" visible="false" style="border: 2px solid #86b3b1">
+                    <tabs id="tabs">
+                        <tab id="TabAntecedentes" label="ANTECEDENTES"   style="font-weight: bold;font-size:9px;"/>
+                        <tab id="TabHistoria" label="HISTORIA"  style="font-weight: bold;font-size:9px;"/>
+                        <tab id="TabReceta" label="RECETA"  style="font-weight: bold;font-size:9px;"/>
+                    </tabs>
+                    <tabpanels>
+                        <tabpanel id="antecedentesP"></tabpanel>
+                        <tabpanel id="informeP" >
+                            <borderlayout>
+                                <!--height="25px"-->
+                                <north  border="0"  style="border:none;">
+                                    <div align="center" style="border: 1px outset;" sclass="patient-cab">
+                                        <label id="nomPractica"    style="font-weight: bold;font-size:16px;"/>
+                                        <label id="IdPractica" visible="false"/>
+                                        <menupopup id="editPopup"/> 
+                                    </div>
+                                </north>
+                                <center  border="0"> 
+                                    <grid id="gridInforme" visible="false" vflex="true"  style="font-weight: bold;font-size:9px;" >
+                                        <custom-attributes org.zkoss.zul.grid.initRodSize="100"/>
+                                        <columns>
+                                            <column  width="45%"/>
+                                            <column width="55%" />
+                                            <column visible="false"/>
+                                            <column visible="false" />
+                                        </columns>
+                                        <rows id="rowsInforme" />
+                                        <foot>
+                                            <footer span="6" id="footer_resultados" class="footer_right" />
+                                        </foot>
+                                    </grid>
+                                </center>
+                            </borderlayout>
+                        </tabpanel>
+                        <tabpanel id="recetaP" />
+                    </tabpanels>
+                </tabbox> 
+            </center>
+            <east id="east" style="border:2px solid white"   border="0" width="18%"  title = "Historial de Pacientes"  splittable="true" collapsible="true"  />
+        </borderlayout>
+    </window>
+</zk>

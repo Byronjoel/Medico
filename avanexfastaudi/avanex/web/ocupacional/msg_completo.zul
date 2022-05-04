@@ -1,0 +1,36 @@
+<?page title="Message" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="css/messages.css" />
+    <borderlayout width="840px" height="120px">
+        <north title="El informe que desea guardar esta Completo"></north>
+        <center>
+            <div>
+                <div align="center">
+                    <hbox>
+                        <label>Qué es lo que desea hacer?</label>
+                    </hbox>
+                </div>
+
+                <div align="center" style="top:35%; left:2%; position: absolute;">
+                    <hbox>
+                    	<button id="cbMsgPreview" label="Vista previa de Informe" sclass="button_validate" />
+                    	<div width="15px"></div>
+                        <button id="cbMsgSavePrint" label="Terminar / Imprimir" sclass="button_save2" />  
+                        <div width="15px"></div>
+                        <button id="cbMsgSaveI" label="Guardar informe incompleto" sclass="button_save1" />  
+                        <div width="15px"></div>
+                        <button id="cbMsgSave" label="Guardar Completo" sclass="button_save2" />
+                        <div width="15px"></div>
+                        <button id="cbMsgCancel" label="Cancelar" sclass="button_cancel" >
+                            <attribute name="onClick">
+                                <![CDATA[
+                                winMsgCompleto.onClose();
+                                ]]>
+                            </attribute>                                                            
+                        </button>
+                    </hbox>
+                </div>
+            </div>
+        </center>
+    </borderlayout>
+</zk>

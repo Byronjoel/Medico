@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="52097101-190e-434a-9183-b4ab52997b58">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="recom_des" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/recomtrat/recom_des]]></fieldDescription>
+	</field>
+	<field name="cod_med" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/cod_med]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/medico]]></fieldDescription>
+	</field>
+	<field name="fecha_hora" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha_hora]]></fieldDescription>
+	</field>
+	<field name="paciente" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/paciente]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="332" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="175" uuid="f7b83f13-a0df-4b0d-be52-7bdde77b25dd">
+					<property name="nombre" value="recomtrat"/>
+					<property name="descripcion" value="M. RECOMENDACIONES Y/O TRATAMIENTO"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="555" height="14" backcolor="#CCCCFF" uuid="cbe4ad08-0289-4d64-bca0-86113642bbef"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="2" y="0" width="385" height="14" uuid="72c3c1b3-07ae-4bcf-b7ac-69c39ee4d868"/>
+					<textElement verticalAlignment="Middle">
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[M. RECOMENDACIONES Y/O TRATAMIENTO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="14" width="555" height="161" uuid="1cd3f5f6-00b5-4d68-89c9-cbc2d20b7981"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="1" y="14" width="554" height="161" uuid="da96d901-dfe2-445f-8323-0e680ccd037e">
+						<property name="orden" value="4080"/>
+						<property name="nombre" value="recom_des"/>
+						<property name="descripcion" value="Descripción"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{recom_des}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="194" width="555" height="30" uuid="f34f06b1-b011-4161-8f85-1f4dc09d9522"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CERTIFICO QUE LO ANTERIORMENTE EXPRESADO EN RELACIÓN A MI ESTADO DE SALUD ES VERDAD. SE ME HA INFORMADO LAS MEDIDAS PREVENTIVAS A TOMAR PARA DISMINUIR O MITIGAR LOS RIESGOS RELACIONADOS CON MI ACTIVIDAD LABORAL.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="232" width="438" height="100" uuid="f3ee1002-eb70-423d-b123-de22f9d45b1e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="232" width="438" height="14" backcolor="#CCCCFF" uuid="e164a493-5333-412d-a146-d5d4f36cd3e3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="232" width="385" height="14" uuid="60a22219-b3d9-40c9-9c02-cb61a82248ab"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N. DATOS DEL PROFESIONAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="246" width="55" height="86" backcolor="#CCFFCC" uuid="9d3b016e-95fa-4978-b6ef-7cd82bdb5277"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="246" width="54" height="86" uuid="6cb0c3ec-4e02-4d23-88a7-c6a737054e7b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FECHA Y HORA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="112" y="246" width="56" height="86" backcolor="#CCFFCC" uuid="ea21bc04-9df4-4284-8536-f4038d4f9f75"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="113" y="246" width="55" height="86" uuid="0e63c596-1271-4b7b-93a1-2ffd97af2ef8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NOMBRES Y APELLIDOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="237" y="246" width="42" height="86" backcolor="#CCFFCC" uuid="ca085096-8205-4542-b59e-beb4674de11b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="237" y="246" width="41" height="86" uuid="6b29a6e2-0427-4ae5-abdc-8b130bb31912"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="338" y="246" width="39" height="86" backcolor="#CCFFCC" uuid="b63e4adb-5fea-4fe6-ba61-0b7d95d7c5e4"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="338" y="246" width="38" height="86" uuid="4ad3619c-30e0-4a52-b8ce-b0136ff437bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FIRMA Y SELLO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="246" width="57" height="86" uuid="c45ccb3e-dfc1-4348-9c72-1f3f91b33d25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="246" width="69" height="86" uuid="9d3fc313-fcbc-4c98-8eba-b03b13304c2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="246" width="59" height="86" uuid="15ca743f-3abb-4572-b1fb-539880ddfb06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cod_med}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="444" y="232" width="111" height="14" backcolor="#CCCCFF" uuid="94ae8373-7934-4e83-8ed6-b8c3a7bc699b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="444" y="232" width="111" height="14" uuid="db88d905-8e2a-4895-bcbd-88da86718905"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[O. FIRMA DEL USUARIO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="444" y="246" width="111" height="86" uuid="fd8eada6-e186-4cf8-b11b-ce61a1e5320f"/>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>

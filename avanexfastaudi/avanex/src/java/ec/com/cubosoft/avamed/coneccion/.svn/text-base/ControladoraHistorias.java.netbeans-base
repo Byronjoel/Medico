@@ -1,0 +1,130 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.modelo.core.CsPerxgru;
+//import ec.com.cubosoft.avamed.procesos.ProcesosSession;
+import org.zkoss.zul.Button;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+
+/**
+ *
+ * @author Administrador
+ */
+public class ControladoraHistorias extends GenericForwardComposer {
+
+     //<editor-fold defaultstate="collapsed" desc="PLANTILLA CARGA">
+    Button btnBuscar;
+    Button btnReset;
+    Button btnCancelar;
+    Button btnSalir;
+    Button btnNuevo;
+    Button btnGuardar;
+    Button btnPreview;
+    Button btnUpdate;
+    Button btnDelete;
+    Button btnImprimir;
+    Button btnSincronizar;
+    boolean bandGuardar;
+    ProcesosSession admiSessionUsuario = new ProcesosSession();
+    CsPerxgru permisosMenuIDControles = null;
+
+    public void onCreate$WinControles() {
+        try {
+            modificarSession();
+        } catch (Exception e) {
+             e.printStackTrace(System.out);
+        }
+
+    }
+
+    private void modificarSession() {
+        try {
+            admiSessionUsuario.AgregarAtributoSession(4, page.getId(), session);
+            permisosMenuIDControles = admiSessionUsuario.ObtenerPermisosPgina(session);
+            HabilitarBotones();
+
+        } catch (Exception e) {
+          e.printStackTrace(System.out);
+        }
+
+    }
+
+    public void HabilitarBotones() {
+        try {
+            btnBuscar.setDisabled(false);
+            btnBuscar.setVisible(true);
+            btnReset.setDisabled(false);
+            btnReset.setVisible(true);
+            btnCancelar.setDisabled(false);
+            btnCancelar.setVisible(true);
+            btnSalir.setDisabled(false);
+            btnSalir.setVisible(true);
+//            btnPreview.setDisabled(false);
+//            btnPreview.setVisible(true);
+            if (permisosMenuIDControles != null) {
+                if (permisosMenuIDControles.getAlta() == 1) { //activo nuevo
+                    btnNuevo.setDisabled(false);
+                    btnNuevo.setVisible(true);
+                    bandGuardar = true;
+                } else {
+                    btnNuevo.setStyle("color: #A2B5CD;");
+
+                }
+                if (permisosMenuIDControles.getBaja() == 1) { //activo eliminacion
+                    btnDelete.setVisible(true);
+                    btnDelete.setDisabled(false);
+
+                } else {
+                    btnDelete.setStyle("color: #A2B5CD;");
+                }
+                if (permisosMenuIDControles.getModif() == 1) { //activo actualizar
+                    btnUpdate.setDisabled(false);
+                    btnUpdate.setVisible(true);
+                    bandGuardar = true;
+                } else {
+                    btnUpdate.setStyle("color: #A2B5CD;");
+                }
+                if (permisosMenuIDControles.getImprime() == 1) { //activo imprimir
+                    btnImprimir.setDisabled(false);
+                    btnImprimir.setVisible(true);
+                } else {
+                    btnImprimir.setStyle("color: #A2B5CD;");
+                }
+                if (permisosMenuIDControles.getSync() == 1) { //activo sincronizar
+                    btnSincronizar.setDisabled(false);
+                    btnSincronizar.setVisible(true);
+                } else {
+                    btnSincronizar.setStyle("color: #A2B5CD;");
+                }
+                if (bandGuardar) { //activo sincronizar
+                    btnGuardar.setDisabled(false);
+                    btnGuardar.setVisible(true);
+                } else {
+                    btnGuardar.setStyle("color: #A2B5CD;");
+                }
+            }
+
+        } catch (Exception e) {
+        }
+
+    }
+// </editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc="EVENTOS CONTROL">
+    public void onClick$btnGuardar() {
+        alert("Click en historial ");
+    }
+
+    public void onClick$btnNuevo() {
+    }
+
+    public void onClick$btnCancelar() {
+    }
+
+    public void onClick$update() {
+    }
+// </editor-fold>
+}

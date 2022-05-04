@@ -1,0 +1,6 @@
+<?page title="Edicion de resultado" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <style src="/css/win-edit.css" />
+    <textbox multiline="true" height="100%" width="100%"
+	id="edit-aux" rows="10" tabbable="true" type="text" sclass="editar" />
+</zk>

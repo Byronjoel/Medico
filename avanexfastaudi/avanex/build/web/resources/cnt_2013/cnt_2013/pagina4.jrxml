@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pagina1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="pais_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_codigo]]></fieldDescription>
+	</field>
+	<field name="pais_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_descripcion]]></fieldDescription>
+	</field>
+	<field name="estado_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_codigo]]></fieldDescription>
+	</field>
+	<field name="estado_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_descripcion]]></fieldDescription>
+	</field>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="canton_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_descripcion]]></fieldDescription>
+	</field>
+	<field name="parroquia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_codigo]]></fieldDescription>
+	</field>
+	<field name="parroquia_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_descripcion]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/nombres]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/apellidos]]></fieldDescription>
+	</field>
+	<field name="paciente" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/paciente]]></fieldDescription>
+	</field>
+	<field name="fecha_nace" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha_nace]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/edad]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/sexo]]></fieldDescription>
+	</field>
+	<field name="estado_civil" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_civil]]></fieldDescription>
+	</field>
+	<field name="identificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/identificacion]]></fieldDescription>
+	</field>
+	<field name="lugar_nace" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/ciudad_nace]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/direccion_paciente]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/telefono]]></fieldDescription>
+	</field>
+	<field name="instruccionP" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/instruccionP]]></fieldDescription>
+	</field>
+	<field name="profesion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/profesion]]></fieldDescription>
+	</field>
+	<field name="ocupacion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/ocupacion]]></fieldDescription>
+	</field>
+	<field name="especialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/especialidad]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/medico]]></fieldDescription>
+	</field>
+	<field name="cod_med" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/cod_med]]></fieldDescription>
+	</field>
+	<field name="empresa" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/empresa]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="fecha_hora" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha_hora]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="537" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="800" height="304"/>
+			</rectangle>
+			<line>
+				<reportElement x="2" y="78" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="130" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="91" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="117" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="475" y="-2" width="1" height="200"/>
+			</line>
+			<line>
+				<reportElement x="2" y="104" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="63" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="50" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="37" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="24" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="11" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="143" width="473" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="211" width="40" height="19" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[FECHA
+
+                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="211" width="30" height="19" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[HORA
+
+                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="211" width="58" height="19" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NOMBRE DEL PROFESIONAL
+
+                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="211" width="43" height="19" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO MÉDICO
+
+                ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="237" width="801" height="1"/>
+			</line>
+			<line>
+				<reportElement x="431" y="198" width="1" height="39"/>
+			</line>
+			<line>
+				<reportElement x="242" y="198" width="1" height="39"/>
+			</line>
+			<line>
+				<reportElement x="182" y="197" width="1" height="40"/>
+			</line>
+			<line>
+				<reportElement x="125" y="197" width="1" height="40"/>
+			</line>
+			<line>
+				<reportElement x="95" y="197" width="1" height="41"/>
+			</line>
+			<line>
+				<reportElement x="41" y="198" width="1" height="39"/>
+			</line>
+			<line>
+				<reportElement x="594" y="198" width="1" height="40"/>
+			</line>
+			<line>
+				<reportElement x="475" y="217" width="326" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="477" y="198" width="118" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[FIRMA MÉDICO
+
+                ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="218" width="117" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[FIRMA Y NOMBRE PACIENTE
+
+                ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="242" y="199" width="190" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{medico} +"       "+$F{cod_med}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="126" y="199" width="56" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha_hora}.substring($F{fecha_hora}.lastIndexOf(" "),$F{fecha_hora}.length() )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="42" y="199" width="53" height="38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="244" width="799" height="60"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["De conformidad con el artículo 22 del Instrumento Andino de SST; yo, "+$F{paciente}+"  dejo constancia de mi autorización para que los datos relacionados con los resultados de este Informe Médico, sean conocidos por el Representante del Empleador, con la finalidad de receptar las recomendaciones pertinentes, en beneficio de mi Salud."]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="158" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="173" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="2" y="186" width="473" height="1"/>
+			</line>
+			<line>
+				<reportElement x="1" y="198" width="800" height="1"/>
+			</line>
+			<line>
+				<reportElement x="475" y="199" width="1" height="40"/>
+			</line>
+			<line>
+				<reportElement x="510" y="105" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="510" y="79" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="707" y="0" width="1" height="199"/>
+			</line>
+			<line>
+				<reportElement x="510" y="118" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="510" y="92" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="511" y="25" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="510" y="12" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="511" y="49" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="511" y="37" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="511" y="64" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="510" y="131" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="509" y="144" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="510" y="160" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="511" y="173" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="510" y="185" width="291" height="1"/>
+			</line>
+			<line>
+				<reportElement x="509" y="0" width="1" height="199"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="124" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{canton_descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="0" width="125" height="11"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{id_orden}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

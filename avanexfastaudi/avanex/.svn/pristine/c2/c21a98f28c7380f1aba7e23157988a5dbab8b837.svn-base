@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+    <datos_generales_standar>
+        <pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+        <pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+        <estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+        <estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+        <canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+        <canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+        <parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+        <parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+        <etnia descripcion="ETNIA" orden="0" tipo_dato="T">MESTIZO</etnia>
+        <practica descripcion="PRACTICA" orden="0" tipo_dato="L">514</practica>
+        <nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">HISTORIA OCUPACIONAL (ADITEC)</nombre_practica>
+        <solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">dfgdf</solicitante>
+        <paciente descripcion="NOMBRE" orden="0" tipo_dato="L">PRUEBAS PRUEBAS</paciente>
+        <nombres descripcion="NOMBRES" orden="0" tipo_dato="L">PRUEBAS</nombres>
+        <apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">PRUEBAS</apellidos>
+        <fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1990/11/27</fecha_nace>
+        <id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+        <empresa descripcion="EMPRESA" orden="0" tipo_dato="L">ECUABARNICES S.A.</empresa>
+        <identificacion descripcion="CI" orden="0" tipo_dato="L">050144418</identificacion>
+        <estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+        <id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">177</id_orden>
+        <telefono descripcion="TELEFONO" orden="0" tipo_dato="L">0987274785// 032946061</telefono>
+        <sexo descripcion="SEXO" orden="0" tipo_dato="L">FEMENINO</sexo>
+        <profesion descripcion="PROFESION" orden="0" tipo_dato="L">ING</profesion>
+        <edad descripcion="EDAD" orden="0" tipo_dato="L">25 AÑOS </edad>
+        <ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">cargo</ocupacion>
+        <instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+        <ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">QUITO</ciudad_nace>
+        <direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">..</direccion_paciente>
+        <titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SRA</titulo_paciente>
+        <medico descripcion="MEDICO" orden="0" tipo_dato="L">Dr. . SIN MEDICO</medico>
+        <especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L"/>
+        <cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L"/>
+        <titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Dr.</titulo_medico>
+        <fecha descripcion="FECHA" orden="0" tipo_dato="L">2016/04/01</fecha>
+        <fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2016/04/01 00:00:00</fecha_hora>
+        <dx descripcion="DIAGNOSTICO" orden="0">1.  (L25)  DERMATITIS   [s der]  
+            2.  (L859)   ENGROSAMIENTO EPIDERMICO 
+            3.  (H011)   DERMATOSIS NO INFECCIOSA DEL PARPADO    [vdf]  
+        </dx>
+        <recomendaciones descripcion="RECOMENDACIONES" orden="0"/>
+        <prescripciones descripcion="PRESCRIPCIONES" orden="0"/>
+        <estado descripcion="ESTADO" orden="0" tipo_dato="L">IN</estado>
+    </datos_generales_standar>
+    <pagina0 Id="1" IdFormato="1216">
+        <antecedentes_laborales descripcion="ANTECEDENTES LABORALES">
+            <tipo_informe descripcion="TIPO DE INFORME" item_lista="PREOCUPACIONAL/OCUPACIONAL/POSTOCUPACIONAL/" orden="" tipo_dato="L"/>
+            <ln descripcion="LUGAR DE NACIMIENTO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <inicio_actividad_laboral descripcion="INICIO DE ACTIVIDAD LABORAL" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+        </antecedentes_laborales>
+        <actividad1 descripcion="EMPRESA 1">
+            <empresa1 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <tiempo1 descripcion="TIEMPO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <cargo1 descripcion="CARGO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <quimico1 descripcion="TIPOS DE RIESGO:    QUÍMICO" item_lista="" orden="" tipo_dato="S"> </quimico1>
+            <fisico1 descripcion="FISICO" item_lista="" orden="" tipo_dato="S"> </fisico1>
+            <mecanico1 descripcion="MECANICO" item_lista="" orden="" tipo_dato="S"> </mecanico1>
+            <ergonomico1 descripcion="ERGONOMICO" item_lista="" orden="" tipo_dato="S"> </ergonomico1>
+            <biologico1 descripcion="BIOLOGICO" item_lista="" orden="" tipo_dato="S"> </biologico1>
+            <psicosocial1 descripcion="PSICOSOCIAL" item_lista="" orden="10" tipo_dato="S"> </psicosocial1>
+            <especifique1 descripcion="ESPECIFIQUE" item_lista="" lineas="0" orden="20" tipo_dato="T"/>
+        </actividad1>
+        <actividad2 descripcion="EMPRESA 2">
+            <empresa2 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <tiempo2 descripcion="TIEMPO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <cargo2 descripcion="CARGO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <quimico2 descripcion="TIPOS DE RIESGO:    QUÍMICO" item_lista="" orden="" tipo_dato="S"> </quimico2>
+            <fisico2 descripcion="FISICO" item_lista="" orden="" tipo_dato="S"> </fisico2>
+            <mecanico2 descripcion="MECANICO" item_lista="" orden="" tipo_dato="S"> </mecanico2>
+            <ergonomico2 descripcion="ERGONOMICO" item_lista="" orden="" tipo_dato="S"> </ergonomico2>
+            <biologico2 descripcion="BIOLOGICO" item_lista="" orden="" tipo_dato="S"> </biologico2>
+            <psicosocial2 descripcion="PSICOSOCIAL" item_lista="" orden="100" tipo_dato="S"> </psicosocial2>
+            <especifique2 descripcion="ESPECIFIQUE" item_lista="" lineas="0" orden="110" tipo_dato="T"/>
+        </actividad2>
+        <actividad3 descripcion="EMPRESA 3">
+            <empresa3 descripcion="EMPRESA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <tiempo3 descripcion="TIEMPO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <cargo3 descripcion="CARGO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <quimico3 descripcion="TIPOS DE RIESGO:   QUÍMICO" item_lista="" orden="" tipo_dato="S"> </quimico3>
+            <fisico3 descripcion="FISICO" item_lista="" orden="" tipo_dato="S"> </fisico3>
+            <mecanico3 descripcion="MECANICO" item_lista="" orden="" tipo_dato="S"> </mecanico3>
+            <ergonomico3 descripcion="ERGONOMICO" item_lista="" orden="" tipo_dato="S"> </ergonomico3>
+            <biologico3 descripcion="BIOLOGICO" item_lista="" orden="" tipo_dato="S"> </biologico3>
+            <psicosocial3 descripcion="PSICOSOCIAL" item_lista="" orden="190" tipo_dato="S"> </psicosocial3>
+            <especifique3 descripcion="ESPECIFIQUE" item_lista="" lineas="0" orden="200" tipo_dato="T"/>
+            <accidentes_laborales descripcion="ACCIDENTES LABORALES" item_lista="" lineas="1" orden="210" tipo_dato="T"/>
+            <enfermedades_personales descripcion="ENFERMEDADES PERSONALES" item_lista="" lineas="1" orden="220" tipo_dato="T"/>
+        </actividad3>
+        <antecedentes descripcion="ANTECEDENTES PATOLÓGICOS PERSONALES">
+            <clinicos descripcion="CLINICOS" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <quirurgicos descripcion="QUIRURGICOS" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <hos descripcion="HOSPITALIZACIÓN" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <alergias descripcion="ALERGIAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <medicacion descripcion="MEDICACION" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <alcohol descripcion="ALCOHOL" item_lista="NO/QUINCENAL/MENSUAL/OCASIONAL/" orden="" tipo_dato="L"/>
+            <tabaco descripcion="TABACO" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <drogas descripcion="DROGAS" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <actividad_fisica descripcion="ACTIVIDAD FISICA" item_lista="" lineas="1" orden="310" tipo_dato="T"/>
+        </antecedentes>
+        <antecedentes1 descripcion="ANTECEDENTES PATOLÓGICOS FAMILIARES">
+            <apf descripcion="APF:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </antecedentes1>
+    </pagina0>
+    <pagina1 Id="2" IdFormato="1217">
+        <inmu descripcion="INMUNIZACIONES">
+            <fiebre_amarilla descripcion="FIEBRE AMARILLA" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <hepatitis descripcion="HEPATITIS A-B" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <fiebre_tifoidea descripcion="FIEBRE TIFOIDEA" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <tetanos descripcion="TETANOS" item_lista="SI/NO/" orden="" tipo_dato="LD"/>
+            <otras descripcion="OTRAS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+        </inmu>
+        <examen_fisico descripcion="EXAMEN FÍSICO"/>
+        <sv descripcion="SIGNOS VITALES">
+            <pa descripcion="PA:" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <fc descripcion="FC ( x ' ):" item_lista="" orden="" tipo_dato="N"/>
+            <fr descripcion="FR ( x ' ):" item_lista="" orden="" tipo_dato="N"/>
+            <talla descripcion="TALLA ( cm ):" item_lista="" orden="" tipo_dato="N"/>
+            <peso descripcion="PESO ( Kg ):" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <imc descripcion="IMC:" item_lista="" orden="" tipo_dato="N"/>
+            <temp descripcion="TEMP ( ° ):" item_lista="" orden="" tipo_dato="N"/>
+        </sv>
+        <soge descripcion="SOMÁTICO GENERAL">
+            <apariencia descripcion="APARIENCIA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <estado_nutricional descripcion="ESTADO NUTRICIONAL" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <actividad_sicomotora descripcion="ACTIVIDAD SICOMOTORA" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+        </soge>
+        <reg descripcion="REGIONAL">
+            <piel_tegumentos descripcion="PIEL Y TEGUMENTOS" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <cabeza_cuello descripcion="CABEZA Y CUELLO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <torax descripcion="TORAX" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <corazon descripcion="CORAZON" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <pulmones descripcion="PULMONES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <abdomen descripcion="ABDOMEN:" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <region_lumbar descripcion="REGION LUMBAR" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <extremidades descripcion="EXTREMIDADES" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <neurologico_elemental descripcion="NEUROLOGICO ELEMENTAL" item_lista="" lineas="1" orden="1190" tipo_dato="T"/>
+        </reg>
+        <examenes1 descripcion="EXAMENES DE LABORATORIO (COLOQUE LOS HALLAZGOS POSITIVOS)">
+            <el14 descripcion="RESULTADOS" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <el15 descripcion="EMO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <el16 descripcion="COPROPARASITARIO" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+            <examenes_laboratorio descripcion="OTROS EXAMENES" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </examenes1>
+    </pagina1>
+    <pagina2 Id="3" IdFormato="1218">
+        <examenes2 descripcion="ESTUDIOS DE ESPECIALIDADES">
+            <oftalmologia descripcion="OFTALMOLOGIA:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <espirometria descripcion="ESPIROMETRÍA" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <audiometria descripcion="AUDIOMETRIA:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <ret descripcion="RX ESTANDAR DE TORAX" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <rcl descripcion="RX COLUMNA LUMBOSACRA" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <otro_examen descripcion="OTROS ESTUDIOS" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+            <dx descripcion="DIAGNÓSTICO GENERAL:" orden="" tipo_dato="G">1.  (L25)  DERMATITIS   [s der]  
+                2.  (L859)   ENGROSAMIENTO EPIDERMICO 
+                3.  (H011)   DERMATOSIS NO INFECCIOSA DEL PARPADO    [vdf]  
+                <dx0 cod="Z00000525" codGrp="DERMATOLOGIA" codRef="L25" tipo="ECUA">DERMATITIS</dx0>
+                <obs0 cod="Z00000525">s der</obs0>
+                <dx1 cod="L859" codGrp="DERMATOLOGIA" codRef="L859" tipo="CIE10"> ENGROSAMIENTO EPIDERMICO </dx1>
+                <obs1 cod="L859"/>
+                <dx2 cod="H011" codGrp="OFTALMOLOGIA" codRef="H011" tipo="CIE10"> DERMATOSIS NO INFECCIOSA DEL PARPADO </dx2>
+                <obs2 cod="H011">vdf</obs2>
+            </dx>
+            <prescripciones descripcion="PRESCRIPCIONES GENERALES:" item_lista="" lineas="0" orden="" tipo_dato="T"/>
+        </examenes2>
+    </pagina2>
+    <pagina3 Id="4" IdFormato="1219">
+        <resultado descripcion="CERTIFICADO"/>
+    </pagina3>
+</resultados>

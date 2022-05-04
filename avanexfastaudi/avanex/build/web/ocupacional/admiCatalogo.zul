@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="FF=6; FF=EDGE"?>
+<?page title="Login AvaSUS"?>
+<?link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<!--<?component name="newUsuario" macroURI="/templates/Cabecera.zul"?>-->
+
+<!-- use="org.zkoss.zul.impl.MessageboxDlg"-->
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.2  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:c="client">
+    <zscript>
+
+        String ip = session.getRemoteAddr();
+        session.removeAttribute(ip);
+        String ver = application.getInitParameter("version");   
+        String browser = Executions.getCurrent().getHeader("user-agent");
+        boolean firefox;
+        firefox = true;
+    </zscript>
+    <style src="css/login.css" />
+    <image id="logo_avasus" src="/images/logos/avasus.png" />
+    <div></div>
+    <label value="Versión ${ver}" sclass="label" />
+    <div></div>
+    <label value="IP: ${ip}" sclass="label" />
+    <window id="winLogin" title="AvaNEX" mode="highlighted" border="normal" width="45%" 
+            position="center " apply="ec.com.cubosoft.avamed.coneccion.ControladoraCatalogo" >
+        <caption image="/images/logos/avasus_title.png" label="Seleccione el catalogo"/>
+        <div align="center" style="top:35%; left:30%; position:center; "  >
+            <div height= "20px"></div>
+            <hbox>
+                <button id="OriEmp" label="ORIGENES" sclass="button_login" />
+            </hbox>
+            <hbox>
+                <space height="25px" />
+            </hbox>
+            <hbox>
+                <button id="catalogo" label="ANALISIS" sclass="button_login" />
+              
+            </hbox>
+            <hbox>
+               
+                <div width= "20px"></div>
+                
+                
+            </hbox>
+            <div height= "20px"></div>
+        </div>
+        <attribute name="onOK"><![CDATA[
+                        Events.postEvent("onClick", iniciar, null);
+                    ]]>
+        </attribute>
+    </window>
+    
+   
+    <zscript><![CDATA[
+        if (!firefox) {
+            winLogin.setVisible(false);
+            winNoCompatible.doModal();
+        };
+    ]]>
+    </zscript>
+    <window mode="overlapped" position="right,bottom" >
+        <label value= "Cubosoft (c) 2012" />
+    </window>  
+    <window mode="overlapped" position="bottom" >
+        <label value= "Versión ${ver}" />
+        <div></div>
+        <label value= "Browser ${browser}" />
+    </window>
+</zk>

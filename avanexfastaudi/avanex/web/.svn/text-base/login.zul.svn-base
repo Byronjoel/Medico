@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?meta http-equiv="X-UA-Compatible" content="FF=6; FF=EDGE"?>
+<?page title="Login AvaSUS"?>
+<?link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<!--<?component name="newUsuario" macroURI="/templates/Cabecera.zul"?>-->
+
+<!-- use="org.zkoss.zul.impl.MessageboxDlg"-->
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.2  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:c="client">
+    <zscript>
+
+        String ip = session.getRemoteAddr();
+        session.removeAttribute(ip);
+        String ver = application.getInitParameter("version");   
+        String browser = Executions.getCurrent().getHeader("user-agent");
+        boolean firefox;
+        
+        if (browser.toUpperCase().indexOf("FIREFOX")>0) {
+            firefox = true;
+        };
+    </zscript>
+    <style src="css/login.css" />
+    <image id="logo_avasus" src="/images/logos/avasus.png" />
+    <div></div>
+    <label value="Versión ${ver}" sclass="label" />
+    <div></div>
+    <label value="IP: ${ip}" sclass="label" />
+    
+    <window id="winLogin" title="AvaSUS" mode="highlighted" border="normal" width="45%" 
+            position="center " apply="ec.com.cubosoft.avamed.coneccion.ControladoraPermisos" >
+        <caption image="/images/logos/avasus_title.png" label="Por favor ingrese sus datos"/>
+        <div align="center" style="top:35%; left:30%; position:center; "  >
+            <div height= "20px"></div>
+            <vbox>
+                <label value="Usuario" sclass="label" />
+                <textbox id="id_user" c:onFocus="this.select()" sclass="textbox" constraint="no empty:El usuario no puede ser vacío."/>
+                <label value="Contraseña" sclass="label" />
+                <textbox id="id_password" c:onFocus="this.select()" sclass="textbox" type="password" constraint="no empty:La clave no puede ser vacía."/>
+                <label value="Ciudad" sclass="label" />
+                <combobox id="id_ciudad" c:onFocus="this.select()" sclass="combobox"/>
+            </vbox>
+            <div height= "20px"></div>
+            <hbox>
+                <button id="iniciar" label="Ingresar" sclass="button_login" />
+                <div width= "20px"></div>
+                <button id="cancelar" label="Cancelar" sclass="button_cancel" />
+            </hbox>
+            <div height= "20px"></div>
+        </div>
+        <attribute name="onOK"><![CDATA[
+                        Events.postEvent("onClick", iniciar, null);
+                    ]]>
+        </attribute>
+    </window>
+    
+    <window id="winNoCompatible" title="AvaSUS" mode="highlighted" border="normal" width="45%" 
+            position="center " visible="false">
+        <caption image="/images/logos/avasus_title.png" label="Navegador Incompatible"/>
+        <div align="center" style="top:35%; left:30%; position:center; "  >
+            <vbox>
+                <div height= "20px"></div>
+                <label>El Navegador que usted intenta utilizar no es compatible con el Sistema.</label>
+                <div height= "20px"></div>
+                <label>Para utilizar AvaSUS debe hacerlo con Mozilla Firefox.</label>
+                <div height= "20px"></div>
+                <label>Si no tiene instalado Firefox por favor comuniquese con el Dpto. de Sistemas</label>
+                <div height= "20px"></div>
+            </vbox>
+        </div>
+    </window>
+    
+    <zscript><![CDATA[
+        if (!firefox) {
+            winLogin.setVisible(false);
+            winNoCompatible.doModal();
+        };
+    ]]>
+    </zscript>
+    
+    <window mode="overlapped" position="right,bottom" >
+        <label value= "Cubosoft (c) 2012" />
+    </window>  
+    
+    <window mode="overlapped" position="bottom" >
+        <label value= "Versión ${ver}" />
+        <div></div>
+        <label value= "Browser ${browser}" />
+    </window>
+</zk>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div align="center" style="top:35%; left:30%; position:center; "  >
+        <label>Se han encontrado las siguientes prácticas para el paciente en la Orden</label>
+        <div></div>
+        <label>Por favor escoja una Práctica:</label>
+    </div>
+    <listbox id="listaPracticas" mold="paging" pageSize="10" pagingPosition="bottom" sclass="detalle-listado"  >
+        <listhead>
+            <listheader label="idArea" sort="auto" align="center" width="15%" visible="false" />
+             <listheader label="Area" sort="auto" align="center" width="15%" visible="false" />
+            <listheader label="Estado" sort="auto" align="center" width="15%"/>
+            <listheader label="Práctica" sort="auto" align="left"/>
+            <listheader label="Id" sort="auto" align="center" width="15%"/>
+        </listhead>
+    </listbox>
+</zk>

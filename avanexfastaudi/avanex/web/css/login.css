@@ -1,0 +1,257 @@
+/* 
+    Document   : StiloDefault
+    Created on : 22/02/2011, 10:31:41 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/* 
+    Document   : StiloDefault
+    Created on : 22/02/2011, 10:31:41 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.titulo {
+    color:#4F4F4F;
+    font-family: arial, sans-serif;
+    font-size: 28px;
+}
+
+.button
+{
+    border: 1px solid #3366FF;
+    background-color:#E8E8E8;
+    font-size: 20px;
+    font-weight: bold;
+    color:#4F4F4F;
+}
+
+.button_login
+{
+    border: 1px solid #00FF00;
+    background-color:darkcyan;
+    font-size: 20px;
+    font-weight: bold;
+    color:#4F4F4F;
+    width: 200px;
+    /*background-color: #6495ed;*/
+}
+
+.button_ok
+{
+/*    border: 1px solid #0000FF;
+    background-color:#3D94FF;
+    font-size: 20px;
+    font-weight: bold;
+    color:#FFFFFF;
+    width: 200px;*/
+    border: 1px solid #3366FF;
+    background-color:#E8E8E8;
+    font-size: 20px;
+    font-weight: bold;
+    color:#4F4F4F;
+}
+
+.button_cancel
+{
+    border: 1px solid #FF0000;
+    background-color:#FF6968;
+    font-size: 20px;
+    font-weight: bold;
+    color:#FF6968;
+    width: 200px;
+}
+
+.button:hover {
+    background-color:#778899;
+}
+
+.button:focus {
+    background-color:#BEBEBE;
+}
+
+.image-Label {
+    margin: 10px 5px 0;
+    padding: 5px 10px;
+    color: #4F4F4F;
+}
+
+.textbox {
+    width: 200px;
+    font-size: 20px;
+    border: 1px solid #3366FF;
+    border-left: 5px solid #3366FF;
+    text-transform:uppercase;
+}
+.combobox {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #3366FF;
+    border-left: 5px solid #3366FF;
+    font-size: 12px;
+   }
+
+.label
+{
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: arial, sans-serif;
+}
+
+.z-textbox{
+    text-transform:uppercase;
+}
+
+.z-comboitem, .z-comboitem-text {
+    width: 200px;
+    height: 30px;
+    font-size-adjust:0.75;
+    text-transform:uppercase;
+}
+
+/*.z-combobox-inp  {
+    width: 175px;
+    height: 80%;
+    font-size: 20px;
+    text-transform:uppercase;
+}*/
+.z-combobox-inp {
+    height: 30px;
+    padding: 2px 0 2px 4px;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 3px 0 0 3px;
+    box-shadow: inset 1px 1px 0 #585858, inset -1px -1px 0 #0F0F0F;
+}
+
+
+/*.titulo {
+    color:#4F4F4F;
+    font-family: arial, sans-serif;
+    font-size: 28px;
+}
+
+.button
+{
+    border: 1px solid #3366FF;
+    background-color:#E8E8E8;
+    font-size: 20px;
+    font-weight: bold;
+    color:#4F4F4F;
+}
+
+.button_login
+{
+    border: 1px solid #3366FF;
+    background-color:#E8E8E8;
+    font-size: 20px;
+    font-weight: bold;
+    color:#4F4F4F;
+        border: 5px solid #00FF00;
+        background-color:#5DC670;
+        background-color:#006600;
+        font-size: 50px;
+        font-weight: bold;
+        color:#4F4F4F;
+        width: 200px;
+}
+
+.button_ok
+{
+    border: 1px solid #3366FF;
+    background-color:#E8E8E8;
+    font-size: 20px;
+    font-weight: bold;
+    color:#4F4F4F;
+}
+
+.button_cancel
+{
+    border: 1px solid #FF0000;
+    background-color:#FF6968;
+    font-size: 20px;
+    font-weight: bold;
+    color:#FF6968;
+        border: 1px solid #FF0000;
+        background-color:#FF6968;
+        font-size: 20px;
+        font-weight: bold;
+        color:#FF6968;
+        width: 200px;
+}
+
+
+.button:hover {
+    background-color:#778899;
+}
+
+.button:focus {
+    background-color:#BEBEBE;
+}
+
+.image-Label {
+    margin: 10px 5px 0;
+    padding: 5px 10px;
+    color: #4F4F4F;
+}
+
+.textbox {
+    width: 200px;
+    font-size: 20px;
+    border: 1px solid #3366FF;
+    border-left: 5px solid #3366FF;
+    text-transform:uppercase;
+}
+
+.combobox {
+        width: 200px;
+    font-size: 20px;
+    border: 1px solid #3366FF;
+    border-left: 5px solid #3366FF;
+    
+    text-transform:uppercase;
+    width: 200px;
+    font-size: 20px;
+    border: 1px solid #3366FF;
+    border-left: 5px solid #3366FF;
+    border-right:  5px solid #3366FF;
+    height: 34px;
+    -webkit-appearance: none;
+       
+        width: 200px;
+        height: 30px;
+        border: 1px solid #3366FF;
+        border-left: 5px solid #3366FF;
+        border-right:  5px solid #3366FF;
+       font-size: 16px;
+}
+.label
+{
+    color: #4F4F4F;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: arial, sans-serif;
+
+}
+
+.z-textbox{
+    text-transform:uppercase;
+}
+
+.z-comboitem, .z-comboitem-text {
+    width: 200px;
+    height: 23px;
+    font-size-adjust:0.75;
+    text-transform:uppercase;
+}
+
+.z-combobox-inp  {
+    width: 175px;
+    height: 80%;
+    font-size: 20px;
+    text-transform:uppercase;
+}*/

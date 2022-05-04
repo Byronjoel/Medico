@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+<datos_generales_standar>
+<pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+<pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+<estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+<estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+<canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+<canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+<parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+<parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+<practica descripcion="PRACTICA" orden="0" tipo_dato="L">773</practica>
+<nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">PRUEBAS PBC</nombre_practica>
+<paciente descripcion="NOMBRE" orden="0" tipo_dato="L">WENDY ALEXANDRA VACA BEDON</paciente>
+<nombres descripcion="NOMBRES" orden="0" tipo_dato="L">WENDY ALEXANDRA</nombres>
+<apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">VACA BEDON</apellidos>
+<fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1981/03/15</fecha_nace>
+<id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+<empresa descripcion="EMPRESA" orden="0" tipo_dato="L">PASTEURIZADORA QUITO</empresa>
+<identificacion descripcion="CI" orden="0" tipo_dato="L">1717340135</identificacion>
+<estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">UNION LIBRE</estado_civil>
+<id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">3507</id_orden>
+<telefono descripcion="TELEFONO" orden="0" tipo_dato="L">2484652</telefono>
+<sexo descripcion="SEXO" orden="0" tipo_dato="L">FEMENINO</sexo>
+<profesion descripcion="PROFESION" orden="0" tipo_dato="L">INGENIERO DE SISTEMAS</profesion>
+<edad descripcion="EDAD" orden="0" tipo_dato="L">29 AÑOS </edad>
+<ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">sadsa</ocupacion>
+<instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">4</instruccion_paciente>
+<ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">QUITO</ciudad_nace>
+<direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">sd</direccion_paciente>
+<titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SRA</titulo_paciente>
+<medico descripcion="MEDICO" orden="0" tipo_dato="L">DR. . SIN MEDICO</medico>
+<especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L"/>
+<cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L"/>
+<titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Dr.</titulo_medico>
+<fecha descripcion="FECHA" orden="0" tipo_dato="L">2010/11/15</fecha>
+<fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2010/11/15 08:00:03</fecha_hora>
+<dx descripcion="DIAGNOSTICO" orden="0">1.   MIOPIA  
+</dx>
+<recomendaciones descripcion="RECOMENDACIONES" orden="0"/>
+<prescripciones descripcion="PRESCRIPCIONES" orden="0"/>
+<estado descripcion="ESTADO" orden="0" tipo_dato="L">IN</estado>
+</datos_generales_standar>
+<pagina0 Id="1" IdFormato="3457">
+<informe_diagnosticos descripcion="INFORME DIAGNÓSTICOS">
+<origen descripcion="Origen:" item_lista="IMBABURA.1/ESMERALDAS.1/CARCHI.1/SUCUMBIOS.1/PICHINCHA.2/NAPO.2/ORELLANA.2/TUNGURAHUA.3/PASTAZA.3/COTOPAXI.3/CHIMBORAZO.3/MANABI.4/STO. DOMINGO DE LOS TSACHILAS.4/GALAPAGOS.4/ GUAYAS.5/PENINSULA DE SANTA ELENA.5/LOS RIOS.5/BOLIVAR.5/" orden="" tipo_dato="L"/>
+<ocupacions descripcion="Cargo:" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<departamento descripcion="Departamento:" item_lista="" lineas="1" orden="" tipo_dato="T"/>
+<grupo_riesgo descripcion="Grupo de Riesgo:" item_lista="ATENCIÓN MÉDICA/BODEGA/CHOFER/CONTACT CENTER/CUSTODIO/ENERGÍA Y CLIMATIZACIÓN/FIBRA ÓPTICA/FISCALIZACIÓN*/MENSAJERIA/O&amp;M CORPORATIVOS/O&amp;M PROVINCIAL/OFICINA/PLANTA EXTERNA/SALAS DE EQUIPOS DE TELECOMUNICACIONES/SERVICIO AL CLIENTE INDOOR/SERVICIO AL CLIENTE OUTDOOR/SOPORTE SERVICIOS MASIVOS/TORRES/" orden="" tipo_dato="L"/>
+<dx descripcion="DIAGNOSTICOS Y HALLAZGOS:" orden="" tipo_dato="G">1.   MIOPIA  
+<dx0 cod="H521" tipo="CIE10"> MIOPIA </dx0>
+<obs0 cod="H521"/>
+</dx>
+</informe_diagnosticos>
+</pagina0>
+</resultados>

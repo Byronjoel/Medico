@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Informes" id="m_informes" ?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+    <style src="/css/edicion-aux.css" />
+    <window id="WinReportes" title="AvaSUS" border="normal"
+            height="100%" width="100%" position="parent"
+            maximizable="true" maximized="true"
+            apply="ec.com.cubosoft.avamed.coneccion.ControladoraReporte" >
+
+        <caption label="Reportes"  id="usuario_label"  apply="ec.com.cubosoft.avamed.coneccion.ControladoraPermisos"  >
+            <hlayout height="18px">
+                <toolbarbutton label="@{usuario_label$composer.usuario}" height="10px" />
+            </hlayout>
+        </caption>
+        
+        <borderlayout height="100%" id="border">
+            <north height="65px">
+                <include src="/templates/Menu.zul" />
+            </north>
+            <west border="0" width="20%" >
+                <borderlayout height="100%">
+                    <north  border="0">
+                        <div align="center" width="100%" height="100%">
+                            <tree id="arbol" zclass="z-vfiletree" height="100%" >
+                                <treecols>
+                                    <treecol id = "Reportes" width="90%" />
+                                </treecols>
+                                <treechildren id="root"  />
+                            </tree>
+                        </div>
+                    </north>
+                    <south>
+                        <hbox>
+                            <button id="btnBuscar" label="Buscar"
+                                    width="90px" height="90px"
+                                    visible="true" zclass="button" image="/images/buscar.gif" />
+                            <space spacing="30%" />
+                            <button id="btnReset" label="Reset"
+                                    width="90px" height="90px"
+                                    visible="true" zclass="button" image="/images/reset.gif" />
+                        </hbox>
+                    </south>
+                </borderlayout>
+            </west>
+            <center>
+                <borderlayout height="100%">
+                    <north border="none" height="110px">
+                        <!-- DATOS DE BUSQUEDA-->
+                        <div id="cabecera" align="center">
+                            <hlayout>
+                                <vbox>
+                                    <label value="Empresa:" sclass="Blabel" />
+                                    <bandbox id="bbEmpresa" mold="rounded" autodrop="true">
+                                        <bandpopup>
+                                            <listbox id="LbxEmpresas" width="300px" >
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center"/>
+                                                    <listheader label="Empresa" style="text-align:center;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vbox>
+                                <vbox>
+                                    <label value="Desde:" sclass="Blabel" />
+                                    <datebox id="FecDesde" cols="16" format="dd/MMM/yyyy" mold="rounded" onCreate="self.value = new Date()" />
+                                </vbox>
+                                <vbox>
+                                    <label value="Hasta:" sclass="Blabel" />
+                                    <datebox id="FecHasta" cols="16" format="dd/MMM/yyyy" mold="rounded" onCreate="self.value = new Date()"/>
+                                </vbox>
+                                <vbox>                                    
+                                    <label value="Formato:" sclass="Blabel" />
+                                    <combobox id="tip_archivo" mold="rounded" autodrop="true">
+                                    </combobox>
+                                </vbox>
+                            </hlayout>
+                            <space> </space>
+                            <hlayout>
+                                <space> </space>
+                                <label id="TipoReporte" sclass="Titulo" value="INFORME" />
+                                <!--                                <vbox>
+                                    <label value="Orden:" sclass="Blabel" />
+                                    <textbox id="bOrden" sclass="Blabel" >
+                                        <attribute name="onChange"><![CDATA[
+                                                    if((!bOrden.getValue().isEmpty())&&(bOrden.getValue()!=null)){
+                                                        FecDesde.setValue(null);
+                                                        FecHasta.setValue(null);
+                                                        }
+                                                    ]]>
+                                        </attribute>
+                                    </textbox>
+                                </vbox>-->
+                                <!--                                <vbox>
+                                    <label value="Cédula:" sclass="Blabel" />
+                                    <textbox id="bCedula" sclass="Blabel" />
+                                </vbox>
+                                <vbox>
+                                    <label value="Historia:" sclass="Blabel" />
+                                    <textbox id="bHistoria" sclass="Blabel" />
+                                </vbox>-->
+                            </hlayout>
+                        </div>
+                        <attribute name="onOK"><![CDATA[
+                            Events.postEvent("onClick",btnBuscar, null);
+                            ]]>
+                        </attribute>
+                    </north>
+                    <center >
+                        <iframe id="reporte" width="100%" height="100%" />
+                    </center>
+                </borderlayout>
+            </center>
+        </borderlayout>
+    </window>
+</zk>

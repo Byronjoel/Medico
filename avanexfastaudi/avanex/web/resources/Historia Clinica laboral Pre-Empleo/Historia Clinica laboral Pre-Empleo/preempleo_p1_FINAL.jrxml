@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="35" bottomMargin="28" uuid="fc45f6fe-edd7-458f-b5be-4c016fe43a9c">
+	<property name="ireport.zoom" value="1.0245201830476176"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="528"/>
+	<field name="pais_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_codigo]]></fieldDescription>
+	</field>
+	<field name="pais_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_descripcion]]></fieldDescription>
+	</field>
+	<field name="estado_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_codigo]]></fieldDescription>
+	</field>
+	<field name="estado_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_descripcion]]></fieldDescription>
+	</field>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="canton_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_descripcion]]></fieldDescription>
+	</field>
+	<field name="parroquia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_codigo]]></fieldDescription>
+	</field>
+	<field name="parroquia_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_descripcion]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/nombres]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/apellidos]]></fieldDescription>
+	</field>
+	<field name="paciente" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/paciente]]></fieldDescription>
+	</field>
+	<field name="fecha_nace" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha_nace]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/edad]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/sexo]]></fieldDescription>
+	</field>
+	<field name="estado_civil" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_civil]]></fieldDescription>
+	</field>
+	<field name="identificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/identificacion]]></fieldDescription>
+	</field>
+	<field name="lugar_nace" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/ciudad_nace]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/direccion_paciente]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/telefono]]></fieldDescription>
+	</field>
+	<field name="instruccion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/instruccion_paciente]]></fieldDescription>
+	</field>
+	<field name="profesion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/profesion]]></fieldDescription>
+	</field>
+	<field name="ocupacion_habitual" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/ocupacion_habitual]]></fieldDescription>
+	</field>
+	<field name="especialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/especialidad]]></fieldDescription>
+	</field>
+	<field name="fecha_accidente" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/accidentes_trabajo/fecha_accidente]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/medico]]></fieldDescription>
+	</field>
+	<field name="cod_med" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/cod_med]]></fieldDescription>
+	</field>
+	<field name="empresa_accidente" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/accidentes_trabajo/empresa_accidente]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="vacio" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/vacio]]></fieldDescription>
+	</field>
+	<field name="tipo_historia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/tipo_historia]]></fieldDescription>
+	</field>
+	<field name="historia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/historia]]></fieldDescription>
+	</field>
+	<field name="num_iess" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/num_iess]]></fieldDescription>
+	</field>
+	<field name="localidad_agencia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/localidad_agencia]]></fieldDescription>
+	</field>
+	<field name="num_empleado" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/num_empleado]]></fieldDescription>
+	</field>
+	<field name="lugar" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/lugar]]></fieldDescription>
+	</field>
+	<field name="fecha_datos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/fecha_datos]]></fieldDescription>
+	</field>
+	<field name="raza" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/raza]]></fieldDescription>
+	</field>
+	<field name="tipo_sangre" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/tipo_sangre]]></fieldDescription>
+	</field>
+	<field name="lugar_residencia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/lugar_residencia]]></fieldDescription>
+	</field>
+	<field name="telefono_domicilio" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/telefono_domicilio]]></fieldDescription>
+	</field>
+	<field name="telefono_celular" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/telefono_celular]]></fieldDescription>
+	</field>
+	<field name="contacto_emergencia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/contacto_emergencia]]></fieldDescription>
+	</field>
+	<field name="telefono_contacto" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/telefono_contacto]]></fieldDescription>
+	</field>
+	<field name="primaria" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/primaria]]></fieldDescription>
+	</field>
+	<field name="secundaria" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/secundaria]]></fieldDescription>
+	</field>
+	<field name="superior" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/superior]]></fieldDescription>
+	</field>
+	<field name="postgrado" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/postgrado]]></fieldDescription>
+	</field>
+	<field name="cargo_actual" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/cargo_actual]]></fieldDescription>
+	</field>
+	<field name="area" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/area]]></fieldDescription>
+	</field>
+	<field name="departamento" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/departamento]]></fieldDescription>
+	</field>
+	<field name="tiempo_empresa" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/tiempo_empresa]]></fieldDescription>
+	</field>
+	<field name="cargos_anteriores" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/cargos_anteriores]]></fieldDescription>
+	</field>
+	<field name="tiempo_cargo_actual" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/tiempo_cargo_actual]]></fieldDescription>
+	</field>
+	<field name="horario_trabajo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/horario_trabajo]]></fieldDescription>
+	</field>
+	<field name="num_dias_semana" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/num_dias_semana]]></fieldDescription>
+	</field>
+	<field name="horas_trabajo_dia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajo_actual/horas_trabajo_dia]]></fieldDescription>
+	</field>
+	<field name="empresa_actividad1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/empresa_actividad1]]></fieldDescription>
+	</field>
+	<field name="tiempo_trabajo_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/tiempo_trabajo_1]]></fieldDescription>
+	</field>
+	<field name="puesto_trabajo_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/puesto_trabajo_1]]></fieldDescription>
+	</field>
+	<field name="factores_riesgo_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/factores_riesgo_1]]></fieldDescription>
+	</field>
+	<field name="horas_exposicion_diaria_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/horas_exposicion_diaria_1]]></fieldDescription>
+	</field>
+	<field name="epi_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/epi_1]]></fieldDescription>
+	</field>
+	<field name="empresa_actividad_2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/empresa_actividad_2]]></fieldDescription>
+	</field>
+	<field name="puesto_trabajo_2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/puesto_trabajo_2]]></fieldDescription>
+	</field>
+	<field name="tiempo_trabajo_2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/tiempo_trabajo_2]]></fieldDescription>
+	</field>
+	<field name="factores_riesgo_2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/factores_riesgo_2]]></fieldDescription>
+	</field>
+	<field name="horas_exposicion_diaria_2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/horas_exposicion_diaria_2]]></fieldDescription>
+	</field>
+	<field name="epi_2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/epi_2]]></fieldDescription>
+	</field>
+	<field name="empresa_actividad_3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/empresa_actividad_3]]></fieldDescription>
+	</field>
+	<field name="tiempo_trabajo_3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/tiempo_trabajo_3]]></fieldDescription>
+	</field>
+	<field name="puesto_trabajo_3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/puesto_trabajo_3]]></fieldDescription>
+	</field>
+	<field name="factores_riesgo_3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/factores_riesgo_3]]></fieldDescription>
+	</field>
+	<field name="horas_exposicion_diaria_3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/horas_exposicion_diaria_3]]></fieldDescription>
+	</field>
+	<field name="epi_3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/epi_3]]></fieldDescription>
+	</field>
+	<field name="empresa_actividad_4" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/empresa_actividad_4]]></fieldDescription>
+	</field>
+	<field name="tiempo_trabajo_4" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/tiempo_trabajo_4]]></fieldDescription>
+	</field>
+	<field name="puesto_trabajo_4" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/puesto_trabajo_4]]></fieldDescription>
+	</field>
+	<field name="factores_riesgo_4" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/factores_riesgo_4]]></fieldDescription>
+	</field>
+	<field name="horas_exposicion_diaria_4" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/horas_exposicion_diaria_4]]></fieldDescription>
+	</field>
+	<field name="epi_4" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/epi_4]]></fieldDescription>
+	</field>
+	<field name="enfermedades_ocupacionales" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/enfermedades_ocupacional/enfermedades_ocupacionales]]></fieldDescription>
+	</field>
+	<field name="descripcion_enfermedad" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/enfermedades_ocupacional/descripcion_enfermedad]]></fieldDescription>
+	</field>
+	<field name="molestias_atribuidas_trabajo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/enfermedades_ocupacional/molestias_atribuidas_trabajo]]></fieldDescription>
+	</field>
+	<field name="accidentes" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/accidentes_trabajo/accidentes]]></fieldDescription>
+	</field>
+	<field name="descripcion_lesion" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/accidentes_trabajo/descripcion_lesion]]></fieldDescription>
+	</field>
+	<field name="descripcion_accidente" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/accidentes_trabajo/descripcion_accidente]]></fieldDescription>
+	</field>
+	<field name="imagen" class="java.lang.String">
+		<fieldDescription><![CDATA["C:\\glassfishv3\\logos\\banco_pacifico.png"]]></fieldDescription>
+	</field>
+	<field name="empresa_actividad_5" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/empresa_actividad_5]]></fieldDescription>
+	</field>
+	<field name="tiempo_trabajo_5" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/tiempo_trabajo_5]]></fieldDescription>
+	</field>
+	<field name="puesto_trabajo_5" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/puesto_trabajo_5]]></fieldDescription>
+	</field>
+	<field name="factores_riesgo_5" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/factores_riesgo_5]]></fieldDescription>
+	</field>
+	<field name="horas_exposicion_diaria_5" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/horas_exposicion_diaria_5]]></fieldDescription>
+	</field>
+	<field name="epi_5" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/trabajos_previos/epi_5]]></fieldDescription>
+	</field>
+	<field name="cargo_accidente" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/accidentes_trabajo/cargo_accidente]]></fieldDescription>
+	</field>
+	<field name="molestias_atribuidas_trabajo_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/enfermedades_ocupacional/molestias_atribuidas_trabajo_1]]></fieldDescription>
+	</field>
+	<field name="no_empleado" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/datos_generales/no_empleado]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="27" width="512" height="38" uuid="6725e625-02f3-483a-a8a8-39dbc21843e2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="169" y="33" width="335" height="28" uuid="fddf958d-1c1d-4eca-8ba4-75701183062e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HISTORIA CLINICA LABORAL DE PRE-EMPLEO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="28" width="168" height="37" uuid="56ae3d12-a7da-4846-8875-d1e7a2a7f6a6"/>
+				<imageExpression><![CDATA["C:\\glassfishv3\\logos\\banco_pacifico.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="0" width="512" height="23" backcolor="#00CCCC" uuid="e0be1a92-4005-4fd2-9c10-c55dd0c0f29c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="3" width="508" height="20" uuid="693bec28-90d9-4d8d-9771-52769dbe75c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sección 1: Datos Generales]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="636" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-2" y="0" width="511" height="636" uuid="3f2d94e0-3f2c-4be0-b626-a09230b6f2d2"/>
+			</rectangle>
+			<frame>
+				<reportElement x="0" y="0" width="508" height="294" uuid="3d1e82ad-4464-4f70-b8ee-154cf13b2174">
+					<property name="nombre" value="datos_generales"/>
+					<property name="descripcion" value="Sección 1: Datos Generales"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="2" y="3" width="41" height="13" uuid="6fcf0d2b-e847-4a7d-88d0-db01b41845de"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Lugar:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="17" width="41" height="13" uuid="d2692342-5ab7-445c-a71d-9aae28db63b1"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Fecha:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="47" y="3" width="131" height="13" uuid="0b6a010a-5b50-47f5-a2ce-d4ecb22231ee">
+						<property name="orden" value="1050 "/>
+						<property name="nombre" value="lugar"/>
+						<property name="descripcion" value="Lugar"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lugar}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="18" width="131" height="13" uuid="061b3bc5-575a-46e5-8049-efcb2d3d3783">
+						<property name="orden" value="1060"/>
+						<property name="nombre" value="fecha_datos"/>
+						<property name="descripcion" value="Fecha"/>
+						<property name="tipo_dato" value="D"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fecha_datos}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="47" y="16" width="131" height="1" uuid="ed4504a0-1de1-4edd-8e04-14e7ea8d987d"/>
+				</line>
+				<line>
+					<reportElement x="48" y="31" width="131" height="1" uuid="44bc2116-fd20-4540-a664-c63772d7466a"/>
+				</line>
+				<staticText>
+					<reportElement x="56" y="48" width="392" height="13" uuid="1456ee3e-8f85-42b8-ab1d-cbafd9b3b637"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Apellidos y Nombres
+                    
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="56" y="47" width="392" height="1" uuid="0a5808bc-0fe5-442a-ba6d-6a8f85229a89"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="56" y="34" width="392" height="13" uuid="fbfe0897-61d1-4615-8e9a-31db34a30e9b"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{apellidos}+"  "+$F{nombres}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="65" width="27" height="13" uuid="5a1a5e41-6818-43ee-8c9a-a53c65191ba4"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Edad: 
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="97" y="65" width="29" height="13" uuid="44d1b25b-4479-49df-8a85-8f73f52cbbf0"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Sexo:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="65" width="9" height="13" uuid="f97dcbf9-aa7a-4931-b34d-79fba57ee1d1"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[F
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="170" y="65" width="11" height="13" uuid="9e205c6d-66c8-4aba-96f1-e94e17b327a5"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[M
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="201" y="65" width="27" height="13" uuid="b823181a-cc9b-4170-8ee7-c8e0bc54f764"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Raza:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="331" y="65" width="95" height="13" uuid="315ed19a-cf46-47be-ae1c-181b2694cb11"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Cédula de Identidad:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="30" y="65" width="54" height="13" uuid="6e541e86-ec3b-412d-a1d7-6c576ee5bdaf"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="145" y="65" width="14" height="12" uuid="c32c27c6-ec9f-41b0-a993-9a2a6db0f6e4"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="146" y="65" width="13" height="13" uuid="1f4ac3dd-7382-40a0-a061-cffc98b290e2"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{sexo}.equalsIgnoreCase("FEMENINO")?"X":"")]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="181" y="65" width="13" height="12" uuid="5d9eb867-8319-41dd-9c41-c5343345dc6e"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="181" y="65" width="13" height="13" uuid="ce99b2d6-1656-43a6-b92c-4a37e8c45633"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{sexo}.equalsIgnoreCase("MASCULINO")?"X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="228" y="65" width="103" height="13" uuid="e68263a1-e367-4ecf-9fbc-f49ffef73197">
+						<property name="orden" value="1070"/>
+						<property name="nombre" value="raza"/>
+						<property name="descripcion" value="Raza"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{raza}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="426" y="65" width="77" height="13" uuid="267fdd9b-db43-4d68-bb7b-9a31e78d1aba"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{identificacion}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="30" y="77" width="54" height="1" uuid="f82d07bd-8ad5-4b94-ab6c-882626d620cd"/>
+				</line>
+				<line>
+					<reportElement x="231" y="77" width="99" height="1" uuid="3c04d4df-52bd-4d26-a6c2-4be6ddef61da"/>
+				</line>
+				<line>
+					<reportElement x="426" y="77" width="77" height="1" uuid="b76fe67d-ce41-49d6-8fcc-8deb70c349ba"/>
+				</line>
+				<staticText>
+					<reportElement x="2" y="81" width="59" height="13" uuid="ddfcd2de-874e-4145-8dc0-fb9dbc7689bc"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Estado Civil:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="72" y="81" width="35" height="13" uuid="1baf6934-bc65-4398-8391-9ade74486f8c"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Soltero:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="208" y="81" width="54" height="13" uuid="08a3f656-7f53-499e-b578-705ac2372506"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Unión Libre:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="134" y="81" width="38" height="13" uuid="70e5376c-8487-4747-b7b0-4fdc6cde54d4"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Casado:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="372" y="81" width="39" height="13" uuid="ca05abde-9a41-4556-bcf1-ad2d71c4c557"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Viudo:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="292" y="81" width="51" height="13" uuid="9c108b3b-ce5b-423b-8987-2ae24452d900"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Divorciado:
+                    
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="107" y="81" width="15" height="13" uuid="a1d14183-51ae-49bb-9861-ab3a47d97a87"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="174" y="81" width="15" height="13" uuid="2087e8d6-3fcf-4237-9402-9f990b8e4759"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="263" y="81" width="15" height="13" uuid="2b4c30b8-ac4b-4260-8131-a8d8675dccda"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="344" y="81" width="15" height="13" uuid="8a1ae3b6-cd9c-48c2-9532-25bfd9469a23"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="412" y="81" width="15" height="13" uuid="ebfdce31-d7f3-4fe0-86a6-6f574ff4c887"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="107" y="81" width="14" height="13" uuid="45002750-9682-42b0-aa6c-0f9b1b9992c2"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{estado_civil}.equalsIgnoreCase("SOLTERO") ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="175" y="81" width="14" height="13" uuid="b94a6340-675b-40a4-b437-6d254392994b"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{estado_civil}.equalsIgnoreCase("CASADO") ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="263" y="81" width="14" height="13" uuid="347cfcc4-daf6-45a3-ad64-d0d9f90bb21b"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{estado_civil}.equalsIgnoreCase("UNION LIBRE") ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="344" y="81" width="14" height="13" uuid="d6cf69be-036d-407e-9bb2-12416f9b0789"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{estado_civil}.equalsIgnoreCase("DIVORCIADO") ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="412" y="81" width="15" height="13" uuid="262b604b-e260-4470-a1c7-e76ad80dfb72"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[( $F{estado_civil}.equalsIgnoreCase("VIUD0") ? "X" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="98" width="104" height="13" uuid="36af3074-399f-49d5-83f8-a2eaef7a3cd1"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Fecha de Nacimiento:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="241" y="98" width="109" height="13" uuid="7769d9ca-f171-4b71-8dc1-6fe65a94dc3d"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Lugar de Nacimiento:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="107" y="98" width="125" height="13" uuid="3a86d1d6-457c-400c-8e14-c25617580ef6"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{fecha_nace})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="350" y="98" width="156" height="13" uuid="d9e35f83-072f-4541-b1b5-74cae6cf254d"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{lugar_nace})]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="107" y="110" width="125" height="1" uuid="329ed8e6-9a07-499c-a2fa-eb8986ab41f4"/>
+				</line>
+				<line>
+					<reportElement x="353" y="109" width="153" height="1" uuid="f1449763-e45d-4bc1-9e26-294932c17fff"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="116" width="102" height="13" uuid="22f9abd8-a166-447f-a6c1-dd1f4dd18881"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Lugar de Residencia:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="241" y="116" width="49" height="13" uuid="5e3249d5-5af9-4dbd-8f67-53d6ce5c7ab2"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Dirección:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="107" y="116" width="125" height="13" uuid="9b4dfce8-872b-4b79-a856-dccf8487106c">
+						<property name="orden" value="1090"/>
+						<property name="nombre" value="lugar_residencia"/>
+						<property name="descripcion" value="Lugar de Residencia:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lugar_residencia}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="292" y="116" width="214" height="13" uuid="43a61488-120f-417d-84d3-a73a59fd0a06"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{direccion})]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="107" y="128" width="125" height="1" uuid="e0ebdc3b-d1df-498f-9b48-28efdec40785"/>
+				</line>
+				<line>
+					<reportElement x="292" y="128" width="214" height="1" uuid="3a988cea-ba23-4a51-9e98-031089b293bb"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="133" width="104" height="13" uuid="cfe50999-9248-4619-bff1-21461e8ba5ab"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Teléfono de domicilio:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="241" y="133" width="82" height="13" uuid="49729ca1-d866-40cf-8934-6d6691647930"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Teléfono celular:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="108" y="133" width="124" height="13" uuid="94d03e8c-50f7-4902-89e8-593f0ebeeb3a">
+						<property name="orden" value="1100"/>
+						<property name="nombre" value="telefono_domicilio"/>
+						<property name="descripcion" value="Teléfono de domicilio:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{telefono_domicilio}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="326" y="133" width="180" height="13" uuid="b27e2f5f-01db-4db4-9203-b10ac81559c6">
+						<property name="orden" value="1130 "/>
+						<property name="nombre" value="telefono_celular"/>
+						<property name="descripcion" value="Teléfono Celular:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{telefono_celular}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="108" y="145" width="124" height="1" uuid="c136bc00-6966-4b19-83f2-32e0120a2f63"/>
+				</line>
+				<line>
+					<reportElement x="326" y="144" width="180" height="1" uuid="ff1e8582-94e5-41d4-b77c-213f04cb8912"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="150" width="225" height="13" uuid="9878f05b-c29a-4065-a989-09a769878517"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Persona de Contacto en Caso de Emergencia:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="344" y="150" width="45" height="13" uuid="b5fb9176-ef24-4c7b-8a82-aeed7ca0b400"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Teléfono:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="228" y="150" width="113" height="13" uuid="847f2e8c-173c-4c89-bc8f-bf8aebe7d2e2">
+						<property name="orden" value="1140"/>
+						<property name="nombre" value="contacto_emergencia"/>
+						<property name="descripcion" value="Persona de Contacto en Caso de Emergencia:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="2"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{contacto_emergencia}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="391" y="150" width="115" height="13" uuid="7b6d0c5f-76e8-4257-9ab0-3ab18cafbed7">
+						<property name="orden" value="1150"/>
+						<property name="nombre" value="telefono_contacto"/>
+						<property name="descripcion" value="Teléfono"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{telefono_contacto}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="228" y="162" width="113" height="1" uuid="0adf82b7-7898-4770-88a6-8e30c3e8ba9b"/>
+				</line>
+				<line>
+					<reportElement x="392" y="162" width="114" height="1" uuid="0e596757-0462-4bc1-9466-c77c7c6d41c0"/>
+				</line>
+				<staticText>
+					<reportElement x="3" y="264" width="53" height="13" uuid="f280f8e1-18a5-427e-801c-9dcd24ab20b3"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Ocupación:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="4" y="278" width="52" height="13" uuid="68df6fa8-ced1-4b43-bd96-272e1a591dbf"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Profesión:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="62" y="264" width="427" height="13" uuid="5382dfd5-0912-4d12-b352-84f1960e04e8">
+						<property name="orden" value="1151"/>
+						<property name="nombre" value="ocupacion_habitual"/>
+						<property name="descripcion" value="Ocupacion (A que se dedica)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ocupacion_habitual}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="60" y="278" width="429" height="13" uuid="c927e4b8-551f-4a6c-8978-749dbe912af8"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{profesion})]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="62" y="275" width="427" height="1" uuid="255bd821-5cb9-4190-9c4c-360ff192140b"/>
+				</line>
+				<line>
+					<reportElement x="62" y="292" width="427" height="1" uuid="0ec10625-0748-4d39-9628-f1fd26fb1d93"/>
+				</line>
+				<line>
+					<reportElement x="29" y="165" width="148" height="1" uuid="f9861baf-2af8-44ad-b069-9c73e89e8a59"/>
+				</line>
+				<line>
+					<reportElement x="29" y="166" width="1" height="95" uuid="2d59bfe4-9db4-4420-a1f7-80a90fce864c"/>
+				</line>
+				<line>
+					<reportElement x="29" y="195" width="148" height="1" uuid="5fe9535b-2c5c-430b-9c2f-a00f18f980e2"/>
+				</line>
+				<line>
+					<reportElement x="129" y="166" width="1" height="94" uuid="a61b0c56-b78f-4e4d-84f6-6bcdc2e04182"/>
+				</line>
+				<line>
+					<reportElement x="153" y="180" width="1" height="80" uuid="f5c8b68d-e926-4f03-b2ce-984c3025127a"/>
+				</line>
+				<line>
+					<reportElement x="176" y="165" width="1" height="96" uuid="66af2a73-a3a4-4aff-859d-8ab4fc596a0a"/>
+				</line>
+				<line>
+					<reportElement x="129" y="179" width="47" height="1" uuid="e5df5c57-9036-48cf-a745-bd094d25c47d"/>
+				</line>
+				<line>
+					<reportElement x="29" y="213" width="148" height="1" uuid="7985ed9b-696a-4ea7-95b5-2bb188f5478b"/>
+				</line>
+				<line>
+					<reportElement x="30" y="230" width="148" height="1" uuid="f03f43d1-eea6-4557-8f45-745ad7088cf0"/>
+				</line>
+				<line>
+					<reportElement x="29" y="245" width="148" height="1" uuid="2ddd265b-2c6c-4a88-8e47-869e3ff13f5b"/>
+				</line>
+				<line>
+					<reportElement x="29" y="260" width="148" height="1" uuid="2bdf243f-1d01-4194-9a33-ed12584bc430"/>
+				</line>
+				<staticText>
+					<reportElement x="30" y="171" width="97" height="20" uuid="2cf6fb29-93e8-4e5b-a3dc-49c216090ba5"/>
+					<textElement>
+						<font size="11"/>
+					</textElement>
+					<text><![CDATA[Nivel de Educación
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="133" y="166" width="40" height="13" uuid="a23ae332-4abd-49c1-8704-4ae803066677"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Culminado
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="131" y="181" width="20" height="14" uuid="fcb4b124-9a5b-4980-b336-b0b26a7618be"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Si
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="156" y="181" width="18" height="14" uuid="10bd0af1-6931-4bfe-a0e5-8b93320e8447"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="34" y="198" width="90" height="13" uuid="e8fff657-6d3f-4f96-9656-476e9a6549cc"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Primaria
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="34" y="216" width="90" height="13" uuid="f5d9c9d0-f99c-4a1f-813c-a76566506207"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Secundaria
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="35" y="232" width="90" height="13" uuid="6ba46a56-fbe5-4226-93ed-5116fdec2201"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Superior
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="35" y="247" width="90" height="13" uuid="29fcf0ae-a572-4354-8583-ec4780dade0e"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Postgrado
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="197" width="21" height="16" uuid="18052b57-1a01-461f-94aa-c7a32438b024">
+						<property name="orden" value="1160"/>
+						<property name="nombre" value="primaria"/>
+						<property name="descripcion" value="Primaria (Culminado)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{primaria}.equalsIgnoreCase("SI" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="154" y="197" width="21" height="16" uuid="88127dd5-a52e-4f73-b130-6c5853e6b743"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{primaria}.equalsIgnoreCase("NO" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="215" width="21" height="14" uuid="e7e8d1bf-7f7e-4872-aec5-5d0ec8663044">
+						<property name="orden" value="1150"/>
+						<property name="nombre" value="secundaria"/>
+						<property name="descripcion" value="Secundaria (Culminado)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{secundaria}.equalsIgnoreCase("SI" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="154" y="215" width="20" height="14" uuid="19a2675a-7084-42e7-b0d6-0b4bbb642022"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{secundaria}.equalsIgnoreCase("NO" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="231" width="21" height="13" uuid="7ab709a2-2814-4a0e-8034-df8a79311279">
+						<property name="orden" value="1160"/>
+						<property name="nombre" value="superior"/>
+						<property name="descripcion" value="Superior"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{superior}.equalsIgnoreCase("SI" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="154" y="231" width="21" height="13" uuid="1e765548-64a3-4115-9356-ccf6e18d5ee0"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{superior}.equalsIgnoreCase("NO" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="131" y="246" width="22" height="14" uuid="92c0f50d-54ec-4d99-b6eb-024d37876e12">
+						<property name="orden" value="1170"/>
+						<property name="nombre" value="postgrado"/>
+						<property name="descripcion" value="Postgrado"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{postgrado}.equalsIgnoreCase("SI" )? "X":"")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="156" y="246" width="18" height="13" uuid="141316bf-6d9d-4e19-bb82-64df086963de"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{postgrado}.equalsIgnoreCase("NO" )? "X":"")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="-2" y="295" width="512" height="22" uuid="3f1a1075-01f1-44a6-a47d-1b2bf067eb22">
+					<property name="nombre" value="informacion_laboral"/>
+					<property name="descripcion" value="Sección 2. Información Laboral"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="1" y="1" width="511" height="20" backcolor="#00CCCC" uuid="8219b490-c435-4260-90f0-00756aa83978"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="2" y="2" width="506" height="20" uuid="ca8d6100-548c-44d9-959f-2d73e4d896c1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sección 2: Información Laboral]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="318" width="511" height="71" uuid="e4e3d007-61b3-4634-a9ed-ec42b05675e1">
+					<property name="nombre" value="trabajo_actual"/>
+					<property name="descripcion" value="Puesto de trabajo actual"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="0" width="100" height="13" uuid="0861e041-6c89-47e9-b4f3-ebb80f73a1c6"/>
+					<textElement>
+						<font size="10" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Puesto de trabajo:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="14" width="67" height="27" uuid="890c3beb-f00b-4a41-84c2-e87032378e53"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Cargo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="44" width="66" height="27" uuid="8739432f-02c9-422b-b059-3027c69dde8b"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Area:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="256" y="14" width="67" height="27" uuid="faf19cb8-3f69-443e-aae8-65a141661fa9"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Departamento:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="77" y="14" width="155" height="27" uuid="b3d59419-d04b-4e22-8175-f93dffbdb351">
+						<property name="orden" value="1152"/>
+						<property name="nombre" value="cargo_actual"/>
+						<property name="descripcion" value="Cargo actual"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargo_actual}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="77" y="44" width="155" height="27" uuid="a7829a0e-4b90-4bb2-9a48-a23fe4e6fa25">
+						<property name="orden" value="1210 "/>
+						<property name="nombre" value="area"/>
+						<property name="descripcion" value="Area"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{area}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="323" y="14" width="154" height="27" uuid="69f9dae6-c356-473c-b586-27b4755117fd">
+						<property name="orden" value="1240"/>
+						<property name="nombre" value="departamento"/>
+						<property name="descripcion" value="Departamento"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{departamento}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="78" y="41" width="154" height="1" uuid="ea8ac278-9d80-47af-9d3f-74da7945944f"/>
+				</line>
+				<line>
+					<reportElement x="78" y="70" width="154" height="1" uuid="f83873f6-7b56-425c-8345-264cd63edf0d"/>
+				</line>
+				<line>
+					<reportElement x="324" y="40" width="154" height="1" uuid="6d76ed5d-cc4c-4510-9c69-1d4d2158a617"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="323" y="43" width="154" height="27" uuid="94d3ed2a-d25f-4d62-b8dd-29051ff25ed7">
+						<property name="orden" value="1260"/>
+						<property name="nombre" value="cargos_anteriores"/>
+						<property name="descripcion" value="Localidad:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargos_anteriores}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="324" y="70" width="154" height="1" uuid="331405d8-3c5c-48ff-901a-c7719c28df13"/>
+				</line>
+				<staticText>
+					<reportElement x="256" y="44" width="67" height="27" uuid="903094d8-75c5-446a-bbb0-00d784220bbb"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Localidad:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="391" width="508" height="15" uuid="deaee776-0bdf-47f6-acf0-fee2efb33c3d">
+					<property name="nombre" value="antecedentes_laborales"/>
+					<property name="descripcion" value="Antecedentes Laborales"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="5" y="2" width="125" height="13" uuid="839076ca-3fe1-415b-a049-1b196ce5cfdc"/>
+					<textElement>
+						<font size="10" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Antecedentes Laborales:
+                    
+                    ]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="2" y="407" width="508" height="218" uuid="6aa7fa23-69e3-4857-a98d-fc028560a36b">
+					<property name="nombre" value="trabajos_previos"/>
+					<property name="descripcion" value="Trabajos previos"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="4" y="2" width="80" height="13" uuid="813c215b-de46-4ee6-897c-169a038f42bb"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Trabajos Previos
+                    
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="26" y="16" width="461" height="1" uuid="bb2a3cba-6655-43a8-8fb5-ad5a0a202886"/>
+				</line>
+				<staticText>
+					<reportElement x="31" y="17" width="100" height="20" uuid="4b542e73-551b-4a89-a947-f5881c8722a5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Empresa/Actividad
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="133" y="17" width="74" height="20" uuid="76eb6d62-e5e1-48c9-8c80-45e3a92c3982"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Tiempo de trabajo
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="210" y="17" width="83" height="20" uuid="756bba76-90e6-4f69-b4a2-ae6ba3b611ea"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Puesto de trabajo
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="295" y="17" width="113" height="20" uuid="cf1698e6-118d-4557-a37e-3e5a57550ce4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Factores de riesgo
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="411" y="17" width="73" height="22" uuid="7653c837-9ca8-4456-b426-45c588fc63dd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Horas de Exposición diaria
+                    
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="27" y="38" width="460" height="1" uuid="4efc276e-0d5c-44b2-966c-2bddbb9dd4ad"/>
+				</line>
+				<line>
+					<reportElement x="27" y="68" width="460" height="1" uuid="80f75b7f-3b56-421f-b02a-f8d1da315622"/>
+				</line>
+				<line>
+					<reportElement x="26" y="100" width="460" height="1" uuid="97160c5b-4301-4281-a3b7-3bd133f22d41"/>
+				</line>
+				<line>
+					<reportElement x="26" y="131" width="460" height="1" uuid="f1b71f52-f59a-4b73-91f0-b6798286e643"/>
+				</line>
+				<line>
+					<reportElement x="26" y="161" width="460" height="1" uuid="f24e35e1-6bf8-49df-bfb7-1a725bab51d1"/>
+				</line>
+				<line>
+					<reportElement x="26" y="17" width="1" height="177" uuid="99d9cf84-6d38-420f-a554-22896b5c22ee"/>
+				</line>
+				<line>
+					<reportElement x="131" y="17" width="1" height="177" uuid="6555fd9b-90d3-401c-8a17-a64a11f6998c"/>
+				</line>
+				<line>
+					<reportElement x="207" y="17" width="1" height="177" uuid="62aa5a6f-2853-48c7-8a21-a87e137172b5"/>
+				</line>
+				<line>
+					<reportElement x="293" y="17" width="1" height="177" uuid="a1b5e21c-b24b-4fea-89bb-d2d6fe973e66"/>
+				</line>
+				<line>
+					<reportElement x="408" y="17" width="1" height="177" uuid="fb4c8453-a80a-46cc-9043-09e8393ced6c"/>
+				</line>
+				<line>
+					<reportElement x="486" y="17" width="1" height="177" uuid="70700c91-ae40-44bc-99b2-507146abec24"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="30" y="39" width="100" height="30" uuid="6abc7447-bf7e-4244-85ef-821476084969">
+						<property name="orden" value="1400"/>
+						<property name="nombre" value="empresa_actividad1"/>
+						<property name="descripcion" value="Empresa/Actividad (1)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa_actividad1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="38" width="75" height="30" uuid="9ea23745-52af-4326-af23-024a81cdca7d">
+						<property name="orden" value="1410"/>
+						<property name="nombre" value="tiempo_trabajo_1"/>
+						<property name="descripcion" value="Tiempo Trabajo (1)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo_trabajo_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="208" y="38" width="84" height="30" uuid="63a7a32f-6378-4482-afaa-300864a55416">
+						<property name="orden" value="1420"/>
+						<property name="nombre" value="puesto_trabajo_1"/>
+						<property name="descripcion" value="Puesto de Trabajo (1)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{puesto_trabajo_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="294" y="38" width="114" height="30" uuid="7ecbacab-cc7d-4758-90c2-73f533e43a7e">
+						<property name="orden" value="1430"/>
+						<property name="nombre" value="factores_riesgo_1"/>
+						<property name="descripcion" value="Factores de Riesgo 1 (Un factor por linea, limite tres lineas)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{factores_riesgo_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="410" y="38" width="71" height="30" uuid="bf58a615-ca3e-4d95-9243-bc3d2f615bde">
+						<property name="orden" value="1450"/>
+						<property name="nombre" value="horas_exposicion_diaria_1"/>
+						<property name="descripcion" value="Horas de Exposición diaria"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horas_exposicion_diaria_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="30" y="70" width="100" height="30" uuid="916fdffd-991b-4439-9204-fb20b5ca4d56">
+						<property name="orden" value="1470"/>
+						<property name="nombre" value="empresa_actividad_2"/>
+						<property name="descripcion" value="Empresa/Actividad  (2)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa_actividad_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="70" width="75" height="30" uuid="4cb2fc8b-280c-4e01-9605-0e1cce0565ac">
+						<property name="orden" value="1500"/>
+						<property name="nombre" value="tiempo_trabajo_2"/>
+						<property name="descripcion" value="Tiempo de Trabajo (2)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo_trabajo_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="208" y="70" width="84" height="30" uuid="c2f534f9-128b-42fb-a2ef-520b0c967be2">
+						<property name="orden" value="1520"/>
+						<property name="nombre" value="puesto_trabajo_2"/>
+						<property name="descripcion" value="Puesto de Trabajo (2)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{puesto_trabajo_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="294" y="70" width="113" height="30" uuid="b38455c4-1faa-493d-ac94-b1245a41e4fd">
+						<property name="orden" value="1530"/>
+						<property name="nombre" value="factores_riesgo_2"/>
+						<property name="descripcion" value="Factores de Riesgo2 (Un factor por linea, limite tres lineas)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{factores_riesgo_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="410" y="70" width="71" height="30" uuid="10572150-1a19-4563-82f8-53a9fec81d29">
+						<property name="orden" value="1560"/>
+						<property name="nombre" value="horas_exposicion_diaria_2"/>
+						<property name="descripcion" value="Horas de Exposición Diaria (2)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horas_exposicion_diaria_2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="30" y="101" width="100" height="30" uuid="ca9f6c8e-a823-4add-a153-66dd3a4188a6">
+						<property name="orden" value="1600"/>
+						<property name="nombre" value="empresa_actividad_3"/>
+						<property name="descripcion" value="Empresa/Actividad (3)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa_actividad_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="101" width="75" height="30" uuid="9d9c7263-e43f-48cf-8381-c7ef597ab39c">
+						<property name="orden" value="1620"/>
+						<property name="nombre" value="tiempo_trabajo_3"/>
+						<property name="descripcion" value="Tiempo de trabajo (3)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo_trabajo_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="208" y="101" width="84" height="30" uuid="cdc3d2dd-1536-4498-aa9d-f12f03d998d1">
+						<property name="orden" value="1620"/>
+						<property name="nombre" value="puesto_trabajo_3"/>
+						<property name="descripcion" value="Puesto de Trabajo (3)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{puesto_trabajo_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="294" y="101" width="113" height="30" uuid="5f0f804b-476f-49d0-af74-3ed47ac04647">
+						<property name="orden" value="1670"/>
+						<property name="nombre" value="factores_riesgo_3"/>
+						<property name="descripcion" value="Factores de Riesgo 3 (Un factor por linea, limite tres lineas)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{factores_riesgo_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="410" y="101" width="71" height="30" uuid="a54fe34a-c591-4358-bb46-866fa4e5867e">
+						<property name="orden" value="1680"/>
+						<property name="nombre" value="horas_exposicion_diaria_3"/>
+						<property name="descripcion" value="Horas de Exposición diaria (3)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horas_exposicion_diaria_3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="30" y="131" width="100" height="30" uuid="49c2c71b-d047-4bc3-a75b-7d82e3a5fdc2">
+						<property name="orden" value="1710"/>
+						<property name="nombre" value="empresa_actividad_4"/>
+						<property name="descripcion" value="Empresa/Actividad (4)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa_actividad_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="131" width="76" height="30" uuid="b83b047f-202c-4922-b158-d348f3611f06">
+						<property name="orden" value="1730"/>
+						<property name="nombre" value="tiempo_trabajo_4"/>
+						<property name="descripcion" value="Tiempo de Trabajo (4)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo_trabajo_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="208" y="131" width="84" height="30" uuid="f37f095a-5fe2-4a06-9279-ddc4621a644d">
+						<property name="orden" value="1750"/>
+						<property name="nombre" value="puesto_trabajo_4"/>
+						<property name="descripcion" value="Puesto de Trabajo (4)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{puesto_trabajo_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="294" y="131" width="113" height="30" uuid="1b6288a9-62fe-4125-8198-0ea611ce46a6">
+						<property name="orden" value="1760"/>
+						<property name="nombre" value="factores_riesgo_4"/>
+						<property name="descripcion" value="Factores de Riesgo 4 (Un factor por linea, limite tres lineas)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{factores_riesgo_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="410" y="131" width="71" height="30" uuid="f87bcfb3-6f84-4e64-89f8-fe69f3685482">
+						<property name="orden" value="1790"/>
+						<property name="nombre" value="horas_exposicion_diaria_4"/>
+						<property name="descripcion" value="Horas de Exposición diaria (4)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horas_exposicion_diaria_4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="30" y="162" width="100" height="30" uuid="30cba1a7-7b39-4e9b-b6a0-2ad49380d4a9">
+						<property name="orden" value="1711"/>
+						<property name="nombre" value="empresa_actividad_5"/>
+						<property name="descripcion" value="Empresa/Actividad (5)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa_actividad_5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="132" y="162" width="75" height="30" uuid="621a5c7a-a891-4339-9121-35ac97775292">
+						<property name="orden" value="1731"/>
+						<property name="nombre" value="tiempo_trabajo_5"/>
+						<property name="descripcion" value="Tiempo de Trabajo (5)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo_trabajo_5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="208" y="162" width="84" height="30" uuid="a1ad823a-684b-4f8b-9bbf-913cbace7484">
+						<property name="orden" value="1751"/>
+						<property name="nombre" value="puesto_trabajo_5"/>
+						<property name="descripcion" value="Puesto de Trabajo (5)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{puesto_trabajo_5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="294" y="162" width="114" height="30" uuid="a5e4a955-1804-433f-99d0-a7648543e5c6">
+						<property name="orden" value="1761"/>
+						<property name="nombre" value="factores_riesgo_5"/>
+						<property name="descripcion" value="Factores de Riesgo 5 (Un factor por linea, limite tres lineas)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{factores_riesgo_5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="410" y="162" width="71" height="30" uuid="f242caa4-87ca-4c29-93f1-64db5228e578">
+						<property name="orden" value="1791"/>
+						<property name="nombre" value="horas_exposicion_diaria_5"/>
+						<property name="descripcion" value="Horas de Exposición diaria (5)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{horas_exposicion_diaria_5}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="26" y="193" width="461" height="1" uuid="5a008094-945d-48fc-8cc2-6bf1cf1b13f7"/>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="1" y="601" width="510" height="35" uuid="287e33fb-a68e-4737-b6ca-b50c8d1fd90e">
+					<property name="nombre" value="enfermedades_ocupacional"/>
+					<property name="descripcion" value="Enfermedades Ocupacionales"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="2" y="0" width="140" height="13" uuid="0a147b49-6957-4d69-920e-61153cbb669c"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Enfermedades Ocupacionales
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="36" y="15" width="20" height="13" uuid="381b09e1-7747-476f-9458-d2e6840977e0"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[NO
+                    
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="59" y="15" width="15" height="12" uuid="eb63b442-3b39-43b0-a647-27c09dfcc5e5"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="59" y="14" width="15" height="13" uuid="79c508d6-337d-407c-a785-d758f8db54f3">
+						<property name="orden" value="1850"/>
+						<property name="nombre" value="enfermedades_ocupacionales"/>
+						<property name="descripcion" value="Enfermedades Ocupacionales"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{enfermedades_ocupacionales}.equalsIgnoreCase( "NO" )?"X":"")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="97" y="15" width="10" height="13" uuid="7105c465-fb72-4c62-a2c1-afda698d7222"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[SI
+                    
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="109" y="15" width="15" height="12" uuid="88172cac-7dbe-4187-8a12-84067244a14b"/>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="109" y="14" width="15" height="13" uuid="50a5c9c5-b5cb-47c4-8337-ab755f4445b8"/>
+					<textElement textAlignment="Center">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{enfermedades_ocupacionales}.equalsIgnoreCase( "SI" )?"X":"")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="144" y="7" width="127" height="13" uuid="7c25c21c-2d7b-4453-a37f-e39f9b9f0e0c"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Descripción de le enfermedad:
+                    
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="144" y="20" width="127" height="13" uuid="f395717b-8edd-422a-b840-5e1ae1fdaf0a"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Molestias atribuidas al trabajo:
+                    
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="271" y="7" width="234" height="13" uuid="635b85f2-d3bb-4761-9a1b-2afb7df35ce3">
+						<property name="orden" value="1850"/>
+						<property name="nombre" value="descripcion_enfermedad"/>
+						<property name="descripcion" value="Descripción de la Enfermedad"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{descripcion_enfermedad}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="271" y="20" width="234" height="13" uuid="40dd2483-06ca-44ac-8544-4a57888a76dc">
+						<property name="orden" value="1880"/>
+						<property name="nombre" value="molestias_atribuidas_trabajo"/>
+						<property name="descripcion" value="Molestias Atribuidas al Trabajo"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{molestias_atribuidas_trabajo}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="272" y="18" width="233" height="1" uuid="3a81c162-7b8c-4ded-8faf-98f7d30173c9"/>
+				</line>
+				<line>
+					<reportElement x="271" y="31" width="233" height="1" uuid="3cd96301-f1a1-49e5-b402-d8246f510b10"/>
+				</line>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="410" y="0" width="100" height="12" uuid="4510f060-1b2c-48c3-9ee2-be78101b9f82"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pág:  1 de 6
+                ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="10" width="100" height="10" uuid="82728a7b-29fd-4145-a545-d9a59d882883"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Id. "+$F{id_orden}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="0" width="100" height="10" uuid="ac54e72b-ef68-4226-94a5-1a0fe0c46846"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{canton_codigo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="21" width="510" height="12" forecolor="#0033CC" uuid="3c1f3ff0-5e2c-4f60-b473-165c4cb259d9"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Versión 2.0           Aprobado 19 de Febrero 2018              Elaborado por Proyectos y Procesos                REGPRESS025]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

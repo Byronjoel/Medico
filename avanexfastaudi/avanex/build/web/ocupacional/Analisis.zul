@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Analisis" id="m_catalogo" ?>
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>-->
+<!--?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="activewin"?-->
+
+<!-- @author Juan Pablo Chavez  -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso  -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul" >
+    <style src="/css/historia.css" />
+    <style src="/css/messages.css" />
+    <style src="/css/button.css" />
+    <style src="/css/edicion-aux.css" />
+    <window id="WinHistoria" title="Ava   Catalogo" border="normal" maximizable="true" style="font-weight: bold;font-size:9px;" apply="ec.com.cubosoft.avamed.coneccion.ControladoraAnalisisServicios"             position="parent"  height="100%" width="100%"   >
+        <borderlayout >
+            <north height="10%">
+                <!--top:35%; left:30%;--> 
+                 <div align="center"  style="position:center;border: 1px solid #86b3b1; " >
+                     <label value=" Análisis:" style=" color:#0a0b0b;    font-family: arial, sans-serif;    font-size: 16px;"/> 
+                    <textbox id="buscar" />
+                    <button id="searchButton" label="Search" iconSclass="z-icon-search" />
+                 </div>
+                 <attribute name="onOK"><![CDATA[
+                        Events.postEvent("onClick", searchButton, null);
+                    ]]>
+        </attribute>
+            </north>
+            <center  >
+                <listbox mold="paging" pageSize="25" id="ListDatosCatagolo" width="100%" height="100%" vflex="true" >
+                    <listhead >
+                        <listheader label="Sección" width="8%" style="font-size: 9px; "/>
+                        <listheader label="Codigo" width="8%" style="font-size: 9px; "/>
+                        <listheader label="Analisis" width="32%" style="font-size: 8px; "/>
+                         <listheader label="Referencia" width="35%" style="font-size: 8px; "/>
+                        <listheader label="Agregar (Avasus)" width="35%" />
+                        <listheader  label="Control"  value="AGREGAR" width="10%" />
+                          <listheader  label="Control"  value="ELIMINAR" width="10%" />
+                    </listhead>
+                </listbox>
+            </center>
+        </borderlayout>
+    </window>
+</zk>

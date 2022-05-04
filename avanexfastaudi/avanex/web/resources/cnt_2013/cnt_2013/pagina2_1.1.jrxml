@@ -1,0 +1,4315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pagina1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="464"/>
+	<field name="glucosa_ayunas" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/glucosa_ayunas]]></fieldDescription>
+	</field>
+	<field name="glucosa_2_horas" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/glucosa_2_horas]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="urea" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/urea]]></fieldDescription>
+	</field>
+	<field name="creatinina" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/creatinina]]></fieldDescription>
+	</field>
+	<field name="acido_urico" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/acido_urico]]></fieldDescription>
+	</field>
+	<field name="bilirrubina_total" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/bilirrubina_total]]></fieldDescription>
+	</field>
+	<field name="bilirrubina_directa" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/bilirrubina_directa]]></fieldDescription>
+	</field>
+	<field name="proteina_total" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/proteina_total]]></fieldDescription>
+	</field>
+	<field name="albumina" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/albumina]]></fieldDescription>
+	</field>
+	<field name="globulina" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/globulina]]></fieldDescription>
+	</field>
+	<field name="tgp" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/tgp]]></fieldDescription>
+	</field>
+	<field name="tgo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/tgo]]></fieldDescription>
+	</field>
+	<field name="fosfatina" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/fosfatina]]></fieldDescription>
+	</field>
+	<field name="colesterol" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/colesterol]]></fieldDescription>
+	</field>
+	<field name="colhdl" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/colhdl]]></fieldDescription>
+	</field>
+	<field name="colldl" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/colldl]]></fieldDescription>
+	</field>
+	<field name="trigliceridos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/trigliceridos]]></fieldDescription>
+	</field>
+	<field name="glucosa_ayunas_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/glucosa_ayunas_1]]></fieldDescription>
+	</field>
+	<field name="glucosa_2_horas_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/glucosa_2_horas_1]]></fieldDescription>
+	</field>
+	<field name="urea_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/urea_1]]></fieldDescription>
+	</field>
+	<field name="creatinina_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/creatinina_1]]></fieldDescription>
+	</field>
+	<field name="acido_urico_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/acido_urico_1]]></fieldDescription>
+	</field>
+	<field name="bilirrubina_total_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/bilirrubina_total_1]]></fieldDescription>
+	</field>
+	<field name="bilirrubina_directa_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/bilirrubina_directa_1]]></fieldDescription>
+	</field>
+	<field name="proteina_total_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/proteina_tota_1l]]></fieldDescription>
+	</field>
+	<field name="albumina_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/albumina_1]]></fieldDescription>
+	</field>
+	<field name="globulina_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/globulina_1]]></fieldDescription>
+	</field>
+	<field name="tgp_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/tgp_1]]></fieldDescription>
+	</field>
+	<field name="tgo_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/tgo_1]]></fieldDescription>
+	</field>
+	<field name="fosfatina_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/fosfatina_1]]></fieldDescription>
+	</field>
+	<field name="colesterol_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/colesterol_1]]></fieldDescription>
+	</field>
+	<field name="colhdl_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/colhdl_1]]></fieldDescription>
+	</field>
+	<field name="colldl_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/colldl_1]]></fieldDescription>
+	</field>
+	<field name="trigliceridos_1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/trigliceridos_1]]></fieldDescription>
+	</field>
+	<field name="densidad" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/densidad]]></fieldDescription>
+	</field>
+	<field name="ph_uro" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/ph_uro]]></fieldDescription>
+	</field>
+	<field name="proteina" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/proteina]]></fieldDescription>
+	</field>
+	<field name="glucosa" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/glucosa]]></fieldDescription>
+	</field>
+	<field name="cetona" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/cetona]]></fieldDescription>
+	</field>
+	<field name="hemo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/hemo]]></fieldDescription>
+	</field>
+	<field name="bilirru" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/bilirru]]></fieldDescription>
+	</field>
+	<field name="urbi" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/urbi]]></fieldDescription>
+	</field>
+	<field name="nitrito" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/nitrito]]></fieldDescription>
+	</field>
+	<field name="leucocitos_pc" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/leucocitos_pc]]></fieldDescription>
+	</field>
+	<field name="piocitos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/piocitos]]></fieldDescription>
+	</field>
+	<field name="eritrocitos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/eritrocitos]]></fieldDescription>
+	</field>
+	<field name="celulas_altas" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/celulas_altas]]></fieldDescription>
+	</field>
+	<field name="bacterias" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/bacterias]]></fieldDescription>
+	</field>
+	<field name="hongos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/hongos]]></fieldDescription>
+	</field>
+	<field name="hongo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/hongo]]></fieldDescription>
+	</field>
+	<field name="mocos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/mocos]]></fieldDescription>
+	</field>
+	<field name="cristales" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/cristales]]></fieldDescription>
+	</field>
+	<field name="cilindros" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/cilindros]]></fieldDescription>
+	</field>
+	<field name="color" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/color]]></fieldDescription>
+	</field>
+	<field name="consist" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/consist]]></fieldDescription>
+	</field>
+	<field name="ph" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/ph]]></fieldDescription>
+	</field>
+	<field name="hemoglobina" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/hemoglobina]]></fieldDescription>
+	</field>
+	<field name="glob_rojos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/glob_rojos]]></fieldDescription>
+	</field>
+	<field name="polimorfos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/polimorfos]]></fieldDescription>
+	</field>
+	<field name="esporas" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/esporas]]></fieldDescription>
+	</field>
+	<field name="micelios" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/micelios]]></fieldDescription>
+	</field>
+	<field name="moco" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/moco]]></fieldDescription>
+	</field>
+	<field name="fibra" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/fibra]]></fieldDescription>
+	</field>
+	<field name="almidon" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/almidon]]></fieldDescription>
+	</field>
+	<field name="grasa" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/grasa]]></fieldDescription>
+	</field>
+	<field name="proto1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/proto1]]></fieldDescription>
+	</field>
+	<field name="proto2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/proto2]]></fieldDescription>
+	</field>
+	<field name="proto3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/proto3]]></fieldDescription>
+	</field>
+	<field name="quiste1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/quiste1]]></fieldDescription>
+	</field>
+	<field name="quiste2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/quiste2]]></fieldDescription>
+	</field>
+	<field name="quiste3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/quiste3]]></fieldDescription>
+	</field>
+	<field name="trofo1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/trofo1]]></fieldDescription>
+	</field>
+	<field name="trofo2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/trofo2]]></fieldDescription>
+	</field>
+	<field name="trofo3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/trofo3]]></fieldDescription>
+	</field>
+	<field name="helmintos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/helmintos1]]></fieldDescription>
+	</field>
+	<field name="helmintos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/helmintos2]]></fieldDescription>
+	</field>
+	<field name="helmintos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/helmintos3]]></fieldDescription>
+	</field>
+	<field name="huevo1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/huevo1]]></fieldDescription>
+	</field>
+	<field name="huevo2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/huevo2]]></fieldDescription>
+	</field>
+	<field name="huevo3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/huevo3]]></fieldDescription>
+	</field>
+	<field name="larva1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/larva1]]></fieldDescription>
+	</field>
+	<field name="larva2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/larva2]]></fieldDescription>
+	</field>
+	<field name="larva3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/larva3]]></fieldDescription>
+	</field>
+	<field name="hct" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/hct]]></fieldDescription>
+	</field>
+	<field name="hgb" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/hgb]]></fieldDescription>
+	</field>
+	<field name="sedimentacion" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/sedimentacion]]></fieldDescription>
+	</field>
+	<field name="plaquetas" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/plaquetas]]></fieldDescription>
+	</field>
+	<field name="leucocitos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/leucocitos]]></fieldDescription>
+	</field>
+	<field name="metam" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/metam]]></fieldDescription>
+	</field>
+	<field name="cayad" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/cayad]]></fieldDescription>
+	</field>
+	<field name="segme" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/segme]]></fieldDescription>
+	</field>
+	<field name="eosin" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/eosin]]></fieldDescription>
+	</field>
+	<field name="basof" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/basof]]></fieldDescription>
+	</field>
+	<field name="monoc" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/monoc]]></fieldDescription>
+	</field>
+	<field name="linfo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/linfo]]></fieldDescription>
+	</field>
+	<field name="atipi" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/atipi]]></fieldDescription>
+	</field>
+	<field name="bcm" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/bcm]]></fieldDescription>
+	</field>
+	<field name="hcm" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/hcm]]></fieldDescription>
+	</field>
+	<field name="chcm" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/chcm]]></fieldDescription>
+	</field>
+	<field name="hipocromia" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/hipocromia]]></fieldDescription>
+	</field>
+	<field name="anisocitosis" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/anisocitosis]]></fieldDescription>
+	</field>
+	<field name="poiquilocit" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/poiquilocit]]></fieldDescription>
+	</field>
+	<field name="micrositosis" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/micrositosis]]></fieldDescription>
+	</field>
+	<field name="policromat" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/policromat]]></fieldDescription>
+	</field>
+	<field name="reticulocitos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/reticulocitos]]></fieldDescription>
+	</field>
+	<field name="drepanocitos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/drepanocitos]]></fieldDescription>
+	</field>
+	<field name="grupo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/grupo]]></fieldDescription>
+	</field>
+	<field name="factorrh" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/factorrh]]></fieldDescription>
+	</field>
+	<field name="coombs" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/coombs]]></fieldDescription>
+	</field>
+	<field name="coombs_dir" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/coombs_dir]]></fieldDescription>
+	</field>
+	<field name="coombs_ind" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/coombs_ind]]></fieldDescription>
+	</field>
+	<field name="tp" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/tp]]></fieldDescription>
+	</field>
+	<field name="ttp" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/ttp]]></fieldDescription>
+	</field>
+	<field name="piel" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/piel]]></fieldDescription>
+	</field>
+	<field name="cabeza" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/cabeza]]></fieldDescription>
+	</field>
+	<field name="ojos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/ojos]]></fieldDescription>
+	</field>
+	<field name="oidos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/oidos]]></fieldDescription>
+	</field>
+	<field name="nariz" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/nariz]]></fieldDescription>
+	</field>
+	<field name="boca" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/boca]]></fieldDescription>
+	</field>
+	<field name="faringe" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/faringe]]></fieldDescription>
+	</field>
+	<field name="cuello" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/cuello]]></fieldDescription>
+	</field>
+	<field name="axilas" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/axilas]]></fieldDescription>
+	</field>
+	<field name="torax" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/torax]]></fieldDescription>
+	</field>
+	<field name="abdomen" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/abdomen]]></fieldDescription>
+	</field>
+	<field name="columna_vertebral" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/columna_vertebral]]></fieldDescription>
+	</field>
+	<field name="perine" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/perine]]></fieldDescription>
+	</field>
+	<field name="superiores" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/superiores]]></fieldDescription>
+	</field>
+	<field name="sentidos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/sentidos]]></fieldDescription>
+	</field>
+	<field name="respiratorio" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/respiratorio]]></fieldDescription>
+	</field>
+	<field name="vascular" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/vascular]]></fieldDescription>
+	</field>
+	<field name="digestivo" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/digestivo]]></fieldDescription>
+	</field>
+	<field name="genital" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/genital]]></fieldDescription>
+	</field>
+	<field name="urinario" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/urinario]]></fieldDescription>
+	</field>
+	<field name="esqueletico" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/esqueletico]]></fieldDescription>
+	</field>
+	<field name="endocrino" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/endocrino]]></fieldDescription>
+	</field>
+	<field name="hemolinfatico" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/hemolinfatico]]></fieldDescription>
+	</field>
+	<field name="neurologico" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/neurologico]]></fieldDescription>
+	</field>
+	<field name="fisico_observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/fisico_observaciones]]></fieldDescription>
+	</field>
+	<field name="pais_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_codigo]]></fieldDescription>
+	</field>
+	<field name="pais_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_descripcion]]></fieldDescription>
+	</field>
+	<field name="estado_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_codigo]]></fieldDescription>
+	</field>
+	<field name="estado_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_descripcion]]></fieldDescription>
+	</field>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="canton_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_descripcion]]></fieldDescription>
+	</field>
+	<field name="parroquia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_codigo]]></fieldDescription>
+	</field>
+	<field name="parroquia_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_descripcion]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/nombres]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/apellidos]]></fieldDescription>
+	</field>
+	<field name="paciente" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/paciente]]></fieldDescription>
+	</field>
+	<field name="fecha_nace" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha_nace]]></fieldDescription>
+	</field>
+	<field name="inferiones" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/examen_fisico/inferiones]]></fieldDescription>
+	</field>
+	<field name="otrouroanalisis" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/uroanalisis/otrouroanalisis]]></fieldDescription>
+	</field>
+	<field name="otrobiometria" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/hematologico/otrobiometria]]></fieldDescription>
+	</field>
+	<field name="otroquimica" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/otroquimica]]></fieldDescription>
+	</field>
+	<field name="otrocoprologico" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/coprologico/otrocoprologico]]></fieldDescription>
+	</field>
+	<field name="otro_quimica" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina1/quimica/otro_quimica]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="528" splitType="Stretch">
+			<frame>
+				<reportElement key="condiciones_socio_economicas" mode="Opaque" x="0" y="0" width="802" height="154" backcolor="#FFFFFF">
+					<property name="nombre" value="examen_fisico"/>
+					<property name="descripcion" value="Examen Físico"/>
+				</reportElement>
+				<rectangle>
+					<reportElement mode="Transparent" x="0" y="0" width="802" height="102" backcolor="#999999"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="0" width="802" height="29" backcolor="#999999"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="5" y="1" width="90" height="14" forecolor="#000000"/>
+					<textElement>
+						<font fontName="SansSerif" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EXAMEN FÍSICO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="1" y="30" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[1-R 	PIEL - FANERAS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="155" y="1" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[R= Regional
+S= Sistemático
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="230" y="1" width="268" height="14"/>
+					<textElement>
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[CP= CON EVIDENCIA DE PATOLOGÍA: MARCAR "X Y DESCRIBIR ABAJO ANOTANDO EL NÚMERO Y LETRA CORRESPONDIENTES
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="553" y="1" width="192" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[SP= SIN EVIDENCIA DE PATOLOGÍA MARCAR "X" Y NO DESCRIBIR
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="115" y="16" width="20" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[CP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="136" y="16" width="20" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[SP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="316" y="30" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[11-R 	 ABDOMEN
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="156" y="30" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[6-R 	 BOCA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="476" y="30" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[1-S ÓRGANOS DE LOS SENTIDOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="635" y="29" width="115" height="16" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[6-S URINARIO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="272" y="16" width="22" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[CP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="293" y="16" width="22" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[SP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="776" y="16" width="25" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[SP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="750" y="16" width="25" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[CP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="592" y="16" width="22" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[CP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="614" y="16" width="22" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[SP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="431" y="16" width="22" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[CP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="453" y="16" width="22" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[SP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="1" y="44" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[2-R	 CABEZA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="1" y="58" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[3-R 	 OJOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="1" y="72" width="115" height="15" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[4-R	 OÍDOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="1" y="88" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[5-R NARÍZ
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="156" y="58" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[8-R 	 CUELLO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="156" y="88" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[10-R 	 TÓRAX
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="156" y="72" width="115" height="15" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[9-R 	 AXILAS-MAMAS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="156" y="44" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[7-R 	 ORO FARINGE
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="316" y="44" width="115" height="15" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[12-R 	 COLUMNA VERTEBRAL
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="316" y="74" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[14-R MIEMBROS SUPERIORES
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="316" y="87" width="115" height="17" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[15-R MIEMBROS INFERIORES
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="316" y="57" width="115" height="17" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[13-R INGLE-PERINÉ
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="476" y="44" width="115" height="16" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[2-S RESPIRATORIO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="476" y="73" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[4-S DIGESTIVO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="476" y="88" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[5-S GENITAL
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="476" y="59" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[3-S CARDIO VASCULAR
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="635" y="45" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[7-S MÚSCULO ESQUELÉTICO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="635" y="73" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[9-S HEMO LINFÁTICO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="635" y="59" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[8-S ENDOCRINO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="" mode="Opaque" x="635" y="88" width="115" height="14" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[10-S NEUROLÓGICO
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="1" y="15" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="155" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="271" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="315" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="749" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="591" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="432" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="475" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="115" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="136" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="294" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="453" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="614" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="774" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="1" y="29" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="635" y="16" width="1" height="86"/>
+				</line>
+				<line>
+					<reportElement x="1" y="43" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="57" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="1" y="71" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="87" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="1" y="102" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="1" y="116" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="1" y="140" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="1" y="127" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="1" y="153" width="801" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="103" width="1" height="50"/>
+				</line>
+				<line>
+					<reportElement x="801" y="104" width="1" height="49"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="116" y="31" width="18" height="14">
+						<property name="orden" value="5000"/>
+						<property name="nombre" value="piel"/>
+						<property name="descripcion" value="Piel Faneras"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{piel}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="116" y="45" width="18" height="14">
+						<property name="orden" value="5010"/>
+						<property name="nombre" value="cabeza"/>
+						<property name="descripcion" value="Cabeza"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cabeza}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="116" y="59" width="18" height="14">
+						<property name="orden" value="5020"/>
+						<property name="nombre" value="ojos"/>
+						<property name="descripcion" value="Ojos"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ojos}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="116" y="74" width="18" height="14">
+						<property name="orden" value="5030"/>
+						<property name="nombre" value="oidos"/>
+						<property name="descripcion" value="Oídos"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{oidos}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="116" y="90" width="18" height="14">
+						<property name="orden" value="5040"/>
+						<property name="nombre" value="nariz"/>
+						<property name="descripcion" value="Naríz"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nariz}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="137" y="31" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{piel}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="137" y="45" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cabeza}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="137" y="59" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ojos}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="137" y="74" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{oidos}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="137" y="90" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nariz}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="273" y="31" width="18" height="14">
+						<property name="orden" value="5050"/>
+						<property name="nombre" value="boca"/>
+						<property name="descripcion" value="Boca"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{boca}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="273" y="46" width="18" height="14">
+						<property name="orden" value="5060"/>
+						<property name="nombre" value="faringe"/>
+						<property name="descripcion" value="Faringe"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{faringe}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="273" y="60" width="18" height="14">
+						<property name="orden" value="5070"/>
+						<property name="nombre" value="cuello"/>
+						<property name="descripcion" value="cuello"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cuello}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="273" y="74" width="18" height="14">
+						<property name="orden" value="5080"/>
+						<property name="nombre" value="axilas"/>
+						<property name="descripcion" value="Axilas"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{axilas}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="273" y="90" width="18" height="14">
+						<property name="orden" value="5090"/>
+						<property name="nombre" value="torax"/>
+						<property name="descripcion" value="Torax"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{torax}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="31" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{boca}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="45" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{faringe}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="59" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cuello}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="74" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{axilas}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="295" y="90" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{torax}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="433" y="30" width="18" height="14">
+						<property name="orden" value="5100"/>
+						<property name="nombre" value="abdomen"/>
+						<property name="descripcion" value="Abdomen"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{abdomen}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="433" y="46" width="18" height="14">
+						<property name="orden" value="5110"/>
+						<property name="nombre" value="columna_vertebral"/>
+						<property name="descripcion" value="Columna Vertebral"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{columna_vertebral}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="433" y="60" width="18" height="14">
+						<property name="orden" value="5120"/>
+						<property name="nombre" value="perine"/>
+						<property name="descripcion" value="Perine"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{perine}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="433" y="74" width="18" height="14">
+						<property name="orden" value="5340"/>
+						<property name="nombre" value="superiores"/>
+						<property name="descripcion" value="Miembros Superiores"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{superiores}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="433" y="90" width="18" height="14">
+						<property name="orden" value="5130"/>
+						<property name="nombre" value="inferiones"/>
+						<property name="descripcion" value="Miembros Inferiores"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{inferiones}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="454" y="31" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{abdomen}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="454" y="46" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{columna_vertebral}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="454" y="59" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{perine}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="454" y="74" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{superiores}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="454" y="90" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{inferiones}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="593" y="30" width="18" height="14">
+						<property name="orden" value="5130"/>
+						<property name="nombre" value="sentidos"/>
+						<property name="descripcion" value="Órganos Sentidos"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{sentidos}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="593" y="45" width="18" height="14">
+						<property name="orden" value="5140"/>
+						<property name="nombre" value="respiratorio"/>
+						<property name="descripcion" value="Respiratorio"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{respiratorio}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="593" y="59" width="18" height="14">
+						<property name="orden" value="5150"/>
+						<property name="nombre" value="vascular"/>
+						<property name="descripcion" value="Cardio Vascular"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{vascular}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="593" y="74" width="18" height="14">
+						<property name="orden" value="5150"/>
+						<property name="nombre" value="digestivo"/>
+						<property name="descripcion" value="Digestivo"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{digestivo}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="593" y="90" width="18" height="14">
+						<property name="orden" value="5160"/>
+						<property name="nombre" value="genital"/>
+						<property name="descripcion" value="Genital"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{genital}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="615" y="30" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{sentidos}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="615" y="45" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{respiratorio}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="615" y="59" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{vascular}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="615" y="74" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{digestivo}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="616" y="90" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{genital}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="753" y="31" width="18" height="14">
+						<property name="orden" value="5160"/>
+						<property name="nombre" value="urinario"/>
+						<property name="descripcion" value="Urinario"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{urinario}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="753" y="46" width="18" height="14">
+						<property name="orden" value="5170"/>
+						<property name="nombre" value="esqueletico"/>
+						<property name="descripcion" value="Músculo Esquelético"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{esqueletico}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="753" y="60" width="18" height="14">
+						<property name="orden" value="5180"/>
+						<property name="nombre" value="endocrino"/>
+						<property name="descripcion" value="Endocrino"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{endocrino}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="753" y="74" width="18" height="14">
+						<property name="orden" value="5190"/>
+						<property name="nombre" value="hemolinfatico"/>
+						<property name="descripcion" value="Hemo Linfático"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hemolinfatico}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="753" y="90" width="18" height="14">
+						<property name="orden" value="5200"/>
+						<property name="nombre" value="neurologico"/>
+						<property name="descripcion" value="Neurológico"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="CON PATOLOGIA/SIN PATOLOGIA/NO VALORADO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{neurologico}.equalsIgnoreCase( "CON PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="778" y="31" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{urinario}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="778" y="45" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{esqueletico}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="778" y="60" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{endocrino}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="778" y="74" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hemolinfatico}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="778" y="90" width="18" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{neurologico}.equalsIgnoreCase( "SIN PATOLOGIA" )?"X":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="1" y="102" width="798" height="51">
+						<property name="orden" value="5300"/>
+						<property name="nombre" value="fisico_observaciones"/>
+						<property name="descripcion" value="Observaciones"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fisico_observaciones}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="154" width="802" height="12" backcolor="#4789AA"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="" x="3" y="154" width="272" height="12" forecolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXÁMENES COMPLEMENTARIOS Y OCUPACIONALES
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="167" width="95" height="12" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="2" y="167" width="86" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LABORATORIO
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="179" width="114" height="12" backcolor="#FFFF66"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="2" y="179" width="93" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. HEMATOLÓGIA
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="146" y="179" width="123" height="12" backcolor="#FFFF66"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="146" y="179" width="122" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. QUÍMICA SANQUÍNEA
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="318" y="179" width="114" height="12" backcolor="#FFFF66"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="325" y="179" width="106" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COPROLÓGICO
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="478" y="179" width="114" height="12" backcolor="#FFFF66"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="485" y="179" width="106" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UROANÁLISIS
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="636" y="179" width="114" height="12" backcolor="#FFFF66"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="643" y="179" width="106" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BACTEROLOGÍA
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="191" width="94" height="12" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="4" y="191" width="86" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOMETRÍA HEMÁTICA
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="181" y="191" width="37" height="12" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="187" y="191" width="29" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[listado
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="343" y="191" width="37" height="12" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="349" y="191" width="29" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[listado
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="520" y="191" width="37" height="12" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="526" y="191" width="29" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[listado
+                    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="667" y="191" width="37" height="12" backcolor="#999999"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="signos_vitales" x="673" y="191" width="29" height="12" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[listado
+                    ]]></text>
+			</staticText>
+			<frame>
+				<reportElement key="signos_vitales" x="0" y="204" width="395" height="154">
+					<property name="nombre" value="hematologico"/>
+					<property name="descripcion" value="Hematológico"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="392" height="154"/>
+				</rectangle>
+				<rectangle>
+					<reportElement mode="Opaque" x="1" y="0" width="391" height="12" backcolor="#FF8080"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="signos_vitales" x="3" y="0" width="129" height="12" forecolor="#000000" backcolor="#999999"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[1. HEMATOLÓGICO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="12" width="30" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="75" y="12" width="43" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="171" y="12" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="12" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="28" width="73" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="28" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="171" y="28" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="13" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[HCT
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="85" y="12" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[HGB
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="185" y="13" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[VCM
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="273" y="13" width="70" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[RETICULOCITOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="28" width="72" height="16"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VELOCIDAD DE SEDIMENTACIÓN
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="183" y="28" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[HCM
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="275" y="28" width="68" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[DREPANOCITOS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="171" y="44" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="44" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="44" width="73" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="275" y="44" width="68" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[GRUPO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="183" y="44" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[CHCM
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="44" width="72" height="16"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[PLAQUETAS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="171" y="60" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="60" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="60" width="73" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="275" y="60" width="68" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[FACTOR RH
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="171" y="60" width="61" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[HIPOCROMÍA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="60" width="72" height="16"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[LEUCOCITOS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="76" width="30" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="75" y="76" width="43" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="76" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="171" y="76" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="77" width="29" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[METAM
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="87" y="76" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[BASOF
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="171" y="76" width="61" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ANISOCITOSIS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="273" y="77" width="70" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[COOMBS DIR
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="171" y="92" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="75" y="92" width="43" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="92" width="30" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="92" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="273" y="93" width="70" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[COOMBS IND
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="171" y="92" width="61" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[POIQUILOCIT
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="87" y="92" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[MONOC
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="93" width="29" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[CAYAD
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="75" y="108" width="43" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="108" width="30" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="108" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="273" y="109" width="70" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[TP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="84" y="108" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[LINFO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="109" width="29" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[SEGME
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="171" y="108" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="171" y="108" width="61" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[MICROCITOSIS
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="11" width="392" height="1"/>
+				</line>
+				<rectangle>
+					<reportElement x="171" y="124" width="61" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="273" y="124" width="70" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="124" width="30" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="75" y="124" width="43" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="171" y="124" width="61" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[POLICROMAT
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="125" width="29" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[EOSIN
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="84" y="124" width="27" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ATIPI
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="273" y="125" width="70" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[TTP
+                    ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="32" y="12" width="23" height="15">
+						<property name="orden" value="5400"/>
+						<property name="nombre" value="hct"/>
+						<property name="descripcion" value="HCT"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hct}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="120" y="11" width="25" height="17">
+						<property name="orden" value="5410"/>
+						<property name="nombre" value="hgb"/>
+						<property name="descripcion" value="HGB"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hgb}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="75" y="28" width="52" height="16">
+						<property name="orden" value="5440"/>
+						<property name="nombre" value="sedimentacion"/>
+						<property name="descripcion" value="Sedimentación"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{sedimentacion}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="75" y="43" width="52" height="17">
+						<property name="orden" value="5470"/>
+						<property name="nombre" value="plaquetas"/>
+						<property name="descripcion" value="Plaquetas"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{plaquetas}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="75" y="59" width="52" height="16">
+						<property name="orden" value="5500"/>
+						<property name="nombre" value="leucocitos"/>
+						<property name="descripcion" value="Leucocitos"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{leucocitos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="32" y="77" width="28" height="15">
+						<property name="orden" value="5590"/>
+						<property name="nombre" value="metam"/>
+						<property name="descripcion" value="Metam"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{metam}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="32" y="93" width="28" height="15">
+						<property name="orden" value="5600"/>
+						<property name="nombre" value="cayad"/>
+						<property name="descripcion" value="Cayad"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cayad}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="32" y="108" width="28" height="15">
+						<property name="orden" value="5610"/>
+						<property name="nombre" value="segme"/>
+						<property name="descripcion" value="Segme"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{segme}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="32" y="123" width="28" height="15">
+						<property name="orden" value="5620"/>
+						<property name="nombre" value="eosin"/>
+						<property name="descripcion" value="Eosin"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{eosin}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="120" y="77" width="30" height="16">
+						<property name="orden" value="5630"/>
+						<property name="nombre" value="basof"/>
+						<property name="descripcion" value="Basof"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{basof}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="120" y="93" width="30" height="16">
+						<property name="orden" value="5640"/>
+						<property name="nombre" value="monoc"/>
+						<property name="descripcion" value="Monoc"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{monoc}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="120" y="108" width="30" height="16">
+						<property name="orden" value="5650"/>
+						<property name="nombre" value="linfo"/>
+						<property name="descripcion" value="Linfo"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{linfo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="120" y="123" width="30" height="16">
+						<property name="orden" value="5660"/>
+						<property name="nombre" value="atipi"/>
+						<property name="descripcion" value="Atipi"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{atipi}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="12" width="35" height="16">
+						<property name="orden" value="5420"/>
+						<property name="nombre" value="bcm"/>
+						<property name="descripcion" value="BCM"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bcm}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="27" width="35" height="16">
+						<property name="orden" value="5450"/>
+						<property name="nombre" value="hcm"/>
+						<property name="descripcion" value="HCM"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hcm}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="43" width="35" height="16">
+						<property name="orden" value="5480"/>
+						<property name="nombre" value="chcm"/>
+						<property name="descripcion" value="CHCM"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{chcm}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="59" width="35" height="16">
+						<property name="orden" value="5510"/>
+						<property name="nombre" value="hipocromia"/>
+						<property name="descripcion" value="Hipocromia"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hipocromia}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="75" width="35" height="16">
+						<property name="orden" value="5520"/>
+						<property name="nombre" value="anisocitosis"/>
+						<property name="descripcion" value="Anisocitosis"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{anisocitosis}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="91" width="35" height="16">
+						<property name="orden" value="5530"/>
+						<property name="nombre" value="poiquilocit"/>
+						<property name="descripcion" value="Poiquilocit"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{poiquilocit}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="107" width="35" height="16">
+						<property name="orden" value="5540"/>
+						<property name="nombre" value="micrositosis"/>
+						<property name="descripcion" value="Micrositosis"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{micrositosis}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="235" y="123" width="35" height="16">
+						<property name="orden" value="5550"/>
+						<property name="nombre" value="policromat"/>
+						<property name="descripcion" value="Policromat"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{policromat}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="345" y="12" width="45" height="16">
+						<property name="orden" value="5430"/>
+						<property name="nombre" value="reticulocitos"/>
+						<property name="descripcion" value="Reticulocitos"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{reticulocitos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="345" y="27" width="45" height="16">
+						<property name="orden" value="5460"/>
+						<property name="nombre" value="drepanocitos"/>
+						<property name="descripcion" value="Drepanocitos"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{drepanocitos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="345" y="43" width="45" height="16">
+						<property name="orden" value="5490"/>
+						<property name="nombre" value="grupo"/>
+						<property name="descripcion" value="Grupo"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{grupo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="345" y="59" width="45" height="16">
+						<property name="orden" value="5560"/>
+						<property name="nombre" value="factorrh"/>
+						<property name="descripcion" value="Factor RH"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{factorrh}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="343" y="75" width="49" height="16">
+						<property name="orden" value="5570"/>
+						<property name="nombre" value="coombs_dir"/>
+						<property name="descripcion" value="Coombs Dir"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="POSITIVO/NEGATIVO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{coombs_dir}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="343" y="91" width="49" height="16">
+						<property name="orden" value="5560"/>
+						<property name="nombre" value="coombs_ind"/>
+						<property name="descripcion" value="Coombs Ind"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="POSITIVO/NEGATIVO/"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{coombs_ind}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="345" y="107" width="32" height="16">
+						<property name="orden" value="5570"/>
+						<property name="nombre" value="tp"/>
+						<property name="descripcion" value="TP"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{tp}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="345" y="123" width="32" height="16">
+						<property name="orden" value="5580"/>
+						<property name="nombre" value="ttp"/>
+						<property name="descripcion" value="TTP"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ttp}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="141" width="392" height="13">
+						<property name="orden" value="2130"/>
+						<property name="nombre" value="otrobiometria"/>
+						<property name="descripcion" value="Otro"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{otrobiometria}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="61" y="77" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="61" y="93" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="61" y="109" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="61" y="123" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="153" y="94" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="153" y="78" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="153" y="110" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="153" y="123" width="12" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="146" y="12" width="22" height="15"/>
+					<textElement/>
+					<text><![CDATA[g/dl
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="55" y="12" width="22" height="15"/>
+					<textElement/>
+					<text><![CDATA[%
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="376" y="108" width="17" height="15"/>
+					<textElement/>
+					<text><![CDATA[seg
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="376" y="123" width="19" height="15"/>
+					<textElement/>
+					<text><![CDATA[seg
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="128" y="30" width="29" height="13"/>
+					<textElement/>
+					<text><![CDATA[mm/h]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="128" y="42" width="29" height="13"/>
+					<textElement/>
+					<text><![CDATA[K/uL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="128" y="60" width="29" height="13"/>
+					<textElement/>
+					<text><![CDATA[K/uL]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="140" width="392" height="1"/>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="406" y="203" width="396" height="155">
+					<property name="nombre" value="coprologico"/>
+					<property name="descripcion" value="Coprológico"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="3" y="0" width="392" height="155"/>
+				</rectangle>
+				<rectangle>
+					<reportElement mode="Opaque" x="3" y="0" width="392" height="12" backcolor="#FF8080"/>
+					<graphicElement>
+						<pen lineWidth="0.75"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="signos_vitales" x="11" y="0" width="129" height="12" forecolor="#000000" backcolor="#999999"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[3. COPROLÓGICO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="201" y="12" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="301" y="12" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="3" y="12" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="104" y="12" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="301" y="13" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[FIBRA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="105" y="12" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[HEMOGLOB.
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="13" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[COLOR
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="201" y="13" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[ESPORAS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="201" y="28" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="301" y="28" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="3" y="28" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="104" y="28" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="301" y="29" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[ALMIDÓN
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="105" y="28" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[GLOB. ROJOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="29" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[CONSIST.
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="201" y="28" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[MICELIOS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="201" y="44" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="301" y="44" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="3" y="44" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="104" y="44" width="65" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="301" y="45" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[GRASA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="105" y="44" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[POLIMORFOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="45" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[pH
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="201" y="44" width="65" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[MOCO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="131" y="60" width="60" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="260" y="60" width="55" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="3" y="60" width="77" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="81" y="60" width="50" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="191" y="60" width="69" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="315" y="60" width="80" height="16" backcolor="#C9DEF4"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="6" y="60" width="70" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[PROTOZOARIOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="83" y="60" width="42" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[QUISTE
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="133" y="61" width="54" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[TROFO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="196" y="61" width="54" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[HELMINTOS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="260" y="60" width="55" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[HUEVO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="320" y="61" width="54" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[LARVA
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="3" y="92" width="392" height="1"/>
+				</line>
+				<line>
+					<reportElement x="3" y="107" width="392" height="1"/>
+				</line>
+				<line>
+					<reportElement x="3" y="123" width="392" height="1"/>
+				</line>
+				<line>
+					<reportElement x="80" y="77" width="1" height="65"/>
+				</line>
+				<line>
+					<reportElement x="131" y="76" width="1" height="66"/>
+				</line>
+				<line>
+					<reportElement x="191" y="76" width="1" height="66"/>
+				</line>
+				<line>
+					<reportElement x="260" y="77" width="1" height="65"/>
+				</line>
+				<line>
+					<reportElement x="314" y="76" width="1" height="66"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="71" y="12" width="30" height="14">
+						<property name="orden" value="5600"/>
+						<property name="nombre" value="color"/>
+						<property name="descripcion" value="Color"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{color}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="71" y="27" width="30" height="14">
+						<property name="orden" value="5610"/>
+						<property name="nombre" value="consist"/>
+						<property name="descripcion" value="Consist"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{consist}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="71" y="44" width="30" height="14">
+						<property name="orden" value="5620"/>
+						<property name="nombre" value="ph"/>
+						<property name="descripcion" value="pH"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ph}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="170" y="13" width="31" height="15">
+						<property name="orden" value="5630"/>
+						<property name="nombre" value="hemoglobina"/>
+						<property name="descripcion" value="Hemoglobina"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hemoglobina}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="170" y="29" width="31" height="15">
+						<property name="orden" value="5640"/>
+						<property name="nombre" value="glob_rojos"/>
+						<property name="descripcion" value="Globulos Rojos"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{glob_rojos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="169" y="43" width="32" height="16">
+						<property name="orden" value="5650"/>
+						<property name="nombre" value="polimorfos"/>
+						<property name="descripcion" value="Polimorfos"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{polimorfos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="267" y="14" width="32" height="14">
+						<property name="orden" value="5660"/>
+						<property name="nombre" value="esporas"/>
+						<property name="descripcion" value="Esporas"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{esporas}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="267" y="28" width="32" height="14">
+						<property name="orden" value="5670"/>
+						<property name="nombre" value="micelios"/>
+						<property name="descripcion" value="Micelios"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{micelios}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="267" y="44" width="32" height="14">
+						<property name="orden" value="5680"/>
+						<property name="nombre" value="moco"/>
+						<property name="descripcion" value="Moco"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{moco}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="366" y="13" width="30" height="14">
+						<property name="orden" value="5690"/>
+						<property name="nombre" value="fibra"/>
+						<property name="descripcion" value="Fibra"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fibra}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="366" y="30" width="30" height="14">
+						<property name="orden" value="5700"/>
+						<property name="nombre" value="almidon"/>
+						<property name="descripcion" value="Almidon"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{almidon}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="366" y="45" width="30" height="14">
+						<property name="orden" value="5710"/>
+						<property name="nombre" value="grasa"/>
+						<property name="descripcion" value="Grasa"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{grasa}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="5" y="78" width="72" height="14">
+						<property name="orden" value="5720"/>
+						<property name="nombre" value="proto1"/>
+						<property name="descripcion" value="Protozoarios 1"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{proto1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="5" y="93" width="72" height="14">
+						<property name="orden" value="5730"/>
+						<property name="nombre" value="proto2"/>
+						<property name="descripcion" value="Protozoarios 2"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{proto2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="5" y="108" width="72" height="14">
+						<property name="orden" value="5740"/>
+						<property name="nombre" value="proto3"/>
+						<property name="descripcion" value="Protozoarios 3"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{proto3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="82" y="78" width="45" height="14">
+						<property name="orden" value="5750"/>
+						<property name="nombre" value="quiste1"/>
+						<property name="descripcion" value="Quiste 1"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{quiste1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="82" y="93" width="45" height="14">
+						<property name="orden" value="5760"/>
+						<property name="nombre" value="quiste2"/>
+						<property name="descripcion" value="Quiste 2"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{quiste2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="82" y="108" width="45" height="14">
+						<property name="orden" value="5770"/>
+						<property name="nombre" value="quiste3"/>
+						<property name="descripcion" value="Quiste 3"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{quiste3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="133" y="78" width="55" height="14">
+						<property name="orden" value="5780"/>
+						<property name="nombre" value="trofo1"/>
+						<property name="descripcion" value="Trofo 1"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{trofo1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="133" y="93" width="55" height="14">
+						<property name="orden" value="5790"/>
+						<property name="nombre" value="trofo2"/>
+						<property name="descripcion" value="Trofo 2"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{trofo2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="133" y="108" width="55" height="14">
+						<property name="orden" value="5800"/>
+						<property name="nombre" value="trofo3"/>
+						<property name="descripcion" value="Trofo 3"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{trofo3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="78" width="68" height="14">
+						<property name="orden" value="5810"/>
+						<property name="nombre" value="helmintos1"/>
+						<property name="descripcion" value="Helmintos 1"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{helmintos1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="93" width="68" height="14">
+						<property name="orden" value="5820"/>
+						<property name="nombre" value="helmintos2"/>
+						<property name="descripcion" value="Helmintos 2"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{helmintos2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="108" width="68" height="14">
+						<property name="orden" value="5830"/>
+						<property name="nombre" value="helmintos3"/>
+						<property name="descripcion" value="Helmintos 3"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{helmintos3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="261" y="78" width="50" height="14">
+						<property name="orden" value="5840"/>
+						<property name="nombre" value="huevo1"/>
+						<property name="descripcion" value="Huevo 1"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{huevo1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="261" y="93" width="50" height="14">
+						<property name="orden" value="5850"/>
+						<property name="nombre" value="huevo2"/>
+						<property name="descripcion" value="Huevo 2"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{huevo2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="261" y="108" width="50" height="14">
+						<property name="orden" value="5850"/>
+						<property name="nombre" value="huevo3"/>
+						<property name="descripcion" value="Huevo 3"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{huevo3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="316" y="78" width="75" height="14">
+						<property name="orden" value="5860"/>
+						<property name="nombre" value="larva1"/>
+						<property name="descripcion" value="Larva 1"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{larva1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="316" y="93" width="75" height="14">
+						<property name="orden" value="5870"/>
+						<property name="nombre" value="larva2"/>
+						<property name="descripcion" value="Larva 2"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{larva2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="316" y="108" width="75" height="14">
+						<property name="orden" value="5880"/>
+						<property name="nombre" value="larva3"/>
+						<property name="descripcion" value="Larva 3"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{larva3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="142" width="392" height="13">
+						<property name="orden" value="2135"/>
+						<property name="nombre" value="otrocoprologico"/>
+						<property name="descripcion" value="Otro"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{otrocoprologico}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="3" y="141" width="392" height="1"/>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="0" y="358" width="393" height="169">
+					<property name="nombre" value="quimica"/>
+					<property name="descripcion" value="Química"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="392" height="167"/>
+				</rectangle>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="0" width="392" height="16" backcolor="#FF9999"/>
+					<graphicElement>
+						<pen lineWidth="0.75"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="signos_vitales" x="0" y="1" width="65" height="12" forecolor="#000000" backcolor="#999999"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[2. QUÍMICA
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="348" y="0" width="1" height="154"/>
+				</line>
+				<line>
+					<reportElement x="198" y="0" width="1" height="167"/>
+				</line>
+				<rectangle>
+					<reportElement x="199" y="16" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="16" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="17" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[GLUCOSA EN AYUNAS
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="199" y="17" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[TGP
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="0" width="43" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[RESULTADO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="128" y="0" width="30" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[UNIDAD DE MEDIDA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="159" y="0" width="33" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[VALOR DE REFERENCIA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="275" y="0" width="43" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[RESULTADO
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="319" y="0" width="30" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[UNIDAD DE MEDIDA
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="350" y="0" width="40" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="SansSerif" size="5"/>
+					</textElement>
+					<text><![CDATA[VALOR DE REFERENCIA
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="157" y="0" width="1" height="154"/>
+				</line>
+				<line>
+					<reportElement x="127" y="0" width="1" height="154"/>
+				</line>
+				<line>
+					<reportElement x="273" y="0" width="1" height="154"/>
+				</line>
+				<line>
+					<reportElement x="314" y="0" width="1" height="154"/>
+				</line>
+				<rectangle>
+					<reportElement x="0" y="30" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Double"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="30" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[GLUCOSA EN 2 HORAS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="44" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="44" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[ÚREA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="58" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="58" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[CREATININA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="72" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="72" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[ÁCIDO ÚRICO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="86" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="86" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[BILIRRUBINA TOTAL
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="100" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="100" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[BILIRRUBINA DIRECTA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="114" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="114" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[PROTEÍNA TOTAL
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="128" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="128" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[ALBÚMINA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="142" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="142" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[GLOBULÍNA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="30" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="199" y="30" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[TGO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="44" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="199" y="44" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[FOSFAT. ALCALINA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="58" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="199" y="58" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[COLESTEROL TOTAL
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="72" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="199" y="72" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[COLESTEROL HDL
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="86" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="199" y="86" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[COLESTEROL LDL
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="100" width="74" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="199" y="100" width="73" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[TRIGLICÉRIDOS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="199" y="114" width="73" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="199" y="128" width="73" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="199" y="142" width="73" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<line>
+					<reportElement x="0" y="29" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="43" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="57" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="71" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="85" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="99" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="114" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="127" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="141" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="2" width="1" height="152"/>
+				</line>
+				<line>
+					<reportElement x="0" y="154" width="393" height="1"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="17" width="40" height="14">
+						<property name="orden" value="5750"/>
+						<property name="nombre" value="glucosa_ayunas"/>
+						<property name="descripcion" value="Glucosa en Ayunas"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{glucosa_ayunas}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="16" width="40" height="15">
+						<property name="orden" value="51000"/>
+						<property name="nombre" value="glucosa_ayunas_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="70-100"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{glucosa_ayunas_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="30" width="40" height="14">
+						<property name="orden" value="5760"/>
+						<property name="nombre" value="glucosa_2_horas"/>
+						<property name="descripcion" value="Glucosa en 2 horas"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{glucosa_2_horas}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="29" width="40" height="15">
+						<property name="orden" value="51010"/>
+						<property name="nombre" value="glucosa_2_horas_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{glucosa_2_horas_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="43" width="40" height="14">
+						<property name="orden" value="5770"/>
+						<property name="nombre" value="urea"/>
+						<property name="descripcion" value="Urea"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{urea}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="43" width="40" height="15">
+						<property name="orden" value="51020"/>
+						<property name="nombre" value="urea_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="10-50"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{urea_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="57" width="40" height="14">
+						<property name="orden" value="5780"/>
+						<property name="nombre" value="creatinina"/>
+						<property name="descripcion" value="Creatinina"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{creatinina}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="57" width="40" height="15">
+						<property name="orden" value="51030"/>
+						<property name="nombre" value="creatinina_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar según sexo)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="0.50-1.40"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{creatinina_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="72" width="40" height="14">
+						<property name="orden" value="5790"/>
+						<property name="nombre" value="acido_urico"/>
+						<property name="descripcion" value="Acido Urico"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{acido_urico}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="71" width="40" height="15">
+						<property name="orden" value="51040"/>
+						<property name="nombre" value="acido_urico_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar según sexo)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="2.4-5.7"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{acido_urico_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="85" width="40" height="14">
+						<property name="orden" value="5800"/>
+						<property name="nombre" value="bilirrubina_total"/>
+						<property name="descripcion" value="Bilirrubina Total"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bilirrubina_total}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="86" width="40" height="15">
+						<property name="orden" value="51050"/>
+						<property name="nombre" value="bilirrubina_total_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 1.10"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bilirrubina_total_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="100" width="40" height="14">
+						<property name="orden" value="5810"/>
+						<property name="nombre" value="bilirrubina_directa"/>
+						<property name="descripcion" value="Bilirrubina Directa"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bilirrubina_directa}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="100" width="40" height="15">
+						<property name="orden" value="51060"/>
+						<property name="nombre" value="bilirrubina_directa_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 0.30"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bilirrubina_directa_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="114" width="40" height="14">
+						<property name="orden" value="5820"/>
+						<property name="nombre" value="proteina_total"/>
+						<property name="descripcion" value="Proteína Total"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{proteina_total}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="115" width="40" height="15">
+						<property name="orden" value="51070"/>
+						<property name="nombre" value="proteina_total_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="6.6-8.7"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{proteina_total_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="128" width="40" height="14">
+						<property name="orden" value="5830"/>
+						<property name="nombre" value="albumina"/>
+						<property name="descripcion" value="Albúmina"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{albumina}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="127" width="40" height="15">
+						<property name="orden" value="51080"/>
+						<property name="nombre" value="albumina_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="3.5-4.8"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{albumina_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="88" y="141" width="40" height="14">
+						<property name="orden" value="5840"/>
+						<property name="nombre" value="globulina"/>
+						<property name="descripcion" value="Globulína"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{globulina}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="157" y="141" width="40" height="15">
+						<property name="orden" value="51090"/>
+						<property name="nombre" value="globulina_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{globulina_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="1" y="155" width="196" height="14">
+						<property name="orden" value="2003"/>
+						<property name="nombre" value="otro_quimica"/>
+						<property name="descripcion" value="Otro"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{otro_quimica}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="16" width="35" height="14">
+						<property name="orden" value="5850"/>
+						<property name="nombre" value="tgp"/>
+						<property name="descripcion" value="TGP"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{tgp}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="16" width="39" height="15">
+						<property name="orden" value="51900"/>
+						<property name="nombre" value="tgp_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 37"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{tgp_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="29" width="35" height="14">
+						<property name="orden" value="5860"/>
+						<property name="nombre" value="tgo"/>
+						<property name="descripcion" value="TGO"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{tgo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="31" width="39" height="15">
+						<property name="orden" value="51910"/>
+						<property name="nombre" value="tgo_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 42"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{tgo_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="43" width="35" height="14">
+						<property name="orden" value="5870"/>
+						<property name="nombre" value="fosfatina"/>
+						<property name="descripcion" value="Fosfat. Alcalina"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fosfatina}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="45" width="39" height="15">
+						<property name="orden" value="51920"/>
+						<property name="nombre" value="fosfatina_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="40-129"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{fosfatina_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="58" width="35" height="14">
+						<property name="orden" value="5880"/>
+						<property name="nombre" value="colesterol"/>
+						<property name="descripcion" value="Colesterol Total"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{colesterol}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="59" width="39" height="15">
+						<property name="orden" value="51930"/>
+						<property name="nombre" value="colesterol_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 200"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{colesterol_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="71" width="35" height="14">
+						<property name="orden" value="5890"/>
+						<property name="nombre" value="colhdl"/>
+						<property name="descripcion" value="Colesterol HDL"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{colhdl}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="73" width="39" height="15">
+						<property name="orden" value="51940"/>
+						<property name="nombre" value="colhdl_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="45.0-65.0"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{colhdl_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="85" width="35" height="14">
+						<property name="orden" value="5900"/>
+						<property name="nombre" value="colldl"/>
+						<property name="descripcion" value="Colesterol LDL"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{colldl}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="86" width="39" height="15">
+						<property name="orden" value="51950"/>
+						<property name="nombre" value="colldl_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 150.00"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{colldl_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="277" y="100" width="35" height="14">
+						<property name="orden" value="5910"/>
+						<property name="nombre" value="trigliceridos"/>
+						<property name="descripcion" value="Trigliceridos"/>
+						<property name="tipo_dato" value="N"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{trigliceridos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="351" y="100" width="39" height="15">
+						<property name="orden" value="51960"/>
+						<property name="nombre" value="trigliceridos_1"/>
+						<property name="descripcion" value="Valor de Referencia (Verificar)"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<property name="valor_defecto" value="Hasta 200.00"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{trigliceridos_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="130" y="16" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="31" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="45" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="58" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="72" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="86" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="101" width="22" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="113" width="22" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[g/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="127" width="22" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[g/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="140" width="22" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[g/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="16" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[U.I.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="29" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[U.I.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="44" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[U.L.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="58" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="86" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="71" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="316" y="101" width="27" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[mg/dL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="199" y="155" width="194" height="13">
+						<property name="orden" value="2136"/>
+						<property name="nombre" value="otroquimica"/>
+						<property name="descripcion" value="Otro"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{otroquimica}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="88" y="0" width="1" height="154"/>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="409" y="358" width="395" height="169">
+					<property name="nombre" value="uroanalisis"/>
+					<property name="descripcion" value="Uroanalisis"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="1" width="392" height="167"/>
+				</rectangle>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="0" width="392" height="16" backcolor="#FF9999"/>
+					<graphicElement>
+						<pen lineWidth="0.75"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement key="signos_vitales" x="0" y="1" width="88" height="12" forecolor="#000000" backcolor="#999999"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[4. UROANÁLISIS
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="161" y="15" width="1" height="126"/>
+				</line>
+				<rectangle>
+					<reportElement x="162" y="16" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="16" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="17" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[DENSIDAD
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="162" y="17" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[LEUCOCITOS PC
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="88" y="16" width="1" height="125"/>
+				</line>
+				<line>
+					<reportElement x="250" y="14" width="1" height="126"/>
+				</line>
+				<rectangle>
+					<reportElement x="0" y="30" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0" lineStyle="Double"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="30" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[pH
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="44" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="44" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[PROTEÍNA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="58" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="58" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[GLUCOSA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="72" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="72" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[CETONA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="86" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="86" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[HEMOGLOBINA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="100" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="100" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[BILIRRUBINA
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="114" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="114" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[URBILINÓGENO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="128" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="128" width="85" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[NITRITO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="29" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="29" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[PIOCITOS PC
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="43" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="43" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[ERITROCITOS PC
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="57" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="57" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[CÉLULAS ALTAS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="71" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="71" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[BACTERIAS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="85" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="85" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[HONGOS
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="99" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="99" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[MOCO
+                    ]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="162" y="113" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="162" y="127" width="88" height="14" backcolor="#C9DEF4"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<line>
+					<reportElement x="0" y="29" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="43" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="57" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="71" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="85" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="99" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="114" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="127" width="393" height="1"/>
+				</line>
+				<line>
+					<reportElement x="0" y="141" width="393" height="1"/>
+				</line>
+				<staticText>
+					<reportElement x="162" y="114" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[CRISTALES
+                    ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="162" y="127" width="88" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="7"/>
+					</textElement>
+					<text><![CDATA[CILINDROS
+                    ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="154" width="393" height="1"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="16" width="61" height="14">
+						<property name="orden" value="10253"/>
+						<property name="nombre" value="densidad"/>
+						<property name="descripcion" value="Densidad"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{densidad}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="29" width="61" height="14">
+						<property name="orden" value="10263"/>
+						<property name="nombre" value="ph_uro"/>
+						<property name="descripcion" value="pH"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ph_uro}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="44" width="61" height="14">
+						<property name="orden" value="10273"/>
+						<property name="nombre" value="proteina"/>
+						<property name="descripcion" value="Proteína"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{proteina}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="57" width="61" height="14">
+						<property name="orden" value="10283"/>
+						<property name="nombre" value="glucosa"/>
+						<property name="descripcion" value="Glucosa"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{glucosa}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="71" width="61" height="14">
+						<property name="orden" value="10293"/>
+						<property name="nombre" value="cetona"/>
+						<property name="descripcion" value="Cetona"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cetona}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="85" width="61" height="14">
+						<property name="orden" value="10303"/>
+						<property name="nombre" value="hemo"/>
+						<property name="descripcion" value="Hemoglobina"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hemo}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="100" width="61" height="14">
+						<property name="orden" value="10313"/>
+						<property name="nombre" value="bilirru"/>
+						<property name="descripcion" value="Bilirrubina"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bilirru}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="115" width="61" height="14">
+						<property name="orden" value="10323"/>
+						<property name="nombre" value="urbi"/>
+						<property name="descripcion" value="Urbilinógeno"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{urbi}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="90" y="127" width="61" height="14">
+						<property name="orden" value="10333"/>
+						<property name="nombre" value="nitrito"/>
+						<property name="descripcion" value="Nitrito"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nitrito}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="16" width="120" height="14">
+						<property name="orden" value="10343"/>
+						<property name="nombre" value="leucocitos_pc"/>
+						<property name="descripcion" value="Leucocitos PC"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{leucocitos_pc}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="29" width="120" height="14">
+						<property name="orden" value="10393"/>
+						<property name="nombre" value="piocitos"/>
+						<property name="descripcion" value="Piocitos PC"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{piocitos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="43" width="120" height="14">
+						<property name="orden" value="10403"/>
+						<property name="nombre" value="eritrocitos"/>
+						<property name="descripcion" value="Eritrocitos PC"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{eritrocitos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="57" width="120" height="14">
+						<property name="orden" value="10413"/>
+						<property name="nombre" value="celulas_altas"/>
+						<property name="descripcion" value="Células Altas"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{celulas_altas}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="72" width="120" height="14">
+						<property name="orden" value="10423"/>
+						<property name="nombre" value="bacterias"/>
+						<property name="descripcion" value="Bacterias"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{bacterias}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="85" width="120" height="14">
+						<property name="orden" value="10383"/>
+						<property name="nombre" value="hongos"/>
+						<property name="descripcion" value="Hongos"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{hongos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="99" width="120" height="14">
+						<property name="orden" value="10363"/>
+						<property name="nombre" value="mocos"/>
+						<property name="descripcion" value="Moco"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{mocos}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="114" width="120" height="14">
+						<property name="orden" value="10353"/>
+						<property name="nombre" value="cristales"/>
+						<property name="descripcion" value="Cristales"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cristales}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="260" y="126" width="120" height="14">
+						<property name="orden" value="10373"/>
+						<property name="nombre" value="cilindros"/>
+						<property name="descripcion" value="Cilindros"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cilindros}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="155" width="391" height="13">
+						<property name="orden" value="2137"/>
+						<property name="nombre" value="otrouroanalisis"/>
+						<property name="descripcion" value="Otro"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{otrouroanalisis}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="16" width="1" height="125"/>
+				</line>
+			</frame>
+			<line>
+				<reportElement x="0" y="173" width="1" height="69"/>
+			</line>
+			<line>
+				<reportElement x="801" y="167" width="1" height="74"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="0" width="125" height="11"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{id_orden}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="0" width="124" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{canton_descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

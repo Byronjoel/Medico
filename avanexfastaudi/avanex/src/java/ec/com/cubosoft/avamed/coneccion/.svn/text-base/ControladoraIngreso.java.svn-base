@@ -1,0 +1,283 @@
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.modelo.core.*;
+import ec.com.cubosoft.avamed.modelo.ingreso.Orden;
+import ec.com.cubosoft.avamed.modelo.organizacion.Organizacion;
+import ec.com.cubosoft.avamed.modelo.practica.*;
+import ec.com.cubosoft.avamed.procesos.*;
+import ec.com.cubosoft.avamed.modelo.medico.Area;
+import ec.com.cubosoft.avasus.controller.renderder.AreaRenderer;
+import ec.com.cubosoft.avasus.controller.renderder.OrdenIngresoRenderer;
+import ec.com.cubosoft.avasus.controller.renderder.OrganizacionRenderer;
+import ec.com.cubosoft.avasus.controller.renderder.PracticaRenderer;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.naming.NamingException;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+import org.zkoss.zk.ui.event.*;
+import org.zkoss.zul.*;
+
+/**
+ * @author Juan Pablo Chavez
+ * @version 1.0.1
+ * 
+ * @author Patricia Amoroso
+ * @version 1.0
+ */
+public class ControladoraIngreso extends GenericForwardComposer {
+
+    private Integer idArea, idPractica;
+    private Long idOrganizacion;
+    Datebox FecHasta, FecDesde;
+    Button btnBuscar, btnReset, btnCancel, btnNew, btnGuardar, btnOpen,
+            btnPreview, btnUpdate, btnDelete, btnPrint, btnSync;
+    Listbox LbxPracticas, LbxAreas, LbxEmpresas;
+    Bandbox bbAreas, bbPracticas, bbEmpresa;
+    Combobox cbEstado;
+    Textbox txtPacienteBusqueda, OrdenDesde, OrdenHasta;
+    Window WinIngreso;
+    Grid GridOrdenes;
+    Rows rowsTabla;
+    //
+    CsPerxgru permisosMenuIDControles = null;
+    ProcesosSession admiSessionUsuario = new ProcesosSession();
+    AdmiNegocio admNegocio;
+    private Footer footer_orden;
+    Include barraBotones;
+
+    public void onCreate$WinIngreso() {
+        loadSession();
+    }
+
+    private void loadSession() {
+        try {
+            GridOrdenes.setVflex(true);
+            admNegocio = new AdmiNegocio();
+            admiSessionUsuario.AgregarAtributoSession(4, page.getId(), desktop.getSession());
+
+            enableButtons();
+
+            loadAreas();
+            loadEmpresas();
+            loadPracticas();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void enableButtons() {
+        try {
+
+            btnBuscar = (Button) barraBotones.getFellow("btnBuscar", false);
+            btnReset = (Button) barraBotones.getFellow("btnReset", false);
+            btnCancel = (Button) barraBotones.getFellow("btnCancel", false);
+            btnGuardar = (Button) barraBotones.getFellow("btnGuardar", false);
+            btnNew = (Button) barraBotones.getFellow("btnNew", false);
+
+            btnBuscar.setDisabled(false);
+            btnBuscar.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                @Override
+                public void onEvent(Event event) throws Exception {
+                    buscar();
+                }
+            });
+
+            btnBuscar.setVisible(true);
+            btnReset.setDisabled(false);
+            btnReset.setVisible(true);
+            btnReset.addEventListener(Events.ON_CLICK, new EventListener() {
+
+                @Override
+                public void onEvent(Event event) throws Exception {
+                    reset();
+                }
+            });
+
+            if (permisosMenuIDControles != null) {
+                if (permisosMenuIDControles.getAlta() == 1) { //activo nuevo
+//                    bandGuardar = true;
+                } else {
+//                    bandGuardar = true;
+                    btnNew.setStyle("color: #A2B5CD;");
+                }
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private List getOrdenesIngreso() throws NamingException, InterruptedException {
+
+        List listOrdenes = null;
+
+        //Sí todos los campos de la cabecera son vacios entonces no sigo
+        if ((FecDesde.getValue() == null) && (FecHasta.getValue() == null)
+                && (OrdenDesde.getValue().isEmpty()) && (OrdenHasta.getValue().isEmpty())
+                && ((bbPracticas.getValue().equals("(Todos)")) || (bbPracticas.getValue().isEmpty()))
+                && ((bbEmpresa.getValue().equals("(Todos)")) || (bbEmpresa.getValue().isEmpty()))
+                && ((bbAreas.getValue().equals("(Todos)")) || (bbAreas.getValue().isEmpty()))) {
+
+            Messagebox.show("No existen condiciones de busqueda, por favor ponga alguna condición.",
+                    "Filtro Vacío", Messagebox.OK, Messagebox.EXCLAMATION);
+//                reset();
+        }
+
+        listOrdenes = getOrdenes();
+
+        return listOrdenes;
+    }
+
+    private List getOrdenes() throws NamingException {
+
+        Object table = new Orden();
+
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+//        List cSQL = new ArrayList();
+        List oSQL = new ArrayList();
+
+        wSQL.put("id ?>=", OrdenDesde.getValue());
+        wSQL.put("id ?<=", OrdenHasta.getValue());
+        wSQL.put("organizacion.id ?=", idOrganizacion);
+        wSQL.put("fecIngreso ?>=", FecDesde.getValue());
+        wSQL.put("fecIngreso ?<=", FecHasta.getValue());
+        wSQL.put("historia.paciente ?like", txtPacienteBusqueda.getValue().toUpperCase());
+        wSQL.put("practicaXorden.practica.id ?=", idPractica);
+        wSQL.put("practicaXorden.practica.area.id ?=", idArea);
+        wSQL.put("stsTecnico ?=", (cbEstado.getSelectedItem() != null ? cbEstado.getSelectedItem().getId() : null));
+
+        oSQL.add("id");
+
+        return admNegocio.getData(table, wSQL, null, oSQL);
+    }
+
+    public void buscar() {
+        //Limpieza de Grid
+        cleanGrid();
+
+        try {
+            List<Orden> listOrdenesIngreso = getOrdenesIngreso();
+
+            GridOrdenes.setRowRenderer(new OrdenIngresoRenderer());
+            GridOrdenes.setModel(new ListModelList(listOrdenesIngreso));
+            GridOrdenes.renderAll();
+            GridOrdenes.invalidate();
+            footer_orden.setLabel(String.valueOf(listOrdenesIngreso.size()) + " Orden(es) en listado");
+
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    private void cleanCab() {
+        txtPacienteBusqueda.setValue("");
+        OrdenDesde.setValue("");
+        OrdenHasta.setValue("");
+        FecDesde.setValue(new Date());
+        FecHasta.setValue(new Date());
+        cbEstado.setValue(null);
+
+        idArea = null;
+        idOrganizacion = null;
+        idPractica = null;
+    }
+
+    private void reset() {
+        btnBuscar.setDisabled(false);
+
+//            loadAreas();
+//            loadEmpresas();
+//            loadPracticas();
+
+        cleanCab();
+        cleanGrid();
+
+    }
+
+    public void onClick$btnCancelar() {
+        reset();
+    }
+
+    private void cleanGrid() {
+        rowsTabla.getChildren().clear();
+        footer_orden.setLabel("");
+    }
+
+    public void loadAreas() throws NamingException {
+        Object table = new Area();
+        List oSQL = new ArrayList();
+        oSQL.add("descripcion");
+        Map<String, Object> wSQL = new HashMap<String, Object>();
+        wSQL.put("lockReg ?=", 0);
+        wSQL.put("idPadre?=", 0);
+        List objectList = admNegocio.getData(table, wSQL, null, oSQL);
+
+        LbxAreas.setItemRenderer(new AreaRenderer());
+        LbxAreas.setModel(new ListModelList(objectList));
+
+        bbAreas.setValue(null);
+    }
+
+    public void onSelect$LbxAreas() {
+        Area area = (Area) LbxAreas.getSelectedItem().getValue();
+        bbAreas.setValue(area.getDescripcion());
+        idArea = area.getId();
+
+        System.out.print("Area escogida = " + idArea);
+
+        bbAreas.close();
+    }
+
+    public void loadEmpresas() throws NamingException {
+
+        Object table = new Organizacion();
+        List oSQL = new ArrayList();
+        oSQL.add("abreviatura");
+
+        List objectList = admNegocio.getData(table, false, oSQL);
+
+        LbxEmpresas.setItemRenderer(new OrganizacionRenderer());
+        LbxEmpresas.setModel(new ListModelList(objectList));
+
+        bbEmpresa.setValue(null);
+    }
+
+    public void onSelect$LbxEmpresas() {
+        Organizacion empresa = (Organizacion) LbxEmpresas.getSelectedItem().getValue();
+        bbEmpresa.setValue(empresa.getAbreviatura());
+        idOrganizacion = empresa.getId();
+
+        System.out.print("Empresa escogida = " + idOrganizacion);
+
+        bbEmpresa.close();
+    }
+
+    public void loadPracticas() throws NamingException {
+
+        Object table = new NombreP();
+        List oSQL = new ArrayList();
+        oSQL.add("descripcion");
+
+        List objectList = admNegocio.getData(table, false, oSQL);
+
+        LbxPracticas.setItemRenderer(new PracticaRenderer());
+        LbxPracticas.setModel(new ListModelList(objectList));
+
+        bbPracticas.setValue(null);
+    }
+
+    public void onSelect$LbxPracticas() {
+        NombreP practica = (NombreP) LbxPracticas.getSelectedItem().getValue();
+        bbPracticas.setValue(practica.getAbreviatura());
+        idPractica = practica.getId();
+
+        System.out.print("Practica escogida = " + idPractica);
+
+        bbPracticas.close();
+    }
+}

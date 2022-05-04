@@ -1,0 +1,71 @@
+<window id="winslista" title="Datos Practicas" style=" border: 3px solid #86b3b1;"  width="900px" border="normal" apply="ec.com.cubosoft.avamed.coneccion.ManejadoraLista" closable="true" >
+        <zscript>
+             import org.zkoss.zul.SimpleTreeNode;
+        import org.zkoss.zul.SimpleTreeModel;
+        import java.util.ArrayList;
+        import ec.com.cubosoft.avamed.coneccion.ManejadoraLista;
+        ManejadoraLista objm=new ManejadoraLista();
+        import ec.com.cubosoft.avamed.fuente.practica.Nombre;
+        import ec.com.cubosoft.avamed.fuente.practica.Codificacion;
+        import ec.com.cubosoft.avamed.fuente.practica.PracticaAsociada;
+        import ec.com.cubosoft.avamed.fuente.practica.Sinonimo;
+        import ec.com.cubosoft.avamed.fuente.practica.Termino;
+        List Datos = objm.getAllEvents();
+        List AuxDatos;
+        ArrayList alpractica = new ArrayList();
+        for (Object objn : Datos) {
+            Nombre objp = (Nombre) objn;
+            ArrayList alc2 = new ArrayList();
+            ArrayList aux = new ArrayList();
+            ArrayList aux1 = new ArrayList();
+            AuxDatos = objm.getAllEventsd("Termino",objp.getId());
+            for (Object objt : AuxDatos) {
+                Termino objte = (Termino) objt;
+                SimpleTreeNode stndtd = new SimpleTreeNode(objte.getDescripcion(), aux1);
+                aux.add(stndtd);
+            }
+            SimpleTreeNode stndt = new SimpleTreeNode("Terminos", aux);
+            alc2.add(stndt);
+            ArrayList auxc = new ArrayList();
+            AuxDatos = objm.getAllEventsd("Codificacion",objp.getId());
+            for (Object objc : AuxDatos) {
+                Codificacion objtcd = (Codificacion) objc;
+                SimpleTreeNode stndcd = new SimpleTreeNode(objtcd.getDescripcion(), aux1);
+                auxc.add(stndcd);
+            }
+                SimpleTreeNode stndc = new SimpleTreeNode("Codificacion", auxc);
+                alc2.add(stndc);
+            ArrayList auxs = new ArrayList();
+            AuxDatos = objm.getAllEventsd("Sinonimo",objp.getId());
+            for (Object objs : AuxDatos) {
+                Sinonimo objtsd = (Sinonimo) objs;
+                SimpleTreeNode stndsd = new SimpleTreeNode(objtsd.getDescripcion(), aux1);
+                auxs.add(stndsd);
+            }
+            SimpleTreeNode stnds= new SimpleTreeNode("Sinonimos", auxs);
+            alc2.add(stnds);
+            ArrayList auxpa = new ArrayList();
+            AuxDatos = objm.getAllEventsd("PracticaAsociada",objp.getId());
+            for (Object objp : AuxDatos) {
+                PracticaAsociada objtpad = (PracticaAsociada) objp;
+                SimpleTreeNode stndpad = new SimpleTreeNode(objtpad.getDescripcion(), aux1);
+                auxpa.add(stndpad);
+            }
+                SimpleTreeNode stndp = new SimpleTreeNode("Practicas Asociadas", auxpa);
+                alc2.add(stndp);
+                SimpleTreeNode stn = new SimpleTreeNode(objp.getDescripcion(),alc2);
+                alpractica.add(stn);
+       }
+        SimpleTreeNode practicas = new SimpleTreeNode("Practicas", alpractica);
+        ArrayList al = new ArrayList();
+        al.add(practicas);
+        SimpleTreeNode root = new SimpleTreeNode("ROOT", al);
+     	SimpleTreeModel stm = new SimpleTreeModel(root);
+        </zscript>
+        <tree id="arbol" fixedLayout="true" multiple="true" model="${stm}">
+            <treecols>
+                <treecol width="120px" label="Descripcion" />
+
+            </treecols>
+        </tree>
+    </window>

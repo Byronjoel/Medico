@@ -1,0 +1,170 @@
+/* 
+    Document   : StiloDefault
+    Created on : 22/02/2011, 10:31:41 AM
+    Author     : Administrador
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+/*
+.root {
+    display: block;
+
+}*/
+
+
+.button_save1
+{    
+    /*color: #fff;*/
+    /*background:transparent;*/
+/*text-align:left;
+text-decoration:underline;
+border:none 0px;
+vertical-align:baseline;
+height:90%;
+cursor:hand;
+color :#FFFFFF;
+font-size:12px ;
+font-weight:lighter;
+font-family:verdana,arial,helvetica,clean,sans-serif;
+margin-right:0px;
+width:auto ;
+padding-right: 0px;
+display:inline; */
+/*      width: 110px;
+      height: 50px;
+      font-size: 9px;
+      font-weight: bold;
+      text-align: justify;
+      background: #ffb515;
+      border-radius: 5px;
+      vertical-align: top;
+      text-align: right;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      text-shadow: 0 -1px 1px rgba(0,0,0,0.25);*/
+    /*width: auto;*/
+    height: 50px;
+    margin-right:0px;
+    margin-left: 0px;
+    font-size: 12px;
+    vertical-align: auto;
+    text-align: justify;
+    
+}
+.button_s
+{
+    border: 1px solid #FF0000;
+    background-color:#FF6968;
+    
+    font-size: 20px;
+    font-weight: bold;
+    color:#FF6968;
+    width: 200px;
+}
+.button_ok
+{
+    border: 1px solid #FF0000;
+    background-color:#FF6968;
+    font-size: 20px;
+    font-weight: bold;
+    color:#FF6968;
+    width: 200px;
+}
+.button:hover {
+    background-color:#778899;
+}
+.button:focus {
+    background-color:#BEBEBE;
+}
+.button_save2
+{    
+   /*width: auto;*/
+    height: 50px;
+      font-size: 12px;
+    text-align: justify;
+    margin-right:0px;
+    margin-left: 0px;
+      vertical-align: auto;
+}
+.button_validate
+{    
+    /*width: auto;*/
+    height: 50px;
+      font-size: 12px;
+    text-align: justify;
+}
+.button_cancel
+{    
+    /*width: auto;*/
+    height: 50px;
+    /*overflow: hidden;*/ 
+      font-size: 12px;
+    text-align: start;
+}
+.button_nosave
+{    
+    width: auto;
+    height: 50px;
+    overflow: hidden; 
+    text-align: justify; 
+}
+.south_validate 
+{
+    background-color: #2E8B57;
+}
+.modal-overlay
+{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background:#fff;
+    opacity:.75;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    z-index:101;
+}
+.modal-window
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin:0;
+    padding:0;
+    z-index:102;
+}
+.close-window
+{
+    position:absolute;
+    width:32px;
+    height:32px;
+    right:8px;
+    top:8px;
+    background:transparent url('/examples/modal-simple/close-button.png') no-repeat scroll right top;
+    text-indent:-99999px;
+    overflow:hidden;
+    cursor:pointer;
+    opacity:.5;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+}
+.close-window:hover
+{
+    opacity:.99;
+    filter: alpha(opacity=99);
+    -moz-opacity: 0.99;
+}
+.timeout 
+{
+    font-size: 20px;
+    color:#3D94FF;
+}

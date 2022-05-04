@@ -1,0 +1,154 @@
+/* 
+    Document   : historia
+    Created on : 6/12/2011, 03:45:50 PM
+    Author     : JP
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.patient-cab
+{
+    /*background-color:#FFFF00;*/
+ background-color: #079d8f; 
+}
+.antecedente-cab
+{
+    background-color:#7bbed1;
+}
+.patient-row
+{
+    background: #A2B5CD; 
+    border:none;
+}
+
+.patient-row-particular
+{
+    background: #cc99ff; 
+    border:none;
+}
+
+.patient-name
+{ 
+    color: #006400; 
+    font-size: 12px;
+}
+.patient-data {
+    color: #2e8b57; 
+    font-size: 13px;
+}
+
+.patient-na
+{
+
+    color: #006400; 
+    font-size: 16px;
+}
+
+
+.patient-data-green {
+    color:#006400; 
+    font-size: 12px;
+}
+
+.patient-data-green2 {
+    color:#006400; 
+    font-size: 13px;
+}
+
+.titulo-listado {
+    color:#2E8B57;
+    font-family: arial, sans-serif;
+    font-size: 22px;
+}
+
+.detalle-listado {
+    border: 2px black solid;
+    border-color: #006400;
+}
+
+.nodo-grupo,.nodo-grupo:hover{
+    border: 1px outset;
+    background-color:#B9D103;
+    color: black;
+    text-align: center; 
+
+}
+
+.row-resultado{
+    border: 0px outset;
+    background-color:#FFFFFF;
+
+    font-size: 16px;
+    color:#4F4F4F;
+    vertical-align: top;
+}
+
+.nombre-resultado {
+    color:#4F4F4F;
+    float:right;
+}
+.descripcion-resultado{
+    /*    color:#708090; */
+    float:left;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.resultado {
+    font-size: 14px;
+    border-right:  2px;
+    line-height: 1.2;
+}
+
+.resultado-incompleto {
+    border: 2px #B22222 solid;
+    font-size: 14px;
+    border-right:  2px #B22222 solid;
+    line-height: 1.2;
+
+
+}
+
+.resultado-completo {
+    border: 2px #8FBC8F solid;
+    font-size: 14px;
+    line-height: 1.2;
+
+}
+
+.sino-incompleto {
+    background-color: #B22222;
+}
+.win-edit-resultado {
+    border: 2px black solid;
+    border-color: #006400;
+}
+
+.edit-resultado {
+    border: 0px outset;
+    background-color:#FFFFFF;
+    font-size: 18px;
+    line-height: 1.2;
+    /*color:#4F4F4F;*/
+    text-align: justify;
+    /*color: #FFFF00;*/
+    /*color: #FFFF00;*/
+}
+
+.nombre-practica{
+    font-size: 26px; 
+    color:#00008B;
+    border: 1px #00008B outset;
+}
+.z-tree
+{
+    font-size: 26px; 
+    color:#00008B;
+    border: 1px #00008B outset;
+}
+

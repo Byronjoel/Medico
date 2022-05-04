@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Historial" id="WinHist" ?>
+<!--<?page title="Historial" id="m_administradora" ?>-->
+<!--<?component name="newPlantilla" macroURI="/templates/PlantillaAdmin.zul"?>
+<?component name="newControl" macroURI="/templates/ControlesBase.zul"?>
+<?component name="newGrdReporte" macroURI="/templates/Generales/ReporteP.zul"?>
+<?component name="newCmbBox" macroURI="/templates/Generales/cmbBox.zul"?>
+<?component name="newFechas" macroURI="/templates/Generales/FiltroFechas.zul"?>-->
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>-->
+<!--?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" arg0="activewin"?-->
+
+<!-- @author Juan Pablo Chavez  -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso  -->
+<!-- @version 1.0  -->
+
+<window id="modalDialog" title="Coffee Order" border="normal" width="460px" style=" border: 3px solid #86b3b1;"
+        apply="ec.com.cubosoft.avamed.coneccion.ControladoraIngre"         
+        position="center,center" closable="true"
+        action="show: slideDown;hide: slideUp">
+    <vlayout>
+        <grid>
+            <columns>
+                <column hflex="1" label="#" />
+                <column hflex="2" label="Descripción" align="center" />
+                <column hflex="1" label="Quantity" align="center" />
+            </columns>
+            <rows>
+                
+            </rows>
+        </grid>
+        <button id="closeBtn" hflex="1" label="close"/>
+    </vlayout>
+</window>

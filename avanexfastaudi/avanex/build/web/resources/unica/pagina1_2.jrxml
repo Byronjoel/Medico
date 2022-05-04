@@ -1,0 +1,3158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="28" bottomMargin="25" uuid="e273829b-d881-4b18-810f-f2198784161f">
+	<property name="ireport.zoom" value="1.6105100000000112"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="pais_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_codigo]]></fieldDescription>
+	</field>
+	<field name="pais_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/pais_descripcion]]></fieldDescription>
+	</field>
+	<field name="estado_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_codigo]]></fieldDescription>
+	</field>
+	<field name="estado_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_descripcion]]></fieldDescription>
+	</field>
+	<field name="canton_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_codigo]]></fieldDescription>
+	</field>
+	<field name="canton_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/canton_descripcion]]></fieldDescription>
+	</field>
+	<field name="parroquia_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_codigo]]></fieldDescription>
+	</field>
+	<field name="parroquia_descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/parroquia_descripcion]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/nombres]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/apellidos]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/edad]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/sexo]]></fieldDescription>
+	</field>
+	<field name="estado_civil" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/estado_civil]]></fieldDescription>
+	</field>
+	<field name="instruccion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/instruccion_paciente]]></fieldDescription>
+	</field>
+	<field name="identificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/identificacion]]></fieldDescription>
+	</field>
+	<field name="lugar_nacimiento" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/d_filiacion/ln]]></fieldDescription>
+	</field>
+	<field name="fecha_nacimiento" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha_nace]]></fieldDescription>
+	</field>
+	<field name="profesion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/profesion]]></fieldDescription>
+	</field>
+	<field name="ocupacions" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/d_filiacion/ocupacions]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/direccion_paciente]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/telefono]]></fieldDescription>
+	</field>
+	<field name="especialidad" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/especialidad]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/fecha]]></fieldDescription>
+	</field>
+	<field name="medico" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/medico]]></fieldDescription>
+	</field>
+	<field name="cod_med" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/cod_med]]></fieldDescription>
+	</field>
+	<field name="empresa" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/empresa]]></fieldDescription>
+	</field>
+	<field name="id_orden" class="java.lang.String">
+		<fieldDescription><![CDATA[datos_generales_standar/id_orden]]></fieldDescription>
+	</field>
+	<field name="inicio_actividad_laboral" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/antecedentes_laborales/inicio_actividad_laboral]]></fieldDescription>
+	</field>
+	<field name="tipo_informe" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/d_filiacion/tipo_informe]]></fieldDescription>
+	</field>
+	<field name="empresa1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/empresa1]]></fieldDescription>
+	</field>
+	<field name="tiempo1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/tiempo1]]></fieldDescription>
+	</field>
+	<field name="cargo1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/cargo1]]></fieldDescription>
+	</field>
+	<field name="ruido1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/ruido1]]></fieldDescription>
+	</field>
+	<field name="vibracion1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/vibracion1]]></fieldDescription>
+	</field>
+	<field name="iluminacion1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/iluminacion1]]></fieldDescription>
+	</field>
+	<field name="ionizantes1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/ionizantes1]]></fieldDescription>
+	</field>
+	<field name="noionizantes1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/noionizantes1]]></fieldDescription>
+	</field>
+	<field name="presion1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/presion1]]></fieldDescription>
+	</field>
+	<field name="vapores1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/vapores1]]></fieldDescription>
+	</field>
+	<field name="gases1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/gases1]]></fieldDescription>
+	</field>
+	<field name="fibras1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/fibras1]]></fieldDescription>
+	</field>
+	<field name="porganicos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/porganicos1]]></fieldDescription>
+	</field>
+	<field name="pinorganicos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/pinorganicos1]]></fieldDescription>
+	</field>
+	<field name="hmetalicos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/hmetalicos1]]></fieldDescription>
+	</field>
+	<field name="hcombustion1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/hcombustion1]]></fieldDescription>
+	</field>
+	<field name="neblinas1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/neblinas1]]></fieldDescription>
+	</field>
+	<field name="liquidos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/liquidos1]]></fieldDescription>
+	</field>
+	<field name="bacterias1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/bacterias1]]></fieldDescription>
+	</field>
+	<field name="cindirecto1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/cindirecto1]]></fieldDescription>
+	</field>
+	<field name="cargas1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/cargas1]]></fieldDescription>
+	</field>
+	<field name="pvds1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/pvds1]]></fieldDescription>
+	</field>
+	<field name="pmantenidas1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/pmantenidas1]]></fieldDescription>
+	</field>
+	<field name="efisico1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/efisico1]]></fieldDescription>
+	</field>
+	<field name="mrepetitivos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/mrepetitivos1]]></fieldDescription>
+	</field>
+	<field name="celectricos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/celectricos1]]></fieldDescription>
+	</field>
+	<field name="scalientes1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/scalientes1]]></fieldDescription>
+	</field>
+	<field name="ucortopunzantes1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/ucortopunzantes1]]></fieldDescription>
+	</field>
+	<field name="gobjetos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/gobjetos1]]></fieldDescription>
+	</field>
+	<field name="apartes1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/apartes1]]></fieldDescription>
+	</field>
+	<field name="cobjetos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/cobjetos1]]></fieldDescription>
+	</field>
+	<field name="derrumbes1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/derrumbes1]]></fieldDescription>
+	</field>
+	<field name="avehiculos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/avehiculos1]]></fieldDescription>
+	</field>
+	<field name="omecanicos1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/omecanicos1]]></fieldDescription>
+	</field>
+	<field name="mambiente1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/mambiente1]]></fieldDescription>
+	</field>
+	<field name="fpropios1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/fpropios1]]></fieldDescription>
+	</field>
+	<field name="ttrabajo1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/ttrabajo1]]></fieldDescription>
+	</field>
+	<field name="gadministrativa1" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp1/gadministrativa1]]></fieldDescription>
+	</field>
+	<field name="empresa2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/empresa2]]></fieldDescription>
+	</field>
+	<field name="tiempo2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/tiempo2]]></fieldDescription>
+	</field>
+	<field name="cargo2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/cargo2]]></fieldDescription>
+	</field>
+	<field name="ruido2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/ruido2]]></fieldDescription>
+	</field>
+	<field name="vibracion2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/vibracion2]]></fieldDescription>
+	</field>
+	<field name="iluminacion2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/iluminacion2]]></fieldDescription>
+	</field>
+	<field name="ionizantes2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/ionizantes2]]></fieldDescription>
+	</field>
+	<field name="noionizantes2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/noionizantes2]]></fieldDescription>
+	</field>
+	<field name="presion2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/presion2]]></fieldDescription>
+	</field>
+	<field name="vapores2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/vapores2]]></fieldDescription>
+	</field>
+	<field name="gases2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/gases2]]></fieldDescription>
+	</field>
+	<field name="fibras2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/fibras2]]></fieldDescription>
+	</field>
+	<field name="porganicos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/porganicos2]]></fieldDescription>
+	</field>
+	<field name="pinorganicos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/pinorganicos2]]></fieldDescription>
+	</field>
+	<field name="hmetalicos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/hmetalicos2]]></fieldDescription>
+	</field>
+	<field name="hcombustion2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/hcombustion2]]></fieldDescription>
+	</field>
+	<field name="neblinas2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/neblinas2]]></fieldDescription>
+	</field>
+	<field name="liquidos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/liquidos2]]></fieldDescription>
+	</field>
+	<field name="bacterias2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/bacterias2]]></fieldDescription>
+	</field>
+	<field name="cindirecto2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/cindirecto2]]></fieldDescription>
+	</field>
+	<field name="cargas2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/cargas2]]></fieldDescription>
+	</field>
+	<field name="pvds2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/pvds2]]></fieldDescription>
+	</field>
+	<field name="pmantenidas2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/pmantenidas2]]></fieldDescription>
+	</field>
+	<field name="efisico2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/efisico2]]></fieldDescription>
+	</field>
+	<field name="mrepetitivos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/mrepetitivos2]]></fieldDescription>
+	</field>
+	<field name="celectricos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/celectricos2]]></fieldDescription>
+	</field>
+	<field name="scalientes2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/scalientes2]]></fieldDescription>
+	</field>
+	<field name="ucortopunzantes2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/ucortopunzantes2]]></fieldDescription>
+	</field>
+	<field name="gobjetos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/gobjetos2]]></fieldDescription>
+	</field>
+	<field name="apartes2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/apartes2]]></fieldDescription>
+	</field>
+	<field name="cobjetos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/cobjetos2]]></fieldDescription>
+	</field>
+	<field name="derrumbes2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/derrumbes2]]></fieldDescription>
+	</field>
+	<field name="avehiculos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/avehiculos2]]></fieldDescription>
+	</field>
+	<field name="omecanicos2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/omecanicos2]]></fieldDescription>
+	</field>
+	<field name="mambiente2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/mambiente2]]></fieldDescription>
+	</field>
+	<field name="fpropios2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/fpropios2]]></fieldDescription>
+	</field>
+	<field name="ttrabajo2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/ttrabajo2]]></fieldDescription>
+	</field>
+	<field name="gadministrativa2" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp2/gadministrativa2]]></fieldDescription>
+	</field>
+	<field name="actual_des" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/antecedentes_laborales/actual_des]]></fieldDescription>
+	</field>
+	<field name="riesgos_expuestos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/antecedentes_laborales/riesgos_expuestos]]></fieldDescription>
+	</field>
+	<field name="proteccion" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/antecedentes_laborales/proteccion]]></fieldDescription>
+	</field>
+	<field name="empresa3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/empresa3]]></fieldDescription>
+	</field>
+	<field name="tiempo3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/tiempo3]]></fieldDescription>
+	</field>
+	<field name="cargo3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/cargo3]]></fieldDescription>
+	</field>
+	<field name="ruido3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/ruido3]]></fieldDescription>
+	</field>
+	<field name="vibracion3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/vibracion3]]></fieldDescription>
+	</field>
+	<field name="iluminacion3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/iluminacion3]]></fieldDescription>
+	</field>
+	<field name="ionizantes3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/ionizantes3]]></fieldDescription>
+	</field>
+	<field name="noionizantes3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/noionizantes3]]></fieldDescription>
+	</field>
+	<field name="presion3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/presion3]]></fieldDescription>
+	</field>
+	<field name="vapores3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/vapores3]]></fieldDescription>
+	</field>
+	<field name="gases3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/gases3]]></fieldDescription>
+	</field>
+	<field name="fibras3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/fibras3]]></fieldDescription>
+	</field>
+	<field name="porganicos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/porganicos3]]></fieldDescription>
+	</field>
+	<field name="pinorganicos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/pinorganicos3]]></fieldDescription>
+	</field>
+	<field name="hmetalicos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/hmetalicos3]]></fieldDescription>
+	</field>
+	<field name="hcombustion3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/hcombustion3]]></fieldDescription>
+	</field>
+	<field name="neblinas3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/neblinas3]]></fieldDescription>
+	</field>
+	<field name="liquidos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/liquidos3]]></fieldDescription>
+	</field>
+	<field name="bacterias3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/bacterias3]]></fieldDescription>
+	</field>
+	<field name="cindirecto3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/cindirecto3]]></fieldDescription>
+	</field>
+	<field name="cargas3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/cargas3]]></fieldDescription>
+	</field>
+	<field name="pvds3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/pvds3]]></fieldDescription>
+	</field>
+	<field name="pmantenidas3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/pmantenidas3]]></fieldDescription>
+	</field>
+	<field name="efisico3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/efisico3]]></fieldDescription>
+	</field>
+	<field name="mrepetitivos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/mrepetitivos3]]></fieldDescription>
+	</field>
+	<field name="celectricos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/celectricos3]]></fieldDescription>
+	</field>
+	<field name="scalientes3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/scalientes3]]></fieldDescription>
+	</field>
+	<field name="ucortopunzantes3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/ucortopunzantes3]]></fieldDescription>
+	</field>
+	<field name="gobjetos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/gobjetos3]]></fieldDescription>
+	</field>
+	<field name="apartes3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/apartes3]]></fieldDescription>
+	</field>
+	<field name="cobjetos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/cobjetos3]]></fieldDescription>
+	</field>
+	<field name="derrumbes3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/derrumbes3]]></fieldDescription>
+	</field>
+	<field name="avehiculos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/avehiculos3]]></fieldDescription>
+	</field>
+	<field name="omecanicos3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/omecanicos3]]></fieldDescription>
+	</field>
+	<field name="mambiente3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/mambiente3]]></fieldDescription>
+	</field>
+	<field name="fpropios3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/fpropios3]]></fieldDescription>
+	</field>
+	<field name="ttrabajo3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/ttrabajo3]]></fieldDescription>
+	</field>
+	<field name="gadministrativa3" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/emp3/gadministrativa3]]></fieldDescription>
+	</field>
+	<field name="otros_riesgos" class="java.lang.String">
+		<fieldDescription><![CDATA[pagina0/oriesgos/otros_riesgos]]></fieldDescription>
+	</field>
+	<field name="imagen" class="java.lang.String">
+		<fieldDescription><![CDATA["C:\\glassfishv3\\logos\\icono.png"]]></fieldDescription>
+	</field>
+	<field name="imagen2" class="java.lang.String">
+		<fieldDescription><![CDATA["C:\\glassfishv3\\logos\\servigrup.jpg"]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="511" height="40" uuid="59836c3a-dd1b-4e9d-82ec-58fd8506f2c2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="150" y="1" width="228" height="13" uuid="3c9881c0-798d-4adc-8923-8536499b6fb1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="149" y="14" width="231" height="12" uuid="cf305c4c-5257-4469-a2f7-bd26677cdf8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VIGILANCIA DE LA SALUD DE LOS TRABAJADORES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="27" width="228" height="12" uuid="be13545c-e94b-4981-a935-059e9703b749"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HISTORIA CL�NICA OCUPACIONAL]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="1" width="148" height="38" uuid="c85aaaeb-54e4-464b-bb1f-f7ec246a51d1"/>
+				<imageExpression><![CDATA[$F{imagen}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="381" y="1" width="128" height="38" uuid="e577309f-c01f-4d2a-acd5-2da0d20c983b"/>
+				<imageExpression><![CDATA[$F{imagen2}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="111" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="511" height="110" uuid="18533da3-31cc-48d4-9161-a8f689768a67"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="511" height="12" uuid="831f262b-1487-4cd9-ba24-8729dfbbad67"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="0" width="100" height="11" uuid="a9cc3024-e05a-4cc6-91eb-bc77a410ec9d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE CHEQUEO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="102" y="0" width="138" height="11" uuid="527c50d7-2c94-4b65-96e3-6c7c102413b7">
+					<property name="orden" value="0"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="12" width="511" height="17" uuid="5eb97fa0-3dd2-4733-82a3-8d5e1e84909f"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="14" width="82" height="11" uuid="74353a6f-159e-4567-94fe-7e50c197823a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO DE CHEQUEO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="15" width="32" height="11" uuid="3b5ff4cd-7ecf-45b5-b521-f4da51c2d45a"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[INICIAL:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="133" y="14" width="17" height="13" uuid="81510f6d-ed3f-4c86-9b98-4ae203cfe8e7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="134" y="15" width="15" height="11" uuid="f0f25463-6f46-4e7a-b605-3b9b9351b1da"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( ($F{tipo_informe}.equalsIgnoreCase("INICIAL")) ? "X" : "" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="172" y="15" width="50" height="11" uuid="a26a970b-f1c1-47db-8048-3a08946f8746"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PERI�DICO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="221" y="14" width="17" height="13" uuid="791959e9-e654-45bd-875b-89df5b5824d9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="222" y="15" width="15" height="11" uuid="ee11b78d-9c41-453e-851d-cb5853c17f32"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( ($F{tipo_informe}.equalsIgnoreCase("PERI�DICO")) ? "X" : "" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="269" y="15" width="84" height="11" uuid="ad540551-67c7-44ff-a90c-e87490a2c7e6"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[POSTOCUPACIONAL:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="353" y="14" width="17" height="13" uuid="b9793cf6-25e1-445a-8c02-aa5ae8eb8523"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="15" width="15" height="11" uuid="ed2f2822-8070-4f5b-8867-f8e905014ac0"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( ($F{tipo_informe}.equalsIgnoreCase("POSTOCUPACIONAL")) ? "X" : "" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="403" y="15" width="53" height="11" uuid="14f0ba1a-11fc-4edb-b0b9-159977f509cd"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[REINTEGRO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="456" y="14" width="17" height="13" uuid="21f47f11-1a7e-4e1a-98b2-36d3021638e2"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="457" y="15" width="15" height="11" uuid="28f9f74a-9a60-441b-8c66-d130da82ca37"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( ($F{tipo_informe}.equalsIgnoreCase("REINTEGRO")) ? "X" : "" )]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="29" width="511" height="14" uuid="eb446aa4-031d-4ba1-825c-c01991339fc7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="57" width="49" height="12" uuid="607bfd3f-ee74-4af3-89d0-bf88e3ae1b64"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CEDULA ID:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="51" y="57" width="108" height="12" uuid="94e53010-7ebf-4d43-a6bf-a99c63d18f8b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identificacion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="50" y="55" width="205" height="1" uuid="563f9590-ff85-40d1-9fbb-818826e2ebff"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="44" width="48" height="12" uuid="be7393ac-424f-4bd6-89b5-25f707ef8ad3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRES:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="44" width="205" height="12" uuid="0feb74e6-4ff8-4380-bb35-d35944d2b737"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="256" y="44" width="54" height="12" uuid="2bf0d2b1-dcd2-4f01-bcd1-bfeba55701a4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APELLIDOS:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="309" y="44" width="200" height="12" uuid="fc824ae9-fa8f-4771-8b9e-fcd387a06fb7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="52" y="67" width="107" height="1" uuid="8dc60594-aba6-4ef1-b91a-096e39d6abc6"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="432" y="67" width="77" height="1" uuid="81950489-fc03-4668-b926-1107e8b3d4f7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="161" y="57" width="30" height="12" uuid="96936580-f8a3-4ed8-927c-effbdf49aaf1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EDAD:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="190" y="57" width="65" height="12" uuid="f0b51b25-a404-428b-8dfd-3144d571849b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{edad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="256" y="57" width="30" height="12" uuid="f7916ad1-01d6-49b1-b21a-2f0ba1c9feb0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEXO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="286" y="57" width="80" height="12" uuid="f5706236-f5b6-43b9-a7a8-ea6b928e1b72"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="367" y="57" width="65" height="12" uuid="1a527f20-57d6-4792-bbcd-983ec29cd6b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO CIVIL:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="431" y="57" width="78" height="12" uuid="f4b25d09-b37d-43fe-b95f-c0d51279162e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado_civil}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="71" y="80" width="153" height="1" uuid="4625083c-dad2-4838-ac9f-4ef3db9835be"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="367" y="80" width="142" height="1" uuid="7a3254fe-db86-4a73-92e2-3a1ec9a92011"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="190" y="67" width="65" height="1" uuid="9ed2edc1-899b-467f-bb5c-c2789e719333"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="70" width="67" height="12" uuid="bd931c96-9234-48fb-ad99-f8e9005f8cbc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSTRUCCI�N:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="69" y="70" width="155" height="12" uuid="04a016a9-4451-4f41-8ceb-dcfa33280541"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( ($F{instruccion}.equalsIgnoreCase("1")) ? "PRIMARIA" : ($F{instruccion}.equalsIgnoreCase("2")) ? "SECUNDARIA" : ($F{instruccion}.equalsIgnoreCase("3")) ? "SUPERIOR" : ($F{instruccion}.equalsIgnoreCase("4")) ? "CUARTO NIVEL" : ($F{instruccion}.equalsIgnoreCase("O")) ? "OTRO" : "" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="226" y="70" width="140" height="12" uuid="2413ae60-9888-4f22-a7f8-8c90e4631bf6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LUGAR Y FECHA DE NACIMIENTO:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="367" y="70" width="142" height="12" uuid="86365fde-95d9-4cef-8255-6f0f6cf2830a">
+					<property name="orden" value="0"/>
+					<property name="nombre" value="nacimiento"/>
+					<property name="descripcion" value="LUGAR Y FECHA DE NACIMIENTO:"/>
+					<property name="tipo_dato" value="T"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugar_nacimiento}+",  "+$F{fecha_nacimiento}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="59" y="95" width="196" height="1" uuid="e4440588-4dab-4f64-ae7f-9b6b837cdee7"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="286" y="67" width="80" height="1" uuid="fb24ede3-b6f3-4772-9096-4371d35474d1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="84" width="55" height="12" uuid="9e3544c3-0346-4f97-9509-b48e9aa1d5be"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROFESI�N:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="59" y="84" width="196" height="12" uuid="644a309f-f299-4035-ac55-13530330025f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="256" y="84" width="90" height="12" uuid="fae837cb-5516-4b2a-9a3e-61365b2333f7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCUPACI�N ACTUAL:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="345" y="84" width="164" height="12" uuid="2ee22ff1-c37b-49ca-862a-908c565cb7ad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ocupacions}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="345" y="95" width="164" height="1" uuid="0f96419a-56b4-4ec2-b6d8-d3edc555e991"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="309" y="54" width="200" height="1" uuid="19778f0b-032c-472f-a542-bd9cce0fbd9d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="97" width="55" height="12" uuid="e23438ca-4ef1-4896-9346-cd4082f10ae2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCI�N:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="59" y="97" width="450" height="12" uuid="2381f534-ef9a-4c5b-a28a-233b261b1ade">
+					<property name="orden" value="0"/>
+					<property name="nombre" value="direccion"/>
+					<property name="descripcion" value="DIRECCI�N:"/>
+					<property name="tipo_dato" value="T"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="59" y="108" width="450" height="1" uuid="3d909b43-bb05-495b-b525-b6ae4e859575"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="30" width="110" height="12" uuid="ef4418e0-d271-4514-984b-72dd7dceaeee"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I. DATOS DE FILIACI�N:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="609" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="511" height="609" uuid="8f227ad0-ae48-4383-b2bb-bfd6a8da5270"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement x="0" y="0" width="511" height="16" uuid="3c5d84fb-cd71-4433-81f9-7dd32efc1fc2">
+					<property name="nombre" value="d_filiacion"/>
+					<property name="descripcion" value="DATOS"/>
+				</reportElement>
+				<textField isBlankWhenNull="true">
+					<reportElement x="405" y="2" width="14" height="12" uuid="b9a504d1-e752-4336-95d3-7cbf10f60a94">
+						<property name="orden" value="1010"/>
+						<property name="nombre" value="ln"/>
+						<property name="descripcion" value="Lugar de Nacimiento:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{lugar_nacimiento}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="420" y="2" width="13" height="12" uuid="135374d2-0683-4168-87ec-c9dc7645e455">
+						<property name="orden" value="1020"/>
+						<property name="nombre" value="tipo_informe"/>
+						<property name="descripcion" value="Tipo de Informe:"/>
+						<property name="tipo_dato" value="L"/>
+						<property name="item_lista" value="INICIAL/PERI�DICO/POSTOCUPACIONAL/REINTEGRO/"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tipo_informe}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="2" width="187" height="12" uuid="9e910a81-06ff-43ec-baea-51ddb869e205"/>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[II. ANTECEDENTES LABORALES]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="434" y="2" width="16" height="12" uuid="4edae9ff-61bb-4455-8cf8-67bf90c245dc">
+						<property name="orden" value="1030"/>
+						<property name="nombre" value="ocupacions"/>
+						<property name="descripcion" value="Cargo que desempe�a o va a desempe�ar en la empresa:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ocupacions}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="15" width="511" height="76" uuid="503e1b69-80e9-49d4-a707-e83c5d9130d1">
+					<property name="nombre" value="antecedentes_laborales"/>
+					<property name="descripcion" value="ANTECEDENTES RIEGOS LABORALES"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="511" height="15" uuid="27249567-1704-49e6-9319-6de0a8c992f5"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="3" y="2" width="187" height="12" uuid="cc056af8-0785-4b67-aa39-6aebfb1f801d"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EDAD DE INICIO DE LA ACTIVIDAD LABORAL:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="189" y="2" width="194" height="12" uuid="897e85e3-cf31-47e5-89b0-99d2be3272aa">
+						<property name="orden" value="1040"/>
+						<property name="nombre" value="inicio_actividad_laboral"/>
+						<property name="descripcion" value="Inicio de la Actividad Laboral:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inicio_actividad_laboral}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="28" width="254" height="46" uuid="7f943c2a-5596-4d26-ba3a-fc98f17f8aaa">
+						<property name="orden" value="1050"/>
+						<property name="nombre" value="actual_des"/>
+						<property name="descripcion" value="Describa el Trabajo Actual que desempe�a o va a desempe�ar:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Actividad del Trabajador: "+$F{actual_des}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="304" y="16" width="205" height="29" uuid="8516cfb1-b831-4e10-b481-1d531bbdd6fe">
+						<property name="orden" value="1060"/>
+						<property name="nombre" value="riesgos_expuestos"/>
+						<property name="descripcion" value="Riesgos a los que esta(r�) Expuesto:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{riesgos_expuestos}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="260" y="16" width="45" height="13" uuid="f80a430e-fa41-4fa1-971e-493203b0ca99"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RIESGOS:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="304" y="45" width="205" height="29" uuid="8b8fb573-dde9-4013-a605-b88089f7ac36">
+						<property name="orden" value="1070"/>
+						<property name="nombre" value="proteccion"/>
+						<property name="descripcion" value="Utiliza(r�) Protecci�n para el trabajo que desempe�a o va a desempe�ar?"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{proteccion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="260" y="45" width="45" height="13" uuid="2eda4931-1f32-4268-ae77-8add86644da9"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EPPS:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="80" y="16" width="178" height="13" uuid="5bb173da-99e6-4843-93d4-b08d3dbd088e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="258" y="15" width="1" height="61" uuid="becf4817-7f6e-4640-bab5-d2cb58ba01a8"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="3" y="16" width="77" height="12" uuid="044dd17b-1d66-45d1-b332-65eda6a64bb5"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Empresa Actual:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="140" width="130" height="447" uuid="76a3a320-0077-431e-8987-bfa3ab562940">
+					<property name="nombre" value="riesgos"/>
+					<property name="descripcion" value="RIESGOS LABORALES"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="3" y="24" width="46" height="11" uuid="1a0f6bf8-20c0-475f-9bf7-3094d4d0e16b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[1. F�sicos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="36" width="54" height="9" uuid="59658c5a-032a-437f-b85e-3f0ca21b64f8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Ruido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="46" width="54" height="9" uuid="b0170bea-e173-4e6c-9678-6ef8e4db56fd"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Vibraci�n]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="56" width="54" height="9" uuid="72b155dc-ab21-4692-ae0c-f136203f2e39"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Iluminaci�n]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="66" width="54" height="9" uuid="e81ce340-0270-4545-9d3f-b8485808ec08"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Radiaciones]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="64" y="66" width="57" height="9" uuid="e87a212e-e7c6-4c36-8bce-5dbf0e32d659"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Ionizantes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="86" width="53" height="9" uuid="0792f1fe-5e3c-4cd1-9cbd-0f9858e21ca9"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Presi�n]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="64" y="76" width="57" height="9" uuid="49e53b90-7a64-41d3-ae40-9337f73ab077"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[No ionizantes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="105" width="54" height="11" uuid="d6d37f5b-dd6b-4c08-a705-8afbfb4baade"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[2. Qu�micos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="117" width="54" height="9" uuid="9a46c26d-8068-4ca1-937b-a978c400b6b3"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Vapores]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="127" width="121" height="9" uuid="cf7f5ed6-7957-4b9c-98dd-abf735992f8a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Gases (crudo, lixiviados , otros)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="148" width="121" height="9" uuid="c1490989-900f-40dd-a500-4f91be897f90"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Polvos Org�nicos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="158" width="121" height="9" uuid="5cc36358-f920-4241-b2e0-058ab0804276"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Polvos Inorg�nicos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="167" width="121" height="9" uuid="86973a64-1175-486e-98e3-1ce74f99bb39"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Humos met�licos (soldadura, otros)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="177" width="121" height="9" uuid="51d5fd98-fc05-46a6-a9b8-f63c9582e6c8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Humos de combusti�n]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="187" width="54" height="9" uuid="5869bd57-0582-422e-a5a5-ebd6980da160"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Neblinas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="197" width="54" height="9" uuid="6be9d3c2-d5ec-452f-93a2-c58e6ae2360d"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[L�quidos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="206" width="60" height="11" uuid="c9485602-f266-4d78-a22d-c444aed42f11"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[3. Biol�gicos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="217" width="121" height="9" uuid="3deb92c3-0bee-476b-aed4-b08db09a986f"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Bacterias, Virus, Hongos, etc]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="245" width="84" height="11" uuid="2b478bbe-a618-4c88-9a58-fcaa47942401"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[4. Ergon�micos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="256" width="44" height="9" uuid="a1817c3c-5c0a-40d6-89d4-9702d7187199"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Cargas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="276" width="121" height="9" uuid="2fb58709-3135-4df0-b1a8-1505de94e18f"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Posturas en el trabajo mantenidas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="266" width="129" height="9" uuid="320b5905-75df-4cc1-b8ac-e033ea7a1680"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Uso de Pantallas de visualizaci�n-PVD�S]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="286" width="107" height="9" uuid="ac79b9c4-a20e-4da8-9a5d-ba313f728bd2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Fatiga por esfuerzo f�sico]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="296" width="88" height="9" uuid="6e588d1c-888f-4f36-8844-3b2f4de0af45"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Movimientos repetitivos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="393" width="84" height="11" uuid="ced15be4-3f22-42ae-942b-529cd0450bd6"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[6. Psicosociales]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="406" width="121" height="9" uuid="6329d891-a5ad-4ff5-891f-f9c23b25f5f1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Medio Ambiente F�sico de trabajo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="416" width="108" height="9" uuid="612ed868-31f5-491e-b956-812346f124be"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Factores propios de la tarea]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="426" width="121" height="9" uuid="45d3a68b-4c5c-44e6-b774-b9b431bbdfd1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Organizaci�n del tiempo de trabajo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="437" width="121" height="9" uuid="8d1b2437-c5dd-4bc2-975b-770d844d758c"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Gesti�n Administrativa de la Empresa]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="1" width="128" height="23" uuid="eed45ee0-9b2f-41bf-89bf-f9fa4744f78a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FACTORES DE RIESGOS LABORALES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="137" width="121" height="9" uuid="1fc58cb2-6ddb-4547-a490-a7b82bcb83a1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Fibras (de nadera, aluminio, otros)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="6" y="227" width="121" height="18" uuid="050af9ee-03ab-4f4a-b40b-8d05adff170e"/>
+					<textElement textAlignment="Justified">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Contacto indirecto con Muestras (Sangu�neas, otras secresiones)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="326" width="121" height="18" uuid="54213fc2-a043-468f-a10c-485599f0a597"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Contacto con herramientas, utensillos cortopunzantes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="344" width="112" height="9" uuid="e23ae11a-f358-419a-b743-4885ebe70413"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Golpe con Objetos, herramientas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="96" width="120" height="9" uuid="88db8909-d08e-4d1a-ba9a-1d699b1aeef0"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Contacto con Circuitos El�ctricos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="354" width="112" height="9" uuid="46cd0735-7baa-4204-a92b-988eb2e37413"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Atrapamiento en partes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="305" width="69" height="11" uuid="e7f00240-b2ac-4a7e-bd36-c25d2087c043"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[5. Mec�nicos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="316" width="121" height="9" uuid="72470546-bb0b-41d5-bcf5-71722d9112fd"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Contacto con superficies calientes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="364" width="112" height="9" uuid="643bafc1-73b1-4e67-8291-fec0dcb1aca9"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Ca�da de Objetos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="374" width="112" height="9" uuid="ab4753fb-4e70-495f-9520-0075d8bf2649"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Derrumbes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="384" width="112" height="9" uuid="5f785a49-4765-453b-918b-ad1d8051acb3"/>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[Atropellamiento por veh�culos]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="130" y="152" width="128" height="435" uuid="f5662d0c-892b-4cb2-b311-a9f55fe7ef09">
+					<property name="nombre" value="emp1"/>
+					<property name="descripcion" value="EMPRESA 1"/>
+				</reportElement>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="1" width="124" height="11" uuid="a13e8c0f-32a1-4434-9739-4308d21e5873">
+						<property name="orden" value="1080"/>
+						<property name="nombre" value="empresa1"/>
+						<property name="descripcion" value="Nombre de la Empresa1:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="12" width="57" height="11" uuid="2145ffcf-2060-4050-b3e2-30478728e7e9">
+						<property name="orden" value="1090"/>
+						<property name="nombre" value="tiempo1"/>
+						<property name="descripcion" value="Tiempo que estuvo en la Empresa1:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="72" y="12" width="54" height="11" uuid="b2c3f899-2864-4d08-b93f-854ec1983327">
+						<property name="orden" value="1100"/>
+						<property name="nombre" value="cargo1"/>
+						<property name="descripcion" value="Cargo que desempe�aba en la Empresa1:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargo1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="23" width="124" height="11" uuid="57130e94-9994-4352-a8d8-b10951d439fd">
+						<property name="orden" value="1110"/>
+						<property name="nombre" value="ruido1"/>
+						<property name="descripcion" value="R. F�sicos: Ruido"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ruido1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="33" width="124" height="11" uuid="9735a248-90dc-4e0c-b096-75fbd44ac0ce">
+						<property name="orden" value="1120"/>
+						<property name="nombre" value="vibracion1"/>
+						<property name="descripcion" value="R. F�sicos: Vibraci�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vibracion1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="43" width="124" height="11" uuid="be5b6e5e-f013-40c1-afc4-c4a07a7f8546">
+						<property name="orden" value="1130"/>
+						<property name="nombre" value="iluminacion1"/>
+						<property name="descripcion" value="R. F�sicos: Iluminacion"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{iluminacion1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="53" width="124" height="11" uuid="4e9102ec-3f3f-4bfd-a4c3-481a1c13fe51">
+						<property name="orden" value="1140"/>
+						<property name="nombre" value="ionizantes1"/>
+						<property name="descripcion" value="R. F�sicos: Radiaciones Ionizantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ionizantes1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="63" width="124" height="11" uuid="fb0576e2-172f-4777-a522-32ff3630a958">
+						<property name="orden" value="1150"/>
+						<property name="nombre" value="noionizantes1"/>
+						<property name="descripcion" value="R. F�sicos: Radiaciones no Ionizantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{noionizantes1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="73" width="124" height="11" uuid="21e24d1b-f40e-4d30-a8c3-1699e61dd4b2">
+						<property name="orden" value="1160"/>
+						<property name="nombre" value="presion1"/>
+						<property name="descripcion" value="R. F�sicos: Presi�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{presion1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="83" width="124" height="11" uuid="e14a0821-dc56-44c3-9c84-5bba0ec5a2b6">
+						<property name="orden" value="1330"/>
+						<property name="nombre" value="celectricos1"/>
+						<property name="descripcion" value="R. F�sicos: Contacto con Circuitos El�ctricos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{celectricos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="104" width="124" height="11" uuid="4d7dc2c3-e0b6-47c2-ae48-bbb45a29dc2f">
+						<property name="orden" value="1170"/>
+						<property name="nombre" value="vapores1"/>
+						<property name="descripcion" value="R. Qu�micos: Vapores"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vapores1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="114" width="124" height="11" uuid="d2ec0a8d-5ea4-4ea7-92e4-8cd5ed2a0d45">
+						<property name="orden" value="1180"/>
+						<property name="nombre" value="gases1"/>
+						<property name="descripcion" value="R. Qu�micos: Gases (crudo, lixiviados, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gases1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="124" width="124" height="11" uuid="6ca5ccfd-953c-48fc-9e42-3cb4940e0c53">
+						<property name="orden" value="1190"/>
+						<property name="nombre" value="fibras1"/>
+						<property name="descripcion" value="R. Qu�micos: Fibras (de madera, aluminio, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fibras1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="134" width="124" height="11" uuid="7975d55e-f288-4b8d-82d6-030c49947da7">
+						<property name="orden" value="1200"/>
+						<property name="nombre" value="porganicos1"/>
+						<property name="descripcion" value="R. Qu�micos: Polvos Org�nicos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{porganicos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="144" width="124" height="11" uuid="39e8b528-0660-4156-ba01-32a83cf14710">
+						<property name="orden" value="1210"/>
+						<property name="nombre" value="pinorganicos1"/>
+						<property name="descripcion" value="R. Qu�micos: Polvos Inorg�nicos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pinorganicos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="154" width="124" height="11" uuid="bbcf7f72-e234-47ba-baef-f27e9fd3f452">
+						<property name="orden" value="1220"/>
+						<property name="nombre" value="hmetalicos1"/>
+						<property name="descripcion" value="R. Qu�micos: Humos met�licos (soldadura, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hmetalicos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="164" width="124" height="11" uuid="9017a8d2-e4b4-407a-bf82-102837798689">
+						<property name="orden" value="1230"/>
+						<property name="nombre" value="hcombustion1"/>
+						<property name="descripcion" value="R. Qu�micos: Humos de combusti�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hcombustion1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="174" width="124" height="11" uuid="d0e76908-6374-46c2-9039-59b3786d4982">
+						<property name="nombre" value="neblinas1"/>
+						<property name="orden" value="1240"/>
+						<property name="descripcion" value="R. Qu�micos: Neblinas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{neblinas1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="184" width="124" height="11" uuid="c378a853-86fd-4c73-b02d-68104906bfe1">
+						<property name="orden" value="1250"/>
+						<property name="nombre" value="liquidos1"/>
+						<property name="descripcion" value="R. Qu�micos: L�quidos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{liquidos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="204" width="124" height="11" uuid="9e8c4a05-5da1-47ab-be95-766f0868cb95">
+						<property name="orden" value="1260"/>
+						<property name="nombre" value="bacterias1"/>
+						<property name="descripcion" value="R. Biol�gicos: Bacterias, Virus, Hongos, etc"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{bacterias1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="215" width="124" height="18" uuid="d6418b12-750d-45d6-8632-38366d8db9c8">
+						<property name="orden" value="1270"/>
+						<property name="nombre" value="cindirecto1"/>
+						<property name="descripcion" value="R. Biol�gicos: Contacto indirecto con muestras (Sangu�neas, otras secresiones)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cindirecto1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="243" width="124" height="11" uuid="50286b25-bfc7-4b34-bdbe-73422eb5c86c">
+						<property name="orden" value="1280"/>
+						<property name="nombre" value="cargas1"/>
+						<property name="descripcion" value="R. Ergon�micos: Cargas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargas1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="253" width="124" height="11" uuid="5ba950b5-527a-4f3e-a9fd-6e357c01bc05">
+						<property name="orden" value="1290"/>
+						<property name="nombre" value="pvds1"/>
+						<property name="descripcion" value="R. Ergon�micos: Uso de pantallas de visualizaci�n - PVDs"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pvds1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="263" width="124" height="11" uuid="bfd0d03b-d79b-4590-a7c5-3ac601f1e267">
+						<property name="orden" value="1300"/>
+						<property name="nombre" value="pmantenidas1"/>
+						<property name="descripcion" value="R. Ergon�micos: Posturas en el trabajo mantenidas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pmantenidas1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="273" width="124" height="11" uuid="751a6177-3649-4c12-a81f-ba752164d416">
+						<property name="orden" value="1310"/>
+						<property name="nombre" value="efisico1"/>
+						<property name="descripcion" value="R. Ergon�micos: Fatiga por esfuerzo f�sico"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{efisico1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="283" width="124" height="11" uuid="c1358286-80b3-44d6-ba88-8695d7b8b0ef">
+						<property name="orden" value="1320"/>
+						<property name="nombre" value="mrepetitivos1"/>
+						<property name="descripcion" value="R. Ergon�micos: Movimientos repetitivos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mrepetitivos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="303" width="124" height="11" uuid="bf8e91a2-fea1-4907-b7fb-0730970de4aa">
+						<property name="orden" value="1340"/>
+						<property name="nombre" value="scalientes1"/>
+						<property name="descripcion" value="R. Mec�nicos: Contacto con superficies calientes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{scalientes1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="314" width="124" height="17" uuid="4e2b7d62-a4c6-42c3-88dd-2d255bfab720">
+						<property name="orden" value="1350"/>
+						<property name="nombre" value="ucortopunzantes1"/>
+						<property name="descripcion" value="R. Mec�nicos: Contacto con herramientas, utensillos cortopunzantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ucortopunzantes1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="331" width="124" height="11" uuid="dddaa099-2826-4b4c-8510-33901c9db21e">
+						<property name="orden" value="1360"/>
+						<property name="nombre" value="gobjetos1"/>
+						<property name="descripcion" value="R. Mec�nicos: Golpe con Objetos, herramientas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gobjetos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="341" width="124" height="11" uuid="40ffdb3b-e21b-4d47-8615-933b96f54b00">
+						<property name="orden" value="1370"/>
+						<property name="nombre" value="apartes1"/>
+						<property name="descripcion" value="R. Mec�nicos: Atrapamiento en partes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{apartes1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="351" width="124" height="11" uuid="b17c76d7-de40-4d07-ac7d-9dfbbe60fd60">
+						<property name="orden" value="1380"/>
+						<property name="nombre" value="cobjetos1"/>
+						<property name="descripcion" value="R. Mec�nicos: Ca�da de Objetos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cobjetos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="361" width="124" height="11" uuid="20c09367-133e-4660-95d6-5b52f3825772">
+						<property name="orden" value="1390"/>
+						<property name="nombre" value="derrumbes1"/>
+						<property name="descripcion" value="R. Mec�nicos: Derrumbes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{derrumbes1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="371" width="124" height="11" uuid="a103b9de-cfb7-40b0-b40f-e6a54f9868e7">
+						<property name="orden" value="1400"/>
+						<property name="nombre" value="avehiculos1"/>
+						<property name="descripcion" value="R. Mec�nicos: Atropellamiento por veh�culos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{avehiculos1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="393" width="124" height="11" uuid="ef51b1d5-4e36-4234-829d-3e5e1c0ade18">
+						<property name="orden" value="1410"/>
+						<property name="nombre" value="mambiente1"/>
+						<property name="descripcion" value="R. Psicosociales: Medio Ambiente F�sico"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mambiente1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="403" width="124" height="11" uuid="b1a526bf-270b-40f7-b767-a9f04e4be357">
+						<property name="orden" value="1420"/>
+						<property name="nombre" value="fpropios1"/>
+						<property name="descripcion" value="R. Psicosociales: Factores propios de la tarea"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fpropios1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="413" width="124" height="11" uuid="92615347-0494-4aaa-a631-5c48b4ab3708">
+						<property name="orden" value="1430"/>
+						<property name="nombre" value="ttrabajo1"/>
+						<property name="descripcion" value="R. Psicosociales: Organizaci�n del tiempo de trabajo"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ttrabajo1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="423" width="124" height="11" uuid="e5ed543f-37cb-48fa-8ed5-79ccda2a0a3c">
+						<property name="orden" value="1440"/>
+						<property name="nombre" value="gadministrativa1"/>
+						<property name="descripcion" value="R. Psicosociales: Gesti�n Administrativa de la Empresa"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gadministrativa1}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="257" y="152" width="126" height="435" uuid="490f0499-8bbf-408f-a0b7-51cb43369ca2">
+					<property name="nombre" value="emp2"/>
+					<property name="descripcion" value="EMPRESA 2"/>
+				</reportElement>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="1" width="119" height="11" uuid="8e66f776-5a88-4e13-9406-86ef6ad8af96">
+						<property name="orden" value="1450"/>
+						<property name="nombre" value="empresa2"/>
+						<property name="descripcion" value="Nombre de la Empresa2:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="12" width="46" height="11" uuid="b333f78f-258b-4465-9904-74f2aab64ef2">
+						<property name="orden" value="1460"/>
+						<property name="nombre" value="tiempo2"/>
+						<property name="descripcion" value="Tiempo que estuvo en la Empresa2:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="74" y="12" width="48" height="11" uuid="3a20d101-69a1-4302-bf95-22726c9811c1">
+						<property name="orden" value="1470"/>
+						<property name="nombre" value="cargo2"/>
+						<property name="descripcion" value="Cargo que desempe�aba en la Empresa2:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargo2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="23" width="119" height="11" uuid="408b7105-5d55-4ffb-bd7a-fe795a8c044b">
+						<property name="orden" value="1480"/>
+						<property name="nombre" value="ruido2"/>
+						<property name="descripcion" value="R. F�sicos: Ruido"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ruido2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="33" width="119" height="11" uuid="92133f43-121c-4492-bcec-15576887800d">
+						<property name="orden" value="1490"/>
+						<property name="nombre" value="vibracion2"/>
+						<property name="descripcion" value="R. F�sicos: Vibraci�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vibracion2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="43" width="119" height="11" uuid="2877e6ca-d30a-49ae-9215-479741f0de63">
+						<property name="orden" value="1500"/>
+						<property name="nombre" value="iluminacion2"/>
+						<property name="descripcion" value="R. F�sicos: Iluminacion"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{iluminacion2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="53" width="119" height="11" uuid="bee47ff8-3613-4845-ab2b-3c520ed217ab">
+						<property name="orden" value="1510"/>
+						<property name="nombre" value="ionizantes2"/>
+						<property name="descripcion" value="R. F�sicos: Radiaciones Ionizantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ionizantes2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="63" width="119" height="11" uuid="0063d63e-d53e-4f94-b65f-e8cf6bee1e12">
+						<property name="orden" value="1520"/>
+						<property name="nombre" value="noionizantes2"/>
+						<property name="descripcion" value="R. F�sicos: Radiaciones no Ionizantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{noionizantes2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="73" width="119" height="11" uuid="dbe4ed36-f562-44ce-aa89-e28d0b741098">
+						<property name="orden" value="1530"/>
+						<property name="nombre" value="presion2"/>
+						<property name="descripcion" value="R. F�sicos: Presi�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{presion2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="83" width="119" height="11" uuid="4296f31b-eddc-40cc-9b77-54cdec147c76">
+						<property name="orden" value="1700"/>
+						<property name="nombre" value="celectricos2"/>
+						<property name="descripcion" value="R. F�sicos: Contacto con Circuitos El�ctricos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{celectricos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="103" width="119" height="11" uuid="e5211c81-fc87-43d4-90f8-fcc0632686c6">
+						<property name="orden" value="1540"/>
+						<property name="nombre" value="vapores2"/>
+						<property name="descripcion" value="R. Qu�micos: Vapores"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vapores2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="113" width="119" height="11" uuid="cb8f67de-4062-4152-a3ad-560b5f6b9431">
+						<property name="orden" value="1550"/>
+						<property name="nombre" value="gases2"/>
+						<property name="descripcion" value="R. Qu�micos: Gases (crudo, lixiviados, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gases2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="123" width="119" height="11" uuid="478b14b0-0e31-4ecc-9b91-ccdc3b5dab15">
+						<property name="orden" value="1560"/>
+						<property name="nombre" value="fibras2"/>
+						<property name="descripcion" value="R. Qu�micos: Fibras (de madera, aluminio, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fibras2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="133" width="119" height="11" uuid="e0eaf568-9a7d-41bd-8c40-567f92f3c5f4">
+						<property name="orden" value="1570"/>
+						<property name="nombre" value="porganicos2"/>
+						<property name="descripcion" value="R. Qu�micos: Polvos Org�nicos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{porganicos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="143" width="119" height="11" uuid="bbfb5f82-b376-4a14-882b-e74a47bdefc6">
+						<property name="orden" value="1580"/>
+						<property name="nombre" value="pinorganicos2"/>
+						<property name="descripcion" value="R. Qu�micos: Polvos Inorg�nicos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pinorganicos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="153" width="119" height="11" uuid="36965445-73ce-4405-836e-71be88773ae2">
+						<property name="orden" value="1590"/>
+						<property name="nombre" value="hmetalicos2"/>
+						<property name="descripcion" value="R. Qu�micos: Humos met�licos (soldadura, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hmetalicos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="163" width="119" height="11" uuid="37196cd3-3706-4021-b7a9-40164ab08af6">
+						<property name="orden" value="1600"/>
+						<property name="nombre" value="hcombustion2"/>
+						<property name="descripcion" value="R. Qu�micos: Humos de combusti�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hcombustion2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="173" width="119" height="11" uuid="86167c56-92cc-4258-ba43-e20fdcd0a7d2">
+						<property name="orden" value="1610"/>
+						<property name="nombre" value="neblinas2"/>
+						<property name="descripcion" value="R. Qu�micos: Neblinas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{neblinas2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="183" width="119" height="11" uuid="b5e89325-e9cf-43e5-b7be-5845db954822">
+						<property name="orden" value="1620"/>
+						<property name="nombre" value="liquidos2"/>
+						<property name="descripcion" value="R. Qu�micos: L�quidos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{liquidos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="204" width="119" height="11" uuid="41c24791-925f-4412-ad99-226cdc151373">
+						<property name="orden" value="1630"/>
+						<property name="nombre" value="bacterias2"/>
+						<property name="descripcion" value="R. Biol�gicos: Bacterias, Virus, Hongos, etc"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isStrikeThrough="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{bacterias2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="215" width="119" height="18" uuid="e33033aa-8677-40dc-96b8-77343c659f5f">
+						<property name="orden" value="1640"/>
+						<property name="nombre" value="cindirecto2"/>
+						<property name="descripcion" value="R. Biol�gicos: Contacto indirecto con muestras (Sangu�neas, otras secresiones)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cindirecto2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="243" width="119" height="11" uuid="d29af5c7-ca6d-4452-a24c-1c4b963226d4">
+						<property name="orden" value="1650"/>
+						<property name="nombre" value="cargas2"/>
+						<property name="descripcion" value="R. Ergon�micos: Cargas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargas2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="253" width="119" height="11" uuid="69494ecf-9e7e-4206-a61e-e5cd7d3c8f3f">
+						<property name="orden" value="1660"/>
+						<property name="nombre" value="pvds2"/>
+						<property name="descripcion" value="R. Ergon�micos: Uso de pantallas de visualizaci�n - PVDs"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pvds2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="263" width="119" height="11" uuid="7ba3abe2-a560-4193-bdbe-f8a26bed22f3">
+						<property name="orden" value="1670"/>
+						<property name="nombre" value="pmantenidas2"/>
+						<property name="descripcion" value="R. Ergon�micos: Posturas en el trabajo mantenidas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pmantenidas2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="273" width="119" height="11" uuid="11dec00c-c747-4e20-b9ce-2fab87d4d5f9">
+						<property name="orden" value="1680"/>
+						<property name="nombre" value="efisico2"/>
+						<property name="descripcion" value="R. Ergon�micos: Fatiga por esfuerzo f�sico"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{efisico2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="283" width="119" height="11" uuid="24f732cf-2411-4434-8311-3f2d2ed906ee">
+						<property name="orden" value="1690"/>
+						<property name="nombre" value="mrepetitivos2"/>
+						<property name="descripcion" value="R. Ergon�micos: Movimientos repetitivos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mrepetitivos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="303" width="119" height="11" uuid="a9724ff9-a2c3-455d-a247-b7a5d7663bf9">
+						<property name="orden" value="1710"/>
+						<property name="nombre" value="scalientes2"/>
+						<property name="descripcion" value="R. Mec�nicos: Contacto con superficies calientes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{scalientes2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="314" width="119" height="17" uuid="60ebe60b-a049-4393-9a47-4df548558a95">
+						<property name="orden" value="1720"/>
+						<property name="nombre" value="ucortopunzantes2"/>
+						<property name="descripcion" value="R. Mec�nicos: Contacto con herramientas, utensillos cortopunzantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ucortopunzantes2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="331" width="119" height="11" uuid="cad249b9-b111-417f-a75b-25bfa74f5992">
+						<property name="orden" value="1730"/>
+						<property name="nombre" value="gobjetos2"/>
+						<property name="descripcion" value="R. Mec�nicos: Golpe con Objetos, herramientas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gobjetos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="341" width="119" height="11" uuid="8d677dd7-e839-4ba8-b9ac-491533663e87">
+						<property name="orden" value="1740"/>
+						<property name="nombre" value="apartes2"/>
+						<property name="descripcion" value="R. Mec�nicos: Atrapamiento en partes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{apartes2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="351" width="119" height="11" uuid="a09bf59b-b10c-4180-baf7-1da2a86bf7f5">
+						<property name="orden" value="1750"/>
+						<property name="nombre" value="cobjetos2"/>
+						<property name="descripcion" value="R. Mec�nicos: Ca�da de Objetos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cobjetos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="361" width="119" height="11" uuid="ff87ab0f-cba8-4061-b1ec-b1856648da43">
+						<property name="orden" value="1760"/>
+						<property name="nombre" value="derrumbes2"/>
+						<property name="descripcion" value="R. Mec�nicos: Derrumbes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{derrumbes2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="371" width="119" height="11" uuid="65617c0f-377c-4832-80a0-2d212ea65f60">
+						<property name="orden" value="1770"/>
+						<property name="nombre" value="avehiculos2"/>
+						<property name="descripcion" value="R. Mec�nicos: Atropellamiento por veh�culos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{avehiculos2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="393" width="119" height="11" uuid="a1f56df2-3f22-4b8f-9b7c-30ea387a7c86">
+						<property name="orden" value="1580"/>
+						<property name="nombre" value="mambiente2"/>
+						<property name="descripcion" value="R. Psicosociales: Medio Ambiente F�sico"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mambiente2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="403" width="119" height="11" uuid="fd038e3e-05e6-4c42-a348-519f5fdc2e97">
+						<property name="orden" value="1590"/>
+						<property name="nombre" value="fpropios2"/>
+						<property name="descripcion" value="R. Psicosociales: Factores propios de la tarea"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fpropios2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="413" width="119" height="11" uuid="08288d26-a127-4ce6-aafe-a997d52af967">
+						<property name="orden" value="1600"/>
+						<property name="nombre" value="ttrabajo2"/>
+						<property name="descripcion" value="R. Psicosociales: Organizaci�n del tiempo de trabajo"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ttrabajo2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="423" width="119" height="11" uuid="c4c3279b-8fc2-49bf-b448-dd370905af88">
+						<property name="orden" value="1610"/>
+						<property name="nombre" value="gadministrativa2"/>
+						<property name="descripcion" value="R. Psicosociales: Gesti�n Administrativa de la Empresa"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gadministrativa2}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="382" y="152" width="129" height="435" uuid="9e9090d5-4038-4ab9-b2a2-1b4367feaeb6">
+					<property name="nombre" value="emp3"/>
+					<property name="descripcion" value="EMPRESA 3"/>
+				</reportElement>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="1" width="125" height="11" uuid="e40173c8-b5de-4561-8e8e-a981a88ac9ab">
+						<property name="orden" value="1620"/>
+						<property name="nombre" value="empresa3"/>
+						<property name="descripcion" value="Nombre de la Empresa3:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empresa3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="12" width="47" height="11" uuid="1c0c3f3b-0065-418a-a1ba-c1be0977fd68">
+						<property name="orden" value="1630"/>
+						<property name="nombre" value="tiempo3"/>
+						<property name="descripcion" value="Tiempo que estuvo en la Empresa3:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tiempo3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="78" y="12" width="49" height="11" uuid="a692c5cd-4ad2-41a4-864a-e43ef676ecbc">
+						<property name="orden" value="1640"/>
+						<property name="nombre" value="cargo3"/>
+						<property name="descripcion" value="Cargo que desempe�aba en la Empresa3:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="1"/>
+						<printWhenExpression><![CDATA[false]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargo3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="23" width="125" height="11" uuid="a58cb0e1-547a-444f-977f-306e464b18b8">
+						<property name="orden" value="1650"/>
+						<property name="nombre" value="ruido3"/>
+						<property name="descripcion" value="R. F�sicos: Ruido"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ruido3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="33" width="125" height="11" uuid="42bc45c9-033f-422e-b924-767f6807978c">
+						<property name="orden" value="1660"/>
+						<property name="nombre" value="vibracion3"/>
+						<property name="descripcion" value="R. F�sicos: Vibraci�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vibracion3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="43" width="125" height="11" uuid="78a6271e-4c9e-43c8-b058-ae14be3f9264">
+						<property name="orden" value="1670"/>
+						<property name="nombre" value="iluminacion3"/>
+						<property name="descripcion" value="R. F�sicos: Iluminacion"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{iluminacion3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="53" width="125" height="11" uuid="6612d7ee-f6eb-4350-8d2b-a14854c66e7d">
+						<property name="orden" value="1680"/>
+						<property name="nombre" value="ionizantes3"/>
+						<property name="descripcion" value="R. F�sicos: Radiaciones Ionizantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ionizantes3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="63" width="125" height="11" uuid="f4f472ce-23d0-4f51-9516-8248a659db68">
+						<property name="orden" value="1690"/>
+						<property name="nombre" value="noionizantes3"/>
+						<property name="descripcion" value="R. F�sicos: Radiaciones no Ionizantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{noionizantes3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="73" width="125" height="11" uuid="d73f2efb-4220-4cc1-b5ac-c65ce9cc5a77">
+						<property name="orden" value="1700"/>
+						<property name="nombre" value="presion3"/>
+						<property name="descripcion" value="R. F�sicos: Presi�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{presion3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="83" width="125" height="11" uuid="94c5dc84-0891-4e7c-81e3-13c7e62ba57d">
+						<property name="orden" value="1870"/>
+						<property name="nombre" value="celectricos3"/>
+						<property name="descripcion" value="R. F�sicos: Contacto con Circuitos El�ctricos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{celectricos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="104" width="125" height="11" uuid="87fb57da-8d65-4998-865c-99e6c21a29be">
+						<property name="orden" value="1710"/>
+						<property name="nombre" value="vapores3"/>
+						<property name="descripcion" value="R. Qu�micos: Vapores"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vapores3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="114" width="125" height="11" uuid="5eb0e045-fbf7-4c86-bcd3-943ae0889bee">
+						<property name="orden" value="1720"/>
+						<property name="nombre" value="gases3"/>
+						<property name="descripcion" value="R. Qu�micos: Gases (crudo, lixiviados, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gases3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="124" width="125" height="11" uuid="f1ee740c-5224-4652-b906-15b199590679">
+						<property name="orden" value="1730"/>
+						<property name="nombre" value="fibras3"/>
+						<property name="descripcion" value="R. Qu�micos: Fibras (de madera, aluminio, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fibras3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="134" width="125" height="11" uuid="91542782-9c3a-41b4-85a7-9310a229ec6f">
+						<property name="orden" value="1740"/>
+						<property name="nombre" value="porganicos3"/>
+						<property name="descripcion" value="R. Qu�micos: Polvos Org�nicos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{porganicos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="144" width="125" height="11" uuid="e1856e46-5616-4640-8809-21234346317a">
+						<property name="orden" value="1750"/>
+						<property name="nombre" value="pinorganicos3"/>
+						<property name="descripcion" value="R. Qu�micos: Polvos Inorg�nicos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pinorganicos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="154" width="125" height="11" uuid="446283db-cd51-4918-9589-6597ceb95fec">
+						<property name="orden" value="1760"/>
+						<property name="nombre" value="hmetalicos3"/>
+						<property name="descripcion" value="R. Qu�micos: Humos met�licos (soldadura, otros)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hmetalicos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="164" width="125" height="11" uuid="e3985626-0d5a-464d-88a5-df1eb24d1e08">
+						<property name="orden" value="1770"/>
+						<property name="nombre" value="hcombustion3"/>
+						<property name="descripcion" value="R. Qu�micos: Humos de combusti�n"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{hcombustion3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="174" width="125" height="11" uuid="18bc030c-bbd8-461d-a2c9-a3f4a7c00463">
+						<property name="orden" value="1780"/>
+						<property name="nombre" value="neblinas3"/>
+						<property name="descripcion" value="R. Qu�micos: Neblinas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{neblinas3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="184" width="125" height="11" uuid="a1da0f21-f0c5-4125-b08e-b0b4534f3762">
+						<property name="orden" value="1790"/>
+						<property name="nombre" value="liquidos3"/>
+						<property name="descripcion" value="R. Qu�micos: L�quidos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{liquidos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="204" width="125" height="11" uuid="9f6f697b-9004-413b-84c4-efcf9bf1bf58">
+						<property name="orden" value="1800"/>
+						<property name="nombre" value="bacterias3"/>
+						<property name="descripcion" value="R. Biol�gicos: Bacterias, Virus, Hongos, etc"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{bacterias3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="215" width="125" height="18" uuid="1a4afc60-d6f2-4cc3-b1cc-3a7ac5886c13">
+						<property name="orden" value="1810"/>
+						<property name="nombre" value="cindirecto3"/>
+						<property name="descripcion" value="R. Biol�gicos: Contacto indirecto con muestras (Sangu�neas, otras secresiones)"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cindirecto3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="243" width="125" height="11" uuid="7a20de71-23bc-497c-b0d5-5f5ebc96c214">
+						<property name="orden" value="1820"/>
+						<property name="nombre" value="cargas3"/>
+						<property name="descripcion" value="R. Ergon�micos: Cargas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cargas3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="253" width="125" height="11" uuid="38144019-9aee-4140-a7c0-71b5f1bf0fb5">
+						<property name="orden" value="1830"/>
+						<property name="nombre" value="pvds3"/>
+						<property name="descripcion" value="R. Ergon�micos: Uso de pantallas de visualizaci�n - PVDs"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pvds3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="263" width="125" height="11" uuid="4f796255-6bcd-49ea-869f-55cf8f3b407a">
+						<property name="orden" value="1840"/>
+						<property name="nombre" value="pmantenidas3"/>
+						<property name="descripcion" value="R. Ergon�micos: Posturas en el trabajo mantenidas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pmantenidas3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="273" width="125" height="11" uuid="8048d9a8-7cd4-45a9-ab14-926cd2363894">
+						<property name="orden" value="1850"/>
+						<property name="nombre" value="efisico3"/>
+						<property name="descripcion" value="R. Ergon�micos: Fatiga por esfuerzo f�sico"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{efisico3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="283" width="125" height="11" uuid="c33ef20a-0101-41b3-bf51-1296baf3fa5a">
+						<property name="orden" value="1860"/>
+						<property name="nombre" value="mrepetitivos3"/>
+						<property name="descripcion" value="R. Ergon�micos: Movimientos repetitivos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mrepetitivos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="303" width="125" height="11" uuid="c4618378-9f55-4292-8b2b-e1ed489accb0">
+						<property name="orden" value="1880"/>
+						<property name="nombre" value="scalientes3"/>
+						<property name="descripcion" value="R. Mec�nicos: Contacto con superficies calientes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{scalientes3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="314" width="125" height="17" uuid="67c885d1-5b80-4d5a-a7bd-c81b737caf89">
+						<property name="orden" value="1890"/>
+						<property name="nombre" value="ucortopunzantes3"/>
+						<property name="descripcion" value="R. Mec�nicos: Contacto con herramientas, utensillos cortopunzantes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ucortopunzantes3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="331" width="125" height="11" uuid="18eb32d0-515b-4f7a-9c06-c8438c340cb3">
+						<property name="orden" value="1900"/>
+						<property name="nombre" value="gobjetos3"/>
+						<property name="descripcion" value="R. Mec�nicos: Golpe con Objetos, herramientas"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gobjetos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="341" width="125" height="11" uuid="ce17a80d-0565-4dca-9022-a71245d30960">
+						<property name="orden" value="1910"/>
+						<property name="nombre" value="apartes3"/>
+						<property name="descripcion" value="R. Mec�nicos: Atrapamiento en partes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{apartes3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="351" width="125" height="11" uuid="a8580f6a-8509-4a41-8579-3bbd7ecfcd4b">
+						<property name="orden" value="1920"/>
+						<property name="nombre" value="cobjetos3"/>
+						<property name="descripcion" value="R. Mec�nicos: Ca�da de Objetos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cobjetos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="361" width="125" height="11" uuid="bbed55b8-b552-4ad9-83a1-067da24f7e88">
+						<property name="orden" value="1930"/>
+						<property name="nombre" value="derrumbes3"/>
+						<property name="descripcion" value="R. Mec�nicos: Derrumbes"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{derrumbes3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="371" width="125" height="11" uuid="c8762964-8d40-408e-8edd-db1c449ec660">
+						<property name="orden" value="1940"/>
+						<property name="nombre" value="avehiculos3"/>
+						<property name="descripcion" value="R. Mec�nicos: Atropellamiento por veh�culos"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{avehiculos3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="393" width="125" height="11" uuid="677c94bc-302d-4024-b9e3-bd600278c93d">
+						<property name="orden" value="1950"/>
+						<property name="nombre" value="mambiente3"/>
+						<property name="descripcion" value="R. Psicosociales: Medio Ambiente F�sico"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mambiente3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="403" width="125" height="11" uuid="3b4f2a89-0607-4466-8083-a727b47e5abf">
+						<property name="orden" value="1960"/>
+						<property name="nombre" value="fpropios3"/>
+						<property name="descripcion" value="R. Psicosociales: Factores propios de la tarea"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fpropios3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="413" width="125" height="11" uuid="05e6b560-7f85-4e6f-b811-d0af19c03ad1">
+						<property name="orden" value="1970"/>
+						<property name="nombre" value="ttrabajo3"/>
+						<property name="descripcion" value="R. Psicosociales: Organizaci�n del tiempo de trabajo"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ttrabajo3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="2" y="423" width="125" height="11" uuid="ab51864a-3fe0-4eee-97c3-b1767611b04b">
+						<property name="orden" value="1980"/>
+						<property name="nombre" value="gadministrativa3"/>
+						<property name="descripcion" value="R. Psicosociales: Gesti�n Administrativa de la Empresa"/>
+						<property name="tipo_dato" value="S"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{gadministrativa3}.equalsIgnoreCase("SI") ? "X" : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement x="0" y="91" width="511" height="1" uuid="5ab9ff2a-4724-403a-88a8-9260354209cf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="91" width="511" height="49" uuid="81ea18a4-6ead-4da9-b42a-bec8624d9b74"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="104" width="511" height="1" uuid="97f80a4a-9571-4e96-b50b-95d3bed7f3ae"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="92" width="199" height="11" uuid="1e507ac2-f51e-4df1-98d9-2a25818a115b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESAS ANTERIORES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="92" width="97" height="11" uuid="c0382dca-9205-4f33-ac84-a1c3e322af70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIEMPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="92" width="202" height="11" uuid="02adfce2-117d-482a-ad58-013885acfd71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARGO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="105" width="199" height="11" uuid="817f7bf3-e122-4cc2-824e-0fe586736396"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa1}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="116" width="511" height="1" uuid="a9ae7f2b-07d6-44fc-a5c3-c055bb6ff7b1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="117" width="199" height="11" uuid="8a9a9547-5653-476b-8cb6-6d7642a54840"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="128" width="511" height="1" uuid="f3f5332d-918b-45f9-8046-7d8f81012398"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="129" width="199" height="11" uuid="b77fa278-605b-45bd-90ce-76de320838c9"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa3}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="204" y="91" width="1" height="49" uuid="fbf40f04-81bd-46fa-9988-437e50366edf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="305" y="91" width="1" height="49" uuid="94209487-1a28-4fc0-a775-23bbcce4a365"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="207" y="105" width="97" height="11" uuid="bb662b56-aee0-4493-8d36-cad39a0d9387"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiempo1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="105" width="202" height="11" uuid="a8433375-ac6a-46e4-88b0-ed8b6b8941d1"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargo1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="207" y="117" width="97" height="11" uuid="c1553856-747e-4142-879c-6059a6b3c064"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiempo2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="117" width="202" height="11" uuid="7c6fc644-11f9-4d30-8773-dca8d42b026a"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargo2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="207" y="129" width="97" height="11" uuid="699ea9a2-a682-4b92-b8f3-c6fbe2287698"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiempo3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="129" width="202" height="11" uuid="964eb910-2941-4096-9d8d-c4ac9395cf97"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargo3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="132" y="141" width="377" height="11" uuid="ff737122-cd48-4cdd-9e43-c471aaca97d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[EMPRESA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="130" y="152" width="380" height="1" uuid="63447000-968c-4f7a-9496-225b8f5ca1da"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="164" width="511" height="1" uuid="c571c066-5c86-4241-8a6a-7a4a8ed02945"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="175" width="511" height="1" uuid="85b87db5-bea3-4c12-87fc-3a8d5608ebdb"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="185" width="511" height="1" uuid="a5fa6c94-295d-4946-a229-29448b547d46"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="195" width="511" height="1" uuid="257fd117-9b6f-4d6a-85f3-3d620e1229de"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="205" width="511" height="1" uuid="66435eee-ec93-4a24-956d-7bb901c83bdf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="225" width="511" height="1" uuid="e8b514e6-01a9-42a7-b1f8-d740f057bc1b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="235" width="511" height="1" uuid="cbe6ebb7-d4dd-45d8-9a1b-94f30f589979"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="246" width="511" height="1" uuid="8011c1dd-54c4-459b-ae6f-26f3f29c1217"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="256" width="511" height="1" uuid="afc1105c-9737-4415-94d5-b5222604156d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="266" width="511" height="1" uuid="75342141-9a6f-44e2-9df5-9412de0bcf03"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="276" width="511" height="1" uuid="eaa4320f-8917-49c3-b4f9-13478ea9e52c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="286" width="511" height="1" uuid="d92a40b4-8672-4688-ac7b-2a63fb8c181b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="296" width="511" height="1" uuid="883b46c8-1575-4089-85bc-e227318c6234"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="306" width="511" height="1" uuid="6706f232-9ef3-49a0-a2ba-cb9dce4e447a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="316" width="511" height="1" uuid="be61a4f3-ceec-4ef4-9c4d-a3604e76e3ba"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="336" width="511" height="1" uuid="679e33cb-7865-420f-975a-6c15d06b86c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="326" width="511" height="1" uuid="4dc93ed9-7575-40cc-915b-f19d407ff380"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="575" width="511" height="1" uuid="9d6453f1-f714-4c15-af82-f6855bc3849a"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="346" width="511" height="1" uuid="add6e040-58da-4631-9031-2f918685c66d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="356" width="511" height="1" uuid="7db584ac-1b56-4609-86f2-778b02860b45"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="366" width="511" height="1" uuid="7211b298-af66-4b70-bb19-3165ccde89b3"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="385" width="511" height="1" uuid="ca67e9c4-bb00-490e-934c-a91074a6e6f3"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="395" width="511" height="1" uuid="a531af1e-19bb-451a-8afa-7a803918f45c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="405" width="511" height="1" uuid="0c056cb6-c689-4ebf-9453-a2722c0cd4ca"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="415" width="511" height="1" uuid="2a590f35-95f7-430f-a607-4c871284660b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="425" width="511" height="1" uuid="7ffc1936-c37e-4cd7-bb98-62f8a9bb3dc5"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="533" width="511" height="1" uuid="02835f14-5c1b-407b-8060-d6dd8e30c1c9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="545" width="511" height="1" uuid="38942c6c-ce66-4268-b30c-c424be6bab3b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="555" width="511" height="1" uuid="248361b2-a243-4717-896d-185dd1fa566c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="565" width="511" height="1" uuid="c4a4087a-812d-426f-8802-75a1c1086d99"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="435" width="511" height="1" uuid="b7193be6-d3be-4417-9a07-b2ab850c69c9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="445" width="511" height="1" uuid="bf32189d-61e1-4f2b-b84d-cf02fb4d0d45"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="455" width="511" height="1" uuid="2353cc92-3314-452e-a687-b9c281cfdf03"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="465" width="511" height="1" uuid="8e647601-b898-4be9-b92c-0133e66575e1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="483" width="511" height="1" uuid="4a01c29b-5c73-489f-94be-f13ff39562ce"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="493" width="511" height="1" uuid="11adf5ed-18f1-4e99-80f9-5ed82aada2bf"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="503" width="511" height="1" uuid="690d65a9-0595-4236-be1b-dd7e2e2f9c32"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="513" width="511" height="1" uuid="2f05a641-6971-4f5e-a097-9d32c8a2e265"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="523" width="511" height="1" uuid="bd4cfad7-55fa-48ff-b47a-39d5483f7885"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="130" y="140" width="1" height="446" uuid="ab1bcc87-1d5d-431e-96e2-2f00d779825c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="257" y="153" width="1" height="433" uuid="be2a89b8-d929-479e-b909-712c7c0073bc"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="381" y="153" width="1" height="434" uuid="25e72aef-8f45-47c8-b82a-4878993eccdd"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="586" width="511" height="1" uuid="1f77f849-cde9-4702-83fe-3e9d103d661b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="60" y="206" width="1" height="19" uuid="a61bb4cf-0bc0-4271-9c50-3e5ffde376a6"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="61" y="215" width="449" height="1" uuid="36b6f120-76a8-406a-b514-f9b5c3ae585d"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement x="0" y="586" width="511" height="23" uuid="94e1483b-81dc-405d-8751-775b60649755">
+					<property name="nombre" value="oriesgos"/>
+					<property name="descripcion" value="ACTIVIDADES EXTRALABORALES"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="1" y="0" width="83" height="23" uuid="4c488085-d7e9-4e24-9d09-62635e7f57ce"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ACTIVIDADES EXTRALABORALES:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="0" width="409" height="23" uuid="5e92c3a6-7ae8-4730-ba73-9d22ed63b2a3">
+						<property name="orden" value="1990"/>
+						<property name="nombre" value="otros_riesgos"/>
+						<property name="descripcion" value="Detalle la Actividad y especif�que riesgos principales:"/>
+						<property name="tipo_dato" value="T"/>
+						<property name="lineas" value="0"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{otros_riesgos}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="17">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="9" uuid="f1a51922-3f0b-49e2-8d4a-56435ee28477"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{canton_codigo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="2" width="51" height="12" uuid="a6469080-fbb4-4f64-8798-4f6cd80e6b7e"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[P1 - FU]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="8" width="100" height="9" uuid="8bdb996e-a27d-4d14-b8b3-db54dc95ecba"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Id. "+$F{id_orden}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

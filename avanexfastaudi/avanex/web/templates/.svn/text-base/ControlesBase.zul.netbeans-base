@@ -1,0 +1,20 @@
+  <!-- @author Patty Amoroso   -->
+ <!-- @version 1.0  -->
+
+    <!--style src="/css/cssDefault.css"/-->
+    <!--vbox id="WinControles" align="center" width="100px" apply="${arg.controladora}" -->
+<vbox id="WinControles" align="center" width="100px" >
+    <button id="btnBuscar" label="Buscar" width="90px" height="90px"  disabled="true" visible="true"  zclass="button" image="/images/buscar.gif" />
+    <button id="btnReset" label="Reset" width="90px" height="90px"  disabled="true" visible="false" zclass="button" image="/images/reset.gif" />
+    <button id="btnCancel" label="Cancelar" width="90px" height="90px" disabled="true" visible="false" zclass="button" image="/images/close.gif" />
+    <button id="btnGuardar" label="Guardar" width="90px" height="90px" disabled="true" visible="false"     zclass="button" image="/images/guardar.gif" />
+    <button id="btnNew" label="Nuevo" width="90px" height="90px" disabled="true" visible="false"  zclass="button" image="/images/nuevo.gif"  />
+    <button id="btnUpdate" label="Modificar" width="90px" height="90px" disabled="true" visible="false"   zclass="button" image="/images/open.gif" />
+    <button id="btnDelete" label="Eliminar" width="90px" height="90px" disabled="true" visible="false"   zclass="button" image="/images/delete.gif" />
+    <button id="btnPreview" label="Preview" width="90px" height="80px"  disabled="true"  visible="false" zclass="button" image="/images/preview.gif" />
+    <button id="btnOpen" label="Abrir" width="90px" height="80px"  disabled="true"  visible="false" zclass="button" image="/images/open.gif" />
+    <button id="btnPrint" label="Imprimir" width="90px" height="90px" disabled="true" visible="false"    zclass="button" image="/images/imprimir.gif" />
+    <button id="btnSync" label="Syncronizar" width="90px" height="90px" disabled="true" visible="false"  zclass="button" image="/images/syncronizar.gif" />
+        <!--button id="btnImpExp" label="Imp/Exp" width="90px" height="90px" disabled="true" visible="false"  zclass="button" image="/images/syncronizar.gif" /-->
+        <!--button id="btnSalir" label="Salir" width="90px" height="90px" disabled="true" visible="false" zclass="button" image="/images/salir.gif" /-->
+</vbox>

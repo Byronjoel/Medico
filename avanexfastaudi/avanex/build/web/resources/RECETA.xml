@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><resultados>
+    <datos_generales_standar>
+        <pais_codigo descripcion="Codigo" orden="0" tipo_dato="T">ECU</pais_codigo>
+        <pais_descripcion descripcion="Pais" orden="0" tipo_dato="T">Ecuador</pais_descripcion>
+        <estado_codigo descripcion="Codigo" orden="0" tipo_dato="T">EC-P</estado_codigo>
+        <estado_descripcion descripcion="Estado" orden="0" tipo_dato="T">Pichincha</estado_descripcion>
+        <canton_codigo descripcion="Codigo" orden="0" tipo_dato="T">1906</canton_codigo>
+        <canton_descripcion descripcion="Canton" orden="0" tipo_dato="T">Quito</canton_descripcion>
+        <parroquia_codigo descripcion="Codigo" orden="0" tipo_dato="T"/>
+        <parroquia_descripcion descripcion="Parroquia" orden="0" tipo_dato="T"/>
+        <etnia descripcion="ETNIA" orden="0" tipo_dato="T"/>
+        <practica descripcion="PRACTICA" orden="0" tipo_dato="L">440</practica>
+        <nombre_practica descripcion="NOMBRE_PRACTICA" orden="0" tipo_dato="L">HISTORIA OCUPACIONAL (ALMESA)</nombre_practica>
+        <solicitante descripcion="SOLICITANTE" orden="0" tipo_dato="L">.</solicitante>
+        <paciente descripcion="NOMBRE" orden="0" tipo_dato="L">JUAN PABLO CHAVEZ ESCUDERO</paciente>
+        <nombres descripcion="NOMBRES" orden="0" tipo_dato="L">JUAN PABLO</nombres>
+        <apellidos descripcion="APELLIDOS" orden="0" tipo_dato="L">CHAVEZ ESCUDERO</apellidos>
+        <fecha_nace descripcion="fecha_nace" orden="0" tipo_dato="L">1984/12/04</fecha_nace>
+        <id_historia descripcion="IDHISTORIA" orden="0" tipo_dato="L">1</id_historia>
+        <empresa descripcion="EMPRESA" orden="0" tipo_dato="L">ALMESA</empresa>
+        <identificacion descripcion="CI" orden="0" tipo_dato="L">1719560730</identificacion>
+        <estado_civil descripcion="ESTADOCIVIL" orden="0" tipo_dato="L">SOLTERO</estado_civil>
+        <id_orden descripcion="IDORDEN" orden="0" tipo_dato="L">6</id_orden>
+        <telefono descripcion="TELEFONO" orden="0" tipo_dato="L">12345474</telefono>
+        <sexo descripcion="SEXO" orden="0" tipo_dato="L">MASCULINO</sexo>
+        <profesion descripcion="PROFESION" orden="0" tipo_dato="L">N/A</profesion>
+        <edad descripcion="EDAD" orden="0" tipo_dato="L">32 AÑOS </edad>
+        <ocupacion descripcion="OCUPACION" orden="0" tipo_dato="L">OCUPACION DE PACIENTE</ocupacion>
+        <instruccion_paciente descripcion="INSTRUCCION PACIENTE" orden="0" tipo_dato="L">2</instruccion_paciente>
+        <ciudad_nace descripcion="CIUDAD NACIMIENTO" orden="0" tipo_dato="L">COTACACHI</ciudad_nace>
+        <direccion_paciente descripcion="DIRECCION" orden="0" tipo_dato="L">SAN ROQUE</direccion_paciente>
+        <titulo_paciente descripcion="TITULO" orden="0" tipo_dato="L">SR</titulo_paciente>
+        <medico descripcion="MEDICO" orden="0" tipo_dato="L">Dr. . SIN MEDICO</medico>
+        <especialidad descripcion="ESPECIALIDAD" orden="0" tipo_dato="L"/>
+        <cod_med descripcion="CODIGO-MEDICO" orden="0" tipo_dato="L"/>
+        <titulo_medico descripcion="TITULO" orden="0" tipo_dato="L">Dr.</titulo_medico>
+        <fecha descripcion="FECHA" orden="0" tipo_dato="L">2017/06/12</fecha>
+        <fecha_hora descripcion="FECHA-HORA" orden="0" tipo_dato="L">2017/06/12 22:08:43</fecha_hora>
+    </datos_generales_standar>
+    <medicina> VACUNA ANTIROTAVIRUS (Líquido oral)   VACUNA ANTIPOLIOMIELÍTICA (Líquido oral)  </medicina>
+    <indicacion>INDICACIONES</indicacion>
+</resultados>

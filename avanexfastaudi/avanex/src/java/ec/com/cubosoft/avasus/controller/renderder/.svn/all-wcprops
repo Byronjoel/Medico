@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/avasus/!svn/ver/1141/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder
+END
+AreaRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/avasus/!svn/ver/1042/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/AreaRenderer.java
+END
+CiudadRendererSb.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/avasus/!svn/ver/1062/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/CiudadRendererSb.java
+END
+OrdenIngresoRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/avasus/!svn/ver/1141/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/OrdenIngresoRenderer.java
+END
+AreaRedererSb.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/avasus/!svn/ver/1062/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/AreaRedererSb.java
+END
+HistoriaRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/avasus/!svn/ver/1042/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/HistoriaRenderer.java
+END
+OrganizacionRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/avasus/!svn/ver/1042/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/OrganizacionRenderer.java
+END
+PracticaRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/avasus/!svn/ver/1042/AVASUS/WebAvasus/src/java/ec/com/cubosoft/avasus/controller/renderder/PracticaRenderer.java
+END

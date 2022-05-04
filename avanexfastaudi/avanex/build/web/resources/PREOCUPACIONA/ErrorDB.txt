@@ -1,0 +1,16 @@
+
+
+jueves, 18 de julio de 2019 09:24	Formulario: Prácticas / Servicios
+
+Código DB: 26
+
+Fila: 0
+
+Error de Select: SQLSTATE = 08S01
+Could not send Query to backend;
+Could not send Query to backend.
+
+MSGSYNTAXselect  practica.nombre.id ,           practica.nombre.abreviatura ,           practica.nombre.descripcion ,           practica.nombre.orden_imp ,           practica.nombre.fec_ini ,           practica.nombre.fec_upd ,           practica.nombre.lock_reg ,           practica.nombre.first_user ,           practica.nombre.last_user ,           practica.nombre.first_oid ,           practica.nombre.last_oid ,           practica.nombre.inf_ad1 ,           practica.nombre.inf_ad2 ,           practica.nombre.inf_ad3 ,           practica.nombre.id_area     from practica.nombre WHERE (Upper( nombre.abreviatura) like Upper('%PREQUI%' )) 
+
+
+--------------------------------------------------------------------------------

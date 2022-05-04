@@ -1,0 +1,55 @@
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./WindowArbol"?>
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.1  -->
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div  id="WindowArbol" height="90%" apply="ec.com.cubosoft.avamed.coneccion.ControladoraArbol" >
+        <!--        <tree id="tree" mold="paging"  style="border:1px solid blue" sclass="z-filetree" rows="10"  >-->
+<!--        <grid  height="45%"  vflex="true">
+            <columns >
+                <column label="ORDEN" style="font-weight: bold;font-size:9px;" align="center" width="25%" />
+                <column label="PRACTICA"  style="font-weight: bold;font-size:9px;" align="start" width="72%"  />
+            </columns>
+            <rows id="rootPacs">
+            </rows>
+        </grid>-->
+        <tree id="tree" height="45%" pagingPosition="bottom"  vflex="true" mold="paging"   style="font-size: 10px;" sclass="z-filetree" >
+            <!--mold="paging"--> 
+            <treecols>
+                <treecol id = "Practica" width="90%" style="font-weight: bold;font-size:9px;"/>
+                <treecol id = "imgEstado" width="10%" style="font-weight: bold;font-size:9px;"/>
+            </treecols>
+            <treechildren id="root"  />
+        </tree>
+        <!--<label value="@{WindowMenu$composer.referencia, load-after='BarraMenu.onCreate'}" visible="false" />-->
+    </div>
+</zk>
+<!--<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./WindowArbol"?>-->
+
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.1  -->
+
+<!--<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div  id="WindowArbol" height="98=7%" apply="ec.com.cubosoft.avamed.coneccion.ControladoraArbol" >
+        <grid  height="48%"  vflex="true">
+            <columns >
+                <column label="ORDEN" style="color:#0e9d97; font-size: 7px;" align="center" width="25%" />
+                <column label="PRACTICA"  style="color:#0e9d97; font-size: 7px;" align="center" width="72%"  />
+            </columns>
+            <rows id="rootPacs">
+            </rows>
+        </grid>
+        <tree id="tree" height="48%" pagingPosition="top" mold="paging" rows="10" sclass="z-filetree" >
+            mold="paging" 
+            <treecols>
+                <treecol id = "Practica" width="90%" />
+                <treecol id = "imgEstado" width="10%" />
+            </treecols>
+            <treechildren id="root"  />
+        </tree>
+    </div>
+</zk>-->

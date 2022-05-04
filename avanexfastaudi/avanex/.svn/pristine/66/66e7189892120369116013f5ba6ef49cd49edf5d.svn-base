@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?page title="Informes A" id="m_informes" ?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./usuario_label"?>
+
+<!-- @author Juan Pablo Chavez   -->
+<!-- @version 1.0.1  -->
+<!-- @author Patty Amoroso   -->
+<!-- @version 1.0  -->
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="WinInformes" title="AvaSUS®" border="normal"            height="100%" width="100%" position="parent"                  apply="ec.com.cubosoft.avamed.coneccion.ControladoraInformes" >
+        <caption id="usuario_label" label="Informes"   apply="ec.com.cubosoft.avamed.coneccion.Controladoramenus">
+            <hlayout height="18px">
+                <toolbarbutton label="@{usuario_label$composer.usuario}" />
+            </hlayout>
+        </caption>
+<!--        <caption label="Informes"  id="usuario_label"  apply="ec.com.cubosoft.avamed.coneccion.ControladoraPermisos" >
+            <hlayout height="18px">
+                <toolbarbutton label="@{usuario_label$composer.usuario}" />
+            </hlayout>
+        </caption>-->
+     <!--<window id="WinInformes" style="border:2px solid blue" title="AvaSUS®" border="normal"  position="parent"  height="100%" width="100%"   apply="ec.com.cubosoft.avamed.coneccion.ControladoraInforme" >-->   
+     
+        <borderlayout height="100%" >
+            <north height="65px">
+                <include src="/templates/Menu.zul" />
+            </north>
+
+            <west border="0" width="17%" >
+                <borderlayout height="100%">
+                    <center flex="true" border="0" title = "Historial de Pacientes" style=" border: 2px solid #86b3b1;font-weight: bold;font-size:9px;">
+                        <tree id="arbol" zclass="z-vfiletree" height="96%" visible="false">
+                            <treecols>
+                                <treecol id = "Practica" width="90%" />
+                                <treecol id = "imgEstado" width="10%" />
+                            </treecols>
+                            <treechildren id="root" />
+                        </tree>
+                    </center>
+                    <south height="100px" border="0">
+                        <div align="center" width="100%" height="100%" style="border: 2px solid #86b3b1">
+                            <separator/>
+                            <vbox id="WinControles">
+                                <hbox>
+                                    <button id="btnBuscar" label="Buscar" width="80px" height="80px" visible="true" zclass="button" image="/images/buscar.gif" />
+                                    <space spacing="30%" />
+                                    <button id="btnReset" label="Reset" width="80px" height="80px" visible="true" zclass="button" image="/images/reset.gif" />
+                                </hbox>
+                            </vbox>
+                        </div>
+                    </south>
+                </borderlayout>
+            </west>
+            <center>
+                     <borderlayout height="100%">
+                    <north border="none" height="110px">
+                        <!-- DATOS DE BUSQUEDA-->
+                        <div id="cabecera" align="center" style="border: 2px solid #86b3b1">
+                            <hlayout>
+                                <vbox>
+                                    <label value="Orden:" style="font-weight: bold;font-size:9px;" />
+                                    <textbox id="bOrden" style="font-weight: bold;font-size:9px;" >
+                                        <attribute name="onChange"><![CDATA[
+                                                    if((!bOrden.getValue().isEmpty())&&(bOrden.getValue()!=null)){
+                                                        FecDesde.setValue(null);
+                                                        FecHasta.setValue(null);
+                                            bCedula.setValue("");
+                                                                                                 }
+                                                    ]]>
+                                        </attribute>
+                                    </textbox>
+                                </vbox>
+                                <vbox>
+                                    <label value="Cédula:" style="font-weight: bold;font-size:9px;"/>
+                                    <textbox id="bCedula" style="font-weight: bold;font-size:9px;">
+                                        <attribute name="onChange"><![CDATA[
+                                                    if((!bCedula.getValue().isEmpty())&&(bCedula.getValue()!=null)){
+                                                        FecDesde.setValue(null);
+                                                        FecHasta.setValue(null);
+                                           bOrden.setValue("");
+                                                        }
+                                                    ]]>
+                                        </attribute>
+                                    </textbox>
+                                </vbox>
+                                <vbox visible="false" >
+                                    <label value="Historia:" style="font-weight: bold;font-size:9px;" />
+                                    <textbox id="bHistoria" style="font-weight: bold;font-size:9px;" />
+                                  
+                                </vbox>
+                                <vbox >
+                                    <label value="Empresa:" style="font-weight: bold;font-size:9px;" />
+                                    <bandbox id="bbEmpresa" mold="rounded" autodrop="true">
+                                        <bandpopup>
+                                            <listbox id="LbxEmpresas" width="300px" >
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center" style="font-weight: bold;font-size:9px;"/>
+                                                    <listheader label="Empresa" style="font-weight: bold;font-size:9px;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vbox>
+                            </hlayout>
+                            <hlayout>
+                                <vbox>
+                                    <label value="Desde:" style="font-weight: bold;font-size:9px;" />
+                                    <datebox id="FecDesde" style="font-weight: bold;font-size:9px;" cols="16" format="dd/MMM/yyyy" mold="rounded" onCreate="self.value = new Date()" />
+                                </vbox>
+                                <vbox>
+                                    <label value="Hasta:" style="font-weight: bold;font-size:9px;" />
+                                    <datebox id="FecHasta" style="font-weight: bold;font-size:9px;" cols="16" format="dd/MMM/yyyy" mold="rounded" onCreate="self.value = new Date()"/>
+                                </vbox>
+                                <vbox visible="false">
+                                    <label value="Practica:" style="font-weight: bold;font-size:9px;" />
+                                    <bandbox id="bbPracticas" style="font-weight: bold;font-size:9px;" mold="rounded" autodrop="true">
+                                        <bandpopup>
+                                            <listbox id="LbxPracticas" width="300px" style="font-weight: bold;font-size:9px;">
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center" style="text-align:center;font-weight: bold;font-size:9px;"/>
+                                                    <listheader label="Práctica" style="font-weight: bold;font-size:9px;text-align:center;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vbox>
+                                <vbox visible="false">
+                                    <label value="Area:" sclass="Blabel" />
+                                    <bandbox id="bbAreas" mold="rounded" autodrop="true">
+                                        <bandpopup>
+                                            <listbox id="LbxAreas" width="300px">
+                                                <listhead>
+                                                    <listheader label="Cod." width="20%" align="center"/>
+                                                    <listheader label="Area" style="text-align:center;"/>
+                                                </listhead>
+                                            </listbox>
+                                        </bandpopup>
+                                    </bandbox>
+                                </vbox>
+                            </hlayout>
+                        </div>
+                        
+                        <attribute name="onOK"><![CDATA[
+                            Events.postEvent("onClick",btnBuscar, null);
+                            ]]>
+                        </attribute>
+                    </north>
+                    <center flex="true">
+                        <iframe id="reporte" width="100%" height="100%" />
+                    </center>
+                     <south>
+<!--                        <div id="seccion" align="center">
+                            <button id="btnDividir" label="Dividir" width="90px" height="90px" visible="true" disabled="true" zclass="button" image="/images/file.gif"  />
+      
+                            <button id="btnDividir" label="Download">
+                               
+                            </button>
+                        </div>-->
+                    </south>
+                </borderlayout>
+            </center>
+            <east width="17%">
+                <grid  height="48%"  vflex="true" style="border: 2px solid #86b3b1">
+                    <columns >
+                        <column label="ORDEN" style="font-weight: bold;font-size:9px;" align="center" width="25%" />
+                        <column label="PRACTICA"  style="font-weight: bold;font-size:9px;" align="start" width="72%"  />
+                    </columns>
+                    <rows id="rootPacs">
+                    </rows>
+                </grid>
+            </east>
+        </borderlayout>
+    </window>
+</zk>

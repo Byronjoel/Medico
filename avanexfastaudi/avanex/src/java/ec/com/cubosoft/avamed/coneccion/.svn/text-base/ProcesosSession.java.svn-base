@@ -1,0 +1,87 @@
+package ec.com.cubosoft.avamed.coneccion;
+
+import ec.com.cubosoft.avamed.modelo.core.CsPerxgru;
+import java.util.ArrayList;
+import java.util.List;
+import org.zkoss.zk.ui.Session;
+import org.zkoss.zk.ui.util.GenericForwardComposer;
+
+/**
+ *  @author Patricia Amoroso
+ *  @author Juan Pablo Chavez
+ */
+public class ProcesosSession extends GenericForwardComposer {
+    
+    List<Object> informSession = new ArrayList<Object>();
+    //la session se llama Usuario
+
+    public void crearSession(Session session, String NombreSession, List<Object> informe) {
+        //informe lleva
+        session.setAttribute(NombreSession, informe);
+    }
+    
+    public void AgregarAtributoSession(int pos, Object valor, Session session) {
+
+        //PARA VALIDAR SI TIENE ESE PERMISO
+        List<Object> user = new ArrayList<Object>();
+        String dirIP = session.getRemoteAddr();
+        user = (List<Object>) session.getAttribute(dirIP);
+        
+        switch (pos) {
+            case 4:
+                String pagActual = (String) valor;
+                user.remove(pos);
+                user.add(pos, pagActual);
+                break;
+            case 6:
+                List<CsPerxgru> listaper = null;
+                listaper = (List<CsPerxgru>) valor;
+                if (user.size()>6)
+                {
+                 user.remove(pos);
+                }
+                user.add(pos, listaper);                
+                break;
+            default:
+            
+        }
+        
+        session.setAttribute("Usuario", user);
+    }
+    
+    public Object ObtenerAtributoSession(int pos, Session session) {
+        Object atributo = null;
+        List<Object> user = new ArrayList<Object>();
+        try {
+            String dirIP = session.getRemoteAddr();
+
+            //PARA VALIDAR SI TIENE ESE PERMISO
+            user = (List<Object>) session.getAttribute(dirIP);
+            informSession = (List) session.getAttribute(dirIP);
+            if ((pos > 0) && (pos <= user.size())) {
+                atributo = user.get(pos);
+                
+            }
+        } catch (Exception e) {
+            System.out.println("Obtener Atributos pos" + pos);
+            System.out.println( e.getMessage());
+        }
+        return atributo;
+    }
+    
+    public CsPerxgru ObtenerPermisosPgina(Session session) {
+        //PARA VALIDAR SI TIENE ESE PERMISO
+        String idPermiso = new String();
+        List<CsPerxgru> listPermisos = (List<CsPerxgru>) ObtenerAtributoSession(6, session);
+        String a = (String) ObtenerAtributoSession(4, session);
+        CsPerxgru permisosMenuID = null;
+        
+        for (CsPerxgru objpermiso : listPermisos) {
+            idPermiso = objpermiso.getCsPerxgruPK().getCodPer().toString();
+            if (idPermiso.equals(a)) {
+                permisosMenuID = objpermiso;
+            }
+        }
+        return permisosMenuID;
+    }
+}
